@@ -1,0 +1,96 @@
+[ui-slot="avatar"] {
+	--avatar-size: attr(data-size px, 60px);
+	--avatar-indicator-size: calc(var(--avatar-size) / 4);
+
+	position: relative;
+	width: var(--avatar-size);
+	height: var(--avatar-size);
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-surface-container-highest);
+	user-select: none;
+
+	&[data-shape="circle"] {
+		[ui-slot="avatar-image"],
+		[ui-slot="avatar-group-count"],
+		& {
+			border-radius: var(--radius-circled);
+		}
+	}
+
+	&[data-shape="square"] {
+		[ui-slot="avatar-image"],
+		[ui-slot="avatar-group-count"],
+		& {
+			border-radius: var(--radius-md);
+		}
+	}
+
+	/* Avatar Image */
+	& > [ui-slot="avatar-image"] {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+
+	&:not(:has([ui-slot="avatar-group-count"])) {
+		&:active,
+		&:focus-visible {
+			outline: var(--color-primary) solid var(--spacing-2);
+			outline-offset: var(--spacing-2);
+		}
+	}
+
+	/* Status */
+	& > [ui-slot="avatar-status"] {
+		position: absolute;
+		z-index: 2;
+		width: var(--avatar-indicator-size);
+		height: var(--avatar-indicator-size);
+		border-radius: var(--radius-rounded);
+		inset-inline-end: -10%;
+		inset-block-end: 0;
+		border: var(--spacing-2) solid var(--color-background);
+
+		&[data-status="online"] {
+			background-color: #1fc16b;
+		}
+
+		&[data-status="offline"] {
+			background-color: #7b7b7b;
+		}
+
+		&[data-status="busy"] {
+			background-color: #fb3748;
+		}
+
+		&[data-status="away"] {
+			background-color: #f6b51e;
+		}
+	}
+
+	/* Avatar Group Count */
+	[ui-slot="avatar-group-count"] {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		color: var(--color-on-surface);
+		background-color: var(--color-background);
+		border: var(--spacing-2) solid var(--color-surface-container-highest);
+	}
+}
+
+/* Avatar Group */
+[ui-slot="avatar-group"] {
+	display: flex;
+	margin-inline-start: var(--spacing-16);
+
+	& > [ui-slot="avatar"] {
+		margin-inline-start: calc(var(--spacing-16) * -1);
+		border: var(--spacing-2) solid var(--color-background);
+	}
+}

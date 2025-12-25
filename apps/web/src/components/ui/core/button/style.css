@@ -9,7 +9,7 @@
 	box-shadow: 0 0 0 3px transparent;
 	text-decoration: none;
 	cursor: pointer;
-	border-radius: var(--radius-xs);
+	border-radius: var(--radius-sm);
 	transition: all var(--transition-standard-default-spatial);
 
 	/* size */
@@ -107,6 +107,7 @@
 		--color-on-button: var(--color-on-background);
 		--color-button-border: transparent;
 		--color-button-container: transparent;
+		border-radius: 0;
 
 		background:
 			linear-gradient(currentColor 0 0) 0 0,
