@@ -18,3 +18,7 @@ body {
 	color: var(--color-on-background);
 	font: var(--font-body-md);
 }
+
+.root {
+	isolation: isolate;
+}

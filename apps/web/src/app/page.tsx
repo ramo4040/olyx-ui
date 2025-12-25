@@ -1,3 +1,9 @@
+import { ButtonsExamples } from "@/components/examples";
+
 export default function Home() {
-	return <div>hi</div>;
+	return (
+		<div>
+			<ButtonsExamples />
+		</div>
+	);
 }

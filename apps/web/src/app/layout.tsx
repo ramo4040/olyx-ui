@@ -13,8 +13,16 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" suppressHydrationWarning>
-			<body>{children}</body>
+		<html lang="en" suppressHydrationWarning data-theme="light">
+			<head>
+				<link
+					rel="stylesheet"
+					href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+				/>
+			</head>
+			<body>
+				<div className="root">{children}</div>
+			</body>
 		</html>
 	);
 }

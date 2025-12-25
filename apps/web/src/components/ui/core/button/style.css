@@ -1,0 +1,176 @@
+[ui-slot="button"] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: var(--button-size);
+	font: var(--font-body-md);
+	outline: none;
+	border: 1px solid;
+	box-shadow: 0 0 0 3px transparent;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: var(--radius-xs);
+	transition: all var(--transition-standard-default-spatial);
+
+	/* size */
+
+	&[data-size="lg"] {
+		--button-size: 40px;
+
+		font-size: var(--font-body-lg);
+		padding-inline: var(--spacing-16);
+		gap: var(--spacing-8);
+	}
+
+	&[data-size="md"] {
+		--button-size: 32px;
+
+		padding-inline: var(--spacing-12);
+		gap: var(--spacing-6);
+	}
+
+	&[data-size="sm"] {
+		--button-size: 24px;
+
+		padding-inline: var(--spacing-8);
+		gap: var(--spacing-2);
+	}
+
+	/* Mode */
+	&[data-mode="filled"] {
+		border-color: transparent;
+		background-color: var(--color-button);
+		color: var(--color-on-button);
+
+		&:hover:not(:disabled, [aria-disabled="true"]) {
+			background-color: color-mix(in srgb, var(--color-button), black 10%);
+
+			&[data-variant="neutral"] {
+				background-color: color-mix(
+					in srgb,
+					var(--color-button),
+					var(--color-on-button) 10%
+				);
+			}
+		}
+	}
+
+	&[data-mode="stroke"] {
+		border-color: var(--color-button-border);
+		background-color: var(--color-on-button);
+		color: var(--color-button);
+
+		&:hover:not(:disabled, [aria-disabled="true"]) {
+			border-color: transparent;
+			background-color: var(--color-button-container);
+		}
+	}
+
+	&[data-mode="lighter"] {
+		border-color: transparent;
+		background-color: var(--color-button-container);
+		color: var(--color-button);
+
+		&:hover:not(:disabled, [aria-disabled="true"]) {
+			border-color: var(--color-button-border);
+			background-color: transparent;
+		}
+	}
+
+	&[data-mode="ghost"] {
+		border-color: transparent;
+		background-color: transparent;
+		color: var(--color-button);
+
+		&:hover:not(:disabled, [aria-disabled="true"]) {
+			background-color: var(--color-button-container);
+		}
+	}
+
+	/* Variant */
+	&[data-variant="primary"] {
+		--color-button: var(--color-primary);
+		--color-on-button: var(--color-on-primary);
+		--color-button-border: var(--color-primary);
+		--color-button-container: var(--color-primary-container);
+	}
+
+	&[data-variant="neutral"] {
+		--color-button: var(--color-on-background);
+		--color-on-button: var(--color-background);
+		--color-button-border: var(--color-surface-variant);
+		--color-button-container: var(--color-surface-container-high);
+	}
+
+	&[data-variant="link"] {
+		--color-button: transparent;
+		--color-on-button: var(--color-on-background);
+		--color-button-border: transparent;
+		--color-button-container: transparent;
+
+		background:
+			linear-gradient(currentColor 0 0) 0 0,
+			linear-gradient(currentColor 0 0) 0 0,
+			linear-gradient(currentColor 0 0) 0 100%,
+			linear-gradient(currentColor 0 0) 0 100%,
+			linear-gradient(currentColor 0 0) 100% 0,
+			linear-gradient(currentColor 0 0) 100% 0,
+			linear-gradient(currentColor 0 0) 100% 100%,
+			linear-gradient(currentColor 0 0) 100% 100%;
+		background-size:
+			var(--d, 0) 1px,
+			1px var(--d, 0);
+		background-repeat: no-repeat;
+
+		&:hover:not(:disabled, [aria-disabled="true"]) {
+			--d: 10px;
+			background-color: transparent;
+		}
+	}
+
+	&[data-variant="error"] {
+		--color-button: var(--color-error);
+		--color-on-button: var(--color-on-error);
+		--color-button-border: var(--color-error);
+		--color-button-container: var(--color-error-container);
+	}
+
+	/* Active */
+	&:active {
+		scale: 0.97;
+	}
+
+	/* Focus */
+	&:focus-visible {
+		box-shadow: 0 0 0 3px
+			color-mix(in oklab, var(--color-button) 30%, transparent);
+	}
+
+	/* Disabled */
+	&:disabled,
+	&[aria-disabled="true"] {
+		border-color: transparent;
+		background-color: var(--color-surface-container);
+		color: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
+		pointer-events: none;
+	}
+
+	/* As Icon */
+	&[data-as-icon="true"] {
+		width: var(--button-size);
+	}
+
+	/* Icon */
+	& > i {
+		flex-shrink: 0;
+		margin-inline: calc(var(--spacing-4) * -1);
+		font-size: 20px;
+	}
+
+	/* Flip Icon In RTL */
+	&[data-flip-icon-in-rtl="true"]:dir(rtl) {
+		& > i {
+			rotate: 180deg;
+		}
+	}
+}
