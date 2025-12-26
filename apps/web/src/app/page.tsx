@@ -4,6 +4,7 @@ import {
 	ButtonsExamples,
 	CheckboxExample,
 	RadioExample,
+	SwitchExample,
 } from "@/components/examples";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
 
 			<CheckboxExample />
 			<RadioExample />
+			<SwitchExample />
 		</div>
 	);
 }
