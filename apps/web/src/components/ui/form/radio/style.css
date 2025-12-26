@@ -1,0 +1,52 @@
+[data-slot="radio-group"] {
+	width: 100%;
+
+	[data-slot="radio-group-item"] {
+		--radio-size: 20px;
+
+		display: grid;
+		place-items: center;
+		width: var(--radio-size);
+		height: var(--radio-size);
+		border: 1px solid var(--color-outline-variant);
+		border-radius: var(--radius-rounded);
+		cursor: pointer;
+		transition: all 0.1s ease-out;
+
+		&:not([aria-disabled]) {
+			&:hover {
+				background-color: var(--color-primary-container);
+				border-color: var(--color-primary);
+			}
+
+			&:focus-visible {
+				outline: var(--spacing-4) solid var(--color-primary-container);
+			}
+		}
+
+		[data-slot="radio-group-item-indicator"] {
+			width: var(--spacing-8);
+			height: var(--spacing-8);
+			background-color: var(--color-primary);
+			border-radius: var(--radius-rounded);
+		}
+
+		&[data-checked] {
+			&,
+			[data-slot="radio-group-item-indicator"] {
+				border-color: var(--color-primary);
+			}
+		}
+
+		&[aria-disabled] {
+			background-color: var(--color-surface-container-highest);
+			cursor: default;
+			border-color: var(--color-outline-variant);
+			color: var(--color-surface-container-highest);
+
+			[data-slot="radio-group-item-indicator"] {
+				background-color: var(--color-outline);
+			}
+		}
+	}
+}

@@ -3,3 +3,4 @@ export * from "./core/badge";
 export * from "./core/button";
 
 export * from "./form/checkbox";
+export * from "./form/radio";

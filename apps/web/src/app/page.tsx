@@ -3,16 +3,18 @@ import {
 	BadgesExamples,
 	ButtonsExamples,
 	CheckboxExample,
+	RadioExample,
 } from "@/components/examples";
 
 export default function Home() {
 	return (
 		<div style={{ display: "grid", gap: "30px" }}>
-			<ButtonsExamples />
+			{/* <ButtonsExamples />
 			<AvatarExamples />
-			<BadgesExamples />
+			<BadgesExamples /> */}
 
 			<CheckboxExample />
+			<RadioExample />
 		</div>
 	);
 }
