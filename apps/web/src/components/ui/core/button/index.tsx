@@ -21,7 +21,7 @@ export function Button({
 }: Props) {
 	return (
 		<Btn
-			ui-slot="button"
+			data-slot="button"
 			data-variant={variant}
 			data-mode={mode}
 			data-size={size}

@@ -14,7 +14,7 @@ const Avatar = ({
 }: AvatarProps) => {
 	return (
 		<AvatarPrimitive.Root
-			ui-slot="avatar"
+			data-slot="avatar"
 			data-size={size}
 			data-shape={shape}
 			tabIndex={0}
@@ -30,7 +30,7 @@ const AvatarFallback = ({
 	...props
 }: AvatarPrimitive.Fallback.Props) => {
 	return (
-		<AvatarPrimitive.Fallback ui-slot="avatar-fallback" {...props}>
+		<AvatarPrimitive.Fallback data-slot="avatar-fallback" {...props}>
 			{children}
 		</AvatarPrimitive.Fallback>
 	);
@@ -38,7 +38,7 @@ const AvatarFallback = ({
 
 const AvatarImage = ({ children, ...props }: AvatarPrimitive.Image.Props) => {
 	return (
-		<AvatarPrimitive.Image ui-slot="avatar-image" {...props}>
+		<AvatarPrimitive.Image data-slot="avatar-image" {...props}>
 			{children}
 		</AvatarPrimitive.Image>
 	);
@@ -49,15 +49,15 @@ type AvatarBadgeProps = React.ComponentProps<"span"> & {
 };
 
 const AvatarBadge = ({ status = "online", ...props }: AvatarBadgeProps) => {
-	return <span ui-slot="avatar-status" data-status={status} {...props} />;
+	return <span data-slot="avatar-status" data-status={status} {...props} />;
 };
 
 const AvatarGroupCount = ({ ...props }: React.ComponentProps<"div">) => {
-	return <div ui-slot="avatar-group-count" {...props} />;
+	return <div data-slot="avatar-group-count" {...props} />;
 };
 
 const AvatarGroup = ({ ...props }: React.ComponentProps<"div">) => {
-	return <div ui-slot="avatar-group" {...props} />;
+	return <div data-slot="avatar-group" {...props} />;
 };
 
 export {

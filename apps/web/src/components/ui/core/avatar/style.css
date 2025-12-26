@@ -1,4 +1,4 @@
-[ui-slot="avatar"] {
+[data-slot="avatar"] {
 	--avatar-size: attr(data-size px, 60px);
 	--avatar-indicator-size: calc(var(--avatar-size) / 4);
 
@@ -13,29 +13,29 @@
 	user-select: none;
 
 	&[data-shape="circle"] {
-		[ui-slot="avatar-image"],
-		[ui-slot="avatar-group-count"],
+		[data-slot="avatar-image"],
+		[data-slot="avatar-group-count"],
 		& {
 			border-radius: var(--radius-circled);
 		}
 	}
 
 	&[data-shape="square"] {
-		[ui-slot="avatar-image"],
-		[ui-slot="avatar-group-count"],
+		[data-slot="avatar-image"],
+		[data-slot="avatar-group-count"],
 		& {
 			border-radius: var(--radius-md);
 		}
 	}
 
 	/* Avatar Image */
-	& > [ui-slot="avatar-image"] {
+	& > [data-slot="avatar-image"] {
 		object-fit: cover;
 		width: 100%;
 		height: 100%;
 	}
 
-	&:not(:has([ui-slot="avatar-group-count"])) {
+	&:not(:has([data-slot="avatar-group-count"])) {
 		&:active,
 		&:focus-visible {
 			outline: var(--color-primary) solid var(--spacing-2);
@@ -44,7 +44,7 @@
 	}
 
 	/* Status */
-	& > [ui-slot="avatar-status"] {
+	& > [data-slot="avatar-status"] {
 		position: absolute;
 		z-index: 2;
 		width: var(--avatar-indicator-size);
@@ -72,7 +72,7 @@
 	}
 
 	/* Avatar Group Count */
-	[ui-slot="avatar-group-count"] {
+	[data-slot="avatar-group-count"] {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -85,11 +85,11 @@
 }
 
 /* Avatar Group */
-[ui-slot="avatar-group"] {
+[data-slot="avatar-group"] {
 	display: flex;
 	margin-inline-start: var(--spacing-16);
 
-	& > [ui-slot="avatar"] {
+	& > [data-slot="avatar"] {
 		margin-inline-start: calc(var(--spacing-16) * -1);
 		border: var(--spacing-2) solid var(--color-background);
 	}

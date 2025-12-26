@@ -1,2 +1,3 @@
 export * from "./core/avatar";
-export { Button } from "./core/button";
+export * from "./core/badge";
+export * from "./core/button";

@@ -28,9 +28,7 @@
 	--shadow-3: 0px 1px 3px rgb(0 0 0 / 30%), 0px 4px 8px rgb(0 0 0 / 15%);
 	--shadow-4: 0px 2px 3px rgb(0 0 0 / 30%), 0px 6px 10px rgb(0 0 0 / 15%);
 	--shadow-5: 0px 4px 4px rgb(0 0 0 / 30%), 0px 8px 12px rgb(0 0 0 / 15%);
-	--font-family:
-		"Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue",
-		sans-serif;
+	--font-family: var(--font-dm-sans), sans-serif;
 	--font-display-lg: 400 57px / 64px var(--font-family);
 	--font-display-md: 400 45px / 52px var(--font-family);
 	--font-display-sm: 400 36px / 44px var(--font-family);
