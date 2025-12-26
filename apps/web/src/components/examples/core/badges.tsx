@@ -16,6 +16,10 @@ export const BadgesExamples = () => {
 				<Badge variant="filled" mode="error">
 					Error
 				</Badge>
+
+				<Badge variant="filled" shape="rounded" mode="error">
+					9
+				</Badge>
 			</div>
 			{/* light Variants */}
 			<div style={{ display: "flex", gap: 8 }}>

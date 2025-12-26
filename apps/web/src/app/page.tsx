@@ -2,6 +2,7 @@ import {
 	AvatarExamples,
 	BadgesExamples,
 	ButtonsExamples,
+	CheckboxExample,
 } from "@/components/examples";
 
 export default function Home() {
@@ -10,6 +11,8 @@ export default function Home() {
 			<ButtonsExamples />
 			<AvatarExamples />
 			<BadgesExamples />
+
+			<CheckboxExample />
 		</div>
 	);
 }
