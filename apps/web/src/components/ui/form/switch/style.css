@@ -58,4 +58,10 @@
 				0;
 		}
 	}
+
+	&:not([aria-disabled]) {
+		&:focus-visible {
+			outline: var(--spacing-2) solid var(--color-primary-container);
+		}
+	}
 }
