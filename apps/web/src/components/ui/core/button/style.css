@@ -110,14 +110,10 @@
 		border-radius: 0;
 
 		background:
-			linear-gradient(currentColor 0 0) 0 0,
-			linear-gradient(currentColor 0 0) 0 0,
 			linear-gradient(currentColor 0 0) 0 100%,
 			linear-gradient(currentColor 0 0) 0 100%,
 			linear-gradient(currentColor 0 0) 100% 0,
-			linear-gradient(currentColor 0 0) 100% 0,
-			linear-gradient(currentColor 0 0) 100% 100%,
-			linear-gradient(currentColor 0 0) 100% 100%;
+			linear-gradient(currentColor 0 0) 100% 0;
 		background-size:
 			var(--d, 0) 1px,
 			1px var(--d, 0);
