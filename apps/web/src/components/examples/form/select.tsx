@@ -16,7 +16,7 @@ export const SelectExample = () => {
 		<div
 			style={{ display: "flex", width: 200, flexDirection: "column", gap: 12 }}
 		>
-			<Select>
+			<Select disabled>
 				<SelectTrigger>
 					<SelectValue>Select an option</SelectValue>
 				</SelectTrigger>

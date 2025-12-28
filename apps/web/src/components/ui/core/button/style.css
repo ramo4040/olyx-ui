@@ -150,6 +150,7 @@
 		background-color: var(--color-surface-container);
 		color: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
 		pointer-events: none;
+		user-select: none;
 	}
 
 	/* As Icon */

@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import {
-	// AvatarExamples,
-	// BadgesExamples,
-	// ButtonsExamples,
+	AvatarExamples,
+	BadgesExamples,
+	ButtonsExamples,
 	CheckboxExample,
 	RadioExample,
 	SelectExample,
@@ -33,9 +33,9 @@ export default function Home() {
 				<Switch checked={theme} onCheckedChange={setTheme} />
 			</header>
 			<div style={{ display: "grid", gap: 40 }}>
-				{/* <ButtonsExamples />
-			<AvatarExamples />
-			<BadgesExamples /> */}
+				<ButtonsExamples />
+				<AvatarExamples />
+				<BadgesExamples />
 
 				<CheckboxExample />
 				<RadioExample />

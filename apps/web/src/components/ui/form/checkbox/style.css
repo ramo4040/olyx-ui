@@ -17,6 +17,10 @@
 			border-color: var(--color-primary);
 		}
 
+		&:active {
+			scale: 0.95;
+		}
+
 		&:focus-visible {
 			outline: var(--spacing-4) solid var(--color-primary-container);
 		}
