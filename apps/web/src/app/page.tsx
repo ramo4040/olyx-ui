@@ -1,24 +1,48 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import {
-	AvatarExamples,
-	BadgesExamples,
-	ButtonsExamples,
+	// AvatarExamples,
+	// BadgesExamples,
+	// ButtonsExamples,
 	CheckboxExample,
 	RadioExample,
+	SelectExample,
 	SliderExample,
 	SwitchExample,
 } from "@/components/examples";
+import { Switch } from "@/components/ui";
 
 export default function Home() {
-	return (
-		<div style={{ display: "grid", gap: "30px" }}>
-			<ButtonsExamples />
-			<AvatarExamples />
-			<BadgesExamples />
+	const [theme, setTheme] = useState(false);
 
-			<CheckboxExample />
-			<RadioExample />
-			<SwitchExample />
-			<SliderExample />
-		</div>
+	useEffect(() => {
+		const html = document.documentElement;
+		html.setAttribute("data-theme", theme ? "dark" : "light");
+	}, [theme]);
+
+	return (
+		<>
+			<header
+				style={{
+					marginBottom: 100,
+					display: "flex",
+					justifyContent: "flex-end",
+				}}
+			>
+				<Switch checked={theme} onCheckedChange={setTheme} />
+			</header>
+			<div style={{ display: "grid", gap: 40 }}>
+				{/* <ButtonsExamples />
+			<AvatarExamples />
+			<BadgesExamples /> */}
+
+				<CheckboxExample />
+				<RadioExample />
+				<SwitchExample />
+				<SliderExample />
+				<SelectExample />
+			</div>
+		</>
 	);
 }
