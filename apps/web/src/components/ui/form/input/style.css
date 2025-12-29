@@ -82,7 +82,7 @@
 			svg {
 				height: var(--icon-size);
 				width: var(--icon-size);
-				color: color-mix(in oklab, currentcolor 50%, transparent);
+				color: color-mix(in oklab, currentcolor 100%, transparent);
 			}
 		}
 
@@ -90,8 +90,8 @@
 		[data-slot="input-affix"] {
 			height: 100%;
 			font: var(--font-body-md);
-			color: color-mix(in oklab, currentcolor 50%, transparent);
 			user-select: none;
+			color: color-mix(in oklab, currentcolor 100%, transparent);
 
 			&[data-inline="false"] {
 				&:first-child {

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import {
 	InputsExample,
+	KbdExample,
 	// AvatarExamples,
 	// BadgesExamples,
 	// ButtonsExamples,
@@ -43,6 +44,8 @@ export default function Home() {
 				<SliderExample /> */}
 				{/* <SelectExample /> */}
 				<InputsExample />
+
+				<KbdExample />
 			</div>
 		</>
 	);
