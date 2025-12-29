@@ -8,3 +8,4 @@ export { RadioExample } from "./form/radio";
 export { SelectExample } from "./form/select";
 export { SliderExample } from "./form/slider";
 export { SwitchExample } from "./form/switch";
+export { TextareaExample } from "./form/textarea";

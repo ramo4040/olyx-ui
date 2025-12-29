@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import {
-	InputsExample,
+	// InputsExample,
 	KbdExample,
+	// TextareaExample,
 	// AvatarExamples,
 	// BadgesExamples,
 	// ButtonsExamples,
@@ -35,15 +36,18 @@ export default function Home() {
 				<Switch checked={theme} onCheckedChange={setTheme} />
 			</header>
 			<div style={{ display: "grid", gap: 40 }}>
-				{/* <ButtonsExamples />
+				{/* 
+				<ButtonsExamples />
 				<AvatarExamples />
 				<BadgesExamples />
 				<CheckboxExample />
 				<RadioExample />
 				<SwitchExample />
-				<SliderExample /> */}
-				{/* <SelectExample /> */}
+				<SelectExample />
 				<InputsExample />
+				<SliderExample /> 
+				<TextareaExample />
+				*/}
 
 				<KbdExample />
 			</div>

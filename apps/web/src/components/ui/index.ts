@@ -9,3 +9,4 @@ export * from "./form/radio";
 export * from "./form/select";
 export * from "./form/slider";
 export * from "./form/switch";
+export * from "./form/textarea";
