@@ -6,7 +6,6 @@
 	font: var(--font-body-md);
 	outline: none;
 	border: 1px solid;
-	box-shadow: 0 0 0 3px transparent;
 	text-decoration: none;
 	cursor: pointer;
 	border-radius: var(--radius-sm);

@@ -1,6 +1,12 @@
 import { User02FreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Input, InputAffix, InputIcon, InputWrapper } from "@/components/ui";
+import {
+	Input,
+	InputAffix,
+	InputIcon,
+	InputWrapper,
+	Kbd,
+} from "@/components/ui";
 
 export const InputsExample = () => {
 	return (
@@ -32,9 +38,15 @@ export const InputsExample = () => {
 				<InputAffix>https://</InputAffix>
 				<Input placeholder="Amount" />
 			</InputWrapper>
+
 			<InputWrapper>
 				<InputAffix inline>$</InputAffix>
 				<Input placeholder="Amount" />
+			</InputWrapper>
+
+			<InputWrapper>
+				<Input placeholder="Amount" />
+				<Kbd>⌘</Kbd>
 			</InputWrapper>
 		</div>
 	);

@@ -12,8 +12,8 @@
 	/* ────────────────────────────────────────────────────────────────
      STEP 1: Configure Your Brand Color
      ──────────────────────────────────────────────────────────────── */
-	--brand-hue: 205; /* 0-360: Your brand color */
-	--brand-saturation: 85%; /* 0-100%: Color intensity */
+	--brand-hue: 206;
+	--brand-saturation: 50%;
 
 	/* ────────────────────────────────────────────────────────────────
      STEP 2: Color Palette Generation
@@ -316,6 +316,24 @@
 				var(--outline-variant-tone-max)
 			)
 	);
+
+	/* SUCCESS */
+	--color-success: hsl(146deg 82% 24%);
+	--color-on-success: hsl(0deg 0% 100%);
+	--color-success-container: hsl(132deg 83% 79%);
+	--color-on-success-container: hsl(140deg 100% 6%);
+
+	/* INFO */
+	--color-info: hsl(236deg 67% 55%);
+	--color-on-info: hsl(0deg 0% 100%);
+	--color-info-container: hsl(240deg 100% 94%);
+	--color-on-info-container: hsl(238deg 100% 21%);
+
+	/* WARNING */
+	--color-warning: hsl(25deg 100% 31%);
+	--color-on-warning: hsl(0deg 0% 100%);
+	--color-warning-container: hsl(18deg 100% 90%);
+	--color-on-warning-container: hsl(20deg 100% 10%);
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -541,11 +559,11 @@
 	);
 
 	/* SURFACE VARIANT & OUTLINE */
-	--surface-variant-dark-sat-min: 5%;
-	--surface-variant-dark-sat-max: 20%;
-	--surface-variant-dark-tone-min: 22%;
-	--surface-variant-dark-tone: 30%;
-	--surface-variant-dark-tone-max: 38%;
+	--surface-variant-dark-sat-min: 3%;
+	--surface-variant-dark-sat-max: 10%;
+	--surface-variant-dark-tone-min: 8%;
+	--surface-variant-dark-tone: 12%;
+	--surface-variant-dark-tone-max: 16%;
 	--on-surface-variant-dark-tone-min: 70%;
 	--on-surface-variant-dark-tone: 80%;
 	--on-surface-variant-dark-tone-max: 88%;
@@ -611,4 +629,22 @@
 				var(--outline-variant-dark-tone-max)
 			)
 	);
+
+	/* SUCCESS */
+	--color-success: hsl(134deg 53% 68%);
+	--color-on-success: hsl(145deg 100% 11%);
+	--color-success-container: hsl(148deg 100% 16%);
+	--color-on-success-container: hsl(132deg 83% 79%);
+
+	/* INFO */
+	--color-info: hsl(236deg 100% 87%);
+	--color-on-info: hsl(238deg 100% 33%);
+	--color-info-container: hwb(236deg 14% 24%);
+	--color-on-info-container: #e0e0ff;
+
+	/* WARNING */
+	--color-warning: hsl(20deg 100% 78%);
+	--color-on-warning: hsl(23deg 100% 17%);
+	--color-warning-container: hsl(25deg 100% 24%);
+	--color-on-warning-container: hsl(18deg 100% 90%);
 }
