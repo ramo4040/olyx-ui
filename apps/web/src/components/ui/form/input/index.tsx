@@ -21,4 +21,18 @@ function InputIcon({ children, ...props }: React.ComponentProps<"span">) {
 	);
 }
 
-export { Input, InputWrapper, InputIcon };
+function InputAffix({
+	children,
+	inline = false,
+	...props
+}: React.ComponentProps<"span"> & {
+	inline?: boolean;
+}) {
+	return (
+		<span {...props} data-slot="input-affix" data-inline={inline}>
+			{children}
+		</span>
+	);
+}
+
+export { Input, InputWrapper, InputIcon, InputAffix };

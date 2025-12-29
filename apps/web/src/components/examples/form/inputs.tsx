@@ -1,6 +1,6 @@
 import { User02FreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Input, InputIcon, InputWrapper } from "@/components/ui";
+import { Input, InputAffix, InputIcon, InputWrapper } from "@/components/ui";
 
 export const InputsExample = () => {
 	return (
@@ -25,6 +25,16 @@ export const InputsExample = () => {
 					<HugeiconsIcon icon={User02FreeIcons} />
 				</InputIcon>
 				<Input placeholder="Text input" />
+			</InputWrapper>
+
+			<h4>Affix Input</h4>
+			<InputWrapper>
+				<InputAffix>https://</InputAffix>
+				<Input placeholder="Amount" />
+			</InputWrapper>
+			<InputWrapper>
+				<InputAffix inline>$</InputAffix>
+				<Input placeholder="Amount" />
 			</InputWrapper>
 		</div>
 	);
