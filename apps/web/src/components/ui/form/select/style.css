@@ -4,14 +4,14 @@
 	justify-content: space-between;
 	isolation: isolate;
 	width: inherit;
-	border: 1px solid var(--color-outline-variant);
+	border: 1px solid var(--color-surface-variant);
 	background-color: var(--color-background);
 	color: var(--color-on-surface-variant);
 	font: var(--font-body-md);
 	height: 36px;
 	gap: var(--spacing-8);
 	padding-inline: var(--spacing-10);
-	border-radius: var(--radius-sm);
+	border-radius: var(--radius-md);
 	cursor: pointer;
 	outline: 0;
 	transition: var(--transition-standard-default-spatial);
@@ -51,7 +51,7 @@
 		overflow-y: auto;
 		background-color: var(--color-surface-container-low);
 		border: 1px solid var(--color-surface-container-highest);
-		border-radius: var(--radius-sm);
+		border-radius: var(--radius-md);
 		box-shadow: 0 16px 32px -12px
 			color-mix(in srgb, var(--color-on-background) 8%, transparent);
 		padding: var(--spacing-6);

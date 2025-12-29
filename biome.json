@@ -49,6 +49,9 @@
 					}
 				}
 			},
+			"a11y": {
+				"noLabelWithoutControl": "off"
+			},
 			"style": {
 				"noParameterAssign": "error",
 				"useAsConstAssertion": "error",
