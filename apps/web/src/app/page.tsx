@@ -2,14 +2,15 @@
 
 import { useEffect, useState } from "react";
 import {
-	AvatarExamples,
-	BadgesExamples,
-	ButtonsExamples,
-	CheckboxExample,
-	RadioExample,
+	InputsExample,
+	// AvatarExamples,
+	// BadgesExamples,
+	// ButtonsExamples,
+	// CheckboxExample,
+	// RadioExample,
+	// SliderExample,
+	// SwitchExample,
 	SelectExample,
-	SliderExample,
-	SwitchExample,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
@@ -33,15 +34,15 @@ export default function Home() {
 				<Switch checked={theme} onCheckedChange={setTheme} />
 			</header>
 			<div style={{ display: "grid", gap: 40 }}>
-				<ButtonsExamples />
+				{/* <ButtonsExamples />
 				<AvatarExamples />
 				<BadgesExamples />
-
 				<CheckboxExample />
 				<RadioExample />
 				<SwitchExample />
-				<SliderExample />
+				<SliderExample /> */}
 				<SelectExample />
+				<InputsExample />
 			</div>
 		</>
 	);
