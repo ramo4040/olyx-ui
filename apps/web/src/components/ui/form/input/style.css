@@ -2,22 +2,46 @@
 [data-slot="input-wrapper"] {
 	--icon-size: 16px;
 	--inline-padding: var(--spacing-10);
+	--surface-low: var(--color-surface-container-low);
 
 	height: 36px;
 	padding-inline: var(--inline-padding);
-	transition: all var(--transition-standard-default-spatial);
-	border-radius: var(--radius-md);
 	border: 1px solid var(--color-surface-variant);
+	border-radius: var(--radius-md);
 	background-color: var(--color-background);
 	box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
 	color: var(--color-on-background);
 	font: var(--font-body-md);
 	outline: 0;
+	transition: all var(--transition-standard-default-spatial);
 
-	/* Animation */
+	/* Placeholder */
+	&::placeholder {
+		color: color-mix(in oklab, currentcolor 50%, transparent);
+		transition: all var(--transition-standard-default-spatial);
+	}
+
+	/* Focuse */
 	&:focus-within {
 		border-color: var(--color-outline);
 		box-shadow: 0 0 0 2px var(--color-primary-container);
+	}
+
+	/* hover */
+	&:hover:not(:focus-within, :disabled) {
+		background-color: var(--surface-low);
+
+		&::placeholder {
+			color: var(--color-on-surface-variant);
+		}
+	}
+
+	/* Disabled */
+	&:disabled,
+	&:has(input:disabled) {
+		border-color: transparent;
+		background-color: var(--surface-low);
+		box-shadow: none;
 	}
 
 	/* Invalid */
@@ -29,33 +53,20 @@
 		}
 	}
 
-	/* Placeholder */
-	&::placeholder {
-		transition: all var(--transition-standard-default-spatial);
-		color: color-mix(in oklab, currentcolor 50%, transparent);
-	}
-
-	/* Disabled */
-	&:disabled,
-	&:has(input:disabled) {
-		border-color: transparent;
-		background-color: var(--color-surface-container-low);
-		box-shadow: none;
-	}
-
 	/* Input Wrapper */
 	&[data-slot="input-wrapper"] {
 		display: flex;
-		align-items: center;
+		place-items: center;
 
+		/* Input */
 		[data-slot="input"] {
 			height: 100%;
 			flex: 1;
 			border: none;
 			border-radius: var(--radius-none);
-			outline: none;
-			box-shadow: none;
 			background: transparent;
+			box-shadow: none;
+			outline: none;
 
 			&:first-child {
 				padding-inline-start: var(--spacing-0);
@@ -66,22 +77,40 @@
 			}
 		}
 
+		/* Icon */
 		[data-slot="input-icon"] {
-			display: flex;
 			svg {
-				color: color-mix(in oklab, currentcolor 50%, transparent);
 				height: var(--icon-size);
 				width: var(--icon-size);
+				color: color-mix(in oklab, currentcolor 50%, transparent);
 			}
 		}
-	}
 
-	/* Hover */
-	&:hover:not(:focus-within, :disabled) {
-		background-color: var(--color-surface-container-low);
+		/* Affix */
+		[data-slot="input-affix"] {
+			height: 100%;
+			font: var(--font-body-md);
+			color: color-mix(in oklab, currentcolor 50%, transparent);
+			user-select: none;
 
-		&::placeholder {
-			color: var(--color-on-surface-variant);
+			&[data-inline="false"] {
+				&:first-child {
+					border-right: 1px solid var(--color-surface-variant);
+					padding-right: var(--inline-padding);
+				}
+
+				&:last-child {
+					border-left: 1px solid var(--color-surface-variant);
+					padding-left: var(--inline-padding);
+				}
+			}
+		}
+
+		[data-slot*="input-affix"],
+		[data-slot="input-icon"] {
+			display: flex;
+			place-items: center;
+			color: color-mix(in oklab, currentcolor 50%, transparent);
 		}
 	}
 }

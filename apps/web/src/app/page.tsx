@@ -10,7 +10,7 @@ import {
 	// RadioExample,
 	// SliderExample,
 	// SwitchExample,
-	SelectExample,
+	// SelectExample,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
@@ -41,7 +41,7 @@ export default function Home() {
 				<RadioExample />
 				<SwitchExample />
 				<SliderExample /> */}
-				<SelectExample />
+				{/* <SelectExample /> */}
 				<InputsExample />
 			</div>
 		</>
