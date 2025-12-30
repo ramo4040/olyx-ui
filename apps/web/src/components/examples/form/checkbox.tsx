@@ -56,7 +56,7 @@ export const CheckboxExample = () => {
 						Cherry
 					</label>
 				</div>
-				<div style={{ marginTop: 16 }}>Selected: {values.join(", ")}</div>
+				<div style={{ marginTop: 16 }}>Selected: {values2.join(", ")}</div>
 			</CheckboxGroup>
 		</div>
 	);

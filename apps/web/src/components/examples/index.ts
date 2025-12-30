@@ -3,6 +3,7 @@ export { BadgesExamples } from "./core/badges";
 export { ButtonsExamples } from "./core/buttons";
 export { KbdExample } from "./data-display/kbd";
 export { CheckboxExample } from "./form/checkbox";
+export { FieldExample } from "./form/field";
 export { InputsExample } from "./form/inputs";
 export { RadioExample } from "./form/radio";
 export { SelectExample } from "./form/select";
