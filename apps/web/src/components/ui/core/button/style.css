@@ -12,7 +12,6 @@
 	transition: all var(--transition-standard-default-spatial);
 
 	/* size */
-
 	&[data-size="lg"] {
 		--button-size: 40px;
 
@@ -158,16 +157,10 @@
 	}
 
 	/* Icon */
-	& > i {
-		flex-shrink: 0;
-		margin-inline: calc(var(--spacing-4) * -1);
-		font-size: 20px;
-	}
-
-	/* Flip Icon In RTL */
-	&[data-flip-icon-in-rtl="true"]:dir(rtl) {
-		& > i {
-			rotate: 180deg;
+	&:has(svg) {
+		padding-inline: var(--spacing-4) !important;
+		svg {
+			color: inherit;
 		}
 	}
 }

@@ -1,6 +1,7 @@
-import { User02FreeIcons } from "@hugeicons/core-free-icons";
+import { Setting06Icon, User02FreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
+	Button,
 	Input,
 	InputAffix,
 	InputIcon,
@@ -45,8 +46,15 @@ export const InputsExample = () => {
 			</InputWrapper>
 
 			<InputWrapper>
-				<Input placeholder="Amount" />
-				<Kbd>⌘</Kbd>
+				<Input placeholder="Icon" />
+				<Kbd>F2</Kbd>
+			</InputWrapper>
+
+			<InputWrapper>
+				<Input placeholder="With icon" />
+				<Button asIcon variant="primary" mode="ghost" size="sm">
+					<HugeiconsIcon icon={Setting06Icon} />
+				</Button>
 			</InputWrapper>
 		</div>
 	);
