@@ -1,103 +1,103 @@
 [data-slot="avatar"] {
-	--avatar-size: attr(data-size px, 60px);
-	--avatar-indicator-size: calc(var(--avatar-size) / 4);
+  --avatar-size: attr(data-size px, 60px);
+  --avatar-indicator-size: calc(var(--avatar-size) / 4);
 
-	position: relative;
-	width: var(--avatar-size);
-	height: var(--avatar-size);
-	text-transform: uppercase;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--color-surface-container-highest);
-	user-select: none;
+  position: relative;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-surface-container-highest);
+  user-select: none;
 
-	&[data-shape="circle"] {
-		[data-slot="avatar-image"],
-		[data-slot="avatar-group-count"],
-		& {
-			border-radius: var(--radius-circled);
-		}
+  &[data-shape="circle"] {
+    [data-slot="avatar-image"],
+    [data-slot="avatar-group-count"],
+    & {
+      border-radius: var(--radius-circled);
+    }
 
-		[data-slot="avatar-status"] {
-			inset-inline-end: 0%;
-			inset-block-end: 5%;
-		}
-	}
+    [data-slot="avatar-status"] {
+      inset-inline-end: 0%;
+      inset-block-end: 5%;
+    }
+  }
 
-	&[data-shape="square"] {
-		[data-slot="avatar-image"],
-		[data-slot="avatar-group-count"],
-		& {
-			border-radius: var(--radius-md);
-		}
-		[data-slot="avatar-status"] {
-			inset-inline-end: -8%;
-			inset-block-end: -2%;
-		}
-	}
+  &[data-shape="square"] {
+    [data-slot="avatar-image"],
+    [data-slot="avatar-group-count"],
+    & {
+      border-radius: var(--radius-md);
+    }
+    [data-slot="avatar-status"] {
+      inset-inline-end: -8%;
+      inset-block-end: -2%;
+    }
+  }
 
-	/* Avatar Image */
-	& > [data-slot="avatar-image"] {
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-	}
+  /* Avatar Image */
+  & > [data-slot="avatar-image"] {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 
-	&:not(:has([data-slot="avatar-group-count"])) {
-		&:active,
-		&:focus-visible {
-			outline: var(--color-primary) solid var(--spacing-2);
-			outline-offset: var(--spacing-2);
-		}
-	}
+  &:not(:has([data-slot="avatar-group-count"])) {
+    &:active,
+    &:focus-visible {
+      outline: var(--color-primary) solid var(--spacing-2);
+      outline-offset: var(--spacing-2);
+    }
+  }
 
-	/* Status */
-	& > [data-slot="avatar-status"] {
-		position: absolute;
-		z-index: 2;
-		width: var(--avatar-indicator-size);
-		height: var(--avatar-indicator-size);
-		border-radius: var(--radius-rounded);
-		border: var(--spacing-2) solid var(--color-background);
+  /* Status */
+  & > [data-slot="avatar-status"] {
+    position: absolute;
+    z-index: 2;
+    width: var(--avatar-indicator-size);
+    height: var(--avatar-indicator-size);
+    border-radius: var(--radius-rounded);
+    border: var(--spacing-2) solid var(--color-background);
 
-		&[data-status="online"] {
-			background-color: #1fc16b;
-		}
+    &[data-status="online"] {
+      background-color: #1fc16b;
+    }
 
-		&[data-status="offline"] {
-			background-color: #7b7b7b;
-		}
+    &[data-status="offline"] {
+      background-color: #7b7b7b;
+    }
 
-		&[data-status="busy"] {
-			background-color: #fb3748;
-		}
+    &[data-status="busy"] {
+      background-color: #fb3748;
+    }
 
-		&[data-status="away"] {
-			background-color: #f6b51e;
-		}
-	}
+    &[data-status="away"] {
+      background-color: #f6b51e;
+    }
+  }
 
-	/* Avatar Group Count */
-	[data-slot="avatar-group-count"] {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-		color: var(--color-on-surface);
-		background-color: var(--color-background);
-		border: var(--spacing-2) solid var(--color-surface-container-highest);
-	}
+  /* Avatar Group Count */
+  [data-slot="avatar-group-count"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--color-on-surface);
+    background-color: var(--color-background);
+    border: var(--spacing-2) solid var(--color-surface-container-highest);
+  }
 }
 
 /* Avatar Group */
 [data-slot="avatar-group"] {
-	display: flex;
-	margin-inline-start: var(--spacing-16);
+  display: flex;
+  margin-inline-start: var(--spacing-16);
 
-	& > [data-slot="avatar"] {
-		margin-inline-start: calc(var(--spacing-16) * -1);
-		border: var(--spacing-2) solid var(--color-background);
-	}
+  & > [data-slot="avatar"] {
+    margin-inline-start: calc(var(--spacing-16) * -1);
+    border: var(--spacing-2) solid var(--color-background);
+  }
 }
