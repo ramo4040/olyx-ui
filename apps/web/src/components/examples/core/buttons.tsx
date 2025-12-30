@@ -1,3 +1,5 @@
+import { Setting06Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import { Button } from "@/components/ui";
 
 export const ButtonsExamples = () => {
@@ -50,8 +52,8 @@ export const ButtonsExamples = () => {
 			</div>
 			{/* Icon , Link and disabled examples */}
 			<div style={{ display: "flex", gap: 8 }}>
-				<Button asIcon>
-					<i className="hgi hgi-stroke hgi-user" />
+				<Button asIcon variant="primary" mode="ghost" size="sm">
+					<HugeiconsIcon icon={Setting06Icon} />
 				</Button>
 				<Button disabled>Disabled</Button>
 				<Button variant="link">Link</Button>
