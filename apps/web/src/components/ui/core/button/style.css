@@ -12,7 +12,6 @@
 	transition: all var(--transition-standard-default-spatial);
 
 	/* size */
-
 	&[data-size="lg"] {
 		--button-size: 40px;
 

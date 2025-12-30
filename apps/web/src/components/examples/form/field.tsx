@@ -27,7 +27,7 @@ export const FieldExample = () => {
 				</Field>
 			</FieldGroup>
 
-			<Field>
+			<Field invalid>
 				<FieldLabel>Error</FieldLabel>
 				<Input placeholder="First Name" />
 				<FieldDescription>Please enter your first name.</FieldDescription>

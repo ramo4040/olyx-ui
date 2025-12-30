@@ -1,0 +1,69 @@
+[data-slot="toggle"] {
+	width: var(--toggle-size);
+	height: var(--toggle-size);
+	text-decoration: none;
+	cursor: pointer;
+	transition: all var(--transition-standard-default-spatial);
+	background-color: var(--color-toggle);
+	color: var(--color-on-toggle);
+	user-select: none;
+	border: 1px solid var(--color-toggle-border);
+	display: grid;
+	place-content: center;
+
+	&[data-size="lg"] {
+		--toggle-size: 40px;
+		padding-inline: var(--spacing-8);
+		border-radius: var(--radius-md);
+	}
+
+	&[data-size="md"] {
+		--toggle-size: 32px;
+		padding-inline: var(--spacing-6);
+		border-radius: var(--radius-sm);
+	}
+
+	&[data-size="sm"] {
+		--toggle-size: 24px;
+		padding-inline: var(--spacing-4);
+		border-radius: var(--radius-xs);
+	}
+
+	&[data-variant="primary"] {
+		--color-toggle: var(--color-background);
+		--color-on-toggle: var(--color-on-background);
+		--color-toggle-border: var(--color-surface-container-highest);
+		--color-toggle-container: var(--color-primary-container);
+		box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 2%, transparent);
+
+		&:hover:not(:disabled, &[data-pressed]),
+		&[data-pressed] {
+			border-color: transparent;
+			background-color: var(--color-toggle-container);
+		}
+	}
+
+	&[data-variant="ghost"] {
+		--color-toggle: transparent;
+		--color-on-toggle: var(--color-on-background);
+		--color-toggle-border: transparent;
+		--color-toggle-container: var(--color-surface-container-high);
+
+		&:hover:not(:disabled, &[data-pressed]),
+		&[data-pressed] {
+			background-color: var(--color-toggle-container);
+		}
+	}
+
+	&:disabled {
+		border-color: none;
+		pointer-events: none;
+		opacity: 0.38;
+	}
+
+	svg {
+		width: 100%;
+		height: 100%;
+		color: inherit;
+	}
+}
