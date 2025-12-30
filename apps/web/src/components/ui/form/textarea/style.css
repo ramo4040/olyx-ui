@@ -1,52 +1,52 @@
 [data-slot="textarea"] {
-	--surface-low: var(--color-surface-container-low);
+  --surface-low: var(--color-surface-container-low);
 
-	min-height: 82px;
-	padding: var(--spacing-10) var(--spacing-12);
-	border: 1px solid var(--color-surface-variant);
-	border-radius: var(--radius-md);
-	background: var(--color-background);
-	outline: 0;
-	box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
-	font: var(--font-body-md);
-	transition: all var(--transition-standard-default-spatial);
-	resize: vertical;
-	color: var(--color-on-background);
+  min-height: 82px;
+  padding: var(--spacing-10) var(--spacing-12);
+  border: 1px solid var(--color-surface-variant);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+  outline: 0;
+  box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
+  font: var(--font-body-md);
+  transition: all var(--transition-standard-default-spatial);
+  resize: vertical;
+  color: var(--color-on-background);
 
-	/* Placeholder */
-	&::placeholder {
-		transition: color var(--transition-standard-default-spatial);
-		color: color-mix(in oklab, currentcolor 50%, transparent);
-	}
+  /* Placeholder */
+  &::placeholder {
+    transition: color var(--transition-standard-default-spatial);
+    color: color-mix(in oklab, currentcolor 50%, transparent);
+  }
 
-	/* Focus */
-	&:focus-within {
-		border-color: var(--color-outline);
-		box-shadow: 0 0 0 2px var(--color-primary-container);
-	}
+  /* Focus */
+  &:focus-within {
+    border-color: var(--color-outline);
+    box-shadow: 0 0 0 2px var(--color-primary-container);
+  }
 
-	/* Hover */
-	&:hover:not(:focus-within, :disabled) {
-		background-color: var(--surface-low);
+  /* Hover */
+  &:hover:not(:focus-within, :disabled) {
+    background-color: var(--surface-low);
 
-		&::placeholder {
-			color: var(--color-on-surface-variant);
-		}
-	}
+    &::placeholder {
+      color: var(--color-on-surface-variant);
+    }
+  }
 
-	/* Disabled */
-	&:disabled {
-		border-color: transparent;
-		background-color: var(--surface-low);
-		box-shadow: none;
-	}
+  /* Disabled */
+  &:disabled {
+    border-color: transparent;
+    background-color: var(--surface-low);
+    box-shadow: none;
+  }
 
-	/* Invalid */
-	&[data-invalid] {
-		border-color: var(--color-error);
+  /* Invalid */
+  &[data-invalid] {
+    border-color: var(--color-error);
 
-		&:focus-within {
-			box-shadow: 0 0 0 2px var(--color-error-container);
-		}
-	}
+    &:focus-within {
+      box-shadow: 0 0 0 2px var(--color-error-container);
+    }
+  }
 }
