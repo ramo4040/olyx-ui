@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import {
-  ToogleExample,
+  SeparatorExample,
+  // ToogleExample,
   // FieldExample,
   // InputsExample,
   // KbdExample,
@@ -49,9 +50,11 @@ export default function Home() {
 				<CheckboxExample />
 				<InputsExample />
 				<KbdExample />
-				<FieldExample /> */}
-
+				<FieldExample /> 
         <ToogleExample />
+        */}
+
+        <SeparatorExample />
       </div>
     </>
   );

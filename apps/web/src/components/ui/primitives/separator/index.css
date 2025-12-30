@@ -1,0 +1,14 @@
+[data-slot="separator"] {
+  background-color: var(--color-surface-variant);
+  flex-shrink: 0;
+
+  &[data-orientation="vertical"] {
+    width: 1px;
+    height: 100%;
+  }
+
+  &[data-orientation="horizontal"] {
+    height: 1px;
+    width: 100%;
+  }
+}
