@@ -1,22 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  SeparatorExample,
-  // ToogleExample,
-  // FieldExample,
-  // InputsExample,
-  // KbdExample,
-  // TextareaExample,
-  // AvatarExamples,
-  // BadgesExamples,
-  // ButtonsExamples,
-  // CheckboxExample,
-  // RadioExample,
-  // SliderExample,
-  // SwitchExample,
-  // SelectExample,
-} from "@/components/examples";
+import { SeparatorExample } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -45,15 +30,14 @@ export default function Home() {
 				<RadioExample />
 				<SwitchExample />
 				<SelectExample />
-				<SliderExample />
 				<TextareaExample />
 				<CheckboxExample />
 				<InputsExample />
 				<KbdExample />
 				<FieldExample /> 
+				<SliderExample />
         <ToogleExample />
         */}
-
         <SeparatorExample />
       </div>
     </>

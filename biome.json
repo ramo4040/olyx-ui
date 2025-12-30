@@ -34,7 +34,7 @@
   },
   "assist": {
     "actions": {
-      "source": { "organizeImports": "on", "useSortedProperties": "off" }
+      "source": { "organizeImports": "on" }
     }
   },
   "linter": {
