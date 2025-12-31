@@ -15,7 +15,7 @@ export const SeparatorExample = () => {
         </Separator>
 
         <Separator variant="content" orientation="vertical">
-          <Button asIcon variant="neutral" mode="lighter" size="sm">
+          <Button asIcon variant="primary" mode="lighter" size="sm">
             <HugeiconsIcon icon={PlusSignIcon} />
           </Button>
         </Separator>
@@ -27,6 +27,9 @@ export const SeparatorExample = () => {
         </Separator>
 
         <Separator style={{ width: 200 }} variant="solid-text">
+          Title Separator
+        </Separator>
+        <Separator style={{ width: 200 }} variant="underline">
           Title Separator
         </Separator>
       </div>
