@@ -7,7 +7,7 @@ export function Separator({
   orientation = "horizontal",
   ...props
 }: SeparatorPrimititve.Props & {
-  variant?: "line" | "solid-text" | "content";
+  variant?: "line" | "solid-text" | "content" | "underline";
 }) {
   return (
     <SeparatorPrimititve

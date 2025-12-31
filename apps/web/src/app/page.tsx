@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SeparatorExample } from "@/components/examples";
+import { AccordionExample, SeparatorExample } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -38,7 +38,9 @@ export default function Home() {
 				<SliderExample />
         <ToogleExample />
         */}
+
         <SeparatorExample />
+        <AccordionExample />
       </div>
     </>
   );
