@@ -1,7 +1,7 @@
-[data-slot="radio-group"] {
+[data-ui="radio-group"] {
   width: 100%;
 
-  [data-slot="radio-group-item"] {
+  [data-ui="radio-group-item"] {
     --radio-size: 20px;
 
     display: grid;
@@ -28,7 +28,7 @@
       }
     }
 
-    [data-slot="radio-group-item-indicator"] {
+    [data-ui="radio-group-item-indicator"] {
       width: var(--spacing-8);
       height: var(--spacing-8);
       background-color: var(--color-primary);
@@ -37,7 +37,7 @@
 
     &[data-checked] {
       &,
-      [data-slot="radio-group-item-indicator"] {
+      [data-ui="radio-group-item-indicator"] {
         border-color: var(--color-primary);
       }
     }
@@ -48,7 +48,7 @@
       border-color: var(--color-outline-variant);
       color: var(--color-on-surface-variant);
 
-      [data-slot="radio-group-item-indicator"] {
+      [data-ui="radio-group-item-indicator"] {
         background-color: var(--color-outline);
       }
     }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AccordionExample, SeparatorExample } from "@/components/examples";
+import { DrawerExample } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -24,7 +24,8 @@ export default function Home() {
         <Switch checked={theme} onCheckedChange={setTheme} />
       </header>
       <div style={{ display: "grid", gap: 40 }}>
-        {/* <ButtonsExamples />
+        {/* 
+        <ButtonsExamples />
 				<AvatarExamples />
 				<BadgesExamples />
 				<RadioExample />
@@ -37,10 +38,11 @@ export default function Home() {
 				<FieldExample /> 
 				<SliderExample />
         <ToogleExample />
-        */}
-
         <SeparatorExample />
         <AccordionExample />
+        */}
+
+        <DrawerExample />
       </div>
     </>
   );

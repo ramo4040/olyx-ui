@@ -32,7 +32,7 @@ function Badge({
     ),
     render,
     state: {
-      slot: "badge",
+      ui: "badge",
       variant: variant || "default",
       size: size || "md",
       shape: shape || "smoothed",

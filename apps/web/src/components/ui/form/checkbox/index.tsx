@@ -6,8 +6,8 @@ import { CheckboxGroup as CheckboxGroupPrimitive } from "@base-ui/react/checkbox
 
 function CheckBox(props: CheckboxPrimitive.Root.Props) {
   return (
-    <CheckboxPrimitive.Root data-slot="checkbox" {...props}>
-      <CheckboxPrimitive.Indicator data-slot="checkbox-indicator" />
+    <CheckboxPrimitive.Root data-ui="checkbox" {...props}>
+      <CheckboxPrimitive.Indicator data-ui="checkbox-indicator" />
     </CheckboxPrimitive.Root>
   );
 }

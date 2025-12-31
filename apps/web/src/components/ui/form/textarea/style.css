@@ -1,4 +1,4 @@
-[data-slot="textarea"] {
+[data-ui="textarea"] {
   --surface-low: var(--color-surface-container-low);
 
   min-height: 82px;

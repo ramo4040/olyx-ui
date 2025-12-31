@@ -12,11 +12,11 @@ import "./style.css";
 const Select = SelectPrimitive.Root;
 
 function SelectGroup({ className, ...props }: SelectPrimitive.Group.Props) {
-  return <SelectPrimitive.Group data-slot="select-group" {...props} />;
+  return <SelectPrimitive.Group data-ui="select-group" {...props} />;
 }
 
 function SelectValue({ className, ...props }: SelectPrimitive.Value.Props) {
-  return <SelectPrimitive.Value data-slot="select-value" {...props} />;
+  return <SelectPrimitive.Value data-ui="select-value" {...props} />;
 }
 
 function SelectTrigger({
@@ -28,12 +28,12 @@ function SelectTrigger({
 }) {
   return (
     <SelectPrimitive.Trigger
-      data-slot="select-trigger"
+      data-ui="select-trigger"
       data-size={size}
       {...props}
     >
       {children}
-      <SelectPrimitive.Icon data-slot="icon">
+      <SelectPrimitive.Icon data-ui="icon">
         <HugeiconsIcon icon={UnfoldMoreIcon} />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
@@ -55,21 +55,21 @@ function SelectContent({
     "align" | "alignOffset" | "side" | "sideOffset" | "alignItemWithTrigger"
   >) {
   return (
-    <SelectPrimitive.Portal data-slot="select-portal">
+    <SelectPrimitive.Portal data-ui="select-portal">
       <SelectPrimitive.Positioner
-        data-slot="select-positioner"
+        data-ui="select-positioner"
         side={side}
         sideOffset={sideOffset}
         align={align}
         alignOffset={alignOffset}
         alignItemWithTrigger={alignItemWithTrigger}
       >
-        <SelectPrimitive.Popup data-slot="select-content" {...props}>
-          <SelectPrimitive.ScrollUpArrow data-slot="scroll-arrow">
+        <SelectPrimitive.Popup data-ui="select-content" {...props}>
+          <SelectPrimitive.ScrollUpArrow data-ui="scroll-arrow">
             <HugeiconsIcon icon={ArrowUp01Icon} />
           </SelectPrimitive.ScrollUpArrow>
           <SelectPrimitive.List>{children}</SelectPrimitive.List>
-          <SelectPrimitive.ScrollDownArrow data-slot="scroll-arrow">
+          <SelectPrimitive.ScrollDownArrow data-ui="scroll-arrow">
             <HugeiconsIcon icon={ArrowDown01Icon} />
           </SelectPrimitive.ScrollDownArrow>
         </SelectPrimitive.Popup>
@@ -82,14 +82,14 @@ function SelectSeparator({
   className,
   ...props
 }: SelectPrimitive.Separator.Props) {
-  return <SelectPrimitive.Separator data-slot="select-separator" {...props} />;
+  return <SelectPrimitive.Separator data-ui="select-separator" {...props} />;
 }
 
 function SelectLabel({
   className,
   ...props
 }: SelectPrimitive.GroupLabel.Props) {
-  return <SelectPrimitive.GroupLabel data-slot="select-label" {...props} />;
+  return <SelectPrimitive.GroupLabel data-ui="select-label" {...props} />;
 }
 
 function SelectItem({
@@ -98,10 +98,10 @@ function SelectItem({
   ...props
 }: SelectPrimitive.Item.Props) {
   return (
-    <SelectPrimitive.Item data-slot="select-item" {...props}>
+    <SelectPrimitive.Item data-ui="select-item" {...props}>
       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
       <SelectPrimitive.ItemIndicator>
-        <span data-slot="select-item-indicator" />
+        <span data-ui="select-item-indicator" />
       </SelectPrimitive.ItemIndicator>
     </SelectPrimitive.Item>
   );

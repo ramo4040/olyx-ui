@@ -1,4 +1,4 @@
-[data-slot="slider"] {
+[data-ui="slider"] {
   --slider-size: 15rem;
   --slider-weight: var(--spacing-16);
   --slider-color: var(--color-primary);
@@ -20,7 +20,7 @@
     height: var(--slider-weight);
   }
 
-  [data-slot="slider-control"] {
+  [data-ui="slider-control"] {
     width: 100%;
     height: 100%;
     border: 1px solid var(--color-outline-variant);
@@ -41,11 +41,11 @@
       background-size: 50px 100%;
     }
 
-    [data-slot="slider-track"] {
+    [data-ui="slider-track"] {
       width: 100%;
       height: 100%;
 
-      [data-slot="slider-indicator"] {
+      [data-ui="slider-indicator"] {
         transition: all var(--transition-standard-fast-spatial);
         background-color: var(--color-background);
         border-radius: var(--radius-xs);
@@ -55,7 +55,7 @@
         }
       }
 
-      [data-slot="slider-thumb"] {
+      [data-ui="slider-thumb"] {
         transition: all var(--transition-standard-fast-spatial);
         &[data-orientation="vertical"] {
           height: 1px;
@@ -80,7 +80,7 @@
         }
       }
 
-      &:not(:has([data-index="1"])) [data-slot="slider-thumb"] {
+      &:not(:has([data-index="1"])) [data-ui="slider-thumb"] {
         &[data-orientation="vertical"] {
           transform: translateY(5px);
         }
@@ -92,7 +92,7 @@
     }
   }
 
-  &:not(&[data-disabled]):hover [data-slot="slider-thumb"] {
+  &:not(&[data-disabled]):hover [data-ui="slider-thumb"] {
     border-width: 2px;
   }
 }

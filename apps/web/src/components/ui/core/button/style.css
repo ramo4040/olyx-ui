@@ -1,4 +1,4 @@
-[data-slot="button"] {
+[data-ui="button"] {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +11,7 @@
   cursor: pointer;
   border-radius: var(--radius-sm);
   transition: all var(--transition-standard-default-spatial);
+  user-select: none;
 
   /* size */
   &[data-size="lg"] {

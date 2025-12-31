@@ -1,10 +1,10 @@
-[data-slot="field"] {
+[data-ui="field"] {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-4);
 }
 
-[data-slot="field-label"] {
+[data-ui="field-label"] {
   color: var(--color-on-background);
   font: var(--font-body-md);
 
@@ -14,7 +14,7 @@
   }
 }
 
-[data-slot="field-description"] {
+[data-ui="field-description"] {
   color: var(--color-on-surface-variant);
   font: var(--font-body-sm);
 
@@ -29,30 +29,30 @@
   }
 }
 
-[data-slot="field-error"] {
+[data-ui="field-error"] {
   color: var(--color-error);
   font: var(--font-body-sm);
 }
 
-[data-slot="field-group"] {
+[data-ui="field-group"] {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-12);
 }
 
-[data-slot="fieldset"] {
+[data-ui="fieldset"] {
   display: flex;
   flex-direction: column;
   border: 0;
   gap: var(--spacing-16);
 
-  [data-slot="fieldset-legend"] {
+  [data-ui="fieldset-legend"] {
     color: var(--color-on-background);
     font: var(--font-body-lg);
     font-weight: 500;
   }
 
-  [data-slot="fieldset-description"] {
+  [data-ui="fieldset-description"] {
     margin-top: -12px;
     color: var(--color-on-surface-variant);
     font: var(--font-body-md);

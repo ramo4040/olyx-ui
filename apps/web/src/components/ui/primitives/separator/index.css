@@ -1,4 +1,4 @@
-[data-slot="separator"] {
+[data-ui="separator"] {
   --separator-color: var(--color-surface-variant);
 
   &[data-orientation="vertical"] {

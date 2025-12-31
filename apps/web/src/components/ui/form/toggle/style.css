@@ -1,4 +1,4 @@
-[data-slot="toggle"] {
+[data-ui="toggle"] {
   display: grid;
   place-content: center;
   width: var(--toggle-size);
@@ -69,7 +69,7 @@
   }
 }
 
-[data-slot="toggle-group"] {
+[data-ui="toggle-group"] {
   display: flex;
   width: fit-content;
   transition: all var(--transition-standard-default-spatial);
@@ -85,7 +85,7 @@
   }
 
   &[data-grouped="true"] {
-    [data-slot="toggle"] {
+    [data-ui="toggle"] {
       border: none;
       border-radius: 0;
     }
@@ -93,7 +93,7 @@
     &[data-variant="primary"] {
       border: 1px solid var(--color-surface-container-highest);
 
-      [data-slot="toggle"]:not(:last-child) {
+      [data-ui="toggle"]:not(:last-child) {
         border-bottom: 1px solid var(--color-surface-container-highest);
       }
     }
