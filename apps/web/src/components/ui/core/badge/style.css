@@ -1,4 +1,4 @@
-[data-slot="badge"] {
+[data-ui="badge"] {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +41,7 @@
     gap: var(--spacing-6);
     font: var(--font-label-md);
 
-    & > [data-slot="badge-dot"] {
+    & > [data-ui="badge-dot"] {
       margin-inline: calc(var(--spacing-6) * -1);
     }
   }
@@ -54,7 +54,7 @@
     font: var(--font-label-sm);
     gap: var(--spacing-8);
 
-    & > [data-slot="badge-dot"] {
+    & > [data-ui="badge-dot"] {
       margin-inline: calc(var(--spacing-8) * -1);
     }
   }

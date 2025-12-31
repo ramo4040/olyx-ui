@@ -1,4 +1,4 @@
-[data-slot="kbd"] {
+[data-ui="kbd"] {
   display: flex;
   align-items: center;
   height: 20px;
@@ -15,7 +15,7 @@
     0 0.5px 0.5px 0 rgba(0, 0, 25, 0.2);
 }
 
-[data-slot="kbd-group"] {
+[data-ui="kbd-group"] {
   display: flex;
   align-items: center;
   gap: var(--spacing-2);

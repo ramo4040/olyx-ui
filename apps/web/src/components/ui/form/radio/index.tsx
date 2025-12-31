@@ -5,13 +5,13 @@ import { Radio as RadioPrimitive } from "@base-ui/react/radio";
 import { RadioGroup as RadioGroupPrimitive } from "@base-ui/react/radio-group";
 
 function RadioGroup(props: RadioGroupPrimitive.Props) {
-  return <RadioGroupPrimitive data-slot="radio-group" {...props} />;
+  return <RadioGroupPrimitive data-ui="radio-group" {...props} />;
 }
 
 function RadioGroupItem(props: RadioPrimitive.Root.Props) {
   return (
-    <RadioPrimitive.Root data-slot="radio-group-item" {...props}>
-      <RadioPrimitive.Indicator data-slot="radio-group-item-indicator" />
+    <RadioPrimitive.Root data-ui="radio-group-item" {...props}>
+      <RadioPrimitive.Indicator data-ui="radio-group-item-indicator" />
     </RadioPrimitive.Root>
   );
 }

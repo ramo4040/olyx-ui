@@ -15,7 +15,8 @@
     "dotenv": "catalog:",
     "next": "^16.1.0",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "vaul-base": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

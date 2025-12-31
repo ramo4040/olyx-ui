@@ -1,4 +1,4 @@
-[data-slot="checkbox"] {
+[data-ui="checkbox"] {
   --checkbox-size: 20px;
   display: inline-flex;
   align-items: center;
@@ -26,7 +26,7 @@
     }
   }
 
-  [data-slot="checkbox-indicator"] {
+  [data-ui="checkbox-indicator"] {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -40,13 +40,13 @@
   &[data-checked],
   &[data-indeterminate] {
     &,
-    [data-slot="checkbox-indicator"] {
+    [data-ui="checkbox-indicator"] {
       border-color: var(--color-primary);
     }
   }
 
   &[data-indeterminate] {
-    [data-slot="checkbox-indicator"] {
+    [data-ui="checkbox-indicator"] {
       height: 0;
       transform: translate(-50%, -50%) rotate(0deg);
       border-inline-end: none;
@@ -60,7 +60,7 @@
     border-color: var(--color-outline-variant);
     color: var(--color-on-surface-variant);
 
-    [data-slot="checkbox-indicator"] {
+    [data-ui="checkbox-indicator"] {
       border-color: var(--color-outline);
     }
   }

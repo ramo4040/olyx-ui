@@ -6,11 +6,11 @@ import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
 function Accordion({ ...props }: AccordionPrimitive.Root.Props) {
-  return <AccordionPrimitive.Root data-slot="accordion" {...props} />;
+  return <AccordionPrimitive.Root data-ui="accordion" {...props} />;
 }
 
 function AccordionItem({ ...props }: AccordionPrimitive.Item.Props) {
-  return <AccordionPrimitive.Item data-slot="accordion-item" {...props} />;
+  return <AccordionPrimitive.Item data-ui="accordion-item" {...props} />;
 }
 
 function AccordionTrigger({
@@ -18,8 +18,8 @@ function AccordionTrigger({
   ...props
 }: AccordionPrimitive.Trigger.Props) {
   return (
-    <AccordionPrimitive.Header data-slot="accordion-header">
-      <AccordionPrimitive.Trigger data-slot="accordion-trigger" {...props}>
+    <AccordionPrimitive.Header data-ui="accordion-header">
+      <AccordionPrimitive.Trigger data-ui="accordion-trigger" {...props}>
         {children}
         <HugeiconsIcon icon={ArrowDown01Icon} />
       </AccordionPrimitive.Trigger>
@@ -28,7 +28,7 @@ function AccordionTrigger({
 }
 
 function AccordionContent({ ...props }: AccordionPrimitive.Panel.Props) {
-  return <AccordionPrimitive.Panel data-slot="accordion-content" {...props} />;
+  return <AccordionPrimitive.Panel data-ui="accordion-content" {...props} />;
 }
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };

@@ -1,4 +1,4 @@
-[data-slot="select-trigger"] {
+[data-ui="select-trigger"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,8 +41,8 @@
   }
 }
 
-[data-slot="select-portal"] {
-  [data-slot="select-positioner"] {
+[data-ui="select-portal"] {
+  [data-ui="select-positioner"] {
     isolation: isolate;
     max-height: var(--available-height);
     width: var(--anchor-width);
@@ -56,30 +56,30 @@
       color-mix(in srgb, var(--color-on-background) 8%, transparent);
     padding: var(--spacing-6);
 
-    [data-slot="select-content"] {
+    [data-ui="select-content"] {
       outline: 0;
 
       > div,
-      [data-slot="select-group"] {
+      [data-ui="select-group"] {
         display: grid;
         gap: var(--spacing-2);
       }
 
-      [data-slot="select-separator"] {
+      [data-ui="select-separator"] {
         height: 1px;
         margin-block: var(--spacing-4);
         margin-inline: calc(var(--spacing--6) * -1);
         background: var(--color-surface-container-highest);
       }
 
-      [data-slot="select-label"] {
+      [data-ui="select-label"] {
         padding-inline: var(--spacing-2);
         font: var(--font-body-sm);
         color: var(--color-on-surface-variant);
         user-select: none;
       }
 
-      [data-slot="select-item"] {
+      [data-ui="select-item"] {
         display: flex;
         justify-content: space-between;
         gap: var(--spacing-4);
@@ -96,7 +96,7 @@
         -webkit-user-select: none;
         user-select: none;
 
-        [data-slot="select-item-indicator"] {
+        [data-ui="select-item-indicator"] {
           display: inline-block;
           width: var(--spacing-6);
           height: var(--spacing-6);
@@ -119,7 +119,7 @@
   }
 }
 
-[data-slot="icon"],
+[data-ui="icon"],
 svg {
   width: 16px;
   height: 16px;

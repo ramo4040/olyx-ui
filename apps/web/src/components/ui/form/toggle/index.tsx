@@ -21,7 +21,7 @@ function Toggle({
 
   return (
     <TogglePrimitive
-      data-slot="toggle"
+      data-ui="toggle"
       data-variant={context.variant || variant}
       data-size={context.size || size}
       {...props}
@@ -42,7 +42,7 @@ function ToggleGroup({
 }: ToggleGroupPremitive.Props & ToggleGroupProps) {
   return (
     <ToggleGroupPremitive
-      data-slot="toggle-group"
+      data-ui="toggle-group"
       data-variant={variant}
       data-grouped={grouped}
       data-size={size}

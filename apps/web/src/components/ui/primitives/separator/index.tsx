@@ -11,7 +11,7 @@ export function Separator({
 }) {
   return (
     <SeparatorPrimititve
-      data-slot="separator"
+      data-ui="separator"
       data-variant={variant}
       orientation={orientation}
       data-orientation={orientation}

@@ -1,5 +1,5 @@
-[data-slot="input"],
-[data-slot="input-wrapper"] {
+[data-ui="input"],
+[data-ui="input-wrapper"] {
   --icon-size: 16px;
   --inline-padding: var(--spacing-10);
   --surface-low: var(--color-surface-container-low);
@@ -54,12 +54,12 @@
   }
 
   /* Input Wrapper */
-  &[data-slot="input-wrapper"] {
+  &[data-ui="input-wrapper"] {
     display: flex;
     place-items: center;
 
     /* Input */
-    [data-slot="input"] {
+    [data-ui="input"] {
       height: 100%;
       flex: 1;
       border: none;
@@ -78,7 +78,7 @@
     }
 
     /* Icon */
-    [data-slot="input-icon"] {
+    [data-ui="input-icon"] {
       svg {
         height: var(--icon-size);
         width: var(--icon-size);
@@ -87,7 +87,7 @@
     }
 
     /* Affix */
-    [data-slot="input-affix"] {
+    [data-ui="input-affix"] {
       height: 100%;
       font: var(--font-body-md);
       user-select: none;
@@ -106,8 +106,8 @@
       }
     }
 
-    [data-slot*="input-affix"],
-    [data-slot="input-icon"] {
+    [data-ui*="input-affix"],
+    [data-ui="input-icon"] {
       display: flex;
       place-items: center;
       color: color-mix(in oklab, currentcolor 50%, transparent);
