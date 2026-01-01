@@ -4,6 +4,7 @@ export { ButtonsExamples } from "./core/buttons";
 export { KbdExample } from "./data-display/kbd";
 export { AccordionExample } from "./disclosure/accordion";
 export { DrawerExample } from "./disclosure/drawer";
+export { DropdownMenuExample } from "./disclosure/dropdown-menu";
 export { CheckboxExample } from "./form/checkbox";
 export { FieldExample } from "./form/field";
 export { InputsExample } from "./form/inputs";

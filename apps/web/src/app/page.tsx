@@ -1,7 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DrawerExample } from "@/components/examples";
+import {
+  DrawerExample,
+  DropdownMenuExample,
+  SelectExample,
+} from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -30,7 +34,6 @@ export default function Home() {
 				<BadgesExamples />
 				<RadioExample />
 				<SwitchExample />
-				<SelectExample />
 				<TextareaExample />
 				<CheckboxExample />
 				<InputsExample />
@@ -40,9 +43,10 @@ export default function Home() {
         <ToogleExample />
         <SeparatorExample />
         <AccordionExample />
+        <SelectExample />
         */}
-
         <DrawerExample />
+        <DropdownMenuExample />
       </div>
     </>
   );

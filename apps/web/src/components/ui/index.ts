@@ -5,6 +5,7 @@ export * from "./core/button";
 export * from "./data-display/kbd";
 export * from "./disclosure/accordion";
 export * from "./disclosure/drawer";
+export * from "./disclosure/dropdown-menu";
 export * from "./form/checkbox";
 export * from "./form/field";
 export * from "./form/input";
