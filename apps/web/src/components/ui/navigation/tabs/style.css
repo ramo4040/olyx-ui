@@ -1,0 +1,156 @@
+[data-ui="tabs"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+
+  &[data-orientation="vertical"] {
+    flex-direction: row;
+  }
+
+  [data-ui="tabs-panel"] {
+    width: 400px;
+  }
+
+  [data-ui="tabs-list"] {
+    --last-tab-width: 2;
+
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: var(--spacing-4);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--spacing-4);
+
+    &:has([data-ui="tabs-tab"]:last-of-type[data-active]) {
+      --last-tab-width: 1;
+    }
+    /*  Tab  */
+    [data-ui="tabs-tab"] {
+      cursor: pointer;
+      padding: var(--spacing-8);
+      border: 0;
+      outline: 0;
+      border-radius: var(--radius-sm);
+      background-color: transparent;
+      color: var(--color-on-background);
+      white-space: nowrap;
+      word-break: keep-all;
+      user-select: none;
+      transition: var(--transition-expressive-slow-effects);
+
+      &:not([data-active]) {
+        opacity: 0.7;
+      }
+
+      &:hover {
+        background-color: var(--color-surface-container);
+      }
+    }
+
+    &[data-orientation="vertical"] {
+      flex-direction: column;
+
+      [data-ui="tabs-tab"] {
+        text-align: left;
+      }
+    }
+
+    /*  Indicator  */
+    [data-ui="tabs-indicator"] {
+      --thum-position: calc(
+        var(--active-tab-left) +
+        (var(--active-tab-width) / var(--last-tab-width))
+      );
+
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(
+        to left in oklab,
+        var(--color-outline-variant) 50%,
+        0%,
+        var(--color-surface-container-highest) 0% 50%
+      );
+      background-size: 300% 100%;
+      background-position: var(--thum-position) 0;
+      transition: var(--transition-expressive-slow-effects);
+
+      &::after,
+      &::before,
+      [data-ui="tabs-indicator-thumb"] {
+        position: absolute;
+        width: var(--spacing-6);
+        height: var(--spacing-6);
+        clip-path: circle();
+      }
+
+      /* Thumb */
+      [data-ui="tabs-indicator-thumb"] {
+        top: 50%;
+        left: var(--thum-position);
+        transform: translateY(-50%);
+        background: var(--color-on-background);
+        transition: var(--transition-expressive-slow-effects);
+      }
+
+      /* start caps */
+      &::after {
+        content: "";
+        top: 50%;
+        left: -3px;
+        transform: translateY(-50%);
+        background: var(--color-outline-variant);
+      }
+
+      /* end caps */
+      &::before {
+        content: "";
+        right: -3px;
+        transform: translateY(-50%);
+        background: var(--color-surface-container-highest);
+      }
+
+      /* Vertical orientation */
+      &[data-orientation="vertical"] {
+        --thum-position: calc(
+          var(--active-tab-top) +
+          (var(--active-tab-height) / var(--last-tab-width))
+        );
+
+        width: 1px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(
+          to top in oklab,
+          var(--color-outline-variant) 50%,
+          0%,
+          var(--color-surface-container-highest) 0% 50%
+        );
+        background-size: 100% 300%;
+        background-position: 0 var(--thum-position);
+
+        [data-ui="tabs-indicator-thumb"] {
+          top: var(--thum-position);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &::after {
+          top: -3px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &::before {
+          bottom: -3px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

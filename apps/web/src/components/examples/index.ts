@@ -16,4 +16,5 @@ export { SliderExample } from "./form/slider";
 export { SwitchExample } from "./form/switch";
 export { TextareaExample } from "./form/textarea";
 export { ToogleExample } from "./form/toggle";
+export { TabsExamples } from "./navigation/tabs";
 export { SeparatorExample } from "./primitives/separator";
