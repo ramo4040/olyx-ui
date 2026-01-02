@@ -1,7 +1,7 @@
 [data-ui="popover-portal"] {
   [data-ui="popover-content"] {
     position: relative;
-    transition: var(--transition-expressive-fast-spatial);
+    transition: var(--transition-expressive-default-spatial);
     border: 1px solid var(--color-surface-variant);
     border-radius: var(--radius-md);
     background-color: var(--color-background);
@@ -27,6 +27,13 @@
         color: var(--color-on-surface-variant);
         font: var(--font-body-md);
       }
+    }
+
+    &[data-starting-style],
+    &[data-ending-style] {
+      filter: blur(10px);
+      scale: 0;
+      opacity: 0;
     }
   }
 }

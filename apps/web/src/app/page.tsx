@@ -5,6 +5,7 @@ import {
   DrawerExample,
   DropdownMenuExample,
   PopoverExamples,
+  SelectExample,
   SpinnerExamples,
   TabsExamples,
   TooltipExamples,
@@ -46,8 +47,8 @@ export default function Home() {
         <ToogleExample />
         <SeparatorExample />
         <AccordionExample />
-        <SelectExample />
         */}
+        <SelectExample />
         <DrawerExample />
         <DropdownMenuExample />
         <PopoverExamples />
