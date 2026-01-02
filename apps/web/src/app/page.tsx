@@ -5,6 +5,7 @@ import {
   DrawerExample,
   DropdownMenuExample,
   PopoverExamples,
+  SpinnerExamples,
   TabsExamples,
   TooltipExamples,
 } from "@/components/examples";
@@ -52,6 +53,7 @@ export default function Home() {
         <PopoverExamples />
         <TooltipExamples />
         <TabsExamples />
+        <SpinnerExamples />
       </div>
     </>
   );
