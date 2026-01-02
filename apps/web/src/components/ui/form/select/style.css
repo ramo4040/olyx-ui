@@ -17,6 +17,13 @@
   transition: var(--transition-standard-default-spatial);
   user-select: none;
 
+  [data-ui="icon"],
+  svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-outline);
+  }
+
   &:not([data-disabled]) {
     &[data-popup-open],
     &:focus-visible {
@@ -117,11 +124,4 @@
       }
     }
   }
-}
-
-[data-ui="icon"],
-svg {
-  width: 16px;
-  height: 16px;
-  color: var(--color-outline);
 }

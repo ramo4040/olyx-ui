@@ -12,22 +12,26 @@ export function PopoverExamples() {
   return (
     <div style={{ display: "flex", gap: "1rem" }}>
       <Popover>
-        <PopoverTrigger>
-          <Button variant="primary" mode="stroke">
-            Open Popover
-          </Button>
-        </PopoverTrigger>
+        <PopoverTrigger
+          render={
+            <Button variant="primary" mode="stroke">
+              Open Popover
+            </Button>
+          }
+        />
         <PopoverContent>
           <p>This is a simple popover content.</p>
         </PopoverContent>
       </Popover>
 
       <Popover>
-        <PopoverTrigger>
-          <Button variant="neutral" mode="ghost">
-            Open Detailed Popover
-          </Button>
-        </PopoverTrigger>
+        <PopoverTrigger
+          render={
+            <Button variant="primary" mode="stroke">
+              Open Popover
+            </Button>
+          }
+        />
         <PopoverContent>
           <PopoverHeader>
             <PopoverTitle>Popover Title</PopoverTitle>

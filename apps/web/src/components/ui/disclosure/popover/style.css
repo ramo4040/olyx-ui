@@ -1,7 +1,3 @@
-[data-slot="popover-trigger"] {
-  all: unset;
-}
-
 [data-ui="popover-portal"] {
   [data-ui="popover-content"] {
     position: relative;
