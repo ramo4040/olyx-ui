@@ -5,6 +5,7 @@ import {
   DrawerExample,
   DropdownMenuExample,
   PopoverExamples,
+  TabsExamples,
   TooltipExamples,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
@@ -50,6 +51,7 @@ export default function Home() {
         <DropdownMenuExample />
         <PopoverExamples />
         <TooltipExamples />
+        <TabsExamples />
       </div>
     </>
   );

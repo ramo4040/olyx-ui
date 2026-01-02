@@ -33,7 +33,6 @@
 
     &[data-starting-style] {
       opacity: 0;
-      scale: 0;
     }
 
     &[data-ending-style] {
