@@ -30,7 +30,6 @@ function DropdownMenuContent({
         side={side}
         sideOffset={sideOffset}
       >
-        <MenuPrimitive.Backdrop data-ui="dropdown-menu-backdrop" />
         <MenuPrimitive.Popup data-ui="dropdown-menu-content" {...props} />
       </MenuPrimitive.Positioner>
     </MenuPrimitive.Portal>

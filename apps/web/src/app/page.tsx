@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import {
   DrawerExample,
   DropdownMenuExample,
-  SelectExample,
+  PopoverExamples,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
@@ -47,6 +47,7 @@ export default function Home() {
         */}
         <DrawerExample />
         <DropdownMenuExample />
+        <PopoverExamples />
       </div>
     </>
   );

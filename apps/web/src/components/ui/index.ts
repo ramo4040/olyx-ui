@@ -6,6 +6,7 @@ export * from "./data-display/kbd";
 export * from "./disclosure/accordion";
 export * from "./disclosure/drawer";
 export * from "./disclosure/dropdown-menu";
+export * from "./disclosure/popover";
 export * from "./form/checkbox";
 export * from "./form/field";
 export * from "./form/input";
