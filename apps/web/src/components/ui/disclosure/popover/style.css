@@ -1,0 +1,32 @@
+[data-ui="popover-portal"] {
+  [data-ui="popover-content"] {
+    position: relative;
+    transition: var(--transition-expressive-fast-spatial);
+    border: 1px solid var(--color-surface-variant);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background);
+    padding: var(--spacing-12);
+    outline: none;
+    max-height: var(--available-height);
+    min-width: var(--anchor-width);
+    width: 250px;
+    transform-origin: var(--transform-origin);
+    box-shadow: 0 5px 20px -10px
+      color-mix(in srgb, var(--color-on-background) 8%, transparent);
+
+    [data-ui="popover-header"] {
+      height: fit-content;
+      margin-bottom: var(--spacing-8);
+
+      [data-ui="popover-title"] {
+        color: var(--color-on-background);
+        font: var(--font-body-lg);
+      }
+
+      [data-ui="popover-description"] {
+        color: var(--color-on-surface-variant);
+        font: var(--font-body-md);
+      }
+    }
+  }
+}

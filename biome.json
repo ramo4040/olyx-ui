@@ -54,6 +54,7 @@
         }
       },
       "a11y": {
+        "noSvgWithoutTitle": "off",
         "noLabelWithoutControl": "off"
       },
       "style": {

@@ -1,0 +1,43 @@
+[data-ui="tooltip-portal"] {
+  [data-ui="tooltip-content"] {
+    border: 0.5px solid var(--color-surface-variant);
+    color: var(--color-background);
+    background-color: var(--color-on-background);
+    transform-origin: var(--transform-origin);
+    max-width: 200px;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    transition: all var(--transition-standard-default-effects);
+
+    /* Size */
+    &[data-size="sm"] {
+      height: 20px;
+      padding-inline: var(--spacing-6);
+      border-radius: var(--radius-xs);
+      font: var(--font-body-sm);
+    }
+
+    &[data-size="md"] {
+      height: 28px;
+      padding-inline: var(--spacing-10);
+      border-radius: calc(var(--radius-sm) - var(--spacing-2));
+      font: var(--font-body-md);
+    }
+
+    &[data-size="lg"] {
+      padding: var(--spacing-12);
+      gap: var(--spacing-12);
+      border-radius: var(--radius-md);
+    }
+
+    &[data-starting-style] {
+      opacity: 0;
+      scale: 0;
+    }
+
+    &[data-ending-style] {
+      scale: 0;
+    }
+  }
+}
