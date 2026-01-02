@@ -6,6 +6,7 @@ export { AccordionExample } from "./disclosure/accordion";
 export { DrawerExample } from "./disclosure/drawer";
 export { DropdownMenuExample } from "./disclosure/dropdown-menu";
 export { PopoverExamples } from "./disclosure/popover";
+export { SpinnerExamples } from "./feedback/spinner";
 export { TooltipExamples } from "./feedback/tooltip";
 export { CheckboxExample } from "./form/checkbox";
 export { FieldExample } from "./form/field";
