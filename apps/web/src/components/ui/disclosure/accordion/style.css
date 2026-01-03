@@ -12,7 +12,7 @@
     --hover-bg: var(--color-surface-container);
 
     font: var(--font-body-md);
-    transition: all var(--transition-expressive-slow-spatial);
+    transition: var(--transition-expressive-default-spatial);
 
     /*Border and border radius setup*/
     border: 1px solid var(--border-color);
@@ -59,7 +59,7 @@
 
       svg {
         color: var(--color-on-surface-variant);
-        transition: transform var(--transition-expressive-default-effects);
+        transition: transform var(--transition-expressive-default-spatial);
         width: var(--spacing-16);
         height: var(--spacing-16);
       }
@@ -72,7 +72,7 @@
     [data-ui="accordion-content"] {
       padding-inline: var(--padding-inline);
       padding-bottom: var(--padding-block);
-      transition: height var(--transition-expressive-fast-spatial);
+      transition: height var(--transition-standard-default-spatial);
       color: var(--color-on-surface-variant);
       height: var(--accordion-panel-height);
       overflow: hidden;
@@ -80,7 +80,7 @@
       > div {
         position: relative;
         top: 0;
-        transition: filter var(--transition-expressive-fast-spatial);
+        transition: filter var(--transition-standard-default-spatial);
       }
 
       &[data-starting-style] {

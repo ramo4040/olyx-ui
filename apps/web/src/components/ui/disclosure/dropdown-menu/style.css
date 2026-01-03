@@ -2,7 +2,7 @@
   [data-ui="dropdown-menu-content"] {
     position: relative;
     width: 250px;
-    transition: var(--transition-expressive-default-spatial);
+    transition: var(--transition-expressive-default-effects);
     border: 1px solid var(--color-surface-variant);
     border-radius: var(--radius-md);
     box-shadow: 0 5px 20px -10px
@@ -11,73 +11,7 @@
     padding: var(--spacing-8);
     outline: none;
 
-    /* Dynamic transform-origin based on side and alignment */
-    /* Side: bottom */
-    &[data-side="bottom"][data-align="start"] {
-      transform-origin: top left;
-    }
-    &[data-side="bottom"][data-align="center"] {
-      transform-origin: top center;
-    }
-    &[data-side="bottom"][data-align="end"] {
-      transform-origin: top right;
-    }
-
-    /* Side: top */
-    &[data-side="top"][data-align="start"] {
-      transform-origin: bottom left;
-    }
-    &[data-side="top"][data-align="center"] {
-      transform-origin: bottom center;
-    }
-    &[data-side="top"][data-align="end"] {
-      transform-origin: bottom right;
-    }
-
-    /* Side: left */
-    &[data-side="left"][data-align="start"] {
-      transform-origin: right top;
-    }
-    &[data-side="left"][data-align="center"] {
-      transform-origin: right center;
-    }
-    &[data-side="left"][data-align="end"] {
-      transform-origin: right bottom;
-    }
-
-    /* Side: right */
-    &[data-side="right"][data-align="start"] {
-      transform-origin: left top;
-    }
-    &[data-side="right"][data-align="center"] {
-      transform-origin: left center;
-    }
-    &[data-side="right"][data-align="end"] {
-      transform-origin: left bottom;
-    }
-
-    /* Side: inline-start */
-    &[data-side="inline-start"][data-align="start"] {
-      transform-origin: right top;
-    }
-    &[data-side="inline-start"][data-align="center"] {
-      transform-origin: right center;
-    }
-    &[data-side="inline-start"][data-align="end"] {
-      transform-origin: right bottom;
-    }
-
-    /* Side: inline-end */
-    &[data-side="inline-end"][data-align="start"] {
-      transform-origin: left top;
-    }
-    &[data-side="inline-end"][data-align="center"] {
-      transform-origin: left center;
-    }
-    &[data-side="inline-end"][data-align="end"] {
-      transform-origin: left bottom;
-    }
-
+    transform-origin: var(--transform-origin);
     &[data-starting-style],
     &[data-ending-style] {
       filter: blur(10px);
