@@ -15,6 +15,7 @@ export * from "./feedback/tooltip";
 export * from "./form/checkbox";
 export * from "./form/field";
 export * from "./form/input";
+export * from "./form/number-field";
 export * from "./form/radio";
 export * from "./form/select";
 export * from "./form/slider";
