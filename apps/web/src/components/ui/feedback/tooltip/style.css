@@ -1,14 +1,25 @@
 [data-ui="tooltip-portal"] {
   [data-ui="tooltip-content"] {
     border: 0.5px solid var(--color-surface-variant);
-    color: var(--color-background);
-    background-color: var(--color-on-background);
+    color: var(--color-tooltip);
+    background-color: var(--color-on-tooltip);
     transform-origin: var(--transform-origin);
     max-width: 200px;
     text-align: center;
     display: grid;
     place-content: center;
-    transition: var(--transition-expressive-default-spatial);
+    transition: var(--transition-standard-fast-effects);
+
+    /* Variant */
+    &[data-variant="light"] {
+      --color-tooltip: var(--color-on-background);
+      --color-on-tooltip: var(--color-background);
+    }
+
+    &[data-variant="dark"] {
+      --color-tooltip: var(--color-background);
+      --color-on-tooltip: var(--color-on-background);
+    }
 
     /* Size */
     &[data-size="sm"] {
@@ -33,9 +44,8 @@
 
     &[data-starting-style],
     &[data-ending-style] {
-      filter: blur(4px);
       opacity: 0;
-      scale: 0;
+      scale: 0.5;
     }
   }
 }

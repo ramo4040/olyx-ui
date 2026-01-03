@@ -1,12 +1,8 @@
 import { Tooltip as TooltipPrimitive } from "@base-ui/react/tooltip";
 import "./style.css";
 
-function TooltipProvider({
-  delay = 100,
-  closeDelay = 1000,
-  ...props
-}: TooltipPrimitive.Provider.Props) {
-  return <TooltipPrimitive.Provider delay={delay} {...props} />;
+function TooltipProvider({ ...props }: TooltipPrimitive.Provider.Props) {
+  return <TooltipPrimitive.Provider {...props} />;
 }
 
 function Tooltip(props: TooltipPrimitive.Root.Props) {
@@ -25,11 +21,15 @@ function TooltipContent({
   align = "center",
   alignOffset = 0,
   side = "top",
+  variant = "dark",
   sideOffset = 6,
   size = "md",
   children,
   ...props
-}: TooltipPrimitive.Popup.Props & { size?: "sm" | "md" | "lg" } & Pick<
+}: TooltipPrimitive.Popup.Props & {
+  size?: "sm" | "md" | "lg";
+  variant?: "dark" | "light";
+} & Pick<
     TooltipPrimitive.Positioner.Props,
     "align" | "alignOffset" | "side" | "sideOffset"
   >) {
@@ -44,6 +44,7 @@ function TooltipContent({
         <TooltipPrimitive.Popup
           data-ui="tooltip-content"
           data-size={size}
+          data-variant={variant}
           {...props}
         >
           {children}
