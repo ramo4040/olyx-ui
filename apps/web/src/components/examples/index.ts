@@ -9,6 +9,7 @@ export { DrawerExample } from "./disclosure/drawer";
 export { DropdownMenuExample } from "./disclosure/dropdown-menu";
 export { MenuBarExamples } from "./disclosure/menu-bar";
 export { PopoverExamples } from "./disclosure/popover";
+export { PreviewCardExamples } from "./feedback/preview-card";
 export { SpinnerExamples } from "./feedback/spinner";
 export { TooltipExamples } from "./feedback/tooltip";
 export { CheckboxExample } from "./form/checkbox";
