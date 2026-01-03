@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import {
-  ProgressExamples,
-  SliderExample,
-  TabsExamples,
+  CollapsibleExamples,
+  DropdownMenuExample,
+  MenuBarExamples,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
@@ -35,6 +35,7 @@ export default function Home() {
 				<RadioExample />
 				<SwitchExample />
 				<TextareaExample />
+        <SpinnerExamples />
 				<CheckboxExample />
 				<InputsExample />
 				<KbdExample />
@@ -44,14 +45,15 @@ export default function Home() {
         <AccordionExample />
         <SelectExample />
         <DrawerExample />
-        <DropdownMenuExample />
         <PopoverExamples />
         <TooltipExamples />
-        <SpinnerExamples />
-        */}
         <TabsExamples />
         <SliderExample />
         <ProgressExamples />
+        */}
+        <DropdownMenuExample />
+        <CollapsibleExamples />
+        <MenuBarExamples />
       </div>
     </>
   );

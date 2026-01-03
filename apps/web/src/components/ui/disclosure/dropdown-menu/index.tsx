@@ -1,7 +1,9 @@
 "use client";
 
+import { HugeiconsIcon } from "@hugeicons/react";
 import "./style.css";
 import { Menu as MenuPrimitive } from "@base-ui/react/menu";
+import { ArrowDown } from "@hugeicons/core-free-icons";
 
 function DropdownMenu(props: MenuPrimitive.Root.Props) {
   return <MenuPrimitive.Root {...props} />;
@@ -14,7 +16,7 @@ function DropdownMenuTrigger(props: MenuPrimitive.Trigger.Props) {
 function DropdownMenuContent({
   align = "start",
   alignOffset = 0,
-  side = "inline-start",
+  side,
   sideOffset = 6,
   ...props
 }: MenuPrimitive.Popup.Props &
@@ -60,12 +62,18 @@ function DropdownMenuSubmenu(props: MenuPrimitive.SubmenuRoot.Props) {
   return <MenuPrimitive.SubmenuRoot {...props} />;
 }
 
-function DropdownMenuSubmenuTrigger(props: MenuPrimitive.SubmenuTrigger.Props) {
+function DropdownMenuSubmenuTrigger({
+  children,
+  ...props
+}: MenuPrimitive.SubmenuTrigger.Props) {
   return (
     <MenuPrimitive.SubmenuTrigger
       data-ui="dropdown-menu-submenu-trigger"
       {...props}
-    />
+    >
+      {children}
+      <HugeiconsIcon icon={ArrowDown} />
+    </MenuPrimitive.SubmenuTrigger>
   );
 }
 
