@@ -9,15 +9,14 @@ export const Spinner = ({
   return (
     <div data-ui="spinner" data-size={size} {...props}>
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        fill="hsl(228, 97%, 42%)"
         viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+        <path
+          fill="var(--color-on-background)"
+          d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z"
+        />
       </svg>
     </div>
   );

@@ -8,7 +8,7 @@
     text-align: center;
     display: grid;
     place-content: center;
-    transition: all var(--transition-standard-default-effects);
+    transition: var(--transition-expressive-default-spatial);
 
     /* Size */
     &[data-size="sm"] {
@@ -31,11 +31,10 @@
       border-radius: var(--radius-md);
     }
 
-    &[data-starting-style] {
-      opacity: 0;
-    }
-
+    &[data-starting-style],
     &[data-ending-style] {
+      filter: blur(4px);
+      opacity: 0;
       scale: 0;
     }
   }

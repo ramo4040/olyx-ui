@@ -2,12 +2,9 @@
 
 import { useEffect, useState } from "react";
 import {
-  DrawerExample,
-  DropdownMenuExample,
-  PopoverExamples,
-  SpinnerExamples,
+  ProgressExamples,
+  SliderExample,
   TabsExamples,
-  TooltipExamples,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
@@ -42,18 +39,19 @@ export default function Home() {
 				<InputsExample />
 				<KbdExample />
 				<FieldExample /> 
-				<SliderExample />
         <ToogleExample />
         <SeparatorExample />
         <AccordionExample />
         <SelectExample />
-        */}
         <DrawerExample />
         <DropdownMenuExample />
         <PopoverExamples />
         <TooltipExamples />
-        <TabsExamples />
         <SpinnerExamples />
+        */}
+        <TabsExamples />
+        <SliderExample />
+        <ProgressExamples />
       </div>
     </>
   );
