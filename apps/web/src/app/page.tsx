@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import {
+  ButtonsExamples,
   CollapsibleExamples,
   DropdownMenuExample,
   MenuBarExamples,
+  NumberFieldExamples,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
@@ -29,7 +31,6 @@ export default function Home() {
       </header>
       <div style={{ display: "grid", gap: 40 }}>
         {/* 
-        <ButtonsExamples />
 				<AvatarExamples />
 				<BadgesExamples />
 				<RadioExample />
@@ -51,6 +52,8 @@ export default function Home() {
         <SliderExample />
         <ProgressExamples />
         */}
+        <ButtonsExamples />
+        <NumberFieldExamples />
         <DropdownMenuExample />
         <CollapsibleExamples />
         <MenuBarExamples />

@@ -14,6 +14,7 @@ export { TooltipExamples } from "./feedback/tooltip";
 export { CheckboxExample } from "./form/checkbox";
 export { FieldExample } from "./form/field";
 export { InputsExample } from "./form/inputs";
+export { NumberFieldExamples } from "./form/number-field";
 export { RadioExample } from "./form/radio";
 export { SelectExample } from "./form/select";
 export { SliderExample } from "./form/slider";

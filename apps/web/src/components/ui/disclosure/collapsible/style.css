@@ -52,6 +52,10 @@
     overflow: hidden;
     transition: all var(--transition-expressive-default-effects);
 
+    &[hidden]:not([hidden="until-found"]) {
+      display: none;
+    }
+
     &[data-ending-style] {
       padding-block: 0;
     }
