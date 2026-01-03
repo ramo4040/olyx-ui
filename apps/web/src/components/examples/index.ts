@@ -7,6 +7,7 @@ export { AccordionExample } from "./disclosure/accordion";
 export { CollapsibleExamples } from "./disclosure/collapsible";
 export { DrawerExample } from "./disclosure/drawer";
 export { DropdownMenuExample } from "./disclosure/dropdown-menu";
+export { MenuBarExamples } from "./disclosure/menu-bar";
 export { PopoverExamples } from "./disclosure/popover";
 export { SpinnerExamples } from "./feedback/spinner";
 export { TooltipExamples } from "./feedback/tooltip";

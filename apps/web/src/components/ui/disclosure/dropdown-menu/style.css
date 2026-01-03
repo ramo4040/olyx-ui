@@ -24,6 +24,7 @@
     [data-ui="dropdown-menu-radio-item"],
     [data-ui="dropdown-menu-submenu-trigger"] {
       display: flex;
+      justify-content: space-between;
       gap: var(--spacing-8);
       position: relative;
       align-items: center;

@@ -46,9 +46,20 @@
     border: 1px solid var(--color-surface-container-highest);
     background: var(--color-background);
     border-radius: var(--radius-sm);
-    transition: all var(--transition-standard-default-spatial);
     height: var(--collapsible-panel-height);
-    box-shadow: 0 10px 20px -10px
+    box-shadow: 0 10px 15px -8px
       color-mix(in srgb, var(--color-on-background) 8%, transparent);
+    overflow: hidden;
+    transition: all var(--transition-expressive-default-effects);
+
+    &[data-ending-style] {
+      padding-block: 0;
+    }
+
+    &[data-starting-style],
+    &[data-ending-style] {
+      height: 0;
+      opacity: 0;
+    }
   }
 }

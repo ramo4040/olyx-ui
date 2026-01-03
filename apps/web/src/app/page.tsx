@@ -1,7 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { CollapsibleExamples } from "@/components/examples";
+import {
+  CollapsibleExamples,
+  DropdownMenuExample,
+  MenuBarExamples,
+} from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -41,14 +45,15 @@ export default function Home() {
         <AccordionExample />
         <SelectExample />
         <DrawerExample />
-        <DropdownMenuExample />
         <PopoverExamples />
         <TooltipExamples />
         <TabsExamples />
         <SliderExample />
         <ProgressExamples />
         */}
+        <DropdownMenuExample />
         <CollapsibleExamples />
+        <MenuBarExamples />
       </div>
     </>
   );

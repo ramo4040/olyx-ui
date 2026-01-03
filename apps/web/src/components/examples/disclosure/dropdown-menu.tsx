@@ -1,5 +1,4 @@
 import {
-  ArrowDown,
   Moon02Icon,
   Notification02Icon,
   Settings03Icon,
@@ -45,7 +44,6 @@ export const DropdownMenuExample = () => {
               <DropdownMenuSubmenuTrigger>
                 <HugeiconsIcon icon={Settings03Icon} />
                 <span style={{ flex: 1 }}>Settings</span>
-                <HugeiconsIcon icon={ArrowDown} />
               </DropdownMenuSubmenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem>
