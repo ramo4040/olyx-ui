@@ -1,0 +1,54 @@
+[data-ui="collapsible"] {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--color-surface-container-low);
+  border-radius: var(--radius-sm);
+  font: var(--font-body-md);
+  transition: var(--transition-expressive-default-spatial);
+
+  &:hover {
+    background-color: var(--color-surface-container-high);
+  }
+
+  [data-ui="collapsible-trigger"] {
+    color: var(--color-on-background);
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    display: flex;
+    gap: var(--spacing-8);
+    padding: var(--spacing-6) var(--spacing-12);
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary-container);
+    }
+
+    svg {
+      transition: var(--transition-expressive-default-spatial);
+      width: 16px;
+      height: 16px;
+      color: inherit;
+    }
+
+    &[data-panel-open] svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  [data-ui="collapsible-panel"] {
+    padding: var(--spacing-8) var(--spacing-16);
+    border: 1px solid var(--color-surface-container-highest);
+    background: var(--color-background);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-standard-default-spatial);
+    height: var(--collapsible-panel-height);
+    box-shadow: 0 10px 20px -10px
+      color-mix(in srgb, var(--color-on-background) 8%, transparent);
+  }
+}

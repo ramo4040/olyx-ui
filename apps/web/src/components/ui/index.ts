@@ -5,6 +5,7 @@ export * from "./core/button";
 export * from "./data-display/kbd";
 export * from "./data-display/progress";
 export * from "./disclosure/accordion";
+export * from "./disclosure/collapsible";
 export * from "./disclosure/drawer";
 export * from "./disclosure/dropdown-menu";
 export * from "./disclosure/popover";

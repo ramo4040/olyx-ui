@@ -1,17 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  AccordionExample,
-  DrawerExample,
-  DropdownMenuExample,
-  PopoverExamples,
-  ProgressExamples,
-  SelectExample,
-  SliderExample,
-  TabsExamples,
-  TooltipExamples,
-} from "@/components/examples";
+import { CollapsibleExamples } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -48,7 +38,6 @@ export default function Home() {
 				<FieldExample /> 
         <ToogleExample />
         <SeparatorExample />
-        */}
         <AccordionExample />
         <SelectExample />
         <DrawerExample />
@@ -58,6 +47,8 @@ export default function Home() {
         <TabsExamples />
         <SliderExample />
         <ProgressExamples />
+        */}
+        <CollapsibleExamples />
       </div>
     </>
   );

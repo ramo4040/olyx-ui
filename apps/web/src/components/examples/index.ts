@@ -4,6 +4,7 @@ export { ButtonsExamples } from "./core/buttons";
 export { KbdExample } from "./data-display/kbd";
 export { ProgressExamples } from "./data-display/progress";
 export { AccordionExample } from "./disclosure/accordion";
+export { CollapsibleExamples } from "./disclosure/collapsible";
 export { DrawerExample } from "./disclosure/drawer";
 export { DropdownMenuExample } from "./disclosure/dropdown-menu";
 export { PopoverExamples } from "./disclosure/popover";
