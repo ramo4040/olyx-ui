@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import {
   AlertDialogExample,
+  AlertExample,
   DialogExamples,
   MenuBarExamples,
   NumberFieldExamples,
@@ -62,6 +63,7 @@ export default function Home() {
         <ToolbarExample />
         <DialogExamples />
         <AlertDialogExample />
+        <AlertExample />
       </div>
     </>
   );
