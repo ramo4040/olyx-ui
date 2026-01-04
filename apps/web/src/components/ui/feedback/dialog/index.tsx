@@ -1,13 +1,14 @@
 "use client";
 
+import "../../shared/dialog-base.css";
 import "./style.css";
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 import { Cancel01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Button } from "../../core/button";
 
-function Dialog({ ...props }: DialogPrimitive.Root.Props) {
-  return <DialogPrimitive.Root data-ui="dialog" {...props} />;
+function Dialog(props: DialogPrimitive.Root.Props) {
+  return <DialogPrimitive.Root {...props} />;
 }
 
 function DialogTrigger({ ...props }: DialogPrimitive.Trigger.Props) {
