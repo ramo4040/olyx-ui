@@ -26,22 +26,18 @@ function NumberFieldScrubArea({
   );
 }
 
-function NumberFieldGroup({
-  variant = "default",
-  children,
-  ...props
-}: NumberFieldPrimitive.Group.Props & {
-  variant?: "default" | "end-aligned";
-}) {
+function NumberFieldGroup(props: NumberFieldPrimitive.Group.Props) {
   return (
     <NumberFieldPrimitive.Group
       data-ui="number-field-control-group"
-      data-variant={variant}
       {...props}
-    >
-      {children}
-      <NumberFieldPrimitive.Input data-slot="number-field-input" />
-    </NumberFieldPrimitive.Group>
+    />
+  );
+}
+
+function NumberFieldInput(props: NumberFieldPrimitive.Input.Props) {
+  return (
+    <NumberFieldPrimitive.Input data-slot="number-field-input" {...props} />
   );
 }
 
@@ -67,6 +63,7 @@ export {
   NumberField,
   NumberFieldScrubArea,
   NumberFieldGroup,
+  NumberFieldInput,
   NumberFieldIncrement,
   NumberFieldDecrement,
 };

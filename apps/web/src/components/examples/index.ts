@@ -23,4 +23,5 @@ export { SwitchExample } from "./form/switch";
 export { TextareaExample } from "./form/textarea";
 export { ToogleExample } from "./form/toggle";
 export { TabsExamples } from "./navigation/tabs";
+export { ToolbarExample } from "./navigation/toolbar";
 export { SeparatorExample } from "./primitives/separator";

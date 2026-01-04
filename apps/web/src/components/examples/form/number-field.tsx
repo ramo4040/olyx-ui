@@ -6,13 +6,14 @@ import {
   NumberFieldDecrement,
   NumberFieldGroup,
   NumberFieldIncrement,
+  NumberFieldInput,
   NumberFieldScrubArea,
 } from "@/components/ui";
 
 export const NumberFieldExamples = () => {
   return (
     <div style={{ display: "flex", gap: 18, width: 600 }}>
-      <NumberField>
+      <NumberField defaultValue={100}>
         <NumberFieldScrubArea>Value</NumberFieldScrubArea>
         <NumberFieldGroup>
           <NumberFieldIncrement
@@ -22,6 +23,8 @@ export const NumberFieldExamples = () => {
               </Button>
             }
           />
+
+          <NumberFieldInput />
 
           <NumberFieldDecrement
             render={
@@ -33,9 +36,11 @@ export const NumberFieldExamples = () => {
         </NumberFieldGroup>
       </NumberField>
 
-      <NumberField disabled>
+      <NumberField defaultValue={50} disabled>
         <NumberFieldScrubArea>Value</NumberFieldScrubArea>
-        <NumberFieldGroup variant="end-aligned">
+        <NumberFieldGroup>
+          <NumberFieldInput />
+
           <NumberFieldIncrement
             render={
               <Button variant="neutral" mode="lighter" size="sm" asIcon>
