@@ -117,8 +117,11 @@
           text-decoration: line-through;
         }
 
-        &:hover:not([data-disabled]) {
-          background-color: var(--color-surface-container-high);
+        &:not([data-disabled]) {
+          &:hover,
+          &:focus-visible {
+            background-color: var(--color-surface-container-high);
+          }
         }
       }
 

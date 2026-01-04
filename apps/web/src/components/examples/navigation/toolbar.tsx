@@ -27,6 +27,8 @@ import {
   ToggleGroup,
   Toolbar,
   ToolbarButton,
+  ToolbarGroup,
+  ToolbarInput,
   ToolbarSeparator,
   Tooltip,
   TooltipContent,
@@ -39,9 +41,9 @@ export function ToolbarExample() {
       {/* Text Formatting Toolbar */}
       <Toolbar>
         <Select>
-          <SelectTrigger size="sm">
+          <ToolbarButton render={<SelectTrigger size="sm" />}>
             <SelectValue>Font 1</SelectValue>
-          </SelectTrigger>
+          </ToolbarButton>
           <SelectContent>
             <SelectItem value="f1">Font 1</SelectItem>
             <SelectItem value="f2">Font 2</SelectItem>
@@ -60,7 +62,7 @@ export function ToolbarExample() {
               }
             />
 
-            <NumberFieldInput />
+            <ToolbarInput render={<NumberFieldInput />} />
 
             <NumberFieldDecrement
               render={
@@ -74,103 +76,101 @@ export function ToolbarExample() {
 
         <ToolbarSeparator />
 
-        <ToggleGroup variant="ghost" grouped multiple>
-          <ToolbarButton
-            render={
-              <Tooltip>
-                <TooltipTrigger
+        <ToolbarGroup render={<ToggleGroup variant="ghost" grouped multiple />}>
+          <Tooltip>
+            <TooltipTrigger
+              render={
+                <ToolbarButton
                   render={
                     <Toggle aria-label="Bold" variant="ghost">
                       <HugeiconsIcon icon={TextBoldIcon} />
                     </Toggle>
                   }
                 />
-                <TooltipContent>Bold</TooltipContent>
-              </Tooltip>
-            }
-          />
+              }
+            />
+            <TooltipContent>Bold</TooltipContent>
+          </Tooltip>
 
-          <ToolbarButton
-            render={
-              <Tooltip>
-                <TooltipTrigger
+          <Tooltip>
+            <TooltipTrigger
+              render={
+                <ToolbarButton
                   render={
                     <Toggle aria-label="Italic" variant="ghost">
                       <HugeiconsIcon icon={TextItalicIcon} />
                     </Toggle>
                   }
                 />
+              }
+            />
+            <TooltipContent>Italic</TooltipContent>
+          </Tooltip>
 
-                <TooltipContent>Italic</TooltipContent>
-              </Tooltip>
-            }
-          />
-
-          <ToolbarButton
-            render={
-              <Tooltip>
-                <TooltipTrigger
+          <Tooltip>
+            <TooltipTrigger
+              render={
+                <ToolbarButton
                   render={
                     <Toggle aria-label="Underline" variant="ghost">
                       <HugeiconsIcon icon={TextUnderlineIcon} />
                     </Toggle>
                   }
                 />
-
-                <TooltipContent>Underline</TooltipContent>
-              </Tooltip>
-            }
-          />
-        </ToggleGroup>
+              }
+            />
+            <TooltipContent>Underline</TooltipContent>
+          </Tooltip>
+        </ToolbarGroup>
 
         <ToolbarSeparator />
 
-        <ToggleGroup variant="ghost" grouped={false}>
-          <ToolbarButton
-            render={
-              <Tooltip>
-                <TooltipTrigger
+        <ToolbarGroup render={<ToggleGroup variant="ghost" grouped={false} />}>
+          <Tooltip>
+            <TooltipTrigger
+              render={
+                <ToolbarButton
                   render={
                     <Toggle aria-label="Align left" variant="ghost">
                       <HugeiconsIcon icon={TextAlignLeft01Icon} />
                     </Toggle>
                   }
                 />
-                <TooltipContent>Align Left</TooltipContent>
-              </Tooltip>
-            }
-          />
-          <ToolbarButton
-            render={
-              <Tooltip>
-                <TooltipTrigger
+              }
+            />
+            <TooltipContent>Align Left</TooltipContent>
+          </Tooltip>
+
+          <Tooltip>
+            <TooltipTrigger
+              render={
+                <ToolbarButton
                   render={
                     <Toggle aria-label="Align center" variant="ghost">
                       <HugeiconsIcon icon={TextAlignCenterIcon} />
                     </Toggle>
                   }
                 />
+              }
+            />
+            <TooltipContent>Align Center</TooltipContent>
+          </Tooltip>
 
-                <TooltipContent>Align Center</TooltipContent>
-              </Tooltip>
-            }
-          />
-          <ToolbarButton
-            render={
-              <Tooltip>
-                <TooltipTrigger
+          <Tooltip>
+            <TooltipTrigger
+              render={
+                <ToolbarButton
                   render={
                     <Toggle aria-label="Align right" variant="ghost">
                       <HugeiconsIcon icon={TextAlignRight01Icon} />
                     </Toggle>
                   }
                 />
-
-                <TooltipContent>Align Right</TooltipContent>
-              </Tooltip>
-            }
-          />
-        </ToggleGroup>
+              }
+            />
+            <TooltipContent>Align Right</TooltipContent>
+          </Tooltip>
+        </ToolbarGroup>
       </Toolbar>
     </div>
   );

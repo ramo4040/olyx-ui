@@ -31,7 +31,7 @@ function ToolbarGroup(props: ToolBarPrimitive.Group.Props) {
 }
 
 function ToolbarInput(props: ToolBarPrimitive.Input.Props) {
-  return <ToolBarPrimitive.Input data-slot="toolbar-input" {...props} />;
+  return <ToolBarPrimitive.Input {...props} />;
 }
 
 export {
