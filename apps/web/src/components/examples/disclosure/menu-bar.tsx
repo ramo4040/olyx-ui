@@ -16,7 +16,7 @@ import {
 export const MenuBarExamples = () => {
   return (
     <Menubar>
-      <MenubarMenu>
+      <MenubarMenu disabled>
         <MenubarTrigger>File</MenubarTrigger>
         <MenubarContent>
           <MenubarItem>
