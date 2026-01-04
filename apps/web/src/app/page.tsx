@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import {
+  DialogExamples,
   MenuBarExamples,
   NumberFieldExamples,
   ToogleExample,
@@ -53,11 +54,12 @@ export default function Home() {
         <DropdownMenuExample />
         <PreviewCardExamples />
         <TooltipExamples />
-        */}
         <NumberFieldExamples />
-        <MenuBarExamples />
         <ToogleExample />
+        */}
+        <MenuBarExamples />
         <ToolbarExample />
+        <DialogExamples />
       </div>
     </>
   );
