@@ -10,6 +10,7 @@ export * from "./disclosure/drawer";
 export * from "./disclosure/dropdown-menu";
 export * from "./disclosure/menu-bar";
 export * from "./disclosure/popover";
+export * from "./feedback/dialog";
 export * from "./feedback/preview-card";
 export * from "./feedback/spinner";
 export * from "./feedback/tooltip";
