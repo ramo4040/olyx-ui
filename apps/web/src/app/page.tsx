@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import {
   MenuBarExamples,
   NumberFieldExamples,
-  PreviewCardExamples,
-  TooltipExamples,
+  ToogleExample,
+  ToolbarExample,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
@@ -40,7 +40,6 @@ export default function Home() {
 				<InputsExample />
 				<KbdExample />
 				<FieldExample /> 
-        <ToogleExample />
         <SeparatorExample />
         <AccordionExample />
         <SelectExample />
@@ -52,11 +51,13 @@ export default function Home() {
         <CollapsibleExamples />
         <ButtonsExamples />
         <DropdownMenuExample />
+        <PreviewCardExamples />
+        <TooltipExamples />
         */}
         <NumberFieldExamples />
         <MenuBarExamples />
-        <TooltipExamples />
-        <PreviewCardExamples />
+        <ToogleExample />
+        <ToolbarExample />
       </div>
     </>
   );
