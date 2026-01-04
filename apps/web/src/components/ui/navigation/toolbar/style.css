@@ -12,6 +12,11 @@
     width: var(--spacing-16);
   }
 
+  [data-slot="toolbar-button"] {
+    border: 0;
+    outline: 0;
+  }
+
   [data-slot="toolbar-separator"] {
     height: 60%;
   }
