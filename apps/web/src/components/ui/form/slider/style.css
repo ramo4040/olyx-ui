@@ -47,13 +47,11 @@
       height: 100%;
 
       [data-ui="slider-indicator"] {
-        transition: all var(--transition-standard-fast-spatial);
         background-color: var(--color-background);
         border-radius: var(--radius-xs);
       }
 
       [data-ui="slider-thumb"] {
-        transition: all var(--transition-standard-fast-spatial);
         &[data-orientation="vertical"] {
           height: 1px;
           width: 50%;
