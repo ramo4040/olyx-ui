@@ -5,6 +5,7 @@ export { KbdExample } from "./data-display/kbd";
 export { ProgressExamples } from "./data-display/progress";
 export { AccordionExample } from "./disclosure/accordion";
 export { CollapsibleExamples } from "./disclosure/collapsible";
+export { ContextMenuExample } from "./disclosure/context-menu";
 export { DrawerExample } from "./disclosure/drawer";
 export { DropdownMenuExample } from "./disclosure/dropdown-menu";
 export { MenuBarExamples } from "./disclosure/menu-bar";

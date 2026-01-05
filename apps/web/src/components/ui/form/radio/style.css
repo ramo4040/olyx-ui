@@ -45,7 +45,7 @@
     &[aria-disabled] {
       background-color: var(--color-surface-variant);
       cursor: default;
-      border-color: var(--color-outline-variant);
+      border-color: var(--color-surface-container-highest);
       color: var(--color-on-surface-variant);
 
       [data-ui="radio-group-item-indicator"] {

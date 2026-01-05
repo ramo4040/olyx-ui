@@ -1,25 +1,29 @@
 @import url("./_base/colors.css");
 @import url("./_base/tokens.css");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-family);
-}
+@layer reset, base;
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  padding-inline: 150px;
-  padding-block: 50px;
-  background-color: var(--color-background);
-  color: var(--color-on-background);
-  font: var(--font-body-md);
-}
+@layer reset {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+  }
 
-.root {
-  isolation: isolate;
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-inline: 150px;
+    padding-block: 50px;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font: var(--font-body-md);
+  }
+
+  .root {
+    isolation: isolate;
+  }
 }
