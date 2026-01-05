@@ -3,11 +3,10 @@
 import { useEffect, useState } from "react";
 import {
   AlertDialogExample,
-  AlertExample,
+  ContextMenuExample,
   DialogExamples,
+  DropdownMenuExample,
   MenuBarExamples,
-  NumberFieldExamples,
-  ToogleExample,
   ToolbarExample,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
@@ -32,17 +31,16 @@ export default function Home() {
         <Switch checked={theme} onCheckedChange={setTheme} />
       </header>
       <div style={{ display: "grid", gap: 40 }}>
-        {/* 
-				<AvatarExamples />
-				<BadgesExamples />
-				<RadioExample />
-				<SwitchExample />
-				<TextareaExample />
+        {/* <AvatarExamples />
+        <BadgesExamples />
+        <RadioExample />
+        <SwitchExample />
+        <TextareaExample />
         <SpinnerExamples />
-				<CheckboxExample />
-				<InputsExample />
-				<KbdExample />
-				<FieldExample /> 
+        <CheckboxExample />
+        <InputsExample />
+        <KbdExample />
+        <FieldExample />
         <SeparatorExample />
         <AccordionExample />
         <SelectExample />
@@ -53,17 +51,19 @@ export default function Home() {
         <ProgressExamples />
         <CollapsibleExamples />
         <ButtonsExamples />
-        <DropdownMenuExample />
         <PreviewCardExamples />
         <TooltipExamples />
         <NumberFieldExamples />
-        <ToogleExample />
+        <ToogleExample /> 
+        <AlertExample />
         */}
+
+        <DropdownMenuExample />
         <MenuBarExamples />
         <ToolbarExample />
         <DialogExamples />
         <AlertDialogExample />
-        <AlertExample />
+        <ContextMenuExample />
       </div>
     </>
   );
