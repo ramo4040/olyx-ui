@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import {
   AlertDialogExample,
-  ContextMenuExample,
   DialogExamples,
   DropdownMenuExample,
   MenuBarExamples,
+  ScrollAreaExample,
   ToolbarExample,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
@@ -31,7 +31,8 @@ export default function Home() {
         <Switch checked={theme} onCheckedChange={setTheme} />
       </header>
       <div style={{ display: "grid", gap: 40 }}>
-        {/* <AvatarExamples />
+        {/*
+         <AvatarExamples />
         <BadgesExamples />
         <RadioExample />
         <SwitchExample />
@@ -54,8 +55,9 @@ export default function Home() {
         <PreviewCardExamples />
         <TooltipExamples />
         <NumberFieldExamples />
-        <ToogleExample /> 
+        <ToogleExample />
         <AlertExample />
+        <ContextMenuExample /> 
         */}
 
         <DropdownMenuExample />
@@ -63,7 +65,7 @@ export default function Home() {
         <ToolbarExample />
         <DialogExamples />
         <AlertDialogExample />
-        <ContextMenuExample />
+        <ScrollAreaExample />
       </div>
     </>
   );
