@@ -53,6 +53,9 @@
           }
         }
       },
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      },
       "a11y": {
         "noSvgWithoutTitle": "off",
         "noLabelWithoutControl": "off"
