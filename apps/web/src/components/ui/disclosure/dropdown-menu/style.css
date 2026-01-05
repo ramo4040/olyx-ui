@@ -40,9 +40,6 @@
       white-space: nowrap;
       cursor: pointer;
       border-left: 2px solid transparent;
-      background:
-        linear-gradient(var(--color-surface-container-low) 0 0) left /
-        var(--d, 0%) 100% no-repeat;
 
       /* Icon */
       svg {
@@ -67,7 +64,7 @@
         &:hover,
         &:focus-visible {
           border-left-color: var(--color-primary-container);
-          --d: 100%;
+          background-color: var(--color-surface-container-low);
         }
       }
     }
