@@ -1,5 +1,5 @@
-[data-ui="dropdown-menu-portal"] {
-  [data-ui="dropdown-menu-content"] {
+@layer base {
+  [data-ui$="-menu-content"] {
     position: relative;
     width: 250px;
     transition: var(--transition-expressive-default-effects);
@@ -19,10 +19,10 @@
       scale: 0;
     }
 
-    [data-ui="dropdown-menu-item"],
-    [data-ui="dropdown-menu-checkbox-item"],
-    [data-ui="dropdown-menu-radio-item"],
-    [data-ui="dropdown-menu-submenu-trigger"] {
+    [data-ui$="-menu-item"],
+    [data-ui$="-menu-checkbox-item"],
+    [data-ui$="-menu-radio-item"],
+    [data-ui$="-menu-submenu-trigger"] {
       display: flex;
       justify-content: space-between;
       gap: var(--spacing-8);
@@ -69,14 +69,14 @@
       }
     }
 
-    [data-ui="dropdown-menu-checkbox-item"],
-    [data-ui="dropdown-menu-radio-item"] {
+    [data-ui$="-menu-checkbox-item"],
+    [data-ui$="-menu-radio-item"] {
       > div {
         flex: 1;
       }
 
-      [data-ui="dropdown-menu-checkbox-indicator"],
-      [data-ui="dropdown-menu-radio-indicator"] {
+      [data-ui$="-menu-checkbox-indicator"],
+      [data-ui$="-menu-radio-indicator"] {
         display: inline-block;
         width: var(--spacing-6);
         height: var(--spacing-6);
@@ -85,14 +85,14 @@
       }
     }
 
-    [data-ui="dropdown-menu-separator"] {
+    [data-ui$="-menu-separator"] {
       height: 1px;
       background-color: var(--color-surface-variant);
       margin-block: var(--spacing-4);
     }
 
-    [data-ui="dropdown-menu-group"] {
-      [data-ui="dropdown-menu-group-label"] {
+    [data-ui$="-menu-group"] {
+      [data-ui$="-menu-group-label"] {
         padding-inline: var(--spacing-10);
         color: var(--color-on-surface-variant);
         font: var(--font-body-sm);
