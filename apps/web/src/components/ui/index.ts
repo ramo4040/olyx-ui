@@ -16,6 +16,7 @@ export * from "./feedback/alert-dialog";
 export * from "./feedback/dialog";
 export * from "./feedback/preview-card";
 export * from "./feedback/spinner";
+export * from "./feedback/toast";
 export * from "./feedback/tooltip";
 export * from "./form/checkbox";
 export * from "./form/field";

@@ -5,6 +5,7 @@ import {
   DropdownMenuExample,
   MenuBarExamples,
   NavigationMenuExample,
+  ToastExamples,
   ToolbarExample,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
@@ -65,6 +66,8 @@ export default function Home() {
         <MenuBarExamples />
         <ToolbarExample />
         <NavigationMenuExample />
+
+        <ToastExamples />
       </div>
     </>
   );

@@ -16,6 +16,7 @@ export { AlertDialogExample } from "./feedback/alert-dialog";
 export { DialogExamples } from "./feedback/dialog";
 export { PreviewCardExamples } from "./feedback/preview-card";
 export { SpinnerExamples } from "./feedback/spinner";
+export { ToastExamples } from "./feedback/toast";
 export { TooltipExamples } from "./feedback/tooltip";
 export { CheckboxExample } from "./form/checkbox";
 export { FieldExample } from "./form/field";
