@@ -1,5 +1,6 @@
 @layer base {
-  [data-ui$="-menu-content"] {
+  [data-ui="dropdown-menu-content"],
+  [data-ui="context-menu-content"] {
     position: relative;
     width: 250px;
     transition: var(--transition-expressive-default-effects);

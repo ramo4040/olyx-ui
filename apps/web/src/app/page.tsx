@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from "react";
 import {
-  AlertDialogExample,
-  DialogExamples,
   DropdownMenuExample,
   MenuBarExamples,
-  ScrollAreaExample,
+  NavigationMenuExample,
+  ToastExamples,
   ToolbarExample,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
@@ -54,18 +53,21 @@ export default function Home() {
         <ButtonsExamples />
         <PreviewCardExamples />
         <TooltipExamples />
-        <NumberFieldExamples />
         <ToogleExample />
         <AlertExample />
-        <ContextMenuExample /> 
-        */}
+        <NumberFieldExamples />
+        <ContextMenuExample />
+        <ScrollAreaExample />
+        <DialogExamples />
+        <AlertDialogExample />
 
+        */}
         <DropdownMenuExample />
         <MenuBarExamples />
         <ToolbarExample />
-        <DialogExamples />
-        <AlertDialogExample />
-        <ScrollAreaExample />
+        <NavigationMenuExample />
+
+        <ToastExamples />
       </div>
     </>
   );
