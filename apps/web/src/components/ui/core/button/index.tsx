@@ -1,7 +1,7 @@
 import "./style.css";
-import { Button as Btn } from "@base-ui/react";
+import { Button as ButtonPrimitive } from "@base-ui/react/button";
 
-type Props = Btn.Props &
+type Props = React.ComponentProps<typeof ButtonPrimitive> &
   Partial<{
     variant: "primary" | "neutral" | "error" | "link";
     mode: "filled" | "lighter" | "ghost" | "stroke";
@@ -20,7 +20,7 @@ export function Button({
   ...rest
 }: Props) {
   return (
-    <Btn
+    <ButtonPrimitive
       data-ui="button"
       data-variant={variant}
       data-mode={mode}
@@ -30,6 +30,6 @@ export function Button({
       {...rest}
     >
       {children}
-    </Btn>
+    </ButtonPrimitive>
   );
 }
