@@ -1,0 +1,95 @@
+@layer components {
+  [data-slot="combobox-input"] {
+    --number-btn: 0;
+
+    padding-inline: 0 !important;
+
+    [data-ui="combobox-input-actions"] {
+      position: absolute;
+      right: 8px;
+      display: flex;
+      gap: var(--spacing-4);
+      margin-left: auto;
+    }
+
+    &:has([data-slot="combobox-trigger"]) {
+      --number-btn: 1;
+    }
+
+    &:has([data-slot="combobox-clear"]) {
+      --number-btn: 2;
+    }
+
+    input {
+      padding-right: calc(28px * var(--number-btn));
+      padding-left: var(--spacing-12) !important;
+    }
+  }
+
+  [data-ui="combobox-content"] {
+    width: var(--anchor-width);
+    max-width: var(--available-width);
+    max-height: 400px;
+
+    [data-slot="combobox-list"] {
+      padding-right: var(--spacing-8);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      max-height: min(350px, var(--available-height));
+    }
+  }
+
+  /* Chips container - uses input-wrapper styles */
+  [data-ui="combobox-chips"] {
+    --icon-size: 16px;
+    --inline-padding: var(--spacing-10);
+    --surface-low: var(--color-surface-container-low);
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-4);
+    min-height: 36px;
+    padding: var(--spacing-4) var(--inline-padding);
+    border: 1px solid var(--color-surface-variant);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background);
+    box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
+    color: var(--color-on-background);
+    font: var(--font-body-md);
+    outline: 0;
+    transition: all var(--transition-standard-default-spatial);
+
+    /* Focus */
+    &:focus-within {
+      border-color: var(--color-outline);
+      box-shadow: 0 0 0 2px var(--color-primary-container);
+    }
+
+    /* Chips input */
+    [data-slot="combobox-chips-input"] {
+      flex: 1;
+      min-width: 60px;
+      height: 28px;
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      outline: none;
+      color: inherit;
+    }
+
+    /* Chip */
+    [data-ui="combobox-chip"] {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-4);
+      background-color: var(--color-surface-container-high);
+      color: var(--color-on-surface);
+      padding: var(--spacing-2) var(--spacing-6);
+      border-radius: var(--radius-sm);
+      font: var(--font-body-sm);
+      font-weight: 500;
+    }
+  }
+}
