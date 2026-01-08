@@ -2,7 +2,14 @@ import { ScrollArea } from "@/components/ui";
 
 export function ScrollAreaExample() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 20,
+        maxWidth: 400,
+      }}
+    >
       <ScrollArea>
         <p>
           Vernacular architecture is building done outside any academic

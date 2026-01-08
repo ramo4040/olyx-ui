@@ -19,6 +19,7 @@ export { SpinnerExamples } from "./feedback/spinner";
 export { ToastExamples } from "./feedback/toast";
 export { TooltipExamples } from "./feedback/tooltip";
 export { CheckboxExample } from "./form/checkbox";
+export { ComboboxExamples } from "./form/combobox";
 export { FieldExample } from "./form/field";
 export { InputsExample } from "./form/inputs";
 export { NumberFieldExamples } from "./form/number-field";

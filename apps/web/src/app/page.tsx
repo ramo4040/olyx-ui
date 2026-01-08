@@ -1,13 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  DropdownMenuExample,
-  MenuBarExamples,
-  NavigationMenuExample,
-  ToastExamples,
-  ToolbarExample,
-} from "@/components/examples";
+import { ComboboxExamples, SelectExample } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -38,12 +32,10 @@ export default function Home() {
         <TextareaExample />
         <SpinnerExamples />
         <CheckboxExample />
-        <InputsExample />
         <KbdExample />
         <FieldExample />
         <SeparatorExample />
         <AccordionExample />
-        <SelectExample />
         <DrawerExample />
         <PopoverExamples />
         <TabsExamples />
@@ -60,14 +52,16 @@ export default function Home() {
         <ScrollAreaExample />
         <DialogExamples />
         <AlertDialogExample />
-
-        */}
         <DropdownMenuExample />
         <MenuBarExamples />
         <ToolbarExample />
         <NavigationMenuExample />
-
+        <InputsExample />
         <ToastExamples />
+        */}
+
+        <SelectExample />
+        <ComboboxExamples />
       </div>
     </>
   );

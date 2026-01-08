@@ -19,6 +19,7 @@ export * from "./feedback/spinner";
 export * from "./feedback/toast";
 export * from "./feedback/tooltip";
 export * from "./form/checkbox";
+export * from "./form/combobox";
 export * from "./form/field";
 export * from "./form/input";
 export * from "./form/number-field";
