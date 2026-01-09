@@ -1,7 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ComboboxExamples, SelectExample } from "@/components/examples";
+import {
+  ButtonGroupExample,
+  ComboboxExamples,
+  SelectExample,
+} from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -62,6 +66,7 @@ export default function Home() {
 
         <SelectExample />
         <ComboboxExamples />
+        <ButtonGroupExample />
       </div>
     </>
   );

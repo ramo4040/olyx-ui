@@ -1,6 +1,7 @@
 export * from "./core/avatar";
 export * from "./core/badge";
 export * from "./core/button";
+export * from "./core/button-group";
 export * from "./core/scroll-area";
 export * from "./data-display/kbd";
 export * from "./data-display/progress";
