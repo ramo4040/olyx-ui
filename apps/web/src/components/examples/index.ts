@@ -1,5 +1,6 @@
 export { AvatarExamples } from "./core/avatars";
 export { BadgesExamples } from "./core/badges";
+export { ButtonGroupExample } from "./core/button-group";
 export { ButtonsExamples } from "./core/buttons";
 export { ScrollAreaExample } from "./core/scroll-area";
 export { KbdExample } from "./data-display/kbd";

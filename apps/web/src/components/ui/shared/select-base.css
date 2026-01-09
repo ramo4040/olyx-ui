@@ -67,7 +67,8 @@
 
         &:not([data-disabled]) {
           &:hover,
-          &:focus-visible {
+          &:focus-visible,
+          &[data-highlighted] {
             background-color: var(--color-surface-container-high);
           }
         }
