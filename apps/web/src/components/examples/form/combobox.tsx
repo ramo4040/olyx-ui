@@ -1,19 +1,22 @@
-import React from "react";
 import {
   Combobox,
   ComboboxChip,
   ComboboxChips,
   ComboboxChipsInput,
+  ComboboxCollection,
   ComboboxContent,
   ComboboxEmpty,
+  ComboboxGroup,
   ComboboxInput,
   ComboboxItem,
+  ComboboxLabel,
   ComboboxList,
   ComboboxValue,
+  useComboboxAnchor,
 } from "@/components/ui";
 
 export const ComboboxExamples = () => {
-  const containerRef = React.useRef<HTMLDivElement | null>(null);
+  const containerRef = useComboboxAnchor();
 
   return (
     <div
@@ -67,9 +70,47 @@ export const ComboboxExamples = () => {
           </ComboboxList>
         </ComboboxContent>
       </Combobox>
+
+      <h4>Grouped Combobox</h4>
+      <Combobox items={products}>
+        <ComboboxInput placeholder="Select an option" />
+        <ComboboxContent>
+          <ComboboxEmpty>No results found.</ComboboxEmpty>
+          <ComboboxList>
+            {(group: ProductGroup) => (
+              <ComboboxGroup key={group.value} items={group.items}>
+                <ComboboxLabel>{group.value}</ComboboxLabel>
+                <ComboboxCollection>
+                  {(item: string) => (
+                    <ComboboxItem key={item} value={item}>
+                      {item}
+                    </ComboboxItem>
+                  )}
+                </ComboboxCollection>
+              </ComboboxGroup>
+            )}
+          </ComboboxList>
+        </ComboboxContent>
+      </Combobox>
     </div>
   );
 };
+
+interface ProductGroup {
+  value: string;
+  items: string[];
+}
+
+const products: ProductGroup[] = [
+  {
+    value: "Fruits",
+    items: ["Apple", "Banana", "Orange"],
+  },
+  {
+    value: "Vegetables",
+    items: ["Carrot", "Lettuce", "Spinach"],
+  },
+];
 
 const fruits = [
   "Apple",
