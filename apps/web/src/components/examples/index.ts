@@ -3,6 +3,7 @@ export { BadgesExamples } from "./core/badges";
 export { ButtonGroupExample } from "./core/button-group";
 export { ButtonsExamples } from "./core/buttons";
 export { ScrollAreaExample } from "./core/scroll-area";
+export { StatusBadgeExample } from "./core/status-badge";
 export { KbdExample } from "./data-display/kbd";
 export { ProgressExamples } from "./data-display/progress";
 export { AccordionExample } from "./disclosure/accordion";

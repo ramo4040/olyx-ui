@@ -1,11 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  ButtonGroupExample,
-  ComboboxExamples,
-  SelectExample,
-} from "@/components/examples";
+import { ComboboxExamples, StatusBadgeExample } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -30,43 +26,43 @@ export default function Home() {
       <div style={{ display: "grid", gap: 40 }}>
         {/*
          <AvatarExamples />
-        <BadgesExamples />
-        <RadioExample />
-        <SwitchExample />
-        <TextareaExample />
-        <SpinnerExamples />
-        <CheckboxExample />
-        <KbdExample />
-        <FieldExample />
-        <SeparatorExample />
-        <AccordionExample />
-        <DrawerExample />
-        <PopoverExamples />
-        <TabsExamples />
-        <SliderExample />
-        <ProgressExamples />
-        <CollapsibleExamples />
-        <ButtonsExamples />
-        <PreviewCardExamples />
-        <TooltipExamples />
-        <ToogleExample />
-        <AlertExample />
-        <NumberFieldExamples />
-        <ContextMenuExample />
-        <ScrollAreaExample />
-        <DialogExamples />
-        <AlertDialogExample />
+         <RadioExample />
+         <SwitchExample />
+         <TextareaExample />
+         <SpinnerExamples />
+         <CheckboxExample />
+         <KbdExample />
+         <FieldExample />
+         <SeparatorExample />
+         <AccordionExample />
+         <DrawerExample />
+         <PopoverExamples />
+         <TabsExamples />
+         <SliderExample />
+         <ProgressExamples />
+         <CollapsibleExamples />
+         <ButtonsExamples />
+         <PreviewCardExamples />
+         <TooltipExamples />
+         <ToogleExample />
+         <AlertExample />
+         <NumberFieldExamples />
+         <ContextMenuExample />
+         <ScrollAreaExample />
+         <DialogExamples />
+         <AlertDialogExample />
         <DropdownMenuExample />
         <MenuBarExamples />
         <ToolbarExample />
         <NavigationMenuExample />
         <InputsExample />
         <ToastExamples />
+        <SelectExample />
+        <ButtonGroupExample />
         */}
 
-        <SelectExample />
         <ComboboxExamples />
-        <ButtonGroupExample />
+        <StatusBadgeExample />
       </div>
     </>
   );
