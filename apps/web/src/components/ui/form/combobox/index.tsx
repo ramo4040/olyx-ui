@@ -3,6 +3,7 @@ import "./style.css";
 import { Combobox as ComboboxPrimitive } from "@base-ui/react";
 import { Cancel01Icon, UnfoldMoreIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import React from "react";
 import { Button } from "../../core/button";
 import { Input, InputWrapper } from "../input";
 
@@ -152,6 +153,30 @@ function ComboboxChipsInput(props: ComboboxPrimitive.Input.Props) {
   );
 }
 
+function ComboboxGroup(props: ComboboxPrimitive.Group.Props) {
+  return <ComboboxPrimitive.Group data-ui="combobox-group" {...props} />;
+}
+
+function ComboboxLabel(props: ComboboxPrimitive.GroupLabel.Props) {
+  return <ComboboxPrimitive.GroupLabel data-ui="combobox-label" {...props} />;
+}
+
+function ComboboxCollection({ ...props }: ComboboxPrimitive.Collection.Props) {
+  return (
+    <ComboboxPrimitive.Collection data-slot="combobox-collection" {...props} />
+  );
+}
+
+function ComboboxSeparator(props: ComboboxPrimitive.Separator.Props) {
+  return (
+    <ComboboxPrimitive.Separator data-slot="combobox-separator" {...props} />
+  );
+}
+
+function useComboboxAnchor() {
+  return React.useRef<HTMLDivElement | null>(null);
+}
+
 export {
   Combobox,
   ComboboxValue,
@@ -165,4 +190,9 @@ export {
   ComboboxChips,
   ComboboxChip,
   ComboboxChipsInput,
+  ComboboxGroup,
+  ComboboxLabel,
+  ComboboxCollection,
+  ComboboxSeparator,
+  useComboboxAnchor,
 };
