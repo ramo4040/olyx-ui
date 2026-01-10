@@ -12,8 +12,8 @@ export const StatusBadgeExample = () => {
   return (
     <div style={{ display: "grid", gap: 12 }}>
       <div style={{ display: "flex", gap: 8 }}>
-        <StatusBadge status="completed" variant="light">
-          <HugeiconsIcon icon={Tick02Icon} /> Completed
+        <StatusBadge status="success" variant="light">
+          <HugeiconsIcon icon={Tick02Icon} /> success
         </StatusBadge>
         <StatusBadge status="warning" variant="light">
           <HugeiconsIcon icon={Alert02Icon} />
@@ -35,8 +35,8 @@ export const StatusBadgeExample = () => {
       </div>
 
       <div style={{ display: "flex", gap: 8 }}>
-        <StatusBadge status="completed" variant="stroke">
-          <HugeiconsIcon icon={Tick02Icon} /> Completed
+        <StatusBadge status="success" variant="stroke">
+          <HugeiconsIcon icon={Tick02Icon} /> success
         </StatusBadge>
         <StatusBadge status="warning" variant="stroke">
           <HugeiconsIcon icon={Alert02Icon} />
@@ -58,8 +58,8 @@ export const StatusBadgeExample = () => {
       </div>
 
       <div style={{ display: "flex", gap: 8 }}>
-        <StatusBadge status="completed" variant="stroke" doted>
-          Completed
+        <StatusBadge status="success" variant="stroke" doted>
+          success
         </StatusBadge>
         <StatusBadge status="warning" variant="stroke" doted>
           Warning

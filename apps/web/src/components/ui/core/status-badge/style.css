@@ -52,7 +52,7 @@
     --color-on-status-badge-container: var(--color-on-surface);
   }
 
-  &[data-status="completed"] {
+  &[data-status="success"] {
     --color-status-badge: var(--color-success);
     --color-on-status-badge: var(--color-on-success);
     --color-status-badge-container: var(--color-success-container);
