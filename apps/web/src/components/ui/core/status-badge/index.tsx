@@ -5,7 +5,7 @@ import { useRender } from "@base-ui/react/use-render";
 
 type BadgeProps = useRender.ComponentProps<"span"> & {
   variant?: "light" | "stroke";
-  status: "completed" | "warning" | "failed" | "disabled" | "info";
+  status: "success" | "warning" | "failed" | "disabled" | "info";
   doted?: boolean;
 };
 

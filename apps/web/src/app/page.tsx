@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ComboboxExamples, StatusBadgeExample } from "@/components/examples";
+import { StatusBadgeExample } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -56,12 +56,13 @@ export default function Home() {
         <ToolbarExample />
         <NavigationMenuExample />
         <InputsExample />
-        <ToastExamples />
         <SelectExample />
         <ButtonGroupExample />
+        <ComboboxExamples />
+        <ToastExamples />
+        <BannerExamples />
         */}
 
-        <ComboboxExamples />
         <StatusBadgeExample />
       </div>
     </>
