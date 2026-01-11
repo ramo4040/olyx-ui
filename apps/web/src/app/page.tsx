@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { StatusBadgeExample } from "@/components/examples";
+import { RatingReviewExample, StatusBadgeExample } from "@/components/examples";
 import { RatingBarExamples } from "@/components/examples/data-display/rating-bar";
 import { Switch } from "@/components/ui";
 
@@ -66,6 +66,7 @@ export default function Home() {
 
         <StatusBadgeExample />
         <RatingBarExamples />
+        <RatingReviewExample />
       </div>
     </>
   );

@@ -8,6 +8,7 @@ export * from "./data-display/banner";
 export * from "./data-display/kbd";
 export * from "./data-display/progress";
 export * from "./data-display/rating-bar";
+export * from "./data-display/rating-review";
 export * from "./disclosure/accordion";
 export * from "./disclosure/collapsible";
 export * from "./disclosure/context-menu";
