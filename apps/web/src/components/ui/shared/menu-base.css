@@ -1,4 +1,16 @@
 @layer base {
+  [data-ui="dropdown-menu-trigger"] {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: 0;
+    color: inherit;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px var(--color-surface-container-high);
+    }
+  }
+
   [data-ui="dropdown-menu-content"],
   [data-ui="context-menu-content"] {
     position: relative;

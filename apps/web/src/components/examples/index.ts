@@ -33,6 +33,7 @@ export { SliderExample } from "./form/slider";
 export { SwitchExample } from "./form/switch";
 export { TextareaExample } from "./form/textarea";
 export { ToogleExample } from "./form/toggle";
+export { BreadCrumbExample } from ".//navigation/breadcrumb";
 export { NavigationMenuExample } from "./navigation/navigation-menu";
 export { TabsExamples } from "./navigation/tabs";
 export { ToolbarExample } from "./navigation/toolbar";
