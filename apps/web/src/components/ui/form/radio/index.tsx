@@ -8,9 +8,10 @@ function RadioGroup(props: RadioGroupPrimitive.Props) {
   return <RadioGroupPrimitive data-ui="radio-group" {...props} />;
 }
 
-function RadioGroupItem(props: RadioPrimitive.Root.Props) {
+function RadioGroupItem({ children, ...props }: RadioPrimitive.Root.Props) {
   return (
     <RadioPrimitive.Root data-ui="radio-group-item" {...props}>
+      {children}
       <RadioPrimitive.Indicator data-ui="radio-group-item-indicator" />
     </RadioPrimitive.Root>
   );
