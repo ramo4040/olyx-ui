@@ -159,7 +159,7 @@
   }
 
   /* Icon */
-  &:has(svg) {
+  &:has(svg):not([data-as-icon="false"]) {
     padding-inline: var(--spacing-4) !important;
     svg {
       color: inherit;

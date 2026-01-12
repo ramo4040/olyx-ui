@@ -35,6 +35,7 @@ export { TextareaExample } from "./form/textarea";
 export { ToogleExample } from "./form/toggle";
 export { BreadCrumbExample } from ".//navigation/breadcrumb";
 export { NavigationMenuExample } from "./navigation/navigation-menu";
+export { PaginationExample } from "./navigation/pagination";
 export { TabsExamples } from "./navigation/tabs";
 export { ToolbarExample } from "./navigation/toolbar";
 export { SeparatorExample } from "./primitives/separator";

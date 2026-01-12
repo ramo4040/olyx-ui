@@ -1,7 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BreadCrumbExample, StatusBadgeExample } from "@/components/examples";
+import {
+  BreadCrumbExample,
+  ButtonsExamples,
+  PaginationExample,
+  StatusBadgeExample,
+} from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -41,7 +46,6 @@ export default function Home() {
          <SliderExample />
          <ProgressExamples />
          <CollapsibleExamples />
-         <ButtonsExamples />
          <PreviewCardExamples />
          <TooltipExamples />
          <ToogleExample />
@@ -51,22 +55,24 @@ export default function Home() {
          <ScrollAreaExample />
          <DialogExamples />
          <AlertDialogExample />
-        <DropdownMenuExample />
-        <MenuBarExamples />
-        <ToolbarExample />
-        <NavigationMenuExample />
-        <InputsExample />
-        <SelectExample />
-        <ButtonGroupExample />
-        <ComboboxExamples />
-        <ToastExamples />
-        <BannerExamples />
-        <RatingBarExamples />
-        <RatingReviewExample />
-        */}
+         <DropdownMenuExample />
+         <MenuBarExamples />
+         <ToolbarExample />
+         <NavigationMenuExample />
+         <InputsExample />
+         <SelectExample />
+         <ButtonGroupExample />
+         <ComboboxExamples />
+         <ToastExamples />
+         <BannerExamples />
+         <RatingBarExamples />
+         <RatingReviewExample />
+         */}
 
+        <ButtonsExamples />
         <StatusBadgeExample />
         <BreadCrumbExample />
+        <PaginationExample />
       </div>
     </>
   );
