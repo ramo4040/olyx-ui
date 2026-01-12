@@ -35,6 +35,7 @@ export * from "./form/slider";
 export * from "./form/switch";
 export * from "./form/textarea";
 export * from "./form/toggle";
+export * from "./layout/skeleton";
 export * from "./navigation/breadcrumb";
 export * from "./navigation/navigation-menu";
 export * from "./navigation/pagination";

@@ -34,6 +34,7 @@ export { SliderExample } from "./form/slider";
 export { SwitchExample } from "./form/switch";
 export { TextareaExample } from "./form/textarea";
 export { ToogleExample } from "./form/toggle";
+export { SkeletonExamples } from "./layout/skeleton";
 export { BreadCrumbExample } from ".//navigation/breadcrumb";
 export { NavigationMenuExample } from "./navigation/navigation-menu";
 export { PaginationExample } from "./navigation/pagination";
