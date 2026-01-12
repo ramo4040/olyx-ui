@@ -2,7 +2,7 @@
 
 import "./style.css";
 import { Toolbar as ToolBarPrimitive } from "@base-ui/react/toolbar";
-import { Separator } from "../../primitives/separator";
+import { Separator } from "../../core/separator";
 
 function Toolbar(props: ToolBarPrimitive.Root.Props) {
   return <ToolBarPrimitive.Root data-ui="toolbar" {...props} />;

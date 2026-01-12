@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 import {
-  BreadCrumbExample,
   ButtonsExamples,
-  PaginationExample,
+  SkeletonExamples,
   StatusBadgeExample,
 } from "@/components/examples";
 import { Switch } from "@/components/ui";
@@ -67,12 +66,13 @@ export default function Home() {
          <BannerExamples />
          <RatingBarExamples />
          <RatingReviewExample />
+        <BreadCrumbExample />
+        <PaginationExample />
          */}
 
         <ButtonsExamples />
         <StatusBadgeExample />
-        <BreadCrumbExample />
-        <PaginationExample />
+        <SkeletonExamples />
       </div>
     </>
   );
