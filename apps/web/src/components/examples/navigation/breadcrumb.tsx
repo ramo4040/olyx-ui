@@ -23,15 +23,15 @@ export const BreadCrumbExample = () => {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">Category</BreadcrumbLink>
+            <BreadcrumbLink href="#">Settings</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">SubCategory</BreadcrumbLink>
+            <BreadcrumbLink href="#">Profile</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">Product</BreadcrumbLink>
+            <BreadcrumbLink href="#">Reset Password</BreadcrumbLink>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

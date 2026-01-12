@@ -2,7 +2,7 @@
 
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Button } from "../../core/button";
-import { Separator } from "../../primitives/separator";
+import { Separator } from "../../core/separator";
 import "./style.css";
 import { Cancel01Icon } from "@hugeicons/core-free-icons";
 import { Drawer as DrawerPrimitive } from "vaul-base";
