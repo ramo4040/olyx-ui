@@ -36,6 +36,7 @@ export * from "./form/textarea";
 export * from "./form/toggle";
 export * from "./navigation/breadcrumb";
 export * from "./navigation/navigation-menu";
+export * from "./navigation/pagination";
 export * from "./navigation/tabs";
 export * from "./navigation/toolbar";
 export * from "./primitives/separator";

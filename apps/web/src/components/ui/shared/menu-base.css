@@ -1,5 +1,5 @@
 @layer base {
-  [data-ui="dropdown-menu-trigger"] {
+  [data-slot="dropdown-menu-trigger"] {
     border: none;
     background: transparent;
     cursor: pointer;
