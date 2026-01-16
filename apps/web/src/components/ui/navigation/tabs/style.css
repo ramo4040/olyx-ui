@@ -12,19 +12,24 @@
   }
 
   [data-ui="tabs-list"] {
-    --last-tab-width: 2;
+    --last-tab-width: 0.5;
 
     position: relative;
     width: fit-content;
     height: fit-content;
-    padding: var(--spacing-4);
+    padding-bottom: var(--spacing-4);
     border-radius: var(--radius-md);
     display: flex;
     gap: var(--spacing-4);
 
+    &:has([data-ui="tabs-tab"]:first-of-type[data-active]) {
+      --last-tab-width: 0;
+    }
+
     &:has([data-ui="tabs-tab"]:last-of-type[data-active]) {
       --last-tab-width: 1;
     }
+
     /*  Tab  */
     [data-ui="tabs-tab"] {
       cursor: pointer;
@@ -37,7 +42,7 @@
       white-space: nowrap;
       word-break: keep-all;
       user-select: none;
-      transition: var(--transition-expressive-default-spatial);
+      transition: var(--transition-expressive-slow-effects);
 
       &:not([data-active]) {
         opacity: 0.7;
@@ -50,6 +55,8 @@
 
     &[data-orientation="vertical"] {
       flex-direction: column;
+      padding-bottom: 0;
+      padding-left: var(--spacing-4);
 
       [data-ui="tabs-tab"] {
         text-align: left;
@@ -60,16 +67,14 @@
     [data-ui="tabs-indicator"] {
       --thum-position: calc(
         var(--active-tab-left) +
-        (var(--active-tab-width) / var(--last-tab-width)) -
-        var(--spacing-8) *
-        2
+        (var(--active-tab-width) * var(--last-tab-width))
       );
 
       position: absolute;
       height: 1px;
-      width: calc(100% - var(--spacing-8) * 2);
+      width: 100%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
       bottom: 0;
       background: linear-gradient(
         to left in oklab,
@@ -81,6 +86,10 @@
       background-position: var(--thum-position) 0;
       transition: var(--transition-expressive-default-spatial);
 
+      [data-ui="tabs-indicator-thumb"] {
+        z-index: 2;
+      }
+
       &::after,
       &::before,
       [data-ui="tabs-indicator-thumb"] {
@@ -88,13 +97,13 @@
         width: var(--spacing-6);
         height: var(--spacing-6);
         clip-path: circle();
+        top: 50%;
       }
 
       /* Thumb */
       [data-ui="tabs-indicator-thumb"] {
-        top: 50%;
         left: var(--thum-position);
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
         background: var(--color-on-background);
         transition: var(--transition-expressive-default-spatial);
       }
@@ -102,17 +111,16 @@
       /* start caps */
       &::after {
         content: "";
-        top: 50%;
-        left: -3px;
-        transform: translateY(-50%);
+        left: 0;
+        transform: translate(-50%, -50%);
         background: var(--color-outline-variant);
       }
 
       /* end caps */
       &::before {
         content: "";
-        right: -3px;
-        transform: translateY(-50%);
+        right: 0;
+        transform: translate(50%, -50%);
         background: var(--color-surface-container-highest);
       }
 
@@ -120,16 +128,14 @@
       &[data-orientation="vertical"] {
         --thum-position: calc(
           var(--active-tab-top) +
-          (var(--active-tab-height) / var(--last-tab-width)) -
-          var(--spacing-8) *
-          2
+          (var(--active-tab-height) * var(--last-tab-width))
         );
 
         width: 1px;
-        height: calc(100% - var(--spacing-8) * 2);
+        height: calc(100%);
         left: 0;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
         background: linear-gradient(
           to top in oklab,
           var(--color-outline-variant) 50%,
@@ -142,19 +148,19 @@
         [data-ui="tabs-indicator-thumb"] {
           top: var(--thum-position);
           left: 50%;
-          transform: translateX(-50%);
+          transform: translate(-50%, -50%);
         }
 
         &::after {
-          top: -3px;
+          top: 0;
           left: 50%;
-          transform: translateX(-50%);
+          transform: translate(-50%, -50%);
         }
 
         &::before {
-          bottom: -3px;
+          top: 100%;
           left: 50%;
-          transform: translateX(-50%);
+          transform: translate(-50%, -50%);
         }
       }
     }
