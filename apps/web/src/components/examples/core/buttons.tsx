@@ -8,6 +8,7 @@ export const ButtonsExamples = () => {
       {/* Primary Variants */}
       <div style={{ display: "flex", gap: 8 }}>
         <Button variant="primary" mode="filled" size="md">
+          <HugeiconsIcon icon={Setting06Icon} />
           Primary
         </Button>
         <Button variant="primary" mode="lighter" size="md">
