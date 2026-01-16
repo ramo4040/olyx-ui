@@ -1,11 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  ButtonsExamples,
-  SkeletonExamples,
-  StatusBadgeExample,
-} from "@/components/examples";
+import { DialogExamples, TabsExamples } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -41,7 +37,6 @@ export default function Home() {
          <AccordionExample />
          <DrawerExample />
          <PopoverExamples />
-         <TabsExamples />
          <SliderExample />
          <ProgressExamples />
          <CollapsibleExamples />
@@ -52,27 +47,27 @@ export default function Home() {
          <NumberFieldExamples />
          <ContextMenuExample />
          <ScrollAreaExample />
-         <DialogExamples />
          <AlertDialogExample />
-         <DropdownMenuExample />
          <MenuBarExamples />
          <ToolbarExample />
-         <NavigationMenuExample />
          <InputsExample />
-         <SelectExample />
-         <ButtonGroupExample />
-         <ComboboxExamples />
-         <ToastExamples />
-         <BannerExamples />
-         <RatingBarExamples />
          <RatingReviewExample />
-        <BreadCrumbExample />
-        <PaginationExample />
-         */}
-
-        <ButtonsExamples />
+         <BreadCrumbExample />
+         <PaginationExample />
+         <NavigationMenuExample />
         <StatusBadgeExample />
-        <SkeletonExamples />
+        <DropdownMenuExample />
+        <SelectExample />
+        <ButtonsExamples />
+        <ComboboxExamples />
+        <BannerExamples />
+        <RatingBarExamples />
+        <ButtonsExamples />
+        <ToastExamples />
+        */}
+
+        <DialogExamples />
+        <TabsExamples />
       </div>
     </>
   );
