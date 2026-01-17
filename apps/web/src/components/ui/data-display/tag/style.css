@@ -61,7 +61,7 @@
     }
 
     /* Dismiss Button */
-    [data-slot="tag-dismiss"] {
+    [data-slot="tag-dismiss"]:is([data-ui="button"]) {
       width: var(--spacing-16);
       height: var(--spacing-16);
       margin-inline: calc(var(--spacing-6) * -1) calc(var(--spacing-4) * -1);

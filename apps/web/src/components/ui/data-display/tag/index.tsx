@@ -1,43 +1,47 @@
 import { HugeiconsIcon } from "@hugeicons/react";
+import { createContext, useContext } from "react";
 import { Button } from "../../core/button";
 import "./style.css";
 import { Cancel01Icon } from "@hugeicons/core-free-icons";
 
+const TagContext = createContext<{ disabled?: boolean }>({});
+
 function Tag({
   disabled,
-  withDismiss,
   variant = "stroke",
-  children,
   ...props
 }: React.ComponentProps<"div"> & {
   disabled?: boolean;
-  withDismiss?: boolean;
   variant?: "lighter" | "stroke";
 }) {
   return (
-    <div
-      data-ui="tag"
-      data-variant={variant}
-      aria-disabled={disabled}
-      {...props}
-    >
-      {children}
-
-      {withDismiss && (
-        <Button
-          data-slot="tag-dismiss"
-          aria-disabled={disabled}
-          type="button"
-          variant="neutral"
-          mode="ghost"
-          asIcon
-          size="sm"
-        >
-          <HugeiconsIcon icon={Cancel01Icon} />
-        </Button>
-      )}
-    </div>
+    <TagContext.Provider value={{ disabled }}>
+      <div
+        data-ui="tag"
+        data-variant={variant}
+        aria-disabled={disabled}
+        {...props}
+      />
+    </TagContext.Provider>
   );
 }
 
-export { Tag };
+function TagDismiss(props: React.ComponentProps<"button" | typeof Button>) {
+  const { disabled } = useContext(TagContext);
+
+  return (
+    <Button
+      data-slot="tag-dismiss"
+      variant="neutral"
+      mode="ghost"
+      asIcon
+      size="sm"
+      disabled={disabled}
+      {...props}
+    >
+      <HugeiconsIcon icon={Cancel01Icon} />
+    </Button>
+  );
+}
+
+export { Tag, TagDismiss };

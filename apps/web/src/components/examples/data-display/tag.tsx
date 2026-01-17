@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Tag } from "@/components/ui";
+import { Tag, TagDismiss } from "@/components/ui";
 
 export const TagExamples = () => {
   return (
@@ -7,13 +7,21 @@ export const TagExamples = () => {
       <Tag>Stroke Tag</Tag>
       <Tag variant="lighter">Lighter Tag</Tag>
 
-      <Tag withDismiss>Dismissible Tag</Tag>
-
-      <Tag withDismiss disabled>
-        Disabled
+      <Tag>
+        Dismissible Tag
+        <TagDismiss />
+      </Tag>
+      <Tag variant="lighter">
+        Dismissible Tag
+        <TagDismiss />
       </Tag>
 
-      <Tag withDismiss>
+      <Tag disabled>
+        Disabled
+        <TagDismiss />
+      </Tag>
+
+      <Tag>
         <Image
           src="https://www.gravatar.com/avatar?d=identicon"
           width={16}
@@ -21,6 +29,7 @@ export const TagExamples = () => {
           alt="Avatar img"
         />
         Avatar
+        <TagDismiss />
       </Tag>
     </div>
   );
