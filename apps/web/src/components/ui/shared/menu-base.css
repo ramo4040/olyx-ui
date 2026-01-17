@@ -1,4 +1,4 @@
-@layer base {
+@layer utilities {
   [data-slot="dropdown-menu-trigger"] {
     border: none;
     background: transparent;

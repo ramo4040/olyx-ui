@@ -1,28 +1,30 @@
 @layer components {
-  [data-slot="combobox-input"] {
-    --number-btn: 0;
+  [data-ui="input-wrapper"] {
+    &[data-slot="combobox-input"] {
+      --number-btn: 0;
 
-    padding-inline: 0 !important;
+      padding-inline: 0;
 
-    [data-ui="combobox-input-actions"] {
-      position: absolute;
-      right: 8px;
-      display: flex;
-      gap: var(--spacing-4);
-      margin-left: auto;
-    }
+      [data-ui="combobox-input-actions"] {
+        position: absolute;
+        right: 8px;
+        display: flex;
+        gap: var(--spacing-4);
+        margin-left: auto;
+      }
 
-    &:has([data-slot="combobox-trigger"]) {
-      --number-btn: 1;
-    }
+      &:has([data-slot="combobox-trigger"]) {
+        --number-btn: 1;
+      }
 
-    &:has([data-slot="combobox-clear"]) {
-      --number-btn: 2;
-    }
+      &:has([data-slot="combobox-clear"]) {
+        --number-btn: 2;
+      }
 
-    input {
-      padding-right: calc(28px * var(--number-btn));
-      padding-left: var(--spacing-12) !important;
+      input {
+        padding-right: calc(28px * var(--number-btn));
+        padding-left: var(--spacing-12);
+      }
     }
   }
 

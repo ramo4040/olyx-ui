@@ -1,4 +1,4 @@
-@layer base {
+@layer utilities {
   [data-slot="dialog-overlay"],
   [data-slot="alert-dialog-overlay"] {
     position: fixed;
