@@ -5,6 +5,7 @@ import { Cancel01Icon, UnfoldMoreIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import React from "react";
 import { Button } from "../../core/button";
+import { Tag, TagDismiss } from "../../data-display/tag";
 import { Input, InputWrapper } from "../input";
 
 const Combobox = ComboboxPrimitive.Root;
@@ -125,25 +126,21 @@ function ComboboxChips(
 }
 
 function ComboboxChip({
-  children,
   showRemove = true,
   ...props
 }: ComboboxPrimitive.Chip.Props & {
   showRemove?: boolean;
 }) {
   return (
-    <ComboboxPrimitive.Chip data-ui="combobox-chip" {...props}>
-      {children}
-
-      {showRemove && (
-        <ComboboxPrimitive.ChipRemove
-          data-slot="combobox-chip-remove"
-          render={<Button variant="neutral" mode="ghost" size="sm" asIcon />}
-        >
-          <HugeiconsIcon icon={Cancel01Icon} />
-        </ComboboxPrimitive.ChipRemove>
+    <ComboboxPrimitive.Chip
+      render={({ children, ...props }) => (
+        <Tag variant="lighter" {...props}>
+          {children}
+          <ComboboxPrimitive.ChipRemove render={<TagDismiss />} />
+        </Tag>
       )}
-    </ComboboxPrimitive.Chip>
+      {...props}
+    />
   );
 }
 
