@@ -9,6 +9,7 @@ export { BannerExamples } from "./data-display/banner";
 export { KbdExample } from "./data-display/kbd";
 export { ProgressExamples } from "./data-display/progress";
 export { RatingReviewExample } from "./data-display/rating-review";
+export { TagExamples } from "./data-display/tag";
 export { AccordionExample } from "./disclosure/accordion";
 export { CollapsibleExamples } from "./disclosure/collapsible";
 export { ContextMenuExample } from "./disclosure/context-menu";
