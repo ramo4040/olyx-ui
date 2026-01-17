@@ -1,7 +1,45 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DialogExamples, TabsExamples } from "@/components/examples";
+import {
+  AccordionExample,
+  AlertDialogExample,
+  AlertExample,
+  AvatarExamples,
+  BannerExamples,
+  BreadCrumbExample,
+  ButtonsExamples,
+  CheckboxExample,
+  CollapsibleExamples,
+  ComboboxExamples,
+  ContextMenuExample,
+  DrawerExample,
+  DropdownMenuExample,
+  FieldExample,
+  InputsExample,
+  KbdExample,
+  MenuBarExamples,
+  NavigationMenuExample,
+  NumberFieldExamples,
+  PopoverExamples,
+  PreviewCardExamples,
+  ProgressExamples,
+  RadioExample,
+  RatingReviewExample,
+  ScrollAreaExample,
+  SelectExample,
+  SeparatorExample,
+  SliderExample,
+  SpinnerExamples,
+  StatusBadgeExample,
+  SwitchExample,
+  TextareaExample,
+  ToastExamples,
+  ToogleExample,
+  ToolbarExample,
+  TooltipExamples,
+} from "@/components/examples";
+import { RatingBarExamples } from "@/components/examples/data-display/rating-bar";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -24,50 +62,45 @@ export default function Home() {
         <Switch checked={theme} onCheckedChange={setTheme} />
       </header>
       <div style={{ display: "grid", gap: 40 }}>
-        {/*
-         <AvatarExamples />
-         <RadioExample />
-         <SwitchExample />
-         <TextareaExample />
-         <SpinnerExamples />
-         <CheckboxExample />
-         <KbdExample />
-         <FieldExample />
-         <SeparatorExample />
-         <AccordionExample />
-         <DrawerExample />
-         <PopoverExamples />
-         <SliderExample />
-         <ProgressExamples />
-         <CollapsibleExamples />
-         <PreviewCardExamples />
-         <TooltipExamples />
-         <ToogleExample />
-         <AlertExample />
-         <NumberFieldExamples />
-         <ContextMenuExample />
-         <ScrollAreaExample />
-         <AlertDialogExample />
-         <MenuBarExamples />
-         <ToolbarExample />
-         <InputsExample />
-         <RatingReviewExample />
-         <BreadCrumbExample />
-         <PaginationExample />
-         <NavigationMenuExample />
+        <AvatarExamples />
+        <RadioExample />
+        <SwitchExample />
+        <TextareaExample />
+        <SpinnerExamples />
+        <CheckboxExample />
+        <KbdExample />
+        <FieldExample />
+        <SeparatorExample />
+        <AccordionExample />
+        <DrawerExample />
+        <PopoverExamples />
+        <SliderExample />
+        <ProgressExamples />
+        <CollapsibleExamples />
+        <PreviewCardExamples />
+        <TooltipExamples />
+        <ToogleExample />
+        <AlertExample />
+        <NumberFieldExamples />
+        <ContextMenuExample />
+        <ScrollAreaExample />
+        <AlertDialogExample />
+        <MenuBarExamples />
+        <ToolbarExample />
+        <InputsExample />
+        <RatingReviewExample />
+        <BreadCrumbExample />
+        <NavigationMenuExample />
         <StatusBadgeExample />
         <DropdownMenuExample />
         <SelectExample />
-        <ButtonsExamples />
         <ComboboxExamples />
         <BannerExamples />
         <RatingBarExamples />
         <ButtonsExamples />
         <ToastExamples />
-        */}
 
-        <DialogExamples />
-        <TabsExamples />
+        <ComboboxExamples />
       </div>
     </>
   );

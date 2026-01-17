@@ -1,4 +1,4 @@
-@layer components {
+@layer components.base {
   [data-ui="input"],
   [data-ui="input-wrapper"] {
     --icon-size: 16px;

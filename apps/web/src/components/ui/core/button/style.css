@@ -161,14 +161,16 @@
       width: var(--button-size);
     }
 
-    svg {
-      margin-inline: calc(var(--spacing-4) * -1);
-      width: var(--icon-size);
-      height: var(--icon-size);
+    &[data-as-icon="false"] {
+      svg {
+        margin-inline: calc(var(--spacing-4) * -1);
+        width: var(--icon-size);
+        height: var(--icon-size);
+      }
     }
 
     /* Icon */
-    &:has(svg):not([data-as-icon="false"]) {
+    &[data-as-icon="true"] {
       padding-inline: var(--spacing-4);
       svg {
         color: inherit;

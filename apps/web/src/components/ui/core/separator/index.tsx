@@ -1,4 +1,4 @@
-import "./index.css";
+import "./style.css";
 
 import { Separator as SeparatorPrimititve } from "@base-ui/react/separator";
 
