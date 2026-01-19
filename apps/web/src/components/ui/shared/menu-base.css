@@ -76,7 +76,6 @@
       &:not(&[data-disabled]) {
         &:hover,
         &:focus-visible {
-          border-left-color: var(--color-primary-container);
           background-color: var(--color-surface-container-low);
         }
       }
