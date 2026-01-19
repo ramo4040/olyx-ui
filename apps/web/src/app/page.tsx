@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ComboboxExamples, TagExamples } from "@/components/examples";
+import { ComboboxExamples, TableExample } from "@/components/examples";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -62,10 +62,11 @@ export default function Home() {
          <RatingBarExamples />
          <ButtonsExamples />
          <ToastExamples />
+        <TagExamples />
          */}
 
         <ComboboxExamples />
-        <TagExamples />
+        <TableExample />
       </div>
     </>
   );
