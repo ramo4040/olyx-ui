@@ -1,0 +1,10 @@
+@layer misc {
+  [data-ui="examples-tab"] {
+    margin-inline: auto;
+    max-width: var(--breakpoint-2xl);
+
+    .tab-list {
+      margin-inline: auto;
+    }
+  }
+}

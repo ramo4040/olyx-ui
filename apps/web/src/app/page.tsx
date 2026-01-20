@@ -1,4 +1,4 @@
-import { Hero, MainNavbar } from "@/widgets/misc";
+import { ExamplesTab, Hero, MainNavbar } from "@/widgets/misc";
 
 export default function Page() {
   return (
@@ -6,6 +6,8 @@ export default function Page() {
       <MainNavbar />
 
       <Hero />
+
+      <ExamplesTab />
     </div>
   );
 }
