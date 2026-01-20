@@ -1,7 +1,7 @@
 @import url("./_base/colors.css");
 @import url("./_base/tokens.css");
 
-@layer reset, base, utilities, components;
+@layer reset, base, utilities, components, misc;
 
 @layer reset {
   * {
@@ -23,8 +23,6 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    padding-inline: 150px;
-    padding-block: 50px;
     background-color: var(--color-background);
     color: var(--color-on-background);
     font: var(--font-body-md);
