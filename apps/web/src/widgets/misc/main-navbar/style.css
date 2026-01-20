@@ -1,0 +1,48 @@
+@layer misc {
+  [data-ui="main-navbar"] {
+    position: fixed;
+    top: var(--spacing-24);
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(24px);
+    background: var(--color-surface-container-lowest);
+    margin-inline: auto;
+    width: fit-content;
+    border-radius: var(--radius-xl-inc);
+    padding: var(--spacing-6) var(--spacing-24);
+    border: 1px solid var(--color-surface-variant);
+
+    .main-navbar-list {
+      gap: var(--spacing-24);
+    }
+
+    .actions-list {
+      margin-left: var(--spacing-48);
+      gap: var(--spacing-6);
+    }
+
+    .link-item {
+      color: var(--color-on-background);
+
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      a {
+        padding-inline: var(--spacing-6);
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .btn {
+      svg {
+        color: var(--color-on-background);
+        fill: var(--color-on-background);
+        width: var(--spacing-16);
+        height: var(--spacing-16);
+      }
+    }
+  }
+}

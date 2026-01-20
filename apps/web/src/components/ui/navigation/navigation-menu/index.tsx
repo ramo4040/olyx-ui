@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.css";
 import { NavigationMenu as NavigationMenuPrimitive } from "@base-ui/react/navigation-menu";
 import { ArrowDown01Icon } from "@hugeicons/core-free-icons";

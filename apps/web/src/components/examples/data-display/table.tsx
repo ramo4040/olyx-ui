@@ -279,7 +279,7 @@ const TableProjectTrackerExample = () => {
                     </Button>
                   }
                 />
-                <DropdownMenuContent side="inline-start">
+                <DropdownMenuContent>
                   <DropdownMenuItem>
                     <HugeiconsIcon icon={Edit02Icon} />
                     <span style={{ flex: 1 }}>Edit</span>
@@ -447,7 +447,7 @@ const TableTaskListExample = () => {
                       </Button>
                     }
                   />
-                  <DropdownMenuContent side="inline-start">
+                  <DropdownMenuContent>
                     <DropdownMenuItem>
                       <HugeiconsIcon icon={Edit02Icon} />
                       <span style={{ flex: 1 }}>Edit</span>

@@ -1,0 +1,32 @@
+@layer misc {
+  [data-ui="hero"] {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: var(--spacing-24);
+    padding-block: 160px 100px;
+    text-align: center;
+    margin-inline: auto;
+    max-width: var(--breakpoint-md);
+
+    h1 {
+      font: var(--font-display-lg);
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    > p {
+      width: 70%;
+      font: var(--font-body-lg);
+      font-weight: 500;
+      color: var(--color-on-surface-variant);
+    }
+
+    .actions {
+      display: flex;
+      gap: var(--spacing-8);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
