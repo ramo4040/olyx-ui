@@ -1,9 +1,9 @@
-import { Logo } from "@/components/misc";
+import { MainNavbar } from "@/widgets/misc";
 
 export default function Page() {
   return (
     <div>
-      <Logo />
+      <MainNavbar />
     </div>
   );
 }

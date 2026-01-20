@@ -1,3 +1,5 @@
+"use client";
+
 import { HugeiconsIcon } from "@hugeicons/react";
 import { createContext, useContext } from "react";
 import { Button } from "../../core/button";
