@@ -1,3 +1,11 @@
+import "./style.css";
+import {
+  Cancel01Icon,
+  Mic02Icon,
+  PinIcon,
+  VideoCameraAiIcon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import {
   Avatar,
   AvatarFallback,
@@ -8,14 +16,6 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui";
-import "./style.css";
-import {
-  Cancel01Icon,
-  Mic02Icon,
-  PinIcon,
-  VideoCameraAiIcon,
-} from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
 
 export function PostComposer() {
   return (

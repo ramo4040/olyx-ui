@@ -5,7 +5,6 @@
       color: var(--color-tooltip);
       background-color: var(--color-on-tooltip);
       transform-origin: var(--transform-origin);
-      max-width: 200px;
       text-align: center;
       display: grid;
       place-content: center;

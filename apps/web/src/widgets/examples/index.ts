@@ -1,5 +1,7 @@
 export * from "./edit-canvas";
+export * from "./event-card";
 export * from "./feedback-card";
+export * from "./input-group";
 export * from "./loading-card";
 export * from "./post-composer";
 export * from "./price-range";

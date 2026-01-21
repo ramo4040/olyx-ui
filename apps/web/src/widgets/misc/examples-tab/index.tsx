@@ -1,8 +1,10 @@
 import "./style.css";
-import { Separator, Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui";
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui";
 import {
   EditCanvas,
+  EventCard,
   FeedbackCard,
+  InputGroup,
   LoadingCard,
   PostComposer,
   PriceRange,
@@ -25,19 +27,22 @@ export const ExamplesTab = () => {
           <div>
             <PostComposer />
             <LoadingCard />
-            <FeedbackCard />
           </div>
 
           <div>
             <EditCanvas />
-            <Separator />
             <TeamSize />
-            <Separator />
           </div>
 
           <div>
             <PriceRange />
+            <EventCard />
+            <InputGroup />
+          </div>
+
+          <div>
             <TeamInvite />
+            <FeedbackCard />
           </div>
         </TabsPanel>
       </Tabs>
