@@ -1,6 +1,11 @@
 import "./style.css";
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui";
-import { EditCanvas, FeedbackCard, PostComposer } from "@/widgets/examples";
+import {
+  EditCanvas,
+  FeedbackCard,
+  LoadingCard,
+  PostComposer,
+} from "@/widgets/examples";
 
 export const ExamplesTab = () => {
   return (
@@ -16,6 +21,7 @@ export const ExamplesTab = () => {
         <TabsPanel value="examples" className="examples-panel">
           <div>
             <PostComposer />
+            <LoadingCard />
             <FeedbackCard />
           </div>
           <div>
