@@ -1,0 +1,81 @@
+@layer misc {
+  .event-card {
+    width: 350px;
+    background: var(--color-surface-container-lowest);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-surface-variant);
+  }
+
+  .event-card-body {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-16);
+    gap: var(--spacing-16);
+  }
+
+  .event-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+
+  .event-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    font: var(--font-body-sm);
+    color: var(--color-on-surface-variant);
+  }
+
+  .event-title {
+    font: var(--font-title-lg);
+  }
+
+  .event-location {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    font: var(--font-body-sm);
+    color: var(--color-on-surface-variant);
+  }
+
+  .event-attendees {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-8);
+  }
+
+  .attendees-text {
+    font: var(--font-body-sm);
+    color: var(--color-on-surface-variant);
+  }
+
+  .event-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-4);
+  }
+
+  .event-price {
+    font: var(--font-headline-sm);
+    font-weight: 600;
+    color: var(--color-success);
+  }
+
+  .event-trend {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    font: var(--font-body-sm);
+    color: var(--color-on-surface-variant);
+  }
+
+  .event-card-footer {
+    display: flex;
+    gap: var(--spacing-12);
+    padding: var(--spacing-6) var(--spacing-16) var(--spacing-12)
+      var(--spacing-16);
+  }
+}
