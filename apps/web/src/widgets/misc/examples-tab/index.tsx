@@ -4,6 +4,7 @@ import {
   EditCanvas,
   EventCard,
   FeedbackCard,
+  GroupButton,
   InputGroup,
   LoadingCard,
   PostComposer,
@@ -26,6 +27,7 @@ export const ExamplesTab = () => {
         <TabsPanel value="examples" className="examples-panel">
           <div>
             <PostComposer />
+            <GroupButton />
             <LoadingCard />
           </div>
 
@@ -36,8 +38,8 @@ export const ExamplesTab = () => {
 
           <div>
             <PriceRange />
-            <EventCard />
             <InputGroup />
+            <EventCard />
           </div>
 
           <div>
