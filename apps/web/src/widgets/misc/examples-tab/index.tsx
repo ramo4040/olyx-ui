@@ -11,6 +11,7 @@ import {
   PriceRange,
   TeamInvite,
   TeamSize,
+  ToastGroup,
 } from "@/widgets/examples";
 
 export const ExamplesTab = () => {
@@ -34,6 +35,7 @@ export const ExamplesTab = () => {
           <div>
             <EditCanvas />
             <TeamSize />
+            <ToastGroup />
           </div>
 
           <div>
