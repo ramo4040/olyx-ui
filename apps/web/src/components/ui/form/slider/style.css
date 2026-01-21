@@ -1,6 +1,6 @@
 @layer components {
   [data-ui="slider"] {
-    --slider-size: 15rem;
+    --slider-size: 100%;
     --slider-weight: var(--spacing-14);
     --slider-color: var(--color-primary);
 

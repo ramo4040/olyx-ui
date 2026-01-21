@@ -1,10 +1,10 @@
 @layer components {
   [data-ui="select-trigger"] {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     isolation: isolate;
-    width: inherit;
     border: 1px solid var(--color-surface-variant);
     background-color: var(--color-background);
     color: var(--color-on-surface-variant);

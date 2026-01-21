@@ -4,10 +4,10 @@ import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 
 type BadgeProps = useRender.ComponentProps<"span"> & {
-  variant?: "filled" | "light" | "lighter" | "stroke";
+  mode?: "filled" | "light" | "lighter" | "stroke";
   size?: "sm" | "md";
   shape?: "rounded" | "smoothed";
-  mode?: "default" | "error";
+  variant?: "primary";
   doted?: boolean;
   disabled?: boolean;
 };
@@ -33,10 +33,10 @@ function Badge({
     render,
     state: {
       ui: "badge",
-      variant: variant || "default",
+      mode: mode || "lighter",
       size: size || "md",
       shape: shape || "smoothed",
-      mode: mode || "default",
+      variant: variant || "primary",
       doted: !!doted,
     },
   });

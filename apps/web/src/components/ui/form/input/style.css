@@ -5,6 +5,7 @@
     --inline-padding: var(--spacing-10);
     --surface-low: var(--color-surface-container-low);
 
+    width: 100%;
     position: relative;
     height: 36px;
     padding-inline: var(--inline-padding);

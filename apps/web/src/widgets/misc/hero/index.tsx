@@ -4,9 +4,7 @@ import { Badge, Button } from "@/components/ui";
 export const Hero = () => {
   return (
     <section data-ui="hero">
-      <Badge variant="lighter" mode="default">
-        🎉​ Olyx v1.0 is now available
-      </Badge>
+      <Badge mode="lighter">🎉​ Olyx v1.0 is now available</Badge>
 
       <h1>Your Complete UI Component Library</h1>
       <p>
