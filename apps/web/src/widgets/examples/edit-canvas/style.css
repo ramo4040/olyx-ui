@@ -9,7 +9,7 @@
     border: 1px solid var(--border-color);
 
     .separator {
-      margin-block: var(--spacing-16);
+      margin-block: var(--spacing-12);
     }
 
     header {

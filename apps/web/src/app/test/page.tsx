@@ -69,8 +69,8 @@ export default function Home() {
          <TagExamples />
          <BadgesExamples />
         <RatingBarExamples />
-        <TableExample />
         */}
+        <TableExample />
         <SelectExample />
         <InputsExample />
 

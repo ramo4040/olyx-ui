@@ -1,0 +1,58 @@
+@layer misc {
+  [data-ui="team-invite"] {
+    width: 350px;
+    padding: var(--spacing-16);
+    background: var(--color-surface-container-lowest);
+    border-radius: var(--radius-lg-inc);
+    border: 1px solid var(--color-surface-variant);
+
+    [data-ui="fieldset-legend"] {
+      font: var(--font-title-sm);
+    }
+
+    [data-ui="fieldset-description"] {
+      font: var(--font-body-md);
+      color: var(--color-on-surface-variant);
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user-name {
+      font: var(--font-body-md);
+      font-weight: 500;
+    }
+
+    .user-handle {
+      font: var(--font-body-sm);
+      color: var(--color-on-surface-variant);
+    }
+
+    .members-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .member-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--spacing-8);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background 0.15s;
+
+      &:hover {
+        background: var(--color-surface-container-high);
+      }
+    }
+
+    .member-info {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-12);
+    }
+  }
+}

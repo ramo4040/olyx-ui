@@ -2,9 +2,14 @@ import "./style.css";
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui";
 import {
   EditCanvas,
+  EventCard,
   FeedbackCard,
+  InputGroup,
   LoadingCard,
   PostComposer,
+  PriceRange,
+  TeamInvite,
+  TeamSize,
 } from "@/widgets/examples";
 
 export const ExamplesTab = () => {
@@ -22,10 +27,22 @@ export const ExamplesTab = () => {
           <div>
             <PostComposer />
             <LoadingCard />
-            <FeedbackCard />
           </div>
+
           <div>
             <EditCanvas />
+            <TeamSize />
+          </div>
+
+          <div>
+            <PriceRange />
+            <EventCard />
+            <InputGroup />
+          </div>
+
+          <div>
+            <TeamInvite />
+            <FeedbackCard />
           </div>
         </TabsPanel>
       </Tabs>

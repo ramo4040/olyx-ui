@@ -1,5 +1,6 @@
 @layer misc {
   [data-ui="loading-card"] {
+    width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
