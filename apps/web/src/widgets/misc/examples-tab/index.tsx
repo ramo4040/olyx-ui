@@ -4,12 +4,14 @@ import {
   EditCanvas,
   EventCard,
   FeedbackCard,
+  GroupButton,
   InputGroup,
   LoadingCard,
   PostComposer,
   PriceRange,
   TeamInvite,
   TeamSize,
+  ToastGroup,
 } from "@/widgets/examples";
 
 export const ExamplesTab = () => {
@@ -26,18 +28,20 @@ export const ExamplesTab = () => {
         <TabsPanel value="examples" className="examples-panel">
           <div>
             <PostComposer />
+            <GroupButton />
             <LoadingCard />
           </div>
 
           <div>
             <EditCanvas />
             <TeamSize />
+            <ToastGroup />
           </div>
 
           <div>
             <PriceRange />
-            <EventCard />
             <InputGroup />
+            <EventCard />
           </div>
 
           <div>
