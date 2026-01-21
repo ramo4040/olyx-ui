@@ -6,6 +6,7 @@ import {
   LoadingCard,
   PostComposer,
   PriceRange,
+  TeamInvite,
   TeamSize,
 } from "@/widgets/examples";
 
@@ -36,6 +37,7 @@ export const ExamplesTab = () => {
 
           <div>
             <PriceRange />
+            <TeamInvite />
           </div>
         </TabsPanel>
       </Tabs>
