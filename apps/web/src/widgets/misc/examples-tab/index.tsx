@@ -1,5 +1,6 @@
-import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui";
 import "./style.css";
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui";
+import { EditCanvas, FeedbackCard, PostComposer } from "@/widgets/examples";
 
 export const ExamplesTab = () => {
   return (
@@ -12,12 +13,14 @@ export const ExamplesTab = () => {
           <TabsTab value="authentication">Authentication</TabsTab>
         </TabsList>
 
-        <TabsPanel value="examples">
-          <p>
-            Welcome to our product overview. This section provides a
-            comprehensive introduction to what we offer and how it can benefit
-            your workflow.
-          </p>
+        <TabsPanel value="examples" className="examples-panel">
+          <div>
+            <PostComposer />
+            <FeedbackCard />
+          </div>
+          <div>
+            <EditCanvas />
+          </div>
         </TabsPanel>
       </Tabs>
     </section>

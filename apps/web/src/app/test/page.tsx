@@ -4,8 +4,12 @@ import { useEffect, useState } from "react";
 import {
   BadgesExamples,
   ComboboxExamples,
+  InputsExample,
   NavigationMenuExample,
+  SelectExample,
+  TableExample,
 } from "@/components/examples";
+import { RatingBarExamples } from "@/components/examples/data-display/rating-bar";
 import { Switch } from "@/components/ui";
 
 export default function Home() {
@@ -54,22 +58,22 @@ export default function Home() {
          <AlertDialogExample />
          <MenuBarExamples />
          <ToolbarExample />
-         <InputsExample />
          <RatingReviewExample />
          <BreadCrumbExample />
          <StatusBadgeExample />
          <DropdownMenuExample />
-         <SelectExample />
          <ComboboxExamples />
          <BannerExamples />
-         <RatingBarExamples />
          <ButtonsExamples />
          <ToastExamples />
          <TagExamples />
-         <TableExample />
-         */}
+         <BadgesExamples />
+        <RatingBarExamples />
+        <TableExample />
+        */}
+        <SelectExample />
+        <InputsExample />
 
-        <BadgesExamples />
         <ComboboxExamples />
         <NavigationMenuExample />
       </div>

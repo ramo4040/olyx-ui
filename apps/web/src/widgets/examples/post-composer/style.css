@@ -1,0 +1,57 @@
+@layer misc {
+  .post-composer {
+    max-width: 350px;
+    padding: var(--spacing-16);
+    background: var(--color-surface-container-lowest);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-surface-variant);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+
+    .post-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .post-user {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-12);
+
+      .post-user-info {
+        display: flex;
+        flex-direction: column;
+
+        .post-user-name {
+          font: var(--font-body-md);
+          font-weight: 600;
+          color: var(--color-on-background);
+        }
+
+        .post-user-handle {
+          font-size: 14px;
+          color: var(--color-on-surface-variant);
+        }
+      }
+    }
+
+    .post-content {
+      textarea {
+        width: 100%;
+      }
+    }
+
+    .post-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .post-actions {
+        display: flex;
+        gap: 8px;
+      }
+    }
+  }
+}

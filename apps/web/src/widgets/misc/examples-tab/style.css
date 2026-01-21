@@ -2,9 +2,21 @@
   [data-ui="examples-tab"] {
     margin-inline: auto;
     max-width: var(--breakpoint-2xl);
+    padding-bottom: 150px;
 
     .tab-list {
       margin-inline: auto;
+    }
+
+    .examples-panel {
+      display: flex;
+      gap: var(--spacing-8);
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-8);
+      }
     }
   }
 }

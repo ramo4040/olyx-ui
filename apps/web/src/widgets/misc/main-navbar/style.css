@@ -1,11 +1,16 @@
 @layer misc {
   [data-ui="main-navbar"] {
     position: fixed;
+    z-index: 40;
     top: var(--spacing-24);
     left: 50%;
     transform: translateX(-50%);
-    backdrop-filter: blur(24px);
-    background: var(--color-surface-container-lowest);
+    backdrop-filter: blur(20px);
+    background: color-mix(
+      in srgb,
+      var(--color-surface-container-lowest) 50%,
+      transparent
+    );
     margin-inline: auto;
     width: fit-content;
     border-radius: var(--radius-xl-inc);

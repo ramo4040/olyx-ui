@@ -1,0 +1,59 @@
+@layer misc {
+  [data-ui="edit-canvas"] {
+    --border-color: var(--color-surface-variant);
+
+    width: 350px;
+    padding: var(--spacing-16);
+    background: var(--color-surface-container-lowest);
+    border-radius: var(--radius-lg-inc);
+    border: 1px solid var(--border-color);
+
+    .separator {
+      margin-block: var(--spacing-16);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font: var(--font-title-sm);
+    }
+
+    .setting-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-8);
+
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-8);
+
+        > [data-ui="input-wrapper"] {
+          flex: 1;
+        }
+      }
+    }
+
+    .px {
+      width: 32px;
+      text-align: center;
+    }
+
+    .tabs {
+      width: 100%;
+      .tab-list {
+        width: 100%;
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
