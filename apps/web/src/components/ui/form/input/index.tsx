@@ -1,7 +1,7 @@
 import "./style.css";
 import { Input as InputPrimitive } from "@base-ui/react/input";
 
-function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+function Input({ className, type, ...props }: InputPrimitive.Props) {
   return <InputPrimitive type={type} data-ui="input" {...props} />;
 }
 
