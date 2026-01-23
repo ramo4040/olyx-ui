@@ -22,8 +22,16 @@
     }
 
     .actions-list {
-      margin-left: var(--spacing-48);
+      margin-left: var(--spacing-64);
       gap: var(--spacing-6);
+
+      > [data-ui="separator"] {
+        height: var(--spacing-24);
+      }
+    }
+
+    .kbd {
+      margin-left: var(--spacing-48);
     }
 
     .link-item {
@@ -38,15 +46,6 @@
         &:hover {
           background-color: transparent;
         }
-      }
-    }
-
-    .btn {
-      svg {
-        color: var(--color-on-background);
-        fill: var(--color-on-background);
-        width: var(--spacing-16);
-        height: var(--spacing-16);
       }
     }
   }

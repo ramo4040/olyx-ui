@@ -1,6 +1,6 @@
 @layer components {
   [data-ui="button"] {
-    --icon-size: 20px;
+    --svg-size: 18px;
 
     display: flex;
     align-items: center;
@@ -19,6 +19,7 @@
     /* size */
     &[data-size="lg"] {
       --button-size: 40px;
+      --svg-as-icon-size: var(--spacing-24);
 
       font-size: var(--font-body-lg);
       padding-inline: var(--spacing-16);
@@ -26,14 +27,16 @@
     }
 
     &[data-size="md"] {
-      --button-size: 32px;
+      --button-size: var(--spacing-32);
+      --svg-as-icon-size: 18px;
 
       padding-inline: var(--spacing-12);
       gap: var(--spacing-12);
     }
 
     &[data-size="sm"] {
-      --button-size: 24px;
+      --button-size: var(--spacing-24);
+      --svg-as-icon-size: var(--spacing-14);
 
       padding-inline: var(--spacing-8);
       gap: var(--spacing-8);
@@ -137,7 +140,7 @@
 
     /* Active */
     &:active {
-      scale: 0.97;
+      scale: 0.99;
     }
 
     /* Focus */
@@ -164,16 +167,18 @@
     &[data-as-icon="false"] {
       svg {
         margin-inline: calc(var(--spacing-4) * -1);
-        width: var(--icon-size);
-        height: var(--icon-size);
+        width: var(--svg-size);
+        height: var(--svg-size);
       }
     }
 
     /* Icon */
     &[data-as-icon="true"] {
       padding-inline: var(--spacing-4);
+
       svg {
-        color: inherit;
+        width: var(--svg-as-icon-size);
+        height: var(--svg-as-icon-size);
       }
     }
   }
