@@ -10,6 +10,7 @@ import {
   LoadingCard,
   PostComposer,
   PriceRange,
+  TasksExample,
   TeamInvite,
   TeamSize,
   ToastGroup,
@@ -51,8 +52,12 @@ export const ExamplesTab = () => {
           </div>
         </TabsPanel>
 
-        <TabsPanel value="authentication" className="authentication-panel">
+        <TabsPanel value="authentication">
           <Authentication />
+        </TabsPanel>
+
+        <TabsPanel value="tasks">
+          <TasksExample />
         </TabsPanel>
       </Tabs>
     </section>

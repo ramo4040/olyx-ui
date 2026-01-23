@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import {
   BadgesExamples,
+  ButtonsExamples,
   ComboboxExamples,
   InputsExample,
   NavigationMenuExample,
@@ -64,18 +65,18 @@ export default function Home() {
          <DropdownMenuExample />
          <ComboboxExamples />
          <BannerExamples />
-         <ButtonsExamples />
          <ToastExamples />
          <TagExamples />
          <BadgesExamples />
-        <RatingBarExamples />
-        */}
-        <TableExample />
+         <RatingBarExamples />
         <SelectExample />
         <InputsExample />
 
         <ComboboxExamples />
         <NavigationMenuExample />
+         */}
+        <ButtonsExamples />
+        <TableExample />
       </div>
     </div>
   );

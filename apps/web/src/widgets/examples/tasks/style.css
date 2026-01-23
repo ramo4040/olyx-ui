@@ -1,0 +1,62 @@
+@layer misc {
+  [data-ui="tasks-page-example"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    height: 90vh;
+    width: 100%;
+    border: 1px solid var(--color-surface-variant);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface-container-lowest);
+    padding: var(--spacing-32);
+
+    > header {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--spacing-12);
+      align-items: center;
+
+      .details {
+        h3 {
+          font: var(--font-title-lg);
+          font-weight: 500;
+        }
+
+        p {
+          font: var(--font-body-lg);
+          color: var(--color-on-surface-variant);
+        }
+      }
+    }
+
+    .task-column {
+      width: 50%;
+    }
+
+    .filter-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .filters {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-12);
+
+        .search {
+          width: 250px;
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .selected-count {
+        color: var(--color-on-surface-variant);
+      }
+    }
+  }
+}
