@@ -7,6 +7,7 @@ export * from "./input-group";
 export * from "./loading-card";
 export * from "./post-composer";
 export * from "./price-range";
+export * from "./tasks";
 export * from "./team-invite";
 export * from "./team-size";
 export * from "./toast-group";

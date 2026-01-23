@@ -27,7 +27,7 @@
     }
 
     &[data-size="md"] {
-      --button-size: var(--spacing-32);
+      --button-size: 36px;
       --svg-as-icon-size: 18px;
 
       padding-inline: var(--spacing-12);
@@ -35,7 +35,7 @@
     }
 
     &[data-size="sm"] {
-      --button-size: var(--spacing-24);
+      --button-size: 28px;
       --svg-as-icon-size: var(--spacing-14);
 
       padding-inline: var(--spacing-8);
