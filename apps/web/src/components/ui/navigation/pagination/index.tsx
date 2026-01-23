@@ -10,18 +10,15 @@ import { Button } from "../../core/button";
 
 function Pagination({
   rounded = false,
-  variant = "stroke",
   ...props
 }: React.ComponentProps<"nav"> & {
   rounded?: boolean;
-  variant?: "ghost" | "stroke";
 }) {
   return (
     <nav
       aria-label="pagination"
       data-ui="pagination"
       data-rounded={rounded}
-      data-variant={variant}
       {...props}
     />
   );
@@ -53,6 +50,7 @@ function PaginationLink({
       data-active={isActive}
       size="md"
       asIcon={asIcon}
+      nativeButton={false}
       render={
         <a
           aria-current={isActive ? "page" : undefined}
@@ -71,6 +69,7 @@ function PaginationPrevious({
 }: React.ComponentProps<typeof PaginationLink>) {
   return (
     <PaginationLink
+      data-slot="pagination-previous"
       aria-label="Go to previous page"
       asIcon={!children}
       {...props}
@@ -86,7 +85,12 @@ function PaginationNext({
   ...props
 }: React.ComponentProps<typeof PaginationLink>) {
   return (
-    <PaginationLink aria-label="Go to next page" asIcon={!children} {...props}>
+    <PaginationLink
+      data-slot="pagination-next"
+      aria-label="Go to next page"
+      asIcon={!children}
+      {...props}
+    >
       {children}
       <HugeiconsIcon icon={ArrowRight01Icon} />
     </PaginationLink>
@@ -100,6 +104,7 @@ function PaginationEllipsis({ ...props }: React.ComponentProps<"span">) {
       size="md"
       variant="neutral"
       mode="stroke"
+      nativeButton={false}
       data-slot="pagination-ellipsis"
       render={
         <span aria-hidden {...props}>

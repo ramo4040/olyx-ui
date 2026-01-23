@@ -5,6 +5,7 @@
     overflow-x: auto;
 
     [data-ui="table"] {
+      width: 100%;
       border-collapse: collapse;
 
       /* Header */

@@ -12,16 +12,20 @@
       gap: var(--spacing-6);
 
       [data-slot="pagination-link"] {
+        background-color: transparent;
+
         &[data-active="true"] {
-          border-color: var(--color-surface-container);
-          background-color: var(--color-surface-container-high);
+          border-color: transparent;
+          color: var(--color-primary);
+          background-color: var(--color-primary-container);
         }
       }
     }
 
-    &[data-variant="ghost"]
-      :is([data-slot="pagination-link"], [data-slot="pagination-ellipsis"]) {
-      border-color: transparent;
+    [data-slot="pagination-next"],
+    [data-slot="pagination-previous"] {
+      border: transparent;
+      background: transparent;
     }
 
     /* Rounded Styles */
