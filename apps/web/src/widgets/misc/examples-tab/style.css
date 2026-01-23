@@ -9,10 +9,6 @@
       margin-inline: auto;
     }
 
-    [data-ui="separator"] {
-      margin: var(--spacing-6) 0;
-    }
-
     .examples-panel {
       display: flex;
       gap: var(--spacing-8);

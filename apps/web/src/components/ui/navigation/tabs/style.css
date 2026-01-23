@@ -9,7 +9,7 @@
     }
 
     [data-ui="tabs-panel"] {
-      width: 400px;
+      width: 100%;
     }
 
     [data-ui="tabs-list"] {

@@ -45,7 +45,7 @@
       transition: background 0.15s;
 
       &:hover {
-        background: var(--color-surface-container-high);
+        background: var(--color-surface-container-low);
       }
     }
 

@@ -1,6 +1,7 @@
 import "./style.css";
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui";
 import {
+  Authentication,
   EditCanvas,
   EventCard,
   FeedbackCard,
@@ -48,6 +49,10 @@ export const ExamplesTab = () => {
             <TeamInvite />
             <FeedbackCard />
           </div>
+        </TabsPanel>
+
+        <TabsPanel value="authentication" className="authentication-panel">
+          <Authentication />
         </TabsPanel>
       </Tabs>
     </section>

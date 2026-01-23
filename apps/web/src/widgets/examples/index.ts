@@ -1,3 +1,4 @@
+export * from "./authentication";
 export * from "./edit-canvas";
 export * from "./event-card";
 export * from "./feedback-card";
