@@ -73,10 +73,10 @@ export default function Home() {
         <InputsExample />
 
         <ComboboxExamples />
-        <NavigationMenuExample />
-         */}
-        <ButtonsExamples />
         <TableExample />
+        <ButtonsExamples />
+        */}
+        <NavigationMenuExample />
       </div>
     </div>
   );

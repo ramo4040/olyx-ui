@@ -23,7 +23,6 @@ export const ExamplesTab = () => {
         <TabsList className="tab-list">
           <TabsTab value="examples">Examples</TabsTab>
           <TabsTab value="tasks">Tasks</TabsTab>
-          <TabsTab value="playground">Playground</TabsTab>
           <TabsTab value="authentication">Authentication</TabsTab>
         </TabsList>
 

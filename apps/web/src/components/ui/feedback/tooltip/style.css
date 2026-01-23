@@ -6,8 +6,10 @@
       background-color: var(--color-on-tooltip);
       transform-origin: var(--transform-origin);
       text-align: center;
-      display: grid;
-      place-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-8);
       transition: var(--transition-standard-fast-effects);
 
       /* Variant */

@@ -18,13 +18,17 @@ function NavigationMenu({
   );
 }
 
-function NavigationMenuList(props: NavigationMenuPrimitive.List.Props) {
+function NavigationMenuList(
+  props: React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.List>,
+) {
   return (
     <NavigationMenuPrimitive.List data-ui="navigation-menu-list" {...props} />
   );
 }
 
-function NavigationMenuItem(props: NavigationMenuPrimitive.Item.Props) {
+function NavigationMenuItem(
+  props: React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.Item>,
+) {
   return (
     <NavigationMenuPrimitive.Item data-ui="navigation-menu-item" {...props} />
   );
@@ -82,7 +86,9 @@ function NavigationMenuLink(props: NavigationMenuPrimitive.Link.Props) {
   );
 }
 
-function NavigationMenuIndicator(props: NavigationMenuPrimitive.Icon.Props) {
+function NavigationMenuIndicator(
+  props: React.ComponentPropsWithRef<typeof NavigationMenuPrimitive.Icon>,
+) {
   return (
     <NavigationMenuPrimitive.Icon
       data-ui="navigation-menu-indicator"
