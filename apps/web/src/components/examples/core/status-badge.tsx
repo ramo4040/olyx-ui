@@ -6,7 +6,7 @@ import {
   UnavailableIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { StatusBadge } from "@/components/ui";
+import { StatusBadge } from "@olyx/react";
 
 export const StatusBadgeExample = () => {
   return (

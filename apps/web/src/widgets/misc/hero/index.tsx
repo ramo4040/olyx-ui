@@ -1,5 +1,5 @@
 import "./style.css";
-import { Badge, Button } from "@/components/ui";
+import { Badge, Button } from "@olyx/react";
 
 export const Hero = () => {
   return (

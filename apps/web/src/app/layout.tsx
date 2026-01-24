@@ -1,6 +1,8 @@
+import "../index.css";
+
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-import "../index.css";
+import { ThemeProvider } from "next-themes";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -27,14 +29,12 @@ export default function RootLayout({
       data-theme="light"
       className={dmSans.variable}
     >
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
-        />
-      </head>
+      <head />
+
       <body>
-        <div className="root">{children}</div>
+        <div className="root">
+          <ThemeProvider>{children}</ThemeProvider>
+        </div>
       </body>
     </html>
   );

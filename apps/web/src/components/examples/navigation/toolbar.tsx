@@ -33,7 +33,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export function ToolbarExample() {
   return (

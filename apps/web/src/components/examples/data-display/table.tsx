@@ -34,7 +34,7 @@ import {
   TableHeader,
   TableRow,
   Tag,
-} from "@/components/ui";
+} from "@olyx/react";
 
 // example 1
 const teamMembers = [

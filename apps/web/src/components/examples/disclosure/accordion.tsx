@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const AccordionExample = () => {
   return (

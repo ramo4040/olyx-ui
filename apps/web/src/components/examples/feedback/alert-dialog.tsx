@@ -7,7 +7,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
   Button,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const AlertDialogExample = () => {
   return (

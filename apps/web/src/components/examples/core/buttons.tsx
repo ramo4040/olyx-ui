@@ -1,6 +1,6 @@
 import { Setting06Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Button } from "@/components/ui";
+import { Button } from "@olyx/react";
 
 export const ButtonsExamples = () => {
   return (

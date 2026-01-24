@@ -1,7 +1,6 @@
 "use client";
 
 import "./style.css";
-import { useState } from "react";
 import {
   Avatar,
   AvatarFallback,
@@ -12,7 +11,8 @@ import {
   Fieldset,
   FieldsetDescription,
   FieldsetLegend,
-} from "@/components/ui";
+} from "@olyx/react";
+import { useState } from "react";
 
 const members = [
   {

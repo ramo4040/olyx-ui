@@ -1,11 +1,6 @@
 import { Alert01FreeIcons } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  Banner,
-  BannerClose,
-  BannerContent,
-  BannerIcon,
-} from "@/components/ui";
+import { Banner, BannerClose, BannerContent, BannerIcon } from "@olyx/react";
 
 export const BannerExamples = () => {
   return (

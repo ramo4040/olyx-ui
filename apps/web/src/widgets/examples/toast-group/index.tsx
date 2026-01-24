@@ -1,7 +1,7 @@
 "use client";
 
 import "./style.css";
-import { Button, StackedToastProvider, stackedToast } from "@/components/ui";
+import { Button, StackedToastProvider, stackedToast } from "@olyx/react";
 
 export const ToastGroup = () => {
   return (

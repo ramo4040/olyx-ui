@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/ui";
+import { Skeleton } from "@olyx/react";
 
 export const SkeletonExamples = () => {
   return (

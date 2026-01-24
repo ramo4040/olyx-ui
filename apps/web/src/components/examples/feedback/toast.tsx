@@ -1,14 +1,14 @@
 "use client";
 
-import { useRef } from "react";
-import type { ToastType } from "@/components/ui";
+import type { ToastType } from "@olyx/react";
 import {
   AnchoredToastProvider,
   anchoredToast,
   Button,
   StackedToastProvider,
   stackedToast,
-} from "@/components/ui";
+} from "@olyx/react";
+import { useRef } from "react";
 
 export const ToastExamples = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);

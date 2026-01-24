@@ -1,5 +1,5 @@
 import "./style.css";
-import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui";
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@olyx/react";
 import {
   Authentication,
   EditCanvas,

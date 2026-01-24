@@ -1,8 +1,4 @@
-import {
-  Collapsible,
-  CollapsiblePanel,
-  CollapsibleTrigger,
-} from "@/components/ui";
+import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@olyx/react";
 
 export const CollapsibleExamples = () => {
   return (

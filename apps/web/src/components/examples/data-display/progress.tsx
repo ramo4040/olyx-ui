@@ -1,4 +1,4 @@
-import { Progress, ProgressLabel, ProgressValue } from "@/components/ui";
+import { Progress, ProgressLabel, ProgressValue } from "@olyx/react";
 
 export const ProgressExamples = () => {
   return (

@@ -13,7 +13,7 @@ import {
   ComboboxList,
   ComboboxValue,
   useComboboxAnchor,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const ComboboxExamples = () => {
   const containerRef = useComboboxAnchor();

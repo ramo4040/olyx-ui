@@ -20,7 +20,7 @@ import {
   DropdownMenuSubmenuTrigger,
   DropdownMenuTrigger,
   Switch,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const DropdownMenuExample = () => {
   return (

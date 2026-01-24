@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const DialogExamples = () => {
   return (

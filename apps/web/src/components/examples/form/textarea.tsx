@@ -1,4 +1,4 @@
-import { Textarea } from "@/components/ui";
+import { Textarea } from "@olyx/react";
 
 export const TextareaExample = () => {
   return (

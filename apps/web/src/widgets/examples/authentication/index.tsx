@@ -1,11 +1,9 @@
 "use client";
 
 import "./style.css";
+import { Button, Input, Separator } from "@olyx/react";
 import { GitHubIcon } from "@/assets/svg/github";
 import { Logo } from "@/components/misc";
-import { Separator } from "@/components/ui";
-import { Button } from "@/components/ui/core/button";
-import { Input } from "@/components/ui/form/input";
 
 export function Authentication() {
   return (

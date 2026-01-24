@@ -1,13 +1,13 @@
 ---
-description: "Main repository instructions for FluentX UI component library"
+description: "Main repository instructions for Olyx UI component library"
 applyTo: "**"
 ---
 
-# Project: FluentX
+# Project: Olyx
 
 ## Overview
 
-FluentX is a modern, accessible React component library built with Next.js 16, React 19, and Base UI. The project uses a monorepo structure with Turborepo, Bun, and Biome for linting/formatting.
+Olyx is a modern, accessible React component library built with Next.js 16, React 19, and Base UI. The project uses a monorepo structure with Turborepo, Bun, and Biome for linting/formatting.
 
 ## Tech Stack
 

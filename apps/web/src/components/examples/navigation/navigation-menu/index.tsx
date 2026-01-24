@@ -7,7 +7,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 const overviewLinks = [
   {

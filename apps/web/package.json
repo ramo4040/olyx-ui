@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@olyx/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,9 +11,11 @@
     "@base-ui/react": "^1.1.0",
     "@hugeicons/core-free-icons": "^3.1.1",
     "@hugeicons/react": "^1.1.4",
+    "@olyx/react": "workspace:*",
     "babel-plugin-react-compiler": "^1.0.0",
     "dotenv": "catalog:",
     "next": "^16.1.0",
+    "next-themes": "^0.4.6",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "vaul-base": "^1.0.0"
@@ -23,6 +25,6 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "typescript": "catalog:",
-    "@fluentx/config": "workspace:*"
+    "@olyx/config": "workspace:*"
   }
 }

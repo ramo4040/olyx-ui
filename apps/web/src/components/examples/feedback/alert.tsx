@@ -13,7 +13,7 @@ import {
   AlertDescription,
   AlertIcon,
   AlertTitle,
-} from "@/components/ui";
+} from "@olyx/react";
 
 const status = [
   "error",

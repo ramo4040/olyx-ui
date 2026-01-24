@@ -8,7 +8,7 @@ import {
   NumberFieldIncrement,
   NumberFieldInput,
   NumberFieldScrubArea,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const NumberFieldExamples = () => {
   return (

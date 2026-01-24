@@ -6,7 +6,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const PaginationExample = () => {
   return (

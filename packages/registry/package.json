@@ -1,0 +1,24 @@
+{
+  "name": "@olyx/registry",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/types.ts",
+      "default": "./src/index.ts"
+    },
+    "./definitions": {
+      "types": "./src/definitions/index.ts",
+      "default": "./src/definitions/index.ts"
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "@olyx/config": "workspace:*",
+    "@types/node": "^25.0.10",
+    "typescript": "catalog:"
+  }
+}

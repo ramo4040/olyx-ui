@@ -1,4 +1,4 @@
-import { Spinner } from "@/components/ui";
+import { Spinner } from "@olyx/react";
 
 export const SpinnerExamples = () => {
   return (

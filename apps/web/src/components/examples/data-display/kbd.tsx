@@ -1,4 +1,4 @@
-import { Kbd, KbdGroup } from "@/components/ui";
+import { Kbd, KbdGroup } from "@olyx/react";
 
 export const KbdExample = () => {
   return (

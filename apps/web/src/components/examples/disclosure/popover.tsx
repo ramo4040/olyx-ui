@@ -6,7 +6,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export function PopoverExamples() {
   return (

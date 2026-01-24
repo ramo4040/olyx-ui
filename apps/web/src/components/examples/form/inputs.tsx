@@ -7,7 +7,7 @@ import {
   InputIcon,
   InputWrapper,
   Kbd,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const InputsExample = () => {
   return (
