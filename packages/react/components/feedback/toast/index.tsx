@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.css";
 
 export { AnchoredToastProvider, anchoredToast } from "./anchored";

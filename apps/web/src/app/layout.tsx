@@ -1,5 +1,6 @@
 import "../index.css";
 
+import { StackedToastProvider } from "@olyx/react";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "next-themes";
@@ -33,7 +34,10 @@ export default function RootLayout({
 
       <body>
         <div className="root">
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <StackedToastProvider timeout={3000} />
+            {children}
+          </ThemeProvider>
         </div>
       </body>
     </html>
