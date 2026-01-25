@@ -1,0 +1,95 @@
+@layer misc {
+  [data-ui="profile-card-example"] {
+    display: grid;
+    gap: var(--spacing-12);
+    width: 370px;
+    padding: var(--spacing-12);
+    border: 1px solid var(--color-surface-variant);
+    border-radius: var(--radius-xl);
+    background-color: var(--color-surface-container-lowest);
+
+    .header {
+      .banner {
+        height: 130px;
+        border-radius: var(--radius-lg-inc);
+        background: radial-gradient(
+          farthest-corner circle at top right in oklab,
+          var(--color-primary-container) 0%,
+          var(--color-tertiary-container) 100%
+        );
+      }
+
+      .avatar {
+        margin-top: -42px;
+        margin-left: var(--spacing-12);
+      }
+    }
+
+    .details {
+      display: grid;
+      gap: var(--spacing-12);
+      padding-inline: var(--spacing-12);
+
+      .info {
+        display: flex;
+        gap: var(--spacing-12);
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          display: flex;
+          align-items: center;
+          gap: var(--spacing-4);
+          font: var(--font-title-lg);
+          font-weight: 600;
+
+          span {
+            display: flex;
+            svg {
+              color: var(--color-info);
+              width: var(--spacing-16);
+              height: var(--spacing-16);
+            }
+          }
+        }
+
+        p {
+          font: var(--font-body-lg);
+          color: var(--color-on-surface-variant);
+        }
+
+        .status-badge {
+          border: none;
+          background: transparent;
+        }
+      }
+
+      .stats {
+        display: flex;
+        gap: var(--spacing-12);
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--color-surface);
+        border-radius: var(--radius-md);
+        padding: var(--spacing-8);
+
+        .separator {
+          height: var(--spacing-32);
+        }
+
+        > div {
+          text-align: center;
+
+          h4 {
+            font: var(--font-title-md);
+            font-weight: 600;
+          }
+          p {
+            font: var(--font-body-md);
+            color: var(--color-on-surface-variant);
+          }
+        }
+      }
+    }
+  }
+}

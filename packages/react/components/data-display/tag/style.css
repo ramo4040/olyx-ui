@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     width: fit-content;
+    flex-shrink: 0;
     height: var(--spacing-24);
     padding-inline: var(--spacing-8);
     transition: var(--transition-standard-default-spatial);
@@ -12,6 +13,7 @@
     font: var(--font-body-sm);
     gap: var(--spacing-8);
     user-select: none;
+    cursor: pointer;
 
     /* Variant */
     &[data-variant="stroke"] {

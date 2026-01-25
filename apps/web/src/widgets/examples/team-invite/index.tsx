@@ -16,12 +16,11 @@ import { useState } from "react";
 
 const members = [
   {
-    id: "seb",
-    name: "Seb Jachec",
-    handle: "@seb",
-    avatar:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=128&h=128&dpr=2&q=80",
-    fallback: "SJ",
+    id: "kv",
+    name: "Kevin Powell",
+    handle: "@kv",
+    avatar: "https://www.kevinpowell.co/img/f21b00ed-600.avif",
+    fallback: "KP",
   },
   {
     id: "lloyd",
@@ -32,16 +31,16 @@ const members = [
     fallback: "LS",
   },
   {
-    id: "jeroen",
-    name: "Jeroen Riemens",
-    handle: "@jeroen",
+    id: "hajib",
+    name: "Hajib",
+    handle: "@hajib",
     avatar: "",
-    fallback: "JR",
+    fallback: "HJ",
   },
 ];
 
 export const TeamInvite = () => {
-  const [selected, setSelected] = useState(["seb", "lloyd"]);
+  const [selected, setSelected] = useState(["kv", "lloyd"]);
 
   return (
     <div data-ui="team-invite">

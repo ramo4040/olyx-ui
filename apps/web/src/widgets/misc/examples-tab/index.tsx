@@ -12,17 +12,13 @@ import {
 import { useState } from "react";
 import {
   Authentication,
-  EditCanvas,
-  EventCard,
-  FeedbackCard,
-  GroupButton,
-  InputGroup,
   LoadingCard,
   PostComposer,
   PriceRange,
+  ProductCardExample,
+  ProfileCardExample,
   TasksExample,
   TeamInvite,
-  TeamSize,
   ToastGroup,
 } from "@/widgets/examples";
 
@@ -65,26 +61,22 @@ export const ExamplesTab = () => {
         >
           <TabsPanel value="examples" className="examples-panel">
             <div>
-              <PostComposer />
-              <GroupButton />
-              <LoadingCard />
+              <ProfileCardExample />
             </div>
 
             <div>
-              <EditCanvas />
-              <TeamSize />
+              <ProductCardExample />
+              <PostComposer />
+            </div>
+
+            <div>
+              <TeamInvite />
               <ToastGroup />
             </div>
 
             <div>
               <PriceRange />
-              <InputGroup />
-              <EventCard />
-            </div>
-
-            <div>
-              <TeamInvite />
-              <FeedbackCard />
+              <LoadingCard />
             </div>
           </TabsPanel>
 
