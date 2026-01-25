@@ -65,7 +65,6 @@ export const MainNavbar = () => {
           <NavigationMenuItem>
             <Button mode="stroke" variant="neutral">
               <HugeiconsIcon icon={Search01Icon} />
-              <div>Quick Search...</div>
               <Kbd className="kbd">⌘K</Kbd>
             </Button>
           </NavigationMenuItem>

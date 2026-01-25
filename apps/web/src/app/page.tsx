@@ -1,4 +1,10 @@
-import { ExamplesTab, FeaturesSection, Hero, MainNavbar } from "@/widgets/misc";
+import {
+  ExamplesTab,
+  FeaturesSection,
+  Hero,
+  MainNavbar,
+  WhyOlyxSection,
+} from "@/widgets/misc";
 
 export default function Page() {
   return (
@@ -8,6 +14,8 @@ export default function Page() {
       <Hero />
 
       <ExamplesTab />
+
+      <WhyOlyxSection />
 
       <FeaturesSection />
     </div>
