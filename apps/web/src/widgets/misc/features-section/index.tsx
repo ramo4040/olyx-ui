@@ -1,5 +1,4 @@
 import {
-  ArrowDown02Icon,
   CheckmarkCircle01Icon,
   CursorEdit02Icon,
   FileEmpty02Icon,
@@ -93,15 +92,11 @@ export const FeaturesSection = () => {
               <div className="main-color" />
               <div className="color-list-wrapper">
                 <div className="color-list">
-                  <div className="primary">primary</div>
-                  <div className="secondary">secondary</div>
-                  <div className="tertiary">tertiary</div>
-                  <div className="surface">surface</div>
-
-                  <div className="success">success</div>
-                  <div className="info">info</div>
-                  <div className="warning">warning</div>
-                  <div className="error">error</div>
+                  {colors.map((color) => (
+                    <div className={color} key={color}>
+                      {color}
+                    </div>
+                  ))}
                 </div>
 
                 <div className="on-color">
@@ -141,25 +136,23 @@ export const FeaturesSection = () => {
                   </Button>
                 </div>
 
-                <div className="layer layer-1">misc</div>
-                <div className="layer layer-2">components</div>
-                <div className="layer layer-3">utilities</div>
-                <div className="layer layer-4">Base</div>
-                <div className="layer layer-5">Reset</div>
+                {layers.map((layer, i) => (
+                  <div className={`layer layer-${i + 1}`} key={layer}>
+                    {layer}
+                  </div>
+                ))}
               </div>
 
               <div className="tokens-tag">
-                <div>
-                  <Tag className="token">var(--spacing-12)</Tag>
-                  <Tag className="token">var(--radius-md)</Tag>
-                  <Tag className="token">var(--font-body-md)</Tag>
-                </div>
-
-                <div>
-                  <Tag className="token">var(--shadow-1)</Tag>
-                  <Tag className="token">var(--color-primary)</Tag>
-                  <Tag className="token">var(--transition-expressive)</Tag>
-                </div>
+                {tokens.map((tokenSet, i) => (
+                  <div key={i}>
+                    {tokenSet.map((token) => (
+                      <Tag className="token" key={token}>
+                        {token}
+                      </Tag>
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -175,3 +168,21 @@ export const FeaturesSection = () => {
     </section>
   );
 };
+
+const colors = [
+  "primary",
+  "secondary",
+  "tertiary",
+  "surface",
+  "success",
+  "info",
+  "warning",
+  "error",
+];
+
+const layers = ["misc", "components", "utilities", "Base", "Reset"];
+
+const tokens = [
+  ["var(--spacing-12)", "var(--radius-md)", "var(--font-body-md)"],
+  ["var(--shadow-1)", "var(--color-primary)", "var(--transition-expressive)"],
+];
