@@ -56,17 +56,16 @@
     }
 
     .card-content {
-      .card-title {
+      h3 {
         color: var(--color-on-surface);
         font: var(--font-body-md);
         font-weight: 600;
         margin-bottom: var(--spacing-8);
       }
 
-      .card-description {
+      p {
         color: var(--color-on-surface-variant);
         font-size: var(--font-size-sm);
-        line-height: 1.6;
       }
     }
   }

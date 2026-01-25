@@ -38,8 +38,8 @@ export function WhyOlyxSection() {
           <div className="why-card" key={title}>
             <div className="card-icon">{icon}</div>
             <div className="card-content">
-              <h3 className="card-title">{title}</h3>
-              <p className="card-description">{description}</p>
+              <h3>{title}</h3>
+              <p>{description}</p>
             </div>
           </div>
         ))}

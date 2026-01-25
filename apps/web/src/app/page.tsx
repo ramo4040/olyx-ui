@@ -1,5 +1,6 @@
 import {
   ExamplesTab,
+  Faq,
   FeaturesSection,
   Hero,
   MainNavbar,
@@ -18,6 +19,8 @@ export default function Page() {
       <WhyOlyxSection />
 
       <FeaturesSection />
+
+      <Faq />
     </div>
   );
 }
