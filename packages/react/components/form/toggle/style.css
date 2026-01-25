@@ -1,9 +1,12 @@
 @layer components {
   [data-ui="toggle"] {
-    display: grid;
-    place-content: center;
-    width: var(--toggle-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    gap: var(--spacing-4);
     height: var(--toggle-size);
+    min-width: var(--toggle-size);
     color: var(--color-on-toggle);
     text-decoration: none;
     cursor: pointer;
@@ -70,9 +73,10 @@
     }
 
     svg {
-      width: 100%;
-      height: 100%;
-      color: inherit;
+      flex-shrink: 0;
+      pointer-events: none;
+      width: 18px;
+      height: 18px;
     }
   }
 

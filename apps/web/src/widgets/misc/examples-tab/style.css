@@ -1,17 +1,75 @@
 @layer misc {
   [data-ui="examples-tab"] {
+    --original-primary-hue: var(--primary-hue);
+    --original-primary-sat: var(--primary-sat);
+    --original-secondary-hue: var(--secondary-hue);
+    --original-secondary-sat: var(--secondary-sat);
+    --original-tertiary-hue: var(--tertiary-hue);
+    --original-tertiary-sat: var(--tertiary-sat);
+
     margin-inline: auto;
-    max-width: 90vw;
+    max-width: 85vw;
     padding-bottom: 150px;
+
+    .panel-container {
+      &[data-color="primary"] {
+        --primary-hue: var(--original-primary-hue);
+        --primary-sat: var(--original-primary-sat);
+        --secondary-hue: var(--original-secondary-hue);
+        --secondary-sat: var(--original-secondary-sat);
+        --tertiary-hue: var(--original-tertiary-hue);
+        --tertiary-sat: var(--original-tertiary-sat);
+      }
+
+      &[data-color="secondary"] {
+        --primary-hue: var(--original-secondary-hue);
+        --primary-sat: var(--original-secondary-sat);
+        --secondary-hue: var(--original-primary-hue);
+        --secondary-sat: var(--original-primary-sat);
+        --tertiary-hue: var(--original-tertiary-hue);
+        --tertiary-sat: var(--original-tertiary-sat);
+      }
+
+      &[data-color="tertiary"] {
+        --primary-hue: var(--original-tertiary-hue);
+        --primary-sat: var(--original-tertiary-sat);
+        --secondary-hue: var(--original-secondary-hue);
+        --secondary-sat: var(--original-secondary-sat);
+        --tertiary-hue: var(--original-primary-hue);
+        --tertiary-sat: var(--original-primary-sat);
+      }
+    }
 
     .tab-list {
       margin-bottom: var(--spacing-16);
-      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacing-8);
+
+      .toggle-item {
+        .color {
+          width: 18px;
+          aspect-ratio: 1;
+          border-radius: var(--radius-xs);
+          background-color: var(--color);
+
+          &.primary {
+            --color: var(--color-primary);
+          }
+          &.secondary {
+            --color: var(--color-secondary);
+          }
+          &.tertiary {
+            --color: var(--color-tertiary);
+          }
+        }
+      }
     }
 
     .examples-panel {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       gap: var(--spacing-8);
 
       > div {
