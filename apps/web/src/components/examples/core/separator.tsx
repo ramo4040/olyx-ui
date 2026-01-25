@@ -1,6 +1,6 @@
 import { PlusSignIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Button, Separator } from "@/components/ui";
+import { Button, Separator } from "@olyx/react";
 
 export const SeparatorExample = () => {
   return (

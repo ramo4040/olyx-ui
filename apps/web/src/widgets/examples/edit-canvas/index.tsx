@@ -13,7 +13,7 @@ import {
   Slider,
   Switch,
   Toggle,
-} from "@/components/ui";
+} from "@olyx/react";
 import "./style.css";
 import { SquareLock02Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";

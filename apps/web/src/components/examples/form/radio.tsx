@@ -1,4 +1,4 @@
-import { RadioGroup, RadioGroupItem } from "@/components/ui";
+import { RadioGroup, RadioGroupItem } from "@olyx/react";
 
 export const RadioExample = () => {
   return (

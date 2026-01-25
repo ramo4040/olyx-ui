@@ -1,8 +1,8 @@
+"use client";
+
 import "./style.css";
 import { DarkModeIcon, Search01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { GitHubIcon } from "@/assets/svg/github";
-import { Logo } from "@/components/misc";
 import {
   Button,
   Kbd,
@@ -11,9 +11,17 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   Separator,
-} from "@/components/ui";
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@olyx/react";
+import { useTheme } from "next-themes";
+import { GitHubIcon } from "@/assets/svg/github";
+import { Logo } from "@/components/misc";
 
 export const MainNavbar = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
     <NavigationMenu data-ui="main-navbar">
       <NavigationMenuList className="main-navbar-list">
@@ -49,26 +57,28 @@ export const MainNavbar = () => {
           <Separator orientation="vertical" />
 
           <NavigationMenuItem>
-            <NavigationMenuLink
-              href="#"
-              render={
-                <Button mode="ghost" variant="neutral" asIcon>
-                  <GitHubIcon />
-                </Button>
-              }
-            />
+            <NavigationMenuLink href="#">
+              <GitHubIcon />
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           <Separator orientation="vertical" />
 
           <NavigationMenuItem>
-            <NavigationMenuLink
-              render={
-                <Button mode="ghost" variant="neutral" asIcon>
-                  <HugeiconsIcon icon={DarkModeIcon} />{" "}
-                </Button>
-              }
-            />
+            <Tooltip>
+              <TooltipTrigger
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                render={
+                  <Button mode="ghost" variant="neutral" asIcon>
+                    <HugeiconsIcon icon={DarkModeIcon} />
+                  </Button>
+                }
+              />
+
+              <TooltipContent>
+                Toggle theme <Kbd>D</Kbd>
+              </TooltipContent>
+            </Tooltip>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenuList>

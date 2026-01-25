@@ -1,4 +1,4 @@
-import { Switch } from "@/components/ui";
+import { Switch } from "@olyx/react";
 
 export const SwitchExample = () => {
   return (

@@ -1,5 +1,5 @@
+import { Tag, TagDismiss } from "@olyx/react";
 import Image from "next/image";
-import { Tag, TagDismiss } from "@/components/ui";
 
 export const TagExamples = () => {
   return (

@@ -1,6 +1,6 @@
 import { TextItalicIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Toggle, ToggleGroup } from "@/components/ui";
+import { Toggle, ToggleGroup } from "@olyx/react";
 
 export const ToogleExample = () => {
   return (

@@ -1,4 +1,4 @@
-import { ButtonGroup, ButtonGroupItem } from "@/components/ui";
+import { ButtonGroup, ButtonGroupItem } from "@olyx/react";
 
 export const ButtonGroupExample = () => {
   return (

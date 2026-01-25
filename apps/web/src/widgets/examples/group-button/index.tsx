@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const GroupButton = () => {
   return (

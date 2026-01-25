@@ -5,7 +5,7 @@ import {
   AvatarGroup,
   AvatarGroupCount,
   AvatarImage,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const AvatarExamples = () => {
   return (

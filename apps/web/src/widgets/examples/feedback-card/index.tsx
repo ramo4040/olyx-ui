@@ -4,7 +4,7 @@ import {
   InputWrapper,
   RatingBar,
   RatingBarItem,
-} from "@/components/ui";
+} from "@olyx/react";
 import "./style.css";
 import { SentIcon, StarIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";

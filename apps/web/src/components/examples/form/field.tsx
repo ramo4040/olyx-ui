@@ -8,7 +8,7 @@ import {
   FieldsetDescription,
   FieldsetLegend,
   Input,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const FieldExample = () => {
   return (

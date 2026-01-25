@@ -9,7 +9,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const DrawerExample = () => {
   return (

@@ -1,5 +1,5 @@
 import "./style.css";
-import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui";
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@olyx/react";
 import {
   Authentication,
   EditCanvas,
@@ -23,7 +23,6 @@ export const ExamplesTab = () => {
         <TabsList className="tab-list">
           <TabsTab value="examples">Examples</TabsTab>
           <TabsTab value="tasks">Tasks</TabsTab>
-          <TabsTab value="playground">Playground</TabsTab>
           <TabsTab value="authentication">Authentication</TabsTab>
         </TabsList>
 

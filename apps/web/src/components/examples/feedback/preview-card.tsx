@@ -3,7 +3,7 @@ import {
   PreviewCard,
   PreviewCardContent,
   PreviewCardTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export function PreviewCardExamples() {
   return (

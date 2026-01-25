@@ -1,4 +1,4 @@
-import { RatingReview } from "@/components/ui";
+import { RatingReview } from "@olyx/react";
 
 export const RatingReviewExample = () => {
   return (

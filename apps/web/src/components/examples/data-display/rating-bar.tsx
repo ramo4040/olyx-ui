@@ -1,6 +1,6 @@
 import { FavouriteIcon, StarIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { RatingBar, RatingBarItem } from "@/components/ui";
+import { RatingBar, RatingBarItem } from "@olyx/react";
 
 const size = ["sm", "md", "lg"] as const;
 

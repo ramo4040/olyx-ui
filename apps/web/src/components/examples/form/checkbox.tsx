@@ -1,7 +1,7 @@
 "use client";
 
+import { CheckBox, CheckboxGroup } from "@olyx/react";
 import { useState } from "react";
-import { CheckBox, CheckboxGroup } from "@/components/ui";
 
 const fruits = ["apple", "banana", "cherry"];
 

@@ -43,7 +43,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const TasksExample = () => {
   const totalEstimate = tasks.reduce((acc, task) => {

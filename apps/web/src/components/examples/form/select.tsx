@@ -9,7 +9,7 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const SelectExample = () => {
   return (

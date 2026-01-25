@@ -14,7 +14,7 @@ import {
   Button,
   Separator,
   StatusBadge,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export function EventCard() {
   return (

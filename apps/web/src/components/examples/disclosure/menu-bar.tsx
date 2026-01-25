@@ -11,7 +11,7 @@ import {
   MenubarSub,
   MenubarSubTrigger,
   MenubarTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const MenuBarExamples = () => {
   return (

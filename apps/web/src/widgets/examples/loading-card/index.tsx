@@ -1,5 +1,5 @@
 import "./style.css";
-import { Button, Spinner } from "@/components/ui";
+import { Button, Spinner } from "@olyx/react";
 
 export const LoadingCard = () => {
   return (

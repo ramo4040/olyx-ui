@@ -13,7 +13,7 @@ import {
   NumberFieldGroup,
   NumberFieldIncrement,
   NumberFieldInput,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const TeamSize = () => {
   return (

@@ -1,13 +1,13 @@
 "use client";
 
 import "./style.css";
-import { useState } from "react";
 import {
   Fieldset,
   FieldsetDescription,
   FieldsetLegend,
   Slider,
-} from "@/components/ui";
+} from "@olyx/react";
+import { useState } from "react";
 
 export const PriceRange = () => {
   const [range, setRange] = useState([290, 600]);

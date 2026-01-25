@@ -1,4 +1,4 @@
-import { ScrollArea } from "@/components/ui";
+import { ScrollArea } from "@olyx/react";
 
 export function ScrollAreaExample() {
   return (

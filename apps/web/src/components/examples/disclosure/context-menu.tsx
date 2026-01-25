@@ -5,7 +5,7 @@ import {
   ContextMenuItem,
   ContextMenuSeparator,
   ContextMenuTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
 
 export const ContextMenuExample = () => {
   return (

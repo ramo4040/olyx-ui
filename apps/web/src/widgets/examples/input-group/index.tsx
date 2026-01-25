@@ -2,7 +2,6 @@ import "./style.css";
 
 import { AlertCircleIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import React from "react";
 import {
   Input,
   InputAffix,
@@ -19,7 +18,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui";
+} from "@olyx/react";
+import React from "react";
 
 const paymentMethods = [
   {

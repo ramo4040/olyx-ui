@@ -1,9 +1,4 @@
-import {
-  Button,
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui";
+import { Button, Tooltip, TooltipContent, TooltipTrigger } from "@olyx/react";
 
 export const TooltipExamples = () => {
   return (
