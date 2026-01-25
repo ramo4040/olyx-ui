@@ -5,7 +5,7 @@ import { useRender } from "@base-ui/react/use-render";
 
 type BadgeProps = useRender.ComponentProps<"span"> & {
   mode?: "filled" | "light" | "lighter" | "stroke";
-  size?: "sm" | "md";
+  size?: "sm" | "md" | "lg";
   shape?: "rounded" | "smoothed";
   variant?: "primary";
   doted?: boolean;
