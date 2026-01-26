@@ -2,6 +2,7 @@ export * from "./components/core/avatar";
 export * from "./components/core/badge";
 export * from "./components/core/button";
 export * from "./components/core/button-group";
+export * from "./components/core/link-button";
 export * from "./components/core/scroll-area";
 export * from "./components/core/separator";
 export * from "./components/core/status-badge";
