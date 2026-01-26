@@ -2,8 +2,10 @@
   [data-ui="toast-group"] {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: var(--spacing-8);
-    width: 350px;
+    width: 370px;
+    height: 100%;
     padding: var(--spacing-12);
     background: var(--color-surface-container-lowest);
     border-radius: var(--radius-lg);

@@ -16,11 +16,27 @@ import {
   TooltipTrigger,
 } from "@olyx/react";
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 import { GitHubIcon } from "@/assets/svg/github";
 import { Logo } from "@/components/misc";
 
 export const MainNavbar = () => {
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === "d") {
+        e.preventDefault();
+        setTheme(theme === "light" ? "dark" : "light");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [theme, setTheme]);
 
   return (
     <NavigationMenu data-ui="main-navbar">
@@ -49,7 +65,6 @@ export const MainNavbar = () => {
           <NavigationMenuItem>
             <Button mode="stroke" variant="neutral">
               <HugeiconsIcon icon={Search01Icon} />
-              <div>Quick Search...</div>
               <Kbd className="kbd">⌘K</Kbd>
             </Button>
           </NavigationMenuItem>

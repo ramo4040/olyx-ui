@@ -1,9 +1,10 @@
 @layer misc {
   [data-ui="team-invite"] {
-    width: 350px;
+    width: 370px;
+    height: fit-content;
     padding: var(--spacing-16);
     background: var(--color-surface-container-lowest);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     border: 1px solid var(--color-surface-variant);
 
     [data-ui="fieldset-legend"] {

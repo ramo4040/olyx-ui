@@ -24,14 +24,14 @@ export function PostComposer() {
         <div className="post-user">
           <Avatar size={42}>
             <AvatarImage
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=128&h=128&dpr=2&q=80"
-              alt="Zlata Dobrik"
+              src="https://www.yassir-rouane.me/_next/image?url=%2Fimages%2Fme%2F3.jpg&w=2048&q=75"
+              alt="Yassir Rouane"
             />
             <AvatarFallback>YR</AvatarFallback>
           </Avatar>
           <div className="post-user-info">
-            <span className="post-user-name">Zlata Dobrik</span>
-            <span className="post-user-handle">@zlata.xoxo</span>
+            <span className="post-user-name">Yassir Rouane</span>
+            <span className="post-user-handle">@ramo4040</span>
           </div>
         </div>
 

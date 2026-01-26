@@ -1,14 +1,14 @@
 @layer misc {
   .post-composer {
-    width: 350px;
+    width: 370px;
+    flex: 1;
     padding: var(--spacing-16);
     background: var(--color-surface-container-lowest);
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-surface-variant);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-16);
-
+    justify-content: space-between;
     .post-header {
       display: flex;
       align-items: flex-start;
