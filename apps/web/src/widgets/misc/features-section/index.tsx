@@ -144,14 +144,10 @@ export const FeaturesSection = () => {
               </div>
 
               <div className="tokens-tag">
-                {tokens.map((tokenSet, i) => (
-                  <div key={i}>
-                    {tokenSet.map((token) => (
-                      <Tag className="token" key={token}>
-                        {token}
-                      </Tag>
-                    ))}
-                  </div>
+                {tokens.map((v, i) => (
+                  <Tag variant="stroke" className="token" key={i}>
+                    {v}
+                  </Tag>
                 ))}
               </div>
             </div>
@@ -183,6 +179,10 @@ const colors = [
 const layers = ["misc", "components", "utilities", "Base", "Reset"];
 
 const tokens = [
-  ["var(--spacing-12)", "var(--radius-md)", "var(--font-body-md)"],
-  ["var(--shadow-1)", "var(--color-primary)", "var(--transition-expressive)"],
+  "var(--spacing-12)",
+  "var(--radius-md)",
+  "var(--font-body-md)",
+  "var(--shadow-1)",
+  "var(--color-primary)",
+  "var(--transition-expressive)",
 ];
