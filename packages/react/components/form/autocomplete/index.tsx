@@ -7,7 +7,13 @@ import { Autocomplete as AutocompletePrimitive } from "@base-ui/react/autocomple
 import { Cancel01Icon, UnfoldMoreIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
-import { Button, Input, InputIcon, InputWrapper } from "@olyx/react";
+import {
+  Button,
+  Input,
+  InputIcon,
+  InputWrapper,
+  ScrollArea,
+} from "@olyx/react";
 
 const Autocomplete = AutocompletePrimitive.Root;
 
@@ -137,7 +143,11 @@ function AutocompleteValue(props: AutocompletePrimitive.Value.Props) {
 }
 
 function AutocompleteList(props: AutocompletePrimitive.List.Props) {
-  return <AutocompletePrimitive.List {...props} />;
+  return (
+    <ScrollArea scrollFade>
+      <AutocompletePrimitive.List data-slot="autocomplete-list" {...props} />
+    </ScrollArea>
+  );
 }
 
 function AutocompleteClear(props: AutocompletePrimitive.Clear.Props) {

@@ -45,59 +45,8 @@
     font: var(--font-body-sm);
   }
 
-  /* Standalone Trigger */
-  [data-ui="autocomplete-trigger"] {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-    border: 1px solid transparent;
-    border-radius: var(--radius-md);
-    background: transparent;
-    opacity: 0.8;
-    outline: none;
-    cursor: pointer;
-    transition: opacity var(--transition-standard-default-spatial);
-
-    &:hover {
-      opacity: 1;
-    }
-
-    svg {
-      width: 16px;
-      height: 16px;
-      pointer-events: none;
-      flex-shrink: 0;
-    }
-  }
-
-  /* Standalone Clear */
-  [data-ui="autocomplete-clear"] {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-    border: 1px solid transparent;
-    border-radius: var(--radius-md);
-    background: transparent;
-    opacity: 0.8;
-    outline: none;
-    cursor: pointer;
-    transition: opacity var(--transition-standard-default-spatial);
-
-    &:hover {
-      opacity: 1;
-    }
-
-    svg {
-      width: 16px;
-      height: 16px;
-      pointer-events: none;
-      flex-shrink: 0;
-    }
+  [data-slot="autocomplete-scrollarea"] {
+    padding: 0;
+    border: 0;
   }
 }
