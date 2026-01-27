@@ -42,7 +42,6 @@ function SelectTrigger({
 }
 
 function SelectContent({
-  className,
   children,
   side = "bottom",
   sideOffset = 4,

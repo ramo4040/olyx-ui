@@ -1,0 +1,103 @@
+@layer components {
+  [data-ui="input-wrapper"] {
+    &[data-slot="autocomplete-input"] {
+      --number-btn: 0;
+
+      padding-inline: 0;
+
+      [data-ui="autocomplete-input-actions"] {
+        position: absolute;
+        right: 8px;
+        display: flex;
+        gap: var(--spacing-4);
+        margin-left: auto;
+      }
+
+      [data-slot="start-addon"] {
+        position: absolute;
+        left: 8px;
+      }
+
+      &:has([data-slot="autocomplete-trigger"]) {
+        --number-btn: 1;
+      }
+
+      &:has([data-slot="autocomplete-clear"]) {
+        --number-btn: 2;
+      }
+
+      input {
+        padding-right: calc(28px * var(--number-btn));
+        padding-left: var(--spacing-12);
+      }
+
+      &:has([data-slot="start-addon"]) {
+        input {
+          padding-left: var(--spacing-32);
+        }
+      }
+    }
+  }
+
+  [data-ui="autocomplete-empty"],
+  [data-ui="autocomplete-status"] {
+    text-align: center;
+    font: var(--font-body-sm);
+  }
+
+  /* Standalone Trigger */
+  [data-ui="autocomplete-trigger"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    background: transparent;
+    opacity: 0.8;
+    outline: none;
+    cursor: pointer;
+    transition: opacity var(--transition-standard-default-spatial);
+
+    &:hover {
+      opacity: 1;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      pointer-events: none;
+      flex-shrink: 0;
+    }
+  }
+
+  /* Standalone Clear */
+  [data-ui="autocomplete-clear"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    background: transparent;
+    opacity: 0.8;
+    outline: none;
+    cursor: pointer;
+    transition: opacity var(--transition-standard-default-spatial);
+
+    &:hover {
+      opacity: 1;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      pointer-events: none;
+      flex-shrink: 0;
+    }
+  }
+}
