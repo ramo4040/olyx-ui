@@ -13,6 +13,7 @@ import {
   InputIcon,
   InputWrapper,
   ScrollArea,
+  Separator,
 } from "@olyx/react";
 
 const Autocomplete = AutocompletePrimitive.Root;
@@ -105,7 +106,8 @@ function AutocompleteItem({
 function AutocompleteSeparator(props: AutocompletePrimitive.Separator.Props) {
   return (
     <AutocompletePrimitive.Separator
-      data-ui="autocomplete-separator"
+      data-slot="autocomplete-separator"
+      render={<Separator />}
       {...props}
     />
   );

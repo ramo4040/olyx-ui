@@ -14,6 +14,11 @@
     box-shadow:
       0 0.5px 0 0 var(--color-primary-container),
       0 0.5px 0.5px 0 rgba(0, 0, 25, 0.2);
+
+    svg {
+      width: var(--spacing-12);
+      height: var(--spacing-12);
+    }
   }
 
   [data-ui="kbd-group"] {

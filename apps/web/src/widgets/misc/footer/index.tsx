@@ -5,6 +5,8 @@ import Link from "next/link";
 import { GitHubIcon } from "@/assets/svg/github";
 
 export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer data-ui="olyx-footer">
       <div className="footer">
@@ -37,7 +39,7 @@ export const Footer = () => {
 
         <div className="copyright">
           <div className="details">
-            <p>@ 2026 Olyx</p>
+            <p>@{currentYear} Olyx</p>
             {bottomLinksSet.map((e) => {
               return (
                 <LinkButton href={e.url} size="sm" key={e.label}>
