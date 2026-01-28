@@ -7,6 +7,11 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@olyx/react": ["./index.ts"],
+      "@olyx/react/*": ["./*"]
+    },
     "types": []
   },
   "include": ["**/*.ts", "**/*.tsx"],

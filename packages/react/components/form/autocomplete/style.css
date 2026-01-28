@@ -1,0 +1,52 @@
+@layer components {
+  [data-ui="input-wrapper"] {
+    &[data-slot="autocomplete-input"] {
+      --number-btn: 0;
+
+      padding-inline: 0;
+
+      [data-ui="autocomplete-input-actions"] {
+        position: absolute;
+        right: 8px;
+        display: flex;
+        gap: var(--spacing-4);
+        margin-left: auto;
+      }
+
+      [data-slot="start-addon"] {
+        position: absolute;
+        left: 8px;
+      }
+
+      &:has([data-slot="autocomplete-trigger"]) {
+        --number-btn: 1;
+      }
+
+      &:has([data-slot="autocomplete-clear"]) {
+        --number-btn: 2;
+      }
+
+      input {
+        padding-right: calc(28px * var(--number-btn));
+        padding-left: var(--spacing-12);
+      }
+
+      &:has([data-slot="start-addon"]) {
+        input {
+          padding-left: var(--spacing-32);
+        }
+      }
+    }
+  }
+
+  [data-ui="autocomplete-empty"],
+  [data-ui="autocomplete-status"] {
+    text-align: center;
+    font: var(--font-body-sm);
+  }
+
+  [data-slot="autocomplete-scrollarea"] {
+    padding: 0;
+    border: 0;
+  }
+}

@@ -3,10 +3,17 @@
 import "./style.css";
 import { ScrollArea as ScrollAreaPrimitive } from "@base-ui/react/scroll-area";
 
-function ScrollArea({ children, ...props }: ScrollAreaPrimitive.Root.Props) {
+function ScrollArea({
+  children,
+  scrollFade = false,
+  ...props
+}: ScrollAreaPrimitive.Root.Props & { scrollFade?: boolean }) {
   return (
     <ScrollAreaPrimitive.Root data-ui="scroll-area" {...props}>
-      <ScrollAreaPrimitive.Viewport data-ui="scroll-area-viewport">
+      <ScrollAreaPrimitive.Viewport
+        data-ui="scroll-area-viewport"
+        data-scroll-fade={scrollFade}
+      >
         {children}
       </ScrollAreaPrimitive.Viewport>
       <ScrollBar orientation="horizontal" />

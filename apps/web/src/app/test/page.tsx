@@ -1,26 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Switch } from "@olyx/react";
+import { useTheme } from "next-themes";
 import {
-  BadgesExamples,
-  ButtonsExamples,
+  AutocompleteExamples,
   ComboboxExamples,
-  InputsExample,
-  NavigationMenuExample,
-  SelectExample,
-  TableExample,
+  CommandExample,
 } from "@/components/examples";
-import { RatingBarExamples } from "@/components/examples/data-display/rating-bar";
-import { Switch } from "@/components/ui";
 
 export default function Home() {
-  const [theme, setTheme] = useState(false);
-
-  useEffect(() => {
-    const html = document.documentElement;
-    html.setAttribute("data-theme", theme ? "dark" : "light");
-  }, [theme]);
-
+  const { theme, setTheme } = useTheme();
   return (
     <div style={{ paddingInline: 150, paddingBlock: 50 }}>
       <header
@@ -30,7 +19,10 @@ export default function Home() {
           justifyContent: "flex-end",
         }}
       >
-        <Switch checked={theme} onCheckedChange={setTheme} />
+        <Switch
+          checked={theme === "dark"}
+          onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+        />
       </header>
       <div style={{ display: "grid", gap: 40 }}>
         {/*
@@ -72,11 +64,14 @@ export default function Home() {
         <SelectExample />
         <InputsExample />
 
-        <ComboboxExamples />
         <TableExample />
         <ButtonsExamples />
-        */}
         <NavigationMenuExample />
+        <ComboboxExamples />
+        <AutocompleteExamples />
+        */}
+
+        <CommandExample />
       </div>
     </div>
   );

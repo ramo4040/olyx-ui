@@ -1,0 +1,97 @@
+@layer misc {
+  [data-ui="olyx-footer"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: var(--spacing-24);
+    max-width: 90vw;
+    margin-inline: auto;
+    padding-bottom: var(--spacing-48);
+
+    .footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      background: var(--color-surface-container-lowest);
+      border-radius: var(--radius-xl-inc);
+      min-height: 400px;
+      padding: var(--spacing-32);
+
+      .details {
+        display: flex;
+
+        .about {
+          flex-basis: 40%;
+
+          .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-8);
+
+            p {
+              font: var(--font-body-lg);
+              font-weight: 500;
+              color: var(--color-on-surface);
+            }
+          }
+        }
+
+        .links-set-container {
+          flex-basis: 60%;
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          padding-right: var(--spacing-48);
+
+          > div {
+            display: grid;
+            gap: var(--spacing-12);
+
+            h5 {
+              color: var(--color-on-surface-variant);
+              font: var(--font-body-sm);
+              font-weight: 500;
+            }
+
+            .links {
+              display: grid;
+              gap: var(--spacing-4);
+
+              a {
+                font: var(--font-body-lg);
+              }
+            }
+          }
+        }
+      }
+
+      .copyright {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .details {
+          display: flex;
+          gap: var(--spacing-12);
+          p {
+            font: var(--font-body-sm);
+            color: var(--color-on-surface-variant);
+          }
+        }
+
+        .social-links {
+          display: flex;
+          gap: var(--spacing-12);
+
+          .icon {
+            width: var(--spacing-24);
+            height: var(--spacing-24);
+            color: var(--color-on-background);
+          }
+        }
+      }
+    }
+  }
+}

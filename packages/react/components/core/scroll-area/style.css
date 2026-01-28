@@ -1,17 +1,49 @@
 @layer components {
   [data-ui="scroll-area"] {
-    width: 100%;
-    height: 300px;
-    max-width: calc(100vw - 128px);
     border: 1px solid var(--color-surface-variant);
     padding: var(--spacing-8);
     padding-right: var(--spacing-24);
     border-radius: var(--radius-md);
 
     [data-ui="scroll-area-viewport"] {
-      width: 100%;
-      height: 100%;
+      max-width: calc(100vw - 128px);
+      max-height: 300px;
       overflow: auto;
+
+      &[data-scroll-fade="true"] {
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          left: 0;
+          width: 100%;
+          position: absolute;
+          pointer-events: none;
+          transition: height var(--transition-standard-default-spatial);
+        }
+
+        &::before {
+          --scroll-area-overflow-y-start: inherit;
+          top: 0;
+          height: min(30px, var(--scroll-area-overflow-y-start));
+          background: linear-gradient(
+            to bottom,
+            color-mix(in srgb, var(--color-background) 80%, transparent),
+            transparent
+          );
+        }
+
+        &::after {
+          --scroll-area-overflow-y-end: inherit;
+          bottom: 0;
+          height: min(30px, var(--scroll-area-overflow-y-end, 30px));
+          background: linear-gradient(
+            to top,
+            color-mix(in srgb, var(--color-background) 80%, transparent),
+            transparent
+          );
+        }
+      }
     }
   }
 

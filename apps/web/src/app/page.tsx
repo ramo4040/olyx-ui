@@ -2,6 +2,7 @@ import {
   ExamplesTab,
   Faq,
   FeaturesSection,
+  Footer,
   Hero,
   MainNavbar,
   WhyOlyxSection,
@@ -21,6 +22,8 @@ export default function Page() {
       <FeaturesSection />
 
       <Faq />
+
+      <Footer />
     </div>
   );
 }

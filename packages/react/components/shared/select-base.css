@@ -1,6 +1,11 @@
 @layer utilities {
   [data-ui="select-positioner"],
-  [data-ui="combobox-positioner"] {
+  [data-ui="combobox-positioner"],
+  [data-ui="autocomplete-positioner"] {
+    z-index: 50;
+    width: var(--anchor-width);
+    user-select: none;
+
     [data-ui$="-content"] {
       border: 1px solid var(--color-surface-variant);
       border-radius: var(--radius-md);
@@ -12,7 +17,18 @@
       transition: var(--transition-expressive-default-effects);
       transform-origin: var(--transform-origin);
 
+      /* If Has Scroll Area */
+      [data-ui="scroll-area"] {
+        padding: 0;
+        border: 0;
+
+        [data-ui="scroll-area-scrollbar"] {
+          margin-inline: 0;
+        }
+      }
+
       > div,
+      [data-slot="autocomplete-list"],
       [data-ui$="-group"] {
         display: grid;
         gap: var(--spacing-2);
