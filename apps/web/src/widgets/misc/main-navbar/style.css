@@ -34,6 +34,10 @@
       }
     }
 
+    .kbd-group {
+      margin-left: var(--spacing-32);
+    }
+
     .link-item {
       color: var(--color-on-background);
 

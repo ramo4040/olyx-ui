@@ -6,7 +6,8 @@
   "sideEffects": false,
   "main": "./index.ts",
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./*": "./src/*/index.tsx"
   },
   "peerDependencies": {
     "react": "^19.0.0",
