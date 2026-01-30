@@ -28,18 +28,18 @@ import {
 } from "@olyx/react";
 import { Fragment, useEffect, useState } from "react";
 
-export interface Item {
+interface Item {
   value: string;
   label: string;
   shortcut?: string;
 }
 
-export interface Group {
+interface Group {
   value: string;
   items: Item[];
 }
 
-export const suggestions: Item[] = [
+const suggestions: Item[] = [
   { label: "Linear", shortcut: "⌘L", value: "linear" },
   { label: "Figma", shortcut: "⌘F", value: "figma" },
   { label: "Slack", shortcut: "⌘S", value: "slack" },
@@ -47,7 +47,7 @@ export const suggestions: Item[] = [
   { label: "Raycast", shortcut: "⌘R", value: "raycast" },
 ];
 
-export const commands: Item[] = [
+const commands: Item[] = [
   { label: "Clipboard History", shortcut: "⌘⇧C", value: "clipboard-history" },
   { label: "Import Extension", shortcut: "⌘I", value: "import-extension" },
   { label: "Create Snippet", shortcut: "⌘N", value: "create-snippet" },
@@ -55,7 +55,7 @@ export const commands: Item[] = [
   { label: "Window Management", shortcut: "⌘⇧W", value: "window-management" },
 ];
 
-export const groupedItems: Group[] = [
+const groupedItems: Group[] = [
   { items: suggestions, value: "Suggestions" },
   { items: commands, value: "Commands" },
 ];

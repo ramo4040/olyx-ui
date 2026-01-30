@@ -1,7 +1,7 @@
 @import url("./_base/colors.css") layer(tokens);
 @import url("./_base/tokens.css") layer(tokens);
 
-@layer reset, base, components, utilities, misc, tokens;
+@layer reset, base, utilities, components, misc, tokens;
 
 @layer reset {
   * {

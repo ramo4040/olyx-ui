@@ -21,6 +21,7 @@ export interface RegistryItem {
     type:
       | "registry:ui"
       | "registry:component"
+      | "registry:block"
       | "registry:hook"
       | "registry:lib"
       | "registry:page"

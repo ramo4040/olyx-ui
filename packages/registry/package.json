@@ -4,14 +4,7 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./src/types.ts",
-      "default": "./src/index.ts"
-    },
-    "./definitions": {
-      "types": "./src/definitions/index.ts",
-      "default": "./src/definitions/index.ts"
-    }
+    ".": "./src/index.ts"
   },
   "files": [
     "src"
