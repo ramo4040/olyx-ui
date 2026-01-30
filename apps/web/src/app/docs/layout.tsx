@@ -7,8 +7,6 @@ export default function DocsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(source.pageTree);
-
   return (
     <div data-ui="docs-layout">
       <header data-ui="docs-header">
