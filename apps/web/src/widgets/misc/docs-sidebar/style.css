@@ -1,0 +1,19 @@
+@layer misc {
+  [data-ui="docs-sidebar"] {
+    width: 200px;
+    min-height: 100%;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-12);
+
+    .link:not([data-active]) {
+      color: var(--color-on-background);
+    }
+
+    h5 {
+      font: var(--font-body-sm);
+      font-weight: 600;
+      color: var(--color-on-surface-variant);
+      padding-bottom: var(--spacing-8);
+    }
+  }
+}
