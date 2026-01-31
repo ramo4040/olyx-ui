@@ -23,7 +23,8 @@
     "dev:web": "turbo -F web dev"
   },
   "dependencies": {
-    "dotenv": "catalog:"
+    "dotenv": "catalog:",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "turbo": "^2.6.3",

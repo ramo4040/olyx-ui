@@ -1,5 +1,6 @@
-import { MainNavbar } from "@/widgets/misc";
 import "./style.css";
+import { source } from "@/lib/source";
+import { DocsSidebar, MainNavbar } from "@/widgets/misc";
 
 export default function DocsLayout({
   children,
@@ -13,7 +14,7 @@ export default function DocsLayout({
       </header>
 
       <main>
-        sidebar
+        <DocsSidebar tree={source.pageTree} />
         {children}
       </main>
     </div>

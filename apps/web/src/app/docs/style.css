@@ -1,4 +1,16 @@
 @layer misc {
   [data-ui="docs-layout"] {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    > main {
+      width: 1536px;
+      flex: 1;
+      margin-inline: auto;
+      display: flex;
+      margin-block: var(--spacing-32);
+      gap: var(--spacing-32);
+    }
   }
 }

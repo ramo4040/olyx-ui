@@ -1,4 +1,5 @@
 export { DocsCommand, docsCommandHandle } from "./docs-command";
+export { DocsSidebar } from "./docs-sidebar";
 export { ExamplesTab } from "./examples-tab";
 export { Faq } from "./faq";
 export { FeaturesSection } from "./features-section";

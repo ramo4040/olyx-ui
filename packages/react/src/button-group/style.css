@@ -2,56 +2,58 @@
   [data-ui="button-group"] {
     display: flex;
     width: fit-content;
-    height: var(--item-size);
-    overflow: hidden;
-    border: 1px solid var(--color-surface-variant);
-    border-radius: var(--radius-sm);
-    font: var(--font-body-md);
 
-    /* Size variants */
-    &[data-size="sm"] {
-      --item-size: 36px;
-      --icon-size: 20px;
-      --item-spacing: var(--spacing-16);
-    }
+    &[data-orientation="horizontal"] {
+      [data-ui="button"] {
+        &:not(:nth-of-type(1), :nth-of-type(2)) {
+          border-radius: 0;
+          border-inline: none;
+        }
 
-    &[data-size="xs"] {
-      --item-size: 32px;
-      --icon-size: 20px;
-      --item-spacing: var(--spacing-14);
-    }
+        &:nth-of-type(1) {
+          border-start-end-radius: 0;
+          border-end-end-radius: 0;
+        }
 
-    &[data-size="xxs"] {
-      --item-size: 24px;
-      --icon-size: 16px;
-      --item-spacing: var(--spacing-12);
-      border-radius: calc(var(--radius-sm) - var(--spacing-2));
-      font: var(--font-body-sm);
-    }
+        &:nth-of-type(2) {
+          border-start-start-radius: 0;
+          border-end-start-radius: 0;
+        }
 
-    /* Item */
-    [data-slot="button-group-item"] {
-      height: 100%;
-      border: none;
-      border-radius: 0;
-      font: inherit;
-      transition: all var(--transition-standard-default-spatial);
-
-      &:not(:last-child) {
-        border-inline-end: 1px solid var(--color-surface-variant);
+        /* only 2 buttons */
+        &:not(:has(:nth-child(3))) {
+          &:nth-of-type(1) {
+            border-inline-end: none;
+          }
+        }
       }
     }
 
-    /* Orientation */
     &[data-orientation="vertical"] {
       flex-direction: column;
       height: fit-content;
 
-      [data-slot="button-group-item"] {
-        height: var(--item-size);
+      [data-ui="button"] {
+        &:not(:nth-of-type(1), :nth-of-type(2)) {
+          border-radius: 0;
+          border-block: none;
+        }
 
-        &:not(:last-child) {
-          border-block-end: 1px solid var(--color-surface-variant);
+        &:nth-of-type(1) {
+          border-end-start-radius: 0;
+          border-end-end-radius: 0;
+        }
+
+        &:nth-of-type(2) {
+          border-start-start-radius: 0;
+          border-start-end-radius: 0;
+        }
+
+        /* only 2 buttons */
+        &:not(:has(:nth-child(3))) {
+          &:nth-of-type(1) {
+            border-block-end: none;
+          }
         }
       }
     }

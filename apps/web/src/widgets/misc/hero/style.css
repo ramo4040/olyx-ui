@@ -4,7 +4,7 @@
     flex-flow: column;
     align-items: center;
     gap: var(--spacing-24);
-    padding-block: 160px 100px;
+    padding-block: 100px;
     text-align: center;
     margin-inline: auto;
     max-width: var(--breakpoint-md);
