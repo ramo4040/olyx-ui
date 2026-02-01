@@ -51,7 +51,11 @@
 @layer misc {
   /* Shiki dual theme: CSS variables approach */
   pre {
-    background-color: none !important;
+    padding: var(--spacing-6);
+  }
+
+  pre:not([data-ui="tabs-panel"] pre) {
+    background: none !important;
     padding: var(--spacing-16);
     border-radius: var(--radius-md);
   }
@@ -65,19 +69,23 @@
   }
 
   [data-rehype-pretty-code-figure] {
+    position: relative;
+
+    .copy-button {
+      position: absolute;
+      z-index: 2;
+      top: var(--spacing-12);
+      right: var(--spacing-12);
+    }
+  }
+
+  [data-rehype-pretty-code-figure]:not([data-ui="tabs-panel"] figure) {
     color: var(--color-on-background);
     border-radius: var(--radius-md);
     border: 1px solid var(--color-surface-variant);
     margin-top: var(--spacing-24);
     overflow: hidden;
     outline: none;
-    position: relative;
-
-    .copy-button {
-      position: absolute;
-      top: var(--spacing-12);
-      right: var(--spacing-12);
-    }
 
     &:has([data-rehype-pretty-code-title]) .copy-button {
       top: var(--spacing-12);
@@ -111,11 +119,10 @@
     counter-increment: line;
     content: counter(line);
     display: inline-block;
-    width: var(--spacing-48);
-    padding-right: var(--spacing-16);
+    width: var(--spacing-24);
+    padding-right: var(--spacing-24);
     text-align: right;
-    color: var(--color-on-surface-variant);
-    background-color: var(--color-surface-container);
+    color: var(--color-on-surface);
     position: sticky;
     left: 0;
   }
