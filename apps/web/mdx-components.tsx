@@ -1,4 +1,6 @@
 import { LinkButton, Separator } from "@olyx/react";
+import { CopyButton } from "@/components/misc";
+import { ComponentPreview } from "@/widgets/misc";
 
 export const mdxComponents = {
   h1: ({ ...props }: React.ComponentProps<"h1">) => (
@@ -48,4 +50,16 @@ export const mdxComponents = {
   hr: ({ ...props }: React.ComponentProps<"div">) => (
     <Separator data-ui="docs-separator" {...props} />
   ),
+  code: ({
+    __raw__,
+    ...props
+  }: React.ComponentProps<"code"> & { __raw__?: string }) => {
+    return (
+      <>
+        {__raw__ && <CopyButton value={__raw__} />}
+        <code {...props} />
+      </>
+    );
+  },
+  ComponentPreview,
 };

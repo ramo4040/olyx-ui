@@ -1,0 +1,18 @@
+@layer misc {
+  [data-ui="code-loading"] {
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
+
+  [data-slot="code-block"] {
+    height: 100%;
+    position: relative;
+
+    .copy-btn {
+      position: absolute;
+      top: var(--spacing-16);
+      right: var(--spacing-16);
+    }
+  }
+}

@@ -5,8 +5,19 @@
     border-radius: var(--radius-lg);
     padding: var(--spacing-12);
 
-    .link:not([data-active]) {
-      color: var(--color-on-background);
+    .link {
+      display: flex;
+      justify-content: space-between;
+      :not([data-active]) {
+        color: var(--color-on-background);
+      }
+
+      .dot {
+        width: var(--spacing-6);
+        height: var(--spacing-6);
+        border-radius: var(--radius-rounded);
+        background-color: var(--color-primary);
+      }
     }
 
     h5 {

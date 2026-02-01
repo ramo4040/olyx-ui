@@ -1,6 +1,7 @@
 import { category, type RegistryItem } from "@olyx/registry";
+import React, { type LazyExoticComponent } from "react";
 
-export const particles: RegistryItem[] = [
+const data: RegistryItem[] = [
   {
     name: "p-accordion-1",
     description: "Basic accordion",
@@ -57,3 +58,26 @@ export const particles: RegistryItem[] = [
     type: "registry:block",
   },
 ];
+
+type RegistryItemWithComponent = RegistryItem & {
+  component: LazyExoticComponent<any>;
+};
+
+export const particles: Record<string, RegistryItemWithComponent> = data.reduce(
+  (acc, item) => {
+    acc[item.name] = {
+      ...item,
+      component: React.lazy(async () => {
+        const mod = await import(`@/registry/particles/${item.name}.tsx`);
+        const exportName =
+          Object.keys(mod).find(
+            (key) =>
+              typeof mod[key] === "function" || typeof mod[key] === "object",
+          ) || item.name;
+        return { default: mod.default || mod[exportName] };
+      }),
+    };
+    return acc;
+  },
+  {} as Record<string, RegistryItemWithComponent>,
+);

@@ -1,13 +1,12 @@
 @layer components {
   [data-ui="scroll-area"] {
-    border: 1px solid var(--color-surface-variant);
     padding: var(--spacing-8);
     padding-right: var(--spacing-24);
     border-radius: var(--radius-md);
 
     [data-ui="scroll-area-viewport"] {
       max-width: calc(100vw - 128px);
-      max-height: 300px;
+      height: 100%;
       overflow: auto;
 
       &[data-scroll-fade="true"] {

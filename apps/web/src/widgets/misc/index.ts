@@ -1,3 +1,4 @@
+export { ComponentPreview } from "./component-preview";
 export { DocsCommand, docsCommandHandle } from "./docs-command";
 export { DocsSidebar } from "./docs-sidebar";
 export { ExamplesTab } from "./examples-tab";

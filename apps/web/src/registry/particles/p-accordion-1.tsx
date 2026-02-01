@@ -27,7 +27,7 @@ export default function Particle() {
   ];
 
   return (
-    <Accordion defaultValue={["3"]}>
+    <Accordion defaultValue={["2"]}>
       {items.map((item) => (
         <AccordionItem key={item.id} value={item.id}>
           <AccordionTrigger>{item.title}</AccordionTrigger>
