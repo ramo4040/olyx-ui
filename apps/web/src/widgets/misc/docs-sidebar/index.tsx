@@ -35,6 +35,8 @@ export const DocsSidebar = ({ tree }: Props) => {
                       render={<Link href={{ pathname: child.url }} />}
                     >
                       {child.name}
+
+                      {child.url === pathname && <span className="dot" />}
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 ) : null;

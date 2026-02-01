@@ -111,11 +111,17 @@
     main {
       width: 100%;
       display: flex;
-      gap: var(--spacing-32);
+      background: var(--color-surface-container-lowest);
+      gap: 300px;
+      margin-top: var(--spacing-12);
+      border-radius: var(--radius-lg-inc);
+      padding-bottom: var(--spacing-64);
     }
 
     [data-ui="docs-content"] {
       margin-left: 120px;
+      width: 100%;
+
       [data-ui="docs-h1"] {
         margin-top: 8px;
         scroll-margin: 80px;
@@ -181,6 +187,14 @@
           margin-bottom: 32px;
         }
       }
+    }
+
+    [data-ui="docs-toc"] {
+      position: sticky;
+      top: 120px;
+      align-self: flex-start;
+      height: fit-content;
+      width: 120px;
     }
   }
 }

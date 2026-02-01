@@ -2,7 +2,8 @@
   [data-ui="accordion"] {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    min-width: 100%;
+    width: 300px;
     padding: var(--spacing-4);
     border-radius: var(--radius-md);
 
