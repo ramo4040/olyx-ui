@@ -112,7 +112,7 @@
       width: 100%;
       display: flex;
       background: var(--color-surface-container-lowest);
-      gap: 300px;
+      gap: 200px;
       margin-top: var(--spacing-12);
       border-radius: var(--radius-lg-inc);
       padding-bottom: var(--spacing-64);
@@ -120,7 +120,7 @@
 
     [data-ui="docs-content"] {
       margin-left: 120px;
-      width: 100%;
+      width: 800px;
 
       [data-ui="docs-h1"] {
         margin-top: 8px;
@@ -187,14 +187,15 @@
           margin-bottom: 32px;
         }
       }
-    }
 
-    [data-ui="docs-toc"] {
-      position: sticky;
-      top: 120px;
-      align-self: flex-start;
-      height: fit-content;
-      width: 120px;
+      [data-ui="tabs"] {
+        [data-ui="tabs-list"] {
+          background: none;
+          [data-ui="tabs-indicator"] {
+            background: var(--color-surface-container-low);
+          }
+        }
+      }
     }
 
     /* Shiki dual theme: CSS variables approach */
@@ -202,14 +203,21 @@
       background: none !important;
       padding: var(--spacing-16);
       border-radius: var(--radius-md);
+
+      &:not([data-ui="scroll-area"] pre) {
+        border: 1px solid var(--color-surface-variant);
+      }
     }
 
     [data-line] span {
       color: var(--shiki-light);
+      font-family: ui-monospace, monospace;
     }
 
     [data-rehype-pretty-code-figure] {
       position: relative;
+      width: 100%;
+      height: inherit;
 
       .copy-button {
         position: absolute;
@@ -222,7 +230,6 @@
     [data-rehype-pretty-code-figure]:not([data-ui="tabs-panel"] figure) {
       color: var(--color-on-background);
       border-radius: var(--radius-md);
-      border: 1px solid var(--color-surface-variant);
       margin-top: var(--spacing-24);
       overflow: hidden;
       outline: none;
@@ -240,7 +247,6 @@
       border-bottom: 1px solid var(--color-surface-variant);
       padding: var(--spacing-16) var(--spacing-24);
       font: var(--font-label-md);
-      font-family: ui-monospace, monospace;
       color: var(--color-on-surface);
     }
 
@@ -257,10 +263,12 @@
 
     [data-line-numbers] [data-line]::before {
       counter-increment: line;
+      background: var(--color-surface-container-lowest);
       content: counter(line);
       display: inline-block;
       width: var(--spacing-24);
-      padding-right: var(--spacing-24);
+      margin-left: -16px;
+      padding-inline: var(--spacing-12) var(--spacing-24);
       text-align: right;
       color: var(--color-on-surface-variant);
       position: sticky;
@@ -298,12 +306,26 @@
   }
 
   [data-theme="dark"] [data-ui="docs-page"] {
-    pre {
+    figure {
       background: var(--color-background) !important;
     }
 
+    [data-line-numbers] [data-line]::before {
+      background: var(--color-background);
+    }
     [data-line] span {
       color: var(--shiki-dark);
     }
+  }
+
+  [data-ui="docs-toc"] {
+    background: var(--color-surface-container-low);
+    align-self: flex-start;
+    position: sticky;
+    width: 150px;
+    height: 300px;
+    top: 150px;
+    margin-right: 50px;
+    margin-top: 100px;
   }
 }

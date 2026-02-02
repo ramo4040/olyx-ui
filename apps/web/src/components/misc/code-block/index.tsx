@@ -24,19 +24,19 @@ export async function CodeBlock({
   });
 
   return (
-    <ScrollArea data-slot="code-block">
-      <figure data-rehype-pretty-code-figure="">
-        {title && (
-          <figcaption data-language={language} data-rehype-pretty-code-title="">
-            {title}
-          </figcaption>
-        )}
+    <figure data-rehype-pretty-code-figure="">
+      {title && (
+        <figcaption data-language={language} data-rehype-pretty-code-title="">
+          {title}
+        </figcaption>
+      )}
 
-        {copyButton && <CopyButton className="copy-button" value={code} />}
+      {copyButton && <CopyButton className="copy-button" value={code} />}
 
+      <ScrollArea data-slot="code-block">
         {/** biome-ignore lint/security/noDangerouslySetInnerHtml: <> */}
         <div dangerouslySetInnerHTML={{ __html: highlightedCode }} />
-      </figure>
-    </ScrollArea>
+      </ScrollArea>
+    </figure>
   );
 }

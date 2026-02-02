@@ -1,6 +1,12 @@
-import { LinkButton, Separator } from "@olyx/react";
-import { CopyButton } from "@/components/misc";
-import { ComponentPreview } from "@/widgets/misc";
+import {
+  LinkButton,
+  Separator,
+  TabsList,
+  TabsPanel,
+  TabsTab,
+} from "@olyx/react";
+import { CodeTabs, CopyButton } from "@/components/misc";
+import { CodeCommandTabs, ComponentPreview } from "@/widgets/misc";
 
 export const mdxComponents = {
   h1: ({ ...props }: React.ComponentProps<"h1">) => (
@@ -52,8 +58,31 @@ export const mdxComponents = {
   ),
   code: ({
     __raw__,
+    __bun__,
+    __npm__,
+    __pnpm__,
+    __yarn__,
     ...props
-  }: React.ComponentProps<"code"> & { __raw__?: string }) => {
+  }: React.ComponentProps<"code"> & {
+    __raw__?: string;
+    __pnpm__?: string;
+    __yarn__?: string;
+    __bun__?: string;
+    __npm__?: string;
+  }) => {
+    const isCodeCommandMenu = __npm__ && __pnpm__ && __yarn__ && __bun__;
+
+    if (isCodeCommandMenu) {
+      return (
+        <CodeCommandTabs
+          __bun__={__bun__}
+          __npm__={__npm__}
+          __pnpm__={__pnpm__}
+          __yarn__={__yarn__}
+        />
+      );
+    }
+
     return (
       <>
         {__raw__ && <CopyButton value={__raw__} />}
@@ -61,5 +90,9 @@ export const mdxComponents = {
       </>
     );
   },
+  CodeTabs,
+  TabsList,
+  TabsTab,
+  TabsPanel,
   ComponentPreview,
 };
