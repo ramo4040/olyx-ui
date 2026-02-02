@@ -1,5 +1,7 @@
+export { CodeCollapsibleWrapper } from "./code-collapsibe-wrapper";
 export { CodeCommandTabs } from "./code-command-tabs";
 export { ComponentPreview } from "./component-preview";
+export { ComponentSource } from "./component-source";
 export { DocsCommand, docsCommandHandle } from "./docs-command";
 export { DocsSidebar } from "./docs-sidebar";
 export { ExamplesTab } from "./examples-tab";

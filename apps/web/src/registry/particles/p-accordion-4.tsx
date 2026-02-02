@@ -37,11 +37,14 @@ export default function Particle() {
         </AccordionItem>
       </Accordion>
 
-      <div>
+      <div style={{ marginTop: 20 }}>
         <Button onClick={() => setValue(["item-1", "item-2"])} mode="stroke">
           Open First Two
         </Button>
-        <p>Open items: {value.length > 0 ? value.join(", ") : "None"}</p>
+
+        <p style={{ marginTop: 10 }}>
+          Open items: {value.length > 0 ? value.join(", ") : "None"}
+        </p>
       </div>
     </div>
   );

@@ -1,0 +1,16 @@
+@layer components {
+  [data-ui="docs-steps"] {
+    margin-bottom: 48px;
+    counter-reset: step;
+
+    h3 {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      margin-top: var(--spacing-32);
+      scroll-margin: 128px;
+      font-weight: 500;
+    }
+  }
+}

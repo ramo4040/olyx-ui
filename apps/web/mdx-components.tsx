@@ -5,8 +5,12 @@ import {
   TabsPanel,
   TabsTab,
 } from "@olyx/react";
-import { CodeTabs, CopyButton } from "@/components/misc";
-import { CodeCommandTabs, ComponentPreview } from "@/widgets/misc";
+import { CodeTabs, CopyButton, Step, Steps } from "@/components/misc";
+import {
+  CodeCommandTabs,
+  ComponentPreview,
+  ComponentSource,
+} from "@/widgets/misc";
 
 export const mdxComponents = {
   h1: ({ ...props }: React.ComponentProps<"h1">) => (
@@ -70,8 +74,12 @@ export const mdxComponents = {
     __bun__?: string;
     __npm__?: string;
   }) => {
-    const isCodeCommandMenu = __npm__ && __pnpm__ && __yarn__ && __bun__;
+    // Inline Code.
+    if (typeof props.children === "string") {
+      return <code data-ui="docs-inline-code" {...props} />;
+    }
 
+    const isCodeCommandMenu = __npm__ && __pnpm__ && __yarn__ && __bun__;
     if (isCodeCommandMenu) {
       return (
         <CodeCommandTabs
@@ -90,9 +98,27 @@ export const mdxComponents = {
       </>
     );
   },
+  li: ({ ...props }: React.ComponentProps<"li">) => (
+    <li data-ui="docs-li" {...props} />
+  ),
+  ol: ({ ...props }: React.ComponentProps<"ol">) => (
+    <ol data-ui="docs-ol" {...props} />
+  ),
+  p: ({ ...props }: React.ComponentProps<"p">) => (
+    <p data-ui="docs-p" {...props} />
+  ),
+  strong: ({ ...props }: React.HTMLAttributes<HTMLElement>) => (
+    <strong data-ui="docs-strong" {...props} />
+  ),
+  ul: ({ ...props }: React.ComponentProps<"ul">) => (
+    <ul data-ui="docs-ul" {...props} />
+  ),
   CodeTabs,
   TabsList,
   TabsTab,
   TabsPanel,
   ComponentPreview,
+  ComponentSource,
+  Steps,
+  Step,
 };

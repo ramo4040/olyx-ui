@@ -22,7 +22,11 @@ export const ComponentPreview: FC<Props> = ({ name }) => {
       </TabsPanel>
 
       <TabsPanel className="tab-panel" value="code">
-        <ComponentSource name={name} src={particles[name].files[0].path} />
+        <ComponentSource
+          collapsible={false}
+          name={name}
+          src={particles[name].files[0].path}
+        />
       </TabsPanel>
     </Tabs>
   );
