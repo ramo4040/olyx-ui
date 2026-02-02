@@ -34,7 +34,12 @@ export default function RootLayout({
 
       <body>
         <div className="root">
-          <ThemeProvider>
+          <ThemeProvider
+            enableColorScheme
+            attribute="data-theme"
+            defaultTheme="system"
+            enableSystem
+          >
             <StackedToastProvider timeout={3000} />
             {children}
           </ThemeProvider>

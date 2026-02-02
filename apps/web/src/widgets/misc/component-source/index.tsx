@@ -37,5 +37,5 @@ export const ComponentSource: FC<Props> = async ({
 
   const lang = language ?? title?.split(".").pop() ?? "tsx";
 
-  return <CodeBlock code={code} lang={lang as BundledLanguage} />;
+  return <CodeBlock code={code} language={lang as BundledLanguage} />;
 };

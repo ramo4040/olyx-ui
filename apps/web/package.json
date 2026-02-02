@@ -23,8 +23,6 @@
     "next-themes": "^0.4.6",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "rehype-pretty-code": "^0.14.1",
-    "shiki": "^3.22.0",
     "vaul-base": "^1.0.0",
     "zod": "^4.3.6"
   },
@@ -32,6 +30,8 @@
     "@types/node": "^20",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "shiki": "^3.15.0",
+    "rehype-pretty-code": "^0.14.1",
     "typescript": "catalog:",
     "@olyx/config": "workspace:*",
     "@olyx/registry": "workspace:*"

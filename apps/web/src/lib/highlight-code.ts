@@ -6,6 +6,7 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import type { ShikiTransformer } from "shiki";
+import { codeToHtml } from "shiki";
 
 export const transformers = [
   {
@@ -60,3 +61,36 @@ export const transformers = [
   transformerNotationErrorLevel(),
   transformerNotationWordHighlight(),
 ] as ShikiTransformer[];
+
+export async function highlightCode(
+  code: string,
+  language = "tsx",
+  options?: { showLineNumbers?: boolean },
+) {
+  const { showLineNumbers = true } = options ?? {};
+
+  const html = await codeToHtml(code, {
+    lang: language,
+    themes: {
+      dark: "github-dark",
+      light: "github-light",
+    },
+    defaultColor: "light-dark()",
+    transformers: [
+      {
+        code(node) {
+          if (showLineNumbers) {
+            node.properties["data-line-numbers"] = "";
+          }
+        },
+        line(node) {
+          node.properties["data-line"] = "";
+        },
+        // pre(node) {},
+      },
+      transformerNotationWordHighlight(),
+    ],
+  });
+
+  return html;
+}
