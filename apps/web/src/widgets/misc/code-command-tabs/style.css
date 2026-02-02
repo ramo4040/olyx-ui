@@ -1,0 +1,26 @@
+@layer misc {
+  [data-slot="code-command-tabs"] {
+    .panel {
+      padding-inline: var(--spacing-16);
+      padding-top: var(--spacing-4);
+      padding-bottom: var(--spacing-12);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-8);
+      padding: var(--spacing-4) var(--spacing-16);
+      border-bottom: 1px solid var(--color-surface-variant);
+
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .btn {
+        margin-left: auto;
+      }
+    }
+  }
+}

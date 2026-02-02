@@ -2,7 +2,7 @@
   [data-ui="tabs"] {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-16);
+    gap: var(--spacing-8);
 
     &[data-orientation="vertical"] {
       flex-direction: row;
@@ -13,157 +13,56 @@
     }
 
     [data-ui="tabs-list"] {
-      --last-tab-width: 0.5;
-
       position: relative;
       width: fit-content;
-      height: fit-content;
-      padding-bottom: var(--spacing-4);
-      border-radius: var(--radius-md);
       display: flex;
-      gap: var(--spacing-4);
+      align-items: center;
+      border-radius: var(--radius-md);
+      background: var(--color-surface-container-low);
+      padding: var(--spacing-4);
 
-      &:has([data-ui="tabs-tab"]:first-of-type[data-active]) {
-        --last-tab-width: 0;
-      }
-
-      &:has([data-ui="tabs-tab"]:last-of-type[data-active]) {
-        --last-tab-width: 1;
-      }
-
-      /*  Tab  */
       [data-ui="tabs-tab"] {
+        position: relative;
         cursor: pointer;
-        padding: var(--spacing-8);
+        padding: var(--spacing-6) var(--spacing-12);
         border: 0;
         outline: 0;
         border-radius: var(--radius-sm);
         background-color: transparent;
         color: var(--color-on-background);
         white-space: nowrap;
-        word-break: keep-all;
         user-select: none;
         transition: var(--transition-expressive-slow-effects);
+        z-index: 1;
 
         &:not([data-active]) {
           opacity: 0.7;
         }
 
-        &:hover {
-          background-color: var(--color-surface-container);
+        &:hover:not([data-active]) {
+          opacity: 0.85;
         }
       }
 
       &[data-orientation="vertical"] {
         flex-direction: column;
-        padding-bottom: 0;
-        padding-left: var(--spacing-4);
 
         [data-ui="tabs-tab"] {
           text-align: left;
         }
       }
 
-      /*  Indicator  */
       [data-ui="tabs-indicator"] {
-        --thum-position: calc(
-          var(--active-tab-left) +
-          (var(--active-tab-width) * var(--last-tab-width))
-        );
-
         position: absolute;
-        height: 1px;
-        width: 100%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        bottom: 0;
-        background: linear-gradient(
-          to left in oklab,
-          var(--color-outline-variant) 50%,
-          0%,
-          var(--color-surface-container-highest) 0% 50%
-        );
-        background-size: 300% 100%;
-        background-position: var(--thum-position) 0;
-        transition: var(--transition-expressive-default-spatial);
-
-        [data-ui="tabs-indicator-thumb"] {
-          z-index: 2;
-        }
-
-        &::after,
-        &::before,
-        [data-ui="tabs-indicator-thumb"] {
-          position: absolute;
-          width: var(--spacing-6);
-          height: var(--spacing-6);
-          clip-path: circle();
-          top: 50%;
-        }
-
-        /* Thumb */
-        [data-ui="tabs-indicator-thumb"] {
-          left: var(--thum-position);
-          transform: translate(-50%, -50%);
-          background: var(--color-on-background);
-          transition: var(--transition-expressive-default-spatial);
-        }
-
-        /* start caps */
-        &::after {
-          content: "";
-          left: 0;
-          transform: translate(-50%, -50%);
-          background: var(--color-outline-variant);
-        }
-
-        /* end caps */
-        &::before {
-          content: "";
-          right: 0;
-          transform: translate(50%, -50%);
-          background: var(--color-surface-container-highest);
-        }
-
-        /* Vertical orientation */
-        &[data-orientation="vertical"] {
-          --thum-position: calc(
-            var(--active-tab-top) +
-            (var(--active-tab-height) * var(--last-tab-width))
-          );
-
-          width: 1px;
-          height: calc(100%);
-          left: 0;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          background: linear-gradient(
-            to top in oklab,
-            var(--color-outline-variant) 50%,
-            0%,
-            var(--color-surface-container-highest) 0% 50%
-          );
-          background-size: 100% 300%;
-          background-position: 0 var(--thum-position);
-
-          [data-ui="tabs-indicator-thumb"] {
-            top: var(--thum-position);
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-
-          &::after {
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-
-          &::before {
-            top: 100%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-        }
+        background-color: var(--color-surface-container-lowest);
+        border-radius: var(--radius-sm);
+        transition: var(--transition-expressive-slow-effects);
+        z-index: 0;
+        inset: 0;
+        left: var(--active-tab-left);
+        top: var(--active-tab-top);
+        width: var(--active-tab-width);
+        height: var(--active-tab-height);
       }
     }
   }

@@ -1,0 +1,9 @@
+@layer misc {
+  [data-slot="code-tabs"] {
+    margin-top: var(--spacing-24);
+
+    figure pre {
+      padding: 0;
+    }
+  }
+}
