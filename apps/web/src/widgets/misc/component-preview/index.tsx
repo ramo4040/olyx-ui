@@ -1,7 +1,6 @@
 import "./style.css";
 
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@olyx/react";
-
 import type { FC } from "react";
 import { particles } from "@/registry/registry-particles";
 import { ComponentSource } from "../component-source";

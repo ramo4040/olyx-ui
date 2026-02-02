@@ -15,6 +15,7 @@ import {
   transformerNotationHighlight,
   transformerNotationWordHighlight
 } from "@shikijs/transformers";
+import { codeToHtml } from "shiki";
 var transformers = [
   {
     code(node) {

@@ -15,11 +15,11 @@
   "type": "module",
   "scripts": {
     "check": "biome check --write .",
+    "clean": "rm -rf node_modules && rm -rf .turbo && rm -rf .next && rm -rf .source",
     "prepare": "husky",
     "dev": "turbo dev",
     "build": "turbo build",
     "check-types": "turbo check-types",
-    "dev:native": "turbo -F native dev",
     "dev:web": "turbo -F web dev"
   },
   "dependencies": {
