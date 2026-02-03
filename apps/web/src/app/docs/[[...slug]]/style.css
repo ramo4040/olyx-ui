@@ -3,7 +3,7 @@
   kbd,
   samp,
   pre {
-    font-family: var(--font-mono);
+    font-family: monospace, ui-monospace;
   }
 
   [data-ui="docs-page"] {
@@ -241,6 +241,20 @@
         list-style-type: disc;
         color: var(--color-on-surface-variant);
       }
+
+      [data-ui="table-header"] {
+        background: transparent;
+        border-bottom: 1px solid var(--color-surface-variant);
+        th {
+          font-weight: 600;
+        }
+      }
+
+      [data-ui="table-row"] {
+        &:hover {
+          background: transparent;
+        }
+      }
     }
 
     [data-ui="docs-toc"] {
@@ -259,6 +273,7 @@
     [data-line] span {
       color: var(--shiki-light);
       font-family: ui-monospace, monospace;
+      font-size: 13px;
     }
 
     [data-ui="tabs-panel"] {
@@ -271,6 +286,7 @@
       position: relative;
       width: 100%;
       height: inherit;
+      overflow: hidden;
       margin-top: var(--spacing-24);
       border: 1px solid var(--color-surface-variant);
       border-radius: var(--radius-md);

@@ -9,10 +9,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/avatar",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/avatar/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/avatar/style.css", type: "registry:style" },
     ],
     meta: {
       category: "core",
@@ -25,10 +23,8 @@ export const registryUi: Registry["items"] = [
     description: "Displays a badge or a component that looks like a badge.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/badge",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/badge/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/badge/style.css", type: "registry:style" },
     ],
     meta: {
       category: "core",
@@ -42,10 +38,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/button",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/button/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/button/style.css", type: "registry:style" },
     ],
     meta: {
       category: "core",
@@ -59,10 +53,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     registryDependencies: ["button"],
     files: [
-      {
-        path: "@olyx/react/button-group",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/button-group/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/button-group/style.css", type: "registry:style" },
     ],
     meta: {
       category: "core",
@@ -77,10 +69,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/scroll-area",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/scroll-area/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/scroll-area/style.css", type: "registry:style" },
     ],
     meta: {
       category: "core",
@@ -94,10 +84,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/separator",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/separator/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/separator/style.css", type: "registry:style" },
     ],
     meta: {
       category: "core",
@@ -110,10 +98,8 @@ export const registryUi: Registry["items"] = [
     description: "Displays status information with colored indicators.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/status-badge",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/status-badge/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/status-badge/style.css", type: "registry:style" },
     ],
     meta: {
       category: "core",
@@ -128,10 +114,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     registryDependencies: ["button"],
     files: [
-      {
-        path: "@olyx/react/banner",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/banner/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/banner/style.css", type: "registry:style" },
     ],
     meta: {
       category: "data-display",
@@ -144,12 +128,7 @@ export const registryUi: Registry["items"] = [
     description:
       "Displays which key or combination of keys performs a given action.",
     type: "registry:ui",
-    files: [
-      {
-        path: "@olyx/react/kbd",
-        type: "registry:ui",
-      },
-    ],
+    files: [{ path: "@olyx/react/kbd/index.tsx", type: "registry:ui" }],
     meta: {
       category: "data-display",
       tags: ["keyboard", "shortcut"],
@@ -163,10 +142,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/progress",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/progress/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/progress/style.css", type: "registry:style" },
     ],
     meta: {
       category: "data-display",
@@ -180,10 +157,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     registryDependencies: ["radio"],
     files: [
-      {
-        path: "@olyx/react/rating-bar",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/rating-bar/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/rating-bar/style.css", type: "registry:style" },
     ],
     meta: {
       category: "data-display",
@@ -196,10 +171,8 @@ export const registryUi: Registry["items"] = [
     description: "Displays detailed rating information with reviews.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/rating-review",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/rating-review/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/rating-review/style.css", type: "registry:style" },
     ],
     meta: {
       category: "data-display",
@@ -212,10 +185,8 @@ export const registryUi: Registry["items"] = [
     description: "A responsive table component for displaying tabular data.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/table",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/table/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/table/style.css", type: "registry:style" },
     ],
     meta: {
       category: "data-display",
@@ -229,10 +200,8 @@ export const registryUi: Registry["items"] = [
       "A compact element that represents an input, attribute, or action.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/tag",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/tag/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/tag/style.css", type: "registry:style" },
     ],
     meta: {
       category: "data-display",
@@ -248,10 +217,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/accordion",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/accordion/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/accordion/style.css", type: "registry:style" },
     ],
     meta: {
       category: "disclosure",
@@ -265,10 +232,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/collapsible",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/collapsible/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/collapsible/style.css", type: "registry:style" },
     ],
     meta: {
       category: "disclosure",
@@ -283,10 +248,7 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/context-menu",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/context-menu/index.tsx", type: "registry:ui" },
     ],
     meta: {
       category: "disclosure",
@@ -300,10 +262,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/drawer",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/drawer/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/drawer/style.css", type: "registry:style" },
     ],
     meta: {
       category: "disclosure",
@@ -318,10 +278,7 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/dropdown-menu",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/dropdown-menu/index.tsx", type: "registry:ui" },
     ],
     meta: {
       category: "disclosure",
@@ -335,10 +292,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/menu-bar",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/menu-bar/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/menu-bar/style.css", type: "registry:style" },
     ],
     meta: {
       category: "disclosure",
@@ -352,10 +307,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/popover",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/popover/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/popover/style.css", type: "registry:style" },
     ],
     meta: {
       category: "disclosure",
@@ -369,10 +322,8 @@ export const registryUi: Registry["items"] = [
     description: "Displays a callout for user attention.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/alert",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/alert/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/alert/style.css", type: "registry:style" },
     ],
     meta: {
       category: "feedback",
@@ -388,10 +339,8 @@ export const registryUi: Registry["items"] = [
     dependencies: ["@base-ui/react"],
     registryDependencies: ["button"],
     files: [
-      {
-        path: "@olyx/react/alert-dialog",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/alert-dialog/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/alert-dialog/style.css", type: "registry:style" },
     ],
     meta: {
       category: "feedback",
@@ -406,10 +355,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/dialog",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/dialog/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/dialog/style.css", type: "registry:style" },
     ],
     meta: {
       category: "feedback",
@@ -423,10 +370,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     registryDependencies: ["button"],
     files: [
-      {
-        path: "@olyx/react/preview-card",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/preview-card/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/preview-card/style.css", type: "registry:style" },
     ],
     meta: {
       category: "feedback",
@@ -439,10 +384,8 @@ export const registryUi: Registry["items"] = [
     description: "A loading indicator that spins to indicate progress.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/spinner",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/spinner/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/spinner/style.css", type: "registry:style" },
     ],
     meta: {
       category: "feedback",
@@ -456,10 +399,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/toast",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/toast/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/toast/style.css", type: "registry:style" },
     ],
     meta: {
       category: "feedback",
@@ -474,10 +415,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/tooltip",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/tooltip/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/tooltip/style.css", type: "registry:style" },
     ],
     meta: {
       category: "feedback",
@@ -493,10 +432,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/checkbox",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/checkbox/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/checkbox/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -511,10 +448,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/combobox",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/combobox/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/combobox/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -528,10 +463,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     registryDependencies: ["input"],
     files: [
-      {
-        path: "@olyx/react/field",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/field/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/field/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -545,10 +478,8 @@ export const registryUi: Registry["items"] = [
       "Displays a form input field or a component that looks like an input field.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/input",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/input/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/input/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -562,10 +493,7 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/number-field",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/number-field/index.tsx", type: "registry:ui" },
     ],
     meta: {
       category: "form",
@@ -580,10 +508,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/radio",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/radio/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/radio/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -598,10 +524,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/select",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/select/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/select/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -616,10 +540,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/slider",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/slider/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/slider/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -634,10 +556,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/switch",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/switch/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/switch/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -651,10 +571,8 @@ export const registryUi: Registry["items"] = [
       "Displays a form textarea or a component that looks like a textarea.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/textarea",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/textarea/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/textarea/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -668,10 +586,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/toggle",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/toggle/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/toggle/style.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -685,10 +601,8 @@ export const registryUi: Registry["items"] = [
     description: "Use to show a placeholder while content is loading.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/skeleton",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/skeleton/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/skeleton/style.css", type: "registry:style" },
     ],
     meta: {
       category: "layout",
@@ -703,10 +617,8 @@ export const registryUi: Registry["items"] = [
       "Displays the path to the current resource using a hierarchy of links.",
     type: "registry:ui",
     files: [
-      {
-        path: "@olyx/react/breadcrumb",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/breadcrumb/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/breadcrumb/style.css", type: "registry:style" },
     ],
     meta: {
       category: "navigation",
@@ -720,10 +632,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/navigation-menu",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/navigation-menu/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/navigation-menu/style.css", type: "registry:style" },
     ],
     meta: {
       category: "navigation",
@@ -737,10 +647,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     registryDependencies: ["button"],
     files: [
-      {
-        path: "@olyx/react/pagination",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/pagination/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/pagination/style.css", type: "registry:style" },
     ],
     meta: {
       category: "navigation",
@@ -755,10 +663,8 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
     files: [
-      {
-        path: "@olyx/react/tabs",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/tabs/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/tabs/style.css", type: "registry:style" },
     ],
     meta: {
       category: "navigation",
@@ -773,10 +679,8 @@ export const registryUi: Registry["items"] = [
     dependencies: ["@base-ui/react"],
     registryDependencies: ["button"],
     files: [
-      {
-        path: "@olyx/react/toolbar",
-        type: "registry:ui",
-      },
+      { path: "@olyx/react/toolbar/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/toolbar/style.css", type: "registry:style" },
     ],
     meta: {
       category: "navigation",

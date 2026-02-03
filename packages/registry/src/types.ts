@@ -1,3 +1,19 @@
+export type RegistryFileType =
+  | "registry:ui"
+  | "registry:style"
+  | "registry:component"
+  | "registry:block"
+  | "registry:hook"
+  | "registry:lib"
+  | "registry:page"
+  | "registry:file";
+
+export interface RegistryFile {
+  path: string;
+  type: RegistryFileType;
+  target?: string;
+}
+
 export interface RegistryItem {
   name: string;
   title?: string;
@@ -16,18 +32,7 @@ export interface RegistryItem {
   registryDependencies?: string[];
   dependencies?: string[];
   devDependencies?: string[];
-  files: {
-    path: string;
-    type:
-      | "registry:ui"
-      | "registry:component"
-      | "registry:block"
-      | "registry:hook"
-      | "registry:lib"
-      | "registry:page"
-      | "registry:file";
-    target?: string;
-  }[];
+  files: RegistryFile[];
   meta?: {
     category?: string;
     subcategory?: string;

@@ -1,12 +1,13 @@
 "use client";
 
+import { ScrollArea } from "../scroll-area";
 import "./style.css";
 
 function Table(props: React.ComponentProps<"table">) {
   return (
-    <div data-ui="table-container">
+    <ScrollArea data-slot="table-container">
       <table data-ui="table" {...props} />
-    </div>
+    </ScrollArea>
   );
 }
 

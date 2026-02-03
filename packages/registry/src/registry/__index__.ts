@@ -10,8 +10,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/avatar",
+        path: "@olyx/react/avatar/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/avatar/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -25,8 +30,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/badge",
+        path: "@olyx/react/badge/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/badge/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -40,8 +50,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/button",
+        path: "@olyx/react/button/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/button/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -55,8 +70,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/button-group",
+        path: "@olyx/react/button-group/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/button-group/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -71,8 +91,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/scroll-area",
+        path: "@olyx/react/scroll-area/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/scroll-area/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -86,8 +111,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/separator",
+        path: "@olyx/react/separator/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/separator/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -101,8 +131,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/status-badge",
+        path: "@olyx/react/status-badge/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/status-badge/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -116,8 +151,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/banner",
+        path: "@olyx/react/banner/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/banner/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -132,7 +172,7 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/kbd",
+        path: "@olyx/react/kbd/index.tsx",
         type: "registry:ui",
         target: "",
       },
@@ -148,8 +188,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/progress",
+        path: "@olyx/react/progress/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/progress/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -163,8 +208,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/rating-bar",
+        path: "@olyx/react/rating-bar/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/rating-bar/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -178,8 +228,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/rating-review",
+        path: "@olyx/react/rating-review/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/rating-review/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -193,8 +248,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/table",
+        path: "@olyx/react/table/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/table/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -209,8 +269,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/tag",
+        path: "@olyx/react/tag/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/tag/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -225,8 +290,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/accordion",
+        path: "@olyx/react/accordion/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/accordion/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -240,8 +310,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/collapsible",
+        path: "@olyx/react/collapsible/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/collapsible/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -256,7 +331,7 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/context-menu",
+        path: "@olyx/react/context-menu/index.tsx",
         type: "registry:ui",
         target: "",
       },
@@ -271,8 +346,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/drawer",
+        path: "@olyx/react/drawer/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/drawer/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -287,7 +367,7 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/dropdown-menu",
+        path: "@olyx/react/dropdown-menu/index.tsx",
         type: "registry:ui",
         target: "",
       },
@@ -302,8 +382,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/menu-bar",
+        path: "@olyx/react/menu-bar/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/menu-bar/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -317,8 +402,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/popover",
+        path: "@olyx/react/popover/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/popover/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -332,8 +422,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/alert",
+        path: "@olyx/react/alert/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/alert/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -348,8 +443,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/alert-dialog",
+        path: "@olyx/react/alert-dialog/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/alert-dialog/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -364,8 +464,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/dialog",
+        path: "@olyx/react/dialog/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/dialog/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -379,8 +484,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/preview-card",
+        path: "@olyx/react/preview-card/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/preview-card/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -394,8 +504,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/spinner",
+        path: "@olyx/react/spinner/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/spinner/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -409,8 +524,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/toast",
+        path: "@olyx/react/toast/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/toast/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -425,8 +545,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/tooltip",
+        path: "@olyx/react/tooltip/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/tooltip/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -441,8 +566,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/checkbox",
+        path: "@olyx/react/checkbox/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/checkbox/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -457,8 +587,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/combobox",
+        path: "@olyx/react/combobox/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/combobox/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -472,8 +607,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/field",
+        path: "@olyx/react/field/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/field/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -488,8 +628,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/input",
+        path: "@olyx/react/input/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/input/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -503,7 +648,7 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/number-field",
+        path: "@olyx/react/number-field/index.tsx",
         type: "registry:ui",
         target: "",
       },
@@ -519,8 +664,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/radio",
+        path: "@olyx/react/radio/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/radio/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -535,8 +685,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/select",
+        path: "@olyx/react/select/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/select/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -551,8 +706,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/slider",
+        path: "@olyx/react/slider/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/slider/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -567,8 +727,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/switch",
+        path: "@olyx/react/switch/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/switch/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -583,8 +748,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/textarea",
+        path: "@olyx/react/textarea/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/textarea/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -598,8 +768,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/toggle",
+        path: "@olyx/react/toggle/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/toggle/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -613,8 +788,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/skeleton",
+        path: "@olyx/react/skeleton/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/skeleton/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -629,8 +809,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/breadcrumb",
+        path: "@olyx/react/breadcrumb/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/breadcrumb/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -644,8 +829,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/navigation-menu",
+        path: "@olyx/react/navigation-menu/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/navigation-menu/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -659,8 +849,13 @@ export const Index: Record<string, any> = {
     dependencies: undefined,
     files: [
       {
-        path: "@olyx/react/pagination",
+        path: "@olyx/react/pagination/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/pagination/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -675,8 +870,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/tabs",
+        path: "@olyx/react/tabs/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/tabs/style.css",
+        type: "registry:style",
         target: "",
       },
     ],
@@ -690,8 +890,13 @@ export const Index: Record<string, any> = {
     dependencies: ["@base-ui/react"],
     files: [
       {
-        path: "@olyx/react/toolbar",
+        path: "@olyx/react/toolbar/index.tsx",
         type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/toolbar/style.css",
+        type: "registry:style",
         target: "",
       },
     ],

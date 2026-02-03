@@ -1,6 +1,12 @@
 import {
   LinkButton,
   Separator,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
   TabsList,
   TabsPanel,
   TabsTab,
@@ -113,6 +119,12 @@ export const mdxComponents = {
   ul: ({ ...props }: React.ComponentProps<"ul">) => (
     <ul data-ui="docs-ul" {...props} />
   ),
+  table: (props: React.ComponentProps<"table">) => <Table {...props} />,
+  thead: (props: React.ComponentProps<"thead">) => <TableHeader {...props} />,
+  tbody: (props: React.ComponentProps<"tbody">) => <TableBody {...props} />,
+  td: (props: React.ComponentProps<"td">) => <TableCell {...props} />,
+  th: (props: React.ComponentProps<"th">) => <TableHead {...props} />,
+  tr: (props: React.ComponentProps<"tr">) => <TableRow {...props} />,
   CodeTabs,
   TabsList,
   TabsTab,

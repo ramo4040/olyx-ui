@@ -9,8 +9,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/avatar",
+          "path": "ui/avatar/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/avatar/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -25,8 +29,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/badge",
+          "path": "ui/badge/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/badge/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -42,8 +50,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/button",
+          "path": "ui/button/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/button/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -59,8 +71,12 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "ui/button-group",
+          "path": "ui/button-group/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/button-group/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -76,8 +92,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/scroll-area",
+          "path": "ui/scroll-area/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/scroll-area/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -93,8 +113,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/separator",
+          "path": "ui/separator/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/separator/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -109,8 +133,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/status-badge",
+          "path": "ui/status-badge/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/status-badge/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -126,8 +154,12 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "ui/banner",
+          "path": "ui/banner/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/banner/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -142,7 +174,7 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/kbd",
+          "path": "ui/kbd/index.tsx",
           "type": "registry:ui"
         }
       ],
@@ -159,8 +191,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/progress",
+          "path": "ui/progress/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/progress/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -176,8 +212,12 @@
       "registryDependencies": ["radio"],
       "files": [
         {
-          "path": "ui/rating-bar",
+          "path": "ui/rating-bar/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/rating-bar/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -192,8 +232,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/rating-review",
+          "path": "ui/rating-review/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/rating-review/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -208,8 +252,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/table",
+          "path": "ui/table/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/table/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -224,8 +272,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/tag",
+          "path": "ui/tag/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/tag/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -241,8 +293,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/accordion",
+          "path": "ui/accordion/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/accordion/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -258,8 +314,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/collapsible",
+          "path": "ui/collapsible/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/collapsible/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -275,7 +335,7 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/context-menu",
+          "path": "ui/context-menu/index.tsx",
           "type": "registry:ui"
         }
       ],
@@ -292,8 +352,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/drawer",
+          "path": "ui/drawer/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/drawer/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -309,7 +373,7 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/dropdown-menu",
+          "path": "ui/dropdown-menu/index.tsx",
           "type": "registry:ui"
         }
       ],
@@ -326,8 +390,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/menu-bar",
+          "path": "ui/menu-bar/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/menu-bar/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -343,8 +411,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/popover",
+          "path": "ui/popover/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/popover/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -359,8 +431,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/alert",
+          "path": "ui/alert/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/alert/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -377,8 +453,12 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "ui/alert-dialog",
+          "path": "ui/alert-dialog/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/alert-dialog/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -394,8 +474,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/dialog",
+          "path": "ui/dialog/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/dialog/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -411,8 +495,12 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "ui/preview-card",
+          "path": "ui/preview-card/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/preview-card/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -427,8 +515,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/spinner",
+          "path": "ui/spinner/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/spinner/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -444,8 +536,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/toast",
+          "path": "ui/toast/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/toast/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -461,8 +557,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/tooltip",
+          "path": "ui/tooltip/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/tooltip/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -478,8 +578,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/checkbox",
+          "path": "ui/checkbox/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/checkbox/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -495,8 +599,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/combobox",
+          "path": "ui/combobox/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/combobox/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -512,8 +620,12 @@
       "registryDependencies": ["input"],
       "files": [
         {
-          "path": "ui/field",
+          "path": "ui/field/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/field/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -528,8 +640,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/input",
+          "path": "ui/input/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/input/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -545,7 +661,7 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/number-field",
+          "path": "ui/number-field/index.tsx",
           "type": "registry:ui"
         }
       ],
@@ -562,8 +678,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/radio",
+          "path": "ui/radio/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/radio/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -579,8 +699,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/select",
+          "path": "ui/select/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/select/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -596,8 +720,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/slider",
+          "path": "ui/slider/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/slider/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -613,8 +741,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/switch",
+          "path": "ui/switch/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/switch/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -629,8 +761,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/textarea",
+          "path": "ui/textarea/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/textarea/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -646,8 +782,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/toggle",
+          "path": "ui/toggle/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/toggle/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -662,8 +802,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/skeleton",
+          "path": "ui/skeleton/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/skeleton/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -678,8 +822,12 @@
       "type": "registry:ui",
       "files": [
         {
-          "path": "ui/breadcrumb",
+          "path": "ui/breadcrumb/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/breadcrumb/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -695,8 +843,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/navigation-menu",
+          "path": "ui/navigation-menu/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/navigation-menu/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -712,8 +864,12 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "ui/pagination",
+          "path": "ui/pagination/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/pagination/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -729,8 +885,12 @@
       "dependencies": ["@base-ui/react"],
       "files": [
         {
-          "path": "ui/tabs",
+          "path": "ui/tabs/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/tabs/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
@@ -747,8 +907,12 @@
       "registryDependencies": ["button"],
       "files": [
         {
-          "path": "ui/toolbar",
+          "path": "ui/toolbar/index.tsx",
           "type": "registry:ui"
+        },
+        {
+          "path": "ui/toolbar/style.css",
+          "type": "registry:style"
         }
       ],
       "meta": {
