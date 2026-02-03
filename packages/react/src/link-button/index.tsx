@@ -15,6 +15,7 @@ function LinkButton({
       data-ui="link-button"
       data-variant={variant}
       data-size={size}
+      data-underline={underline}
       {...props}
     />
   );

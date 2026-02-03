@@ -34,7 +34,9 @@ export const mdxComponents = {
 
     return (
       <h2 {...props} data-ui="docs-h2" id={id}>
-        <LinkButton href={`#${id}`}>{children}</LinkButton>
+        <LinkButton href={`#${id}`} underline={false} variant="gray">
+          {children}
+        </LinkButton>
       </h2>
     );
   },
@@ -50,7 +52,9 @@ export const mdxComponents = {
 
     return (
       <h3 {...props} data-ui="docs-h3" id={id}>
-        <LinkButton href={`#${id}`}>{children}</LinkButton>
+        <LinkButton href={`#${id}`} underline={false}>
+          {children}
+        </LinkButton>
       </h3>
     );
   },

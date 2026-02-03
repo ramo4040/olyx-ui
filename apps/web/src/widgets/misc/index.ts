@@ -4,6 +4,7 @@ export { ComponentPreview } from "./component-preview";
 export { ComponentSource } from "./component-source";
 export { DocsCommand, docsCommandHandle } from "./docs-command";
 export { DocsSidebar } from "./docs-sidebar";
+export { DocsToc } from "./docs-toc";
 export { ExamplesTab } from "./examples-tab";
 export { Faq } from "./faq";
 export { FeaturesSection } from "./features-section";

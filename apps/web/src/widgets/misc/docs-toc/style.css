@@ -1,0 +1,57 @@
+@layer misc {
+  [data-ui="docs-toc"] {
+    position: sticky;
+    top: 150px;
+    margin-top: 100px;
+    align-self: flex-start;
+    flex-shrink: 0;
+
+    h3 {
+      font: var(--font-label-md);
+      font-weight: 600;
+      margin-bottom: var(--spacing-6);
+    }
+
+    .links {
+      padding-left: var(--spacing-12);
+      border-left: 1px solid var(--color-surface-variant);
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    a {
+      padding-block: var(--spacing-4);
+      font: var(--font-label-lg);
+      color: var(--color-on-surface-variant);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      &[data-active="true"] {
+        color: var(--color-primary);
+        font-weight: 500;
+
+        &::after {
+          content: "";
+          width: 2px;
+          height: 20px;
+          position: absolute;
+          left: 0;
+          background: var(--color-primary);
+        }
+      }
+
+      &[data-depth="3"] {
+        margin-left: var(--spacing-12);
+      }
+
+      &[data-depth="4"] {
+        margin-left: calc(var(--spacing-12) * 2);
+      }
+    }
+  }
+}
