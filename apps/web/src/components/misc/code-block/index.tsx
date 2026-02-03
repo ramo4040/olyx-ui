@@ -1,6 +1,7 @@
 import "./style.css";
 
 import { ScrollArea } from "@olyx/react";
+import { getIconForLanguageExtension } from "@/lib/get-extension-logo";
 import { highlightCode } from "@/lib/highlight-code";
 import { CopyButton } from "../copy-button";
 
@@ -27,6 +28,7 @@ export async function CodeBlock({
     <figure data-rehype-pretty-code-figure="">
       {title && (
         <figcaption data-language={language} data-rehype-pretty-code-title="">
+          {language && getIconForLanguageExtension(language)}
           {title}
         </figcaption>
       )}

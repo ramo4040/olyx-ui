@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun --bun next dev --port 3001",
-    "build": "bun --bun next build",
-    "start": "bun --bun next start"
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@base-ui/react": "^1.1.0",
@@ -20,10 +20,12 @@
     "fumadocs-mdx": "^14.2.6",
     "hast-util-to-jsx-runtime": "^2.3.6",
     "jotai": "^2.17.0",
-    "next": "^16.1.0",
+    "next": "^16.1.6",
     "next-themes": "^0.4.6",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "rehype-pretty-code": "^0.14.1",
+    "shiki": "^3.15.0",
     "vaul-base": "^1.0.0",
     "zod": "^4.3.6"
   },
@@ -31,8 +33,6 @@
     "@types/node": "^20",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "shiki": "^3.15.0",
-    "rehype-pretty-code": "^0.14.1",
     "typescript": "catalog:",
     "@olyx/config": "workspace:*",
     "@olyx/registry": "workspace:*"

@@ -1,8 +1,6 @@
 @layer components {
-  [data-ui="table-container"] {
-    position: relative;
+  [data-slot="table-container"] {
     width: 100%;
-    overflow-x: auto;
 
     [data-ui="table"] {
       width: 100%;

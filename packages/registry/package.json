@@ -9,6 +9,9 @@
   "files": [
     "src"
   ],
+  "scripts": {
+    "build": "bun run scripts/build-registry.ts"
+  },
   "devDependencies": {
     "@olyx/config": "workspace:*",
     "@types/node": "^25.0.10",

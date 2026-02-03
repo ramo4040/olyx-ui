@@ -1,7 +1,5 @@
-import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import "./style.css";
 import { Collapsible as CollapsiblePrimitive } from "@base-ui/react/collapsible";
-import { HugeiconsIcon } from "@hugeicons/react";
 
 function Collapsible(props: CollapsiblePrimitive.Root.Props) {
   return <CollapsiblePrimitive.Root data-ui="collapsible" {...props} />;
@@ -12,8 +10,7 @@ function CollapsibleTrigger({
   ...props
 }: CollapsiblePrimitive.Trigger.Props) {
   return (
-    <CollapsiblePrimitive.Trigger data-ui="collapsible-trigger" {...props}>
-      <HugeiconsIcon icon={ArrowDown01Icon} />
+    <CollapsiblePrimitive.Trigger data-slot="collapsible-trigger" {...props}>
       {children}
     </CollapsiblePrimitive.Trigger>
   );

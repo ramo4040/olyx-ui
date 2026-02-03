@@ -1,0 +1,48 @@
+@layer misc {
+  .code-collapsible-wrapper {
+    position: relative;
+
+    .trigger-container {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      gap: var(--spacing-4);
+      top: calc(var(--spacing-8) + var(--spacing-24));
+      right: var(--spacing-48);
+
+      .trigger-separator {
+        height: var(--spacing-16);
+      }
+    }
+
+    .collapsible-panel[data-closed] {
+      max-height: 250px;
+    }
+
+    .bottom-trigger {
+      position: absolute;
+      bottom: calc(var(--spacing-8) * -1);
+      left: 0;
+      right: 0;
+      height: 84px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom-left-radius: var(--radius-md);
+      border-bottom-right-radius: var(--radius-md);
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--color-surface-container-lowest) 50%,
+        var(--color-surface-container-lowest) 100%
+      );
+      color: var(--color-on-surface-variant);
+    }
+
+    &[data-open] .bottom-trigger {
+      display: none;
+    }
+  }
+}

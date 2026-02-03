@@ -1,30 +1,16 @@
 @layer components {
   [data-ui="collapsible"] {
-    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: var(--color-surface-container-low);
     border-radius: var(--radius-sm);
     font: var(--font-body-md);
     transition: var(--transition-expressive-default-spatial);
 
-    &:hover {
-      background-color: var(--color-surface-container-high);
-    }
-
-    [data-ui="collapsible-trigger"] {
-      color: var(--color-on-background);
-      background-color: transparent;
-      border: 0;
+    [data-slot="collapsible-trigger"] {
       outline: 0;
-      display: flex;
-      gap: var(--spacing-8);
-      padding: var(--spacing-6) var(--spacing-12);
-      align-items: center;
-      width: 100%;
-      cursor: pointer;
-      border-radius: var(--radius-sm);
+      border: 0;
+      background-color: transparent;
 
       &:focus-visible {
         outline: 2px solid var(--color-primary-container);
@@ -36,35 +22,15 @@
         height: 16px;
         color: inherit;
       }
-
-      &[data-panel-open] svg {
-        transform: rotate(180deg);
-      }
     }
 
     [data-ui="collapsible-panel"] {
-      padding: var(--spacing-8) var(--spacing-16);
-      border: 1px solid var(--color-surface-container-highest);
-      background: var(--color-background);
       border-radius: var(--radius-sm);
       height: var(--collapsible-panel-height);
-      box-shadow: 0 10px 15px -8px
-        color-mix(in srgb, var(--color-on-background) 8%, transparent);
       overflow: hidden;
-      transition: all var(--transition-expressive-default-effects);
 
       &[hidden]:not([hidden="until-found"]) {
         display: none;
-      }
-
-      &[data-ending-style] {
-        padding-block: 0;
-      }
-
-      &[data-starting-style],
-      &[data-ending-style] {
-        height: 0;
-        opacity: 0;
       }
     }
   }
