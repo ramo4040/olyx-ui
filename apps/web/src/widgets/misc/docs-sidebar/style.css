@@ -1,9 +1,21 @@
 @layer misc {
   [data-ui="docs-sidebar"] {
-    width: 200px;
-    min-height: 100%;
+    --header-height: 56px;
+
+    width: 250px;
+    height: 80vh;
+    overflow-y: auto;
+    position: sticky;
+    top: calc(var(--header-height) * 2);
     border-radius: var(--radius-lg);
     padding: var(--spacing-12);
+    padding-top: 0;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .link {
       display: flex;

@@ -22,7 +22,7 @@
     }
 
     a {
-      padding-block: var(--spacing-4);
+      padding-bottom: var(--spacing-8);
       font: var(--font-label-lg);
       color: var(--color-on-surface-variant);
       text-decoration: none;
@@ -40,17 +40,13 @@
           width: 2px;
           height: 20px;
           position: absolute;
-          left: 0;
+          left: -1.5px;
           background: var(--color-primary);
         }
       }
 
-      &[data-depth="3"] {
+      &:where([data-depth="3"], [data-depth="4"]) {
         margin-left: var(--spacing-12);
-      }
-
-      &[data-depth="4"] {
-        margin-left: calc(var(--spacing-12) * 2);
       }
     }
   }

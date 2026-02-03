@@ -1,12 +1,12 @@
 "use client";
 
+import "./style.css";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
 } from "@olyx/react";
-import "./style.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { source } from "@/lib/source";
