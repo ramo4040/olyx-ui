@@ -1,7 +1,237 @@
 ---
 title: Autocomplete
-description: test.
+description: Provide intelligent suggestions as users type in an input field for faster data entry and improved discoverability.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/autocomplete#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-autocomplete-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/autocomplete
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="autocomplete" title="components/ui/autocomplete.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Autocomplete,
+  AutocompleteEmpty,
+  AutocompleteInput,
+  AutocompleteItem,
+  AutocompleteList,
+  AutocompletePopup,
+  AutocompleteGroup,
+  AutocompleteGroupLabel,
+  AutocompleteSeparator,
+} from "@/components/ui/autocomplete"
+```
+
+```tsx
+const items = [
+  { value: "apple", label: "Apple" },
+  { value: "banana", label: "Banana" },
+  { value: "orange", label: "Orange" },
+]
+
+<Autocomplete items={items}>
+  <AutocompleteInput placeholder="Search..." />
+  <AutocompletePopup>
+    <AutocompleteEmpty>No results found.</AutocompleteEmpty>
+    <AutocompleteList>
+      {(item) => (
+        <AutocompleteItem key={item.value} value={item}>
+          {item.label}
+        </AutocompleteItem>
+      )}
+    </AutocompleteList>
+  </AutocompletePopup>
+</Autocomplete>
+```
+
+## API Reference
+
+### Autocomplete
+
+Root component managing state and providing context to child components.
+
+| Prop             | Type                       | Description                          |
+| ---------------- | -------------------------- | ------------------------------------ |
+| `items`          | `readonly unknown[]`       | Array of items to display            |
+| `open`           | `boolean`                  | Controls popup open state            |
+| `disabled`       | `boolean`                  | Disables the autocomplete            |
+| `autoHighlight`  | `boolean`                  | Auto-highlight first match           |
+| `inlineAutocompletion` | `boolean`             | Inline suggestion while typing       |
+| `value`          | `unknown`                  | Currently selected value             |
+| `...props`       | Base UI Autocomplete props | All standard autocomplete attributes are supported |
+
+### AutocompleteInput
+
+Input field with support for icons and action buttons.
+
+| Prop          | Type                        | Default     | Description                           |
+| ------------- | --------------------------- | ----------- | ------------------------------------- |
+| `startAddon`  | `React.ReactNode`           | -           | Icon or element at input start        |
+| `showTrigger` | `boolean`                   | `false`     | Display trigger (chevron) button      |
+| `showClear`   | `boolean`                   | `false`     | Display clear (X) button              |
+| `...props`    | Base UI Autocomplete Input props          | -           | All standard autocomplete input attributes are supported  |
+
+### AutocompletePopup
+
+Popup container for suggestions and results.
+
+| Prop  | Type   | Description                     |
+| ----- | ------ | ------------------------------- |
+| `children` | `React.ReactNode` | Content inside popup |
+| `side`     | `string` | Popup placement side |
+| `...props` | Base UI Autocomplete Popup props | All standard autocomplete popup attributes are supported |
+
+### AutocompleteList
+
+Scrollable container for autocomplete items.
+
+| Prop       | Type              | Description              |
+| ---------- | ----------------- | ------------------------ |
+| `children` | `React.ReactNode` | List item elements       |
+| `...props` | Base UI Autocomplete List props | All standard autocomplete list attributes are supported |
+
+### AutocompleteItem
+
+Individual selectable item in the list.
+
+| Prop    | Type      | Description          |
+| ------- | --------- | -------------------- |
+| `value` | `unknown` | Item value           |
+| `children` | `React.ReactNode` | Item label/content |
+| `...props` | Base UI Autocomplete Item props | All standard autocomplete item attributes are supported |
+
+### AutocompleteEmpty
+
+Message displayed when no results match.
+
+| Prop       | Type              | Description       |
+| ---------- | ----------------- | ----------------- |
+| `children` | `React.ReactNode` | Empty state text  |
+| `...props` | Base UI Autocomplete Empty props | All standard autocomplete empty attributes are supported |
+
+### AutocompleteGroup
+
+Container for grouped items.
+
+| Prop    | Type              | Description      |
+| ------- | ----------------- | ---------------- |
+| `children` | `React.ReactNode` | Group items      |
+| `...props` | Base UI Autocomplete Group props | All standard autocomplete group attributes are supported |
+
+### AutocompleteGroupLabel
+
+Label for an item group.
+
+| Prop       | Type              | Description   |
+| ---------- | ----------------- | ------------- |
+| `children` | `React.ReactNode` | Group title   |
+| `...props` | Base UI Autocomplete Group Label props | All standard autocomplete group label attributes are supported |
+
+### AutocompleteSeparator
+
+Visual separator between groups.
+
+Renders a horizontal line divider without additional props.
+
+## Examples
+
+### Disabled
+
+<ComponentPreview name="p-autocomplete-2" />
+
+### With Label
+
+<ComponentPreview name="p-autocomplete-5" />
+
+### Inline Autocomplete
+
+Autofill the input with the highlighted item while navigating with arrow keys.
+
+<ComponentPreview name="p-autocomplete-6" />
+
+### Auto Highlight
+
+Automatically highlight the first matching option when results appear.
+
+<ComponentPreview name="p-autocomplete-7" />
+
+### With Clear Button
+
+<ComponentPreview name="p-autocomplete-8" />
+
+### With Trigger and Clear Buttons
+
+<ComponentPreview name="p-autocomplete-9" />
+
+### With Groups
+
+Organize items into categorized sections for better organization.
+
+<ComponentPreview name="p-autocomplete-10" />
+
+### Limit Results
+
+Restrict displayed results and show only a set number of matches.
+
+<ComponentPreview name="p-autocomplete-11" />
+
+### Async Search
+
+Load suggestions dynamically based on user input.
+
+<ComponentPreview name="p-autocomplete-12" />
+
+### Form Integration
+
+Use autocomplete within forms for controlled selection handling.
+
+<ComponentPreview name="p-autocomplete-13" />
+
+### With Start Addon
+
+Display an icon at the input start for visual context.
+
+<ComponentPreview name="p-autocomplete-14" />

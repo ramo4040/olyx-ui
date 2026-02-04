@@ -441,6 +441,22 @@ export const registryUi: Registry["items"] = [
     },
   },
   {
+    name: "autocomplete",
+    title: "Autocomplete",
+    description:
+      "Provides intelligent suggestions as users type in an input field for faster data entry.",
+    type: "registry:ui",
+    dependencies: ["@base-ui/react"],
+    files: [
+      { path: "@olyx/react/autocomplete/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/autocomplete/style.css", type: "registry:style" },
+    ],
+    meta: {
+      category: "form",
+      tags: ["autocomplete", "input", "suggestions"],
+    },
+  },
+  {
     name: "combobox",
     title: "Combobox",
     description:

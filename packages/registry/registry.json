@@ -592,6 +592,27 @@
       }
     },
     {
+      "name": "autocomplete",
+      "title": "Autocomplete",
+      "description": "Provides intelligent suggestions as users type in an input field for faster data entry.",
+      "type": "registry:ui",
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "ui/autocomplete/index.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "ui/autocomplete/style.css",
+          "type": "registry:style"
+        }
+      ],
+      "meta": {
+        "category": "form",
+        "tags": ["autocomplete", "input", "suggestions"]
+      }
+    },
+    {
       "name": "combobox",
       "title": "Combobox",
       "description": "Autocomplete input and command palette with a list of suggestions.",

@@ -99,7 +99,7 @@ export const DocsCommand = () => {
       />
 
       <CommandDialogContent>
-        <Command items={groupedItems}>
+        <Command items={groupedItems} autoHighlight>
           <CommandInput placeholder="Search for apps and commands..." />
           <CommandPanel>
             <CommandEmpty>No results found.</CommandEmpty>

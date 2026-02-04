@@ -3,6 +3,7 @@
     &[data-slot="autocomplete-input"] {
       --number-btn: 0;
 
+      width: 100%;
       padding-inline: 0;
 
       [data-ui="autocomplete-input-actions"] {
@@ -41,12 +42,27 @@
 
   [data-ui="autocomplete-empty"],
   [data-ui="autocomplete-status"] {
-    text-align: center;
     font: var(--font-body-sm);
+    width: 100%;
   }
 
   [data-slot="autocomplete-scrollarea"] {
     padding: 0;
     border: 0;
+  }
+
+  [data-ui="scroll-area"]:has([data-slot="autocomplete-list"]:not(:empty))
+    + [data-ui="autocomplete-status"] {
+    margin-top: var(--spacing-12);
+  }
+
+  [data-ui="autocomplete-status"]:has(
+      + [data-ui="scroll-area"] [data-slot="autocomplete-list"]:not(:empty)
+    ) {
+    margin-bottom: var(--spacing-12);
+  }
+
+  [data-slot="autocomplete-separator"] {
+    margin: var(--spacing-4) 0;
   }
 }

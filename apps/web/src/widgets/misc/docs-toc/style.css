@@ -1,10 +1,19 @@
 @layer misc {
   [data-ui="docs-toc"] {
     position: sticky;
-    top: 150px;
+    top: 100px;
+    padding-bottom: 50px;
     margin-top: 100px;
     align-self: flex-start;
     flex-shrink: 0;
+    max-height: calc(100svh - 56px * 2);
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     h3 {
       font: var(--font-label-md);

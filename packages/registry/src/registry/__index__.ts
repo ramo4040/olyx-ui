@@ -578,6 +578,27 @@ export const Index: Record<string, any> = {
     ],
     meta: { category: "form", tags: ["input", "boolean", "toggle"] },
   },
+  autocomplete: {
+    name: "autocomplete",
+    description:
+      "Provides intelligent suggestions as users type in an input field for faster data entry.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["@base-ui/react"],
+    files: [
+      {
+        path: "@olyx/react/autocomplete/index.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/autocomplete/style.css",
+        type: "registry:style",
+        target: "",
+      },
+    ],
+    meta: { category: "form", tags: ["autocomplete", "input", "suggestions"] },
+  },
   combobox: {
     name: "combobox",
     description:

@@ -16,6 +16,7 @@
       outline: 0;
       transition: var(--transition-expressive-default-effects);
       transform-origin: var(--transform-origin);
+      width: 100%;
 
       /* If Has Scroll Area */
       [data-ui="scroll-area"] {
@@ -62,7 +63,6 @@
         font: var(--font-body-md);
         cursor: pointer;
         outline: 0;
-        transition: var(--transition-standard-default-spatial);
         -webkit-user-select: none;
         user-select: none;
 

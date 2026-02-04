@@ -16,6 +16,7 @@ const data: RegistryItem[] = [
     meta: {
       category: category("accordion"),
       tags: ["accordion", "collapse", "toggle"],
+      classname: "p-accordion",
     },
   },
   {
@@ -154,6 +155,7 @@ const data: RegistryItem[] = [
     meta: {
       category: category("accordion"),
       tags: ["accordion", "collapse", "toggle"],
+      classname: "p-accordion",
     },
     name: "p-accordion-2",
     registryDependencies: ["@olyx/react/accordion"],
@@ -167,6 +169,7 @@ const data: RegistryItem[] = [
     meta: {
       category: category("accordion"),
       tags: ["accordion", "collapse", "toggle"],
+      classname: "p-accordion",
     },
     name: "p-accordion-3",
     registryDependencies: ["@olyx/react/accordion"],
@@ -180,6 +183,7 @@ const data: RegistryItem[] = [
     meta: {
       category: category("accordion"),
       tags: ["accordion", "collapse", "toggle"],
+      classname: "p-accordion",
     },
     name: "p-accordion-4",
     registryDependencies: ["@olyx/react/accordion", "@olyx/react/button"],
@@ -407,6 +411,210 @@ const data: RegistryItem[] = [
     meta: {
       category: category("alert-dialog"),
       tags: ["alert-dialog", "sign-out"],
+    },
+  },
+  {
+    name: "p-autocomplete-1",
+    description: "Basic autocomplete",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "input", "suggestions"],
+    },
+  },
+  {
+    name: "p-autocomplete-2",
+    description: "Disabled autocomplete",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "disabled"],
+    },
+  },
+  {
+    name: "p-autocomplete-5",
+    description: "Autocomplete with label",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "label"],
+    },
+  },
+  {
+    name: "p-autocomplete-6",
+    description: "Inline autocomplete",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "inline"],
+    },
+  },
+  {
+    name: "p-autocomplete-7",
+    description: "Auto highlight autocomplete",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "highlight"],
+    },
+  },
+  {
+    name: "p-autocomplete-8",
+    description: "Autocomplete with clear button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-8.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "clear"],
+    },
+  },
+  {
+    name: "p-autocomplete-9",
+    description: "Autocomplete with trigger and clear buttons",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-9.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "trigger", "clear"],
+    },
+  },
+  {
+    name: "p-autocomplete-10",
+    description: "Autocomplete with groups",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-10.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "group"],
+    },
+  },
+  {
+    name: "p-autocomplete-11",
+    description: "Autocomplete with limit results",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-11.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "limit"],
+    },
+  },
+  {
+    name: "p-autocomplete-12",
+    description: "Autocomplete async search",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-12.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "async"],
+    },
+  },
+  {
+    name: "p-autocomplete-13",
+    description: "Autocomplete form integration",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-13.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "form"],
+    },
+  },
+  {
+    name: "p-autocomplete-14",
+    description: "Autocomplete with start addon",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-14.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "addon", "icon"],
     },
   },
 ];

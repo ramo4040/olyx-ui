@@ -1,4 +1,5 @@
 import "./style.css";
+import "./particles-style.css";
 import {
   ArrowDown01Icon,
   Copy01Icon,

@@ -37,6 +37,7 @@ export interface RegistryItem {
     category?: string;
     subcategory?: string;
     tags?: string[];
+    classname?: string;
   };
 }
 
