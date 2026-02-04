@@ -1,6 +1,6 @@
 @layer components {
   [data-ui="link-button"] {
-    display: flex;
+    display: inline-flex;
     position: relative;
     align-items: center;
     justify-content: center;

@@ -19,6 +19,134 @@ const data: RegistryItem[] = [
     },
   },
   {
+    name: "p-button-1",
+    description: "Button with icon and plain button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "icon"],
+    },
+  },
+  {
+    name: "p-button-2",
+    description: "Primary button modes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "mode"],
+    },
+  },
+  {
+    name: "p-button-3",
+    description: "Neutral variant with all modes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "variant"],
+    },
+  },
+  {
+    name: "p-button-4",
+    description: "Error variant with all modes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "variant", "error"],
+    },
+  },
+  {
+    name: "p-button-5",
+    description: "Button sizes with icons",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "size"],
+    },
+  },
+  {
+    name: "p-button-6",
+    description: "Button with text and icon",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "icon"],
+    },
+  },
+  {
+    name: "p-button-7",
+    description: "Icon only button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "icon"],
+    },
+  },
+  {
+    name: "p-button-8",
+    description: "Disabled button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-8.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "disabled"],
+    },
+  },
+  {
     description: "Accordion with one panel open",
     files: [
       { path: "registry/particles/p-accordion-2.tsx", type: "registry:block" },
@@ -28,7 +156,7 @@ const data: RegistryItem[] = [
       tags: ["accordion", "collapse", "toggle"],
     },
     name: "p-accordion-2",
-    registryDependencies: ["@coss/accordion"],
+    registryDependencies: ["@olyx/react/accordion"],
     type: "registry:block",
   },
   {
@@ -41,7 +169,7 @@ const data: RegistryItem[] = [
       tags: ["accordion", "collapse", "toggle"],
     },
     name: "p-accordion-3",
-    registryDependencies: ["@coss/accordion"],
+    registryDependencies: ["@olyx/react/accordion"],
     type: "registry:block",
   },
   {
@@ -54,8 +182,40 @@ const data: RegistryItem[] = [
       tags: ["accordion", "collapse", "toggle"],
     },
     name: "p-accordion-4",
-    registryDependencies: ["@coss/accordion", "@coss/button"],
+    registryDependencies: ["@olyx/react/accordion", "@olyx/react/button"],
     type: "registry:block",
+  },
+  {
+    name: "p-button-9",
+    description: "Icon only button sizes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-9.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "icon", "size"],
+    },
+  },
+  {
+    name: "p-button-10",
+    description: "Loading button with spinner",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-10.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button", "@olyx/react/spinner"],
+    meta: {
+      category: category("button"),
+      tags: ["button", "spinner", "loading"],
+    },
   },
 ];
 

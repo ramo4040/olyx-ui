@@ -70,6 +70,7 @@ export const mdxComponents = {
   hr: ({ ...props }: React.ComponentProps<"div">) => (
     <Separator data-ui="docs-separator" {...props} />
   ),
+  a: ({ ...props }: React.ComponentProps<"a">) => <LinkButton {...props} />,
   code: ({
     __raw__,
     __bun__,
