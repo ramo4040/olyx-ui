@@ -13,6 +13,13 @@
     }
   }
 
+  [data-slot="dialog-trigger"],
+  [data-slot="dialog-close"] {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
   [data-ui="dialog-content"],
   [data-ui="alert-dialog-content"] {
     display: flex;
@@ -33,7 +40,7 @@
       scale(calc(1 - 0.2 * var(--nested-dialogs)));
     translate: 0 calc(var(--spacing-24) * var(--nested-dialogs));
 
-    [data-slot="dialog-close"] {
+    [data-slot="dialog-close-icon"] {
       position: absolute;
       top: 18px;
       right: var(--spacing-16);

@@ -116,7 +116,7 @@
     main {
       display: flex;
       width: 100%;
-      gap: 200px;
+      gap: 80px;
       margin-top: var(--spacing-12);
       padding-bottom: var(--spacing-64);
       background: var(--color-surface-container-lowest);
@@ -255,17 +255,6 @@
           background: transparent;
         }
       }
-    }
-
-    [data-ui="docs-toc"] {
-      position: sticky;
-      top: 150px;
-      align-self: flex-start;
-      width: 150px;
-      height: 300px;
-      margin-top: 100px;
-      margin-right: 50px;
-      background: var(--color-surface-container-low);
     }
 
     /* Shiki dual theme: CSS variables approach */

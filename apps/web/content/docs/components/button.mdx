@@ -1,7 +1,115 @@
 ---
 title: Button
-description: test.
+description: A button or a component that looks like a button.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/button#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-button-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/button
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="button" title="components/ui/button.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/button"
+```
+
+```tsx
+<Button>Button</Button>
+```
+
+## API Reference
+
+#### Button
+
+Styled wrapper for `Button` from Base UI.
+
+| Prop      | Type                                            | Default     |
+| --------- | ----------------------------------------------- | ----------- |
+| `variant` | `"primary" \| "neutral" \| "error" \| "link"`   | `"primary"` |
+| `mode`    | `"filled" \| "lighter" \| "ghost" \| "stroke"`  | `"filled"`  |
+| `size`    | `"sm" \| "md" \| "lg"`                          | `"md"`      |
+| `asIcon`  | `boolean`                                       | `false`     |
+| `asRtl`   | `boolean`                                       | `false`     |
+
+All props from [Base UI Button](https://base-ui.com/react/components/button#api-reference) are also supported.
+
+## Examples
+
+### Primary
+
+<ComponentPreview name="p-button-2" />
+
+### Neutral
+
+<ComponentPreview name="p-button-3" />
+
+### Error
+
+<ComponentPreview name="p-button-4" />
+
+
+### Sizes
+
+<ComponentPreview name="p-button-5" />
+
+### With Icon
+
+<ComponentPreview name="p-button-6" />
+
+### Icon Only
+
+<ComponentPreview name="p-button-7" />
+
+### Icon Only Sizes
+
+<ComponentPreview name="p-button-9" />
+
+### Loading
+
+<ComponentPreview name="p-button-10" />
+
+### Disabled
+
+<ComponentPreview name="p-button-8" />

@@ -15,50 +15,52 @@ import { ThemeToggle } from "../theme-toggle";
 
 export const MainNavbar = () => {
   return (
-    <NavigationMenu data-ui="main-navbar">
-      <NavigationMenuList className="main-navbar-list">
-        <div className="links">
-          {/* Logo */}
-          <NavigationMenuItem>
-            <Logo />
-          </NavigationMenuItem>
-
-          {/* Links */}
-          <NavigationMenuList>
-            <NavigationMenuItem className="link-item">
-              <NavigationMenuLink href="#">Docs</NavigationMenuLink>
+    <header data-ui="main-navbar-header">
+      <NavigationMenu data-ui="main-navbar">
+        <NavigationMenuList className="main-navbar-list">
+          <div className="links">
+            {/* Logo */}
+            <NavigationMenuItem>
+              <Logo />
             </NavigationMenuItem>
 
-            <NavigationMenuItem className="link-item">
-              <NavigationMenuLink href="#">Components</NavigationMenuLink>
+            {/* Links */}
+            <NavigationMenuList>
+              <NavigationMenuItem className="link-item">
+                <NavigationMenuLink href="#">Docs</NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem className="link-item">
+                <NavigationMenuLink href="#">Components</NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem className="link-item">
+                <NavigationMenuLink href="#">Blocks</NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </div>
+          <NavigationMenuList className="actions-list">
+            {/* Search */}
+            <NavigationMenuItem>
+              <DocsCommand />
             </NavigationMenuItem>
 
-            <NavigationMenuItem className="link-item">
-              <NavigationMenuLink href="#">Blocks</NavigationMenuLink>
+            <Separator orientation="vertical" />
+
+            <NavigationMenuItem>
+              <NavigationMenuLink href="#">
+                <GitHubIcon />
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <Separator orientation="vertical" />
+
+            <NavigationMenuItem>
+              <ThemeToggle />
             </NavigationMenuItem>
           </NavigationMenuList>
-        </div>
-        <NavigationMenuList className="actions-list">
-          {/* Search */}
-          <NavigationMenuItem>
-            <DocsCommand />
-          </NavigationMenuItem>
-
-          <Separator orientation="vertical" />
-
-          <NavigationMenuItem>
-            <NavigationMenuLink href="#">
-              <GitHubIcon />
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-
-          <Separator orientation="vertical" />
-
-          <NavigationMenuItem>
-            <ThemeToggle />
-          </NavigationMenuItem>
         </NavigationMenuList>
-      </NavigationMenuList>
-    </NavigationMenu>
+      </NavigationMenu>
+    </header>
   );
 };

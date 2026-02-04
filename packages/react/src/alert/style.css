@@ -1,5 +1,7 @@
 @layer components {
   [data-ui="alert"] {
+    --icon-size: 18px;
+
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -47,22 +49,24 @@
     }
 
     &[data-size="lg"] {
+      --icon-size: var(--spacing-24);
+
       height: auto;
       gap: var(--spacing-12);
       padding: var(--spacing-14);
       border-radius: var(--radius-md);
+      font: var(--font-body-lg);
     }
 
     &[data-size="md"] {
-      height: 36px;
-      padding-inline: var(--spacing-10);
+      padding: var(--spacing-10);
       gap: var(--spacing-8);
       border-radius: var(--radius-sm);
+      font: var(--font-body-md);
     }
 
     &[data-size="sm"] {
-      height: 32px;
-      padding-inline: var(--spacing-8);
+      padding: var(--spacing-8);
       border-radius: var(--radius-sm);
       font: var(--font-body-sm);
       gap: var(--spacing-8);
@@ -101,9 +105,10 @@
     [data-ui="alert-icon"] {
       display: grid;
       place-content: center;
+
       svg {
-        width: 18px;
-        height: 18px;
+        width: var(--icon-size);
+        height: var(--icon-size);
         flex-shrink: 0;
       }
     }
@@ -112,12 +117,12 @@
       flex: 1;
     }
 
-    [data-slot="alert-close"]:is([data-ui="button"]) {
-      border-color: transparent;
+    [data-slot="alert-close"]:is(button) {
       background-color: transparent;
       color: currentcolor;
+      border-color: transparent;
 
-      &:hover {
+      &[data-slot="alert-close"]:hover {
         background-color: color-mix(in srgb, currentcolor 10%, transparent);
         color: currentcolor;
       }

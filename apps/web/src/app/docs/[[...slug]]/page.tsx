@@ -20,6 +20,7 @@ import { Markdown } from "@/assets/svg/markdown";
 import { OpenAI } from "@/assets/svg/openai";
 import { V0 } from "@/assets/svg/v0";
 import { source } from "@/lib/source";
+import { DocsToc } from "@/widgets/misc";
 import { mdxComponents } from "../../../../mdx-components";
 
 export const revalidate = false;
@@ -136,7 +137,8 @@ export default async function Page(props: {
         <div data-ui="docs-content">
           <MDX components={mdxComponents} />
         </div>
-        <div data-ui="docs-toc"> </div>
+
+        <DocsToc toc={doc.toc} />
       </main>
     </div>
   );

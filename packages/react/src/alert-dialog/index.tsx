@@ -1,7 +1,7 @@
 "use client";
 
-import "../shared/dialog-base.css";
 import "./style.css";
+import "../shared/dialog-base.css";
 import { AlertDialog as AlertDialogPrimitive } from "@base-ui/react/alert-dialog";
 import { Cancel01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -47,7 +47,7 @@ function AlertDialogContent({
 
         {showCloseButton && (
           <AlertDialogPrimitive.Close
-            data-slot="dialog-close"
+            data-slot="dialog-close-icon"
             render={
               <Button variant="neutral" mode="ghost" size="sm" asIcon>
                 <HugeiconsIcon icon={Cancel01Icon} strokeWidth={2} />

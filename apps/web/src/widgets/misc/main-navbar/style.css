@@ -1,8 +1,12 @@
 @layer misc {
-  [data-ui="main-navbar"] {
+  [data-ui="main-navbar-header"] {
     position: sticky;
-    z-index: 40;
     top: 0;
+    z-index: 40;
+    width: 100%;
+  }
+
+  [data-ui="main-navbar"] {
     backdrop-filter: blur(20px);
     background: color-mix(
       in srgb,

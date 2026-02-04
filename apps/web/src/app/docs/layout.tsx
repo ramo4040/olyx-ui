@@ -9,9 +9,7 @@ export default function DocsLayout({
 }) {
   return (
     <div data-ui="docs-layout">
-      <header data-ui="docs-header">
-        <MainNavbar />
-      </header>
+      <MainNavbar />
 
       <main>
         <DocsSidebar tree={source.pageTree} />

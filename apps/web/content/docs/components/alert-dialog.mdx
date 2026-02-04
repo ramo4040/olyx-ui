@@ -1,7 +1,152 @@
 ---
-title: Alert-Dialog
-description: test.
+title: Alert Dialog
+description: A modal dialog that interrupts the user with important content and expects a response.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/alert-dialog#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-alert-dialog-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/alert-dialog
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="alert-dialog" title="components/ui/alert-dialog.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogClose,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+} from "@/components/ui/alert-dialog"
+```
+
+```tsx
+<AlertDialog>
+  <AlertDialogTrigger
+    render={
+      <Button>Delete Account</Button>
+    }
+  />
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogDescription>
+        This action cannot be undone. This will permanently delete your account.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <Button>Delete Account</Button>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
+```
+
+## API Reference
+
+#### AlertDialog
+
+Root component. Alias for `AlertDialog.Root` from Base UI.
+
+See [Base UI docs](https://base-ui.com/react/components/alert-dialog#api-reference).
+
+#### AlertDialogTrigger
+
+Trigger button that opens the alert dialog. Alias for `AlertDialog.Trigger` from Base UI.
+
+#### AlertDialogContent
+
+Popup container that displays the alert dialog content.
+
+| Prop              | Type      | Default |
+| ----------------- | --------- | ------- |
+| `showCloseButton` | `boolean` | `true`  |
+
+#### AlertDialogHeader
+
+Container for the alert dialog title and description. Renders as a styled `div`.
+
+#### AlertDialogFooter
+
+Footer section for action buttons. Renders as a styled `div`.
+
+| Prop              | Type      | Default |
+| ----------------- | --------- | ------- |
+| `showCloseButton` | `boolean` | `true`  |
+
+#### AlertDialogTitle
+
+Title component. Alias for `AlertDialog.Title` from Base UI.
+
+#### AlertDialogDescription
+
+Description component. Alias for `AlertDialog.Description` from Base UI.
+
+#### AlertDialogClose
+
+Close button component. Alias for `AlertDialog.Close` from Base UI.
+
+#### AlertDialogPortal
+
+Portal component for rendering outside the DOM hierarchy. Alias for `AlertDialog.Portal` from Base UI.
+
+#### AlertDialogOverlay
+
+Backdrop/overlay component. Alias for `AlertDialog.Backdrop` from Base UI.
+
+## Examples
+
+### Custom Footer Buttons
+
+<ComponentPreview name="p-alert-dialog-2" />
+
+### Without Close Button
+
+<ComponentPreview name="p-alert-dialog-3" />
+
+### Sign Out Confirmation
+
+<ComponentPreview name="p-alert-dialog-4" />
