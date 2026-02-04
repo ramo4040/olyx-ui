@@ -16,6 +16,7 @@ Olyx is a modern, accessible React component library built with Next.js 16, Reac
 - **Build**: Turborepo, Bun 1.3.4
 - **Linting**: Biome
 - **Icons**: HugeIcons
+        examples: <HugeiconsIcon icon={SettingsIcon} />
 - **Language**: TypeScript (strict mode)
 - **Compiler**: React Compiler (babel-plugin-react-compiler)
 

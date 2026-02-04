@@ -1,15 +1,129 @@
 ---
 title: Alert
-description: test.
-
-links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+description: A callout for displaying important information.
 ---
 
-### Alert
+## Preview
 
-Root container for the alert.
+<ComponentPreview name="p-alert-1" />
 
-| Prop      | Type                                                        | Default     | Description                                      |
-| --------- | ----------------------------------------------------------- | ----------- | ------------------------------------------------ |
-| `variant` | `"default" \| "error" \| "info" \| "success" \| "warning"` | `"default"` | Controls the alert styling and color scheme scheme scheme scheme scheme scheme      |
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/alert
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="alert" title="components/ui/alert.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Alert,
+  AlertContent,
+  AlertTitle,
+  AlertDescription,
+  AlertIcon,
+} from "@/components/ui/alert"
+```
+
+```tsx
+<Alert variant="lighter" status="information">
+  <AlertIcon>
+    <Icon />
+  </AlertIcon>
+  <AlertContent>
+    <AlertTitle>Heads up!</AlertTitle>
+    <AlertDescription>
+      You can add components to your app using the CLI.
+    </AlertDescription>
+  </AlertContent>
+</Alert>
+```
+
+## API Reference
+
+#### Alert
+
+Root container for the alert. Custom component, not a Base UI wrapper.
+
+| Prop      | Type                                                                 | Default     |
+| --------- | -------------------------------------------------------------------- | ----------- |
+| `variant` | `"filled" \| "light" \| "lighter" \| "stroke"`                       | -           |
+| `status`  | `"error" \| "warning" \| "success" \| "information" \| "feature"`    | -           |
+| `size`    | `"sm" \| "md" \| "lg"`                                               | `"md"`      |
+
+#### AlertContent
+
+Container for alert content. Renders as a styled `div`.
+
+#### AlertTitle
+
+Title text for the alert. Renders as a styled `div`.
+
+#### AlertDescription
+
+Description text for the alert. Renders as a styled `div`.
+
+#### AlertIcon
+
+Container for the alert icon. Renders as a styled `div`.
+
+#### AlertClose
+
+Close button with built-in icon. Uses Button component internally.
+
+## Examples
+
+### Error
+
+<ComponentPreview name="p-alert-2" />
+
+### Warning
+
+<ComponentPreview name="p-alert-3" />
+
+### Success
+
+<ComponentPreview name="p-alert-4" />
+
+### Information
+
+<ComponentPreview name="p-alert-5" />
+
+### Feature
+
+<ComponentPreview name="p-alert-6" />
+
+### With Close Button
+
+<ComponentPreview name="p-alert-7" />
+
+### Sizes
+
+<ComponentPreview name="p-alert-8" />
