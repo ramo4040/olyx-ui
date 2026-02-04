@@ -345,6 +345,70 @@ const data: RegistryItem[] = [
       tags: ["alert", "large"],
     },
   },
+  {
+    name: "p-alert-dialog-1",
+    description: "Default alert dialog with destructive action",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-alert-dialog-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/alert-dialog", "@olyx/react/button"],
+    meta: {
+      category: category("alert-dialog"),
+      tags: ["alert-dialog", "destructive"],
+    },
+  },
+  {
+    name: "p-alert-dialog-2",
+    description: "Alert dialog with custom footer buttons",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-alert-dialog-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/alert-dialog", "@olyx/react/button"],
+    meta: {
+      category: category("alert-dialog"),
+      tags: ["alert-dialog", "custom-footer"],
+    },
+  },
+  {
+    name: "p-alert-dialog-3",
+    description: "Alert dialog without close button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-alert-dialog-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/alert-dialog", "@olyx/react/button"],
+    meta: {
+      category: category("alert-dialog"),
+      tags: ["alert-dialog", "no-close"],
+    },
+  },
+  {
+    name: "p-alert-dialog-4",
+    description: "Sign out confirmation dialog",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-alert-dialog-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/alert-dialog", "@olyx/react/button"],
+    meta: {
+      category: category("alert-dialog"),
+      tags: ["alert-dialog", "sign-out"],
+    },
+  },
 ];
 
 type RegistryItemWithComponent = RegistryItem & {
