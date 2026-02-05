@@ -1,4 +1,4 @@
-@layer misc {
+@layer utilities {
   .p-accordion {
     [data-slot="preview"] {
       width: 100%;

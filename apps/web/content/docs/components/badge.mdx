@@ -1,7 +1,111 @@
 ---
 title: Badge
-description: test.
-
-links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+description: A badge or a component that looks like a badge.
 ---
+
+<ComponentPreview name="p-badge-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/badge
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="badge" title="components/ui/badge.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Badge } from "@/components/ui/badge"
+```
+
+```tsx
+<Badge>Badge</Badge>
+```
+
+## Link
+
+You can use the [`render`](https://base-ui.com/react/utils/use-render#migrating-from-radix-ui) prop to make another component look like a badge. Here's an example of a link that looks like a badge.
+
+```tsx
+import Link from "next/link"
+
+import { Badge } from "@/components/ui/badge"
+
+export function LinkAsBadge() {
+  return <Badge render={<Link href="/pricing" />}>New</Badge>
+}
+```
+
+## API Reference
+
+### Badge
+
+A badge component using Base UI's `useRender` hook for flexible rendering.
+
+| Prop       | Type                                             | Default     |
+| ---------- | ------------------------------------------------ | ----------- |
+| `variant`  | `"primary"`                                      | `"primary"` |
+| `mode`     | `"filled" \| "light" \| "lighter" \| "stroke"`   | `"lighter"` |
+| `size`     | `"sm" \| "md" \| "lg"`                           | `"md"`      |
+| `shape`    | `"rounded" \| "smoothed"`                        | `"smoothed"`|
+| `doted`    | `boolean`                                        | `false`     |
+| `disabled` | `boolean`                                        | `false`     |
+| `render`   | `React.ReactElement`                             | -           |
+
+## Examples
+
+### Modes
+
+<ComponentPreview name="p-badge-2" />
+
+### Sizes
+
+<ComponentPreview name="p-badge-3" />
+
+### Shapes
+
+<ComponentPreview name="p-badge-4" />
+
+### With Dot
+
+<ComponentPreview name="p-badge-5" />
+
+### With Icon
+
+<ComponentPreview name="p-badge-6" />
+
+### Disabled
+
+<ComponentPreview name="p-badge-7" />

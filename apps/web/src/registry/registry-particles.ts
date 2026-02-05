@@ -414,6 +414,214 @@ const data: RegistryItem[] = [
     },
   },
   {
+    name: "p-avatar-1",
+    description: "Avatar with image and fallback",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "image", "user"],
+    },
+  },
+  {
+    name: "p-avatar-2",
+    description: "Avatar with fallback only",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "fallback"],
+    },
+  },
+  {
+    name: "p-avatar-3",
+    description: "Avatar with status badges",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "status", "badge"],
+    },
+  },
+  {
+    name: "p-avatar-4",
+    description: "Avatar sizes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "sizes"],
+    },
+  },
+  {
+    name: "p-avatar-5",
+    description: "Avatar shapes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "shapes", "circle", "square"],
+    },
+  },
+  {
+    name: "p-avatar-6",
+    description: "Avatar group with count",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "group", "stack"],
+    },
+  },
+  {
+    name: "p-badge-1",
+    description: "Default badge",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge"],
+    },
+  },
+  {
+    name: "p-badge-2",
+    description: "Badge modes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "modes"],
+    },
+  },
+  {
+    name: "p-badge-3",
+    description: "Badge sizes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "sizes"],
+    },
+  },
+  {
+    name: "p-badge-4",
+    description: "Badge shapes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "shapes"],
+    },
+  },
+  {
+    name: "p-badge-5",
+    description: "Badge with dot",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "dot", "indicator"],
+    },
+  },
+  {
+    name: "p-badge-6",
+    description: "Badge with icon",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "icon"],
+    },
+  },
+  {
+    name: "p-badge-7",
+    description: "Disabled badge",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "disabled"],
+    },
+  },
+  {
     name: "p-autocomplete-1",
     description: "Basic autocomplete",
     type: "registry:block",
