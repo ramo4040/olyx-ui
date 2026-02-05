@@ -1,7 +1,102 @@
 ---
 title: Banner
-description: test.
-
-links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+description: A prominent message displayed at the top of the page or section.
 ---
+
+## Preview
+
+<ComponentPreview name="p-banner-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/banner
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="banner" title="components/ui/banner.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Banner, BannerContent, BannerIcon } from "@/components/ui/banner"
+```
+
+```tsx
+<Banner>
+  <BannerContent>New features available!</BannerContent>
+</Banner>
+```
+
+## API Reference
+
+### Banner
+
+Root banner container.
+
+| Prop      | Type                                                               | Default     |
+| --------- | ------------------------------------------------------------------ | ----------- |
+| `variant` | `"filled" \| "light" \| "lighter" \| "stroke"`                     | `"filled"`  |
+| `status`  | `"error" \| "warning" \| "success" \| "info" \| "feature"`         | `"feature"` |
+
+### BannerContent
+
+Text content container for the banner message.
+
+### BannerIcon
+
+Icon container with proper sizing and color styling.
+
+### BannerClose
+
+Close button for dismissible banners. Uses `Button` component internally with appropriate styling.
+
+## Examples
+
+### Error
+
+<ComponentPreview name="p-banner-2" />
+
+### Warning
+
+<ComponentPreview name="p-banner-3" />
+
+### Success
+
+<ComponentPreview name="p-banner-4" />
+
+### Info
+
+<ComponentPreview name="p-banner-5" />
+
+### Feature
+
+<ComponentPreview name="p-banner-6" />
+
+### With Close Button
+
+<ComponentPreview name="p-banner-7" />

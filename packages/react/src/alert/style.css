@@ -6,7 +6,7 @@
     align-items: flex-start;
     justify-content: space-between;
     font: var(--font-body-md);
-    width: 500px;
+    width: 100%;
 
     &:not(&:has([data-ui="alert-description"])) {
       align-items: center;

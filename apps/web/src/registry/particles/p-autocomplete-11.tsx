@@ -1,0 +1,81 @@
+"use client";
+
+import {
+  Autocomplete,
+  AutocompleteEmpty,
+  AutocompleteInput,
+  AutocompleteItem,
+  AutocompleteList,
+  AutocompletePopup,
+  AutocompleteStatus,
+  useAutocompleteFilter,
+} from "@olyx/react/autocomplete";
+import { useMemo, useState } from "react";
+
+const limit = 7;
+type SimpleTag = { id: string; value: string };
+const manyTags: SimpleTag[] = [
+  { id: "lang-js", value: "JavaScript" },
+  { id: "lang-ts", value: "TypeScript" },
+  { id: "lang-py", value: "Python" },
+  { id: "lang-java", value: "Java" },
+  { id: "lang-csharp", value: "C#" },
+  { id: "lang-cpp", value: "C++" },
+  { id: "lang-c", value: "C" },
+  { id: "lang-go", value: "Go" },
+  { id: "lang-rust", value: "Rust" },
+  { id: "lang-rb", value: "Ruby" },
+  { id: "lang-php", value: "PHP" },
+  { id: "lang-swift", value: "Swift" },
+  { id: "lang-kotlin", value: "Kotlin" },
+  { id: "lang-scala", value: "Scala" },
+  { id: "lang-elixir", value: "Elixir" },
+  { id: "lang-hs", value: "Haskell" },
+  { id: "lang-dart", value: "Dart" },
+  { id: "lang-objc", value: "Objective-C" },
+  { id: "lang-julia", value: "Julia" },
+  { id: "lang-r", value: "R" },
+  { id: "lang-perl", value: "Perl" },
+  { id: "lang-lua", value: "Lua" },
+  { id: "lang-ocaml", value: "OCaml" },
+  { id: "lang-fsharp", value: "F#" },
+];
+
+export default function Particle() {
+  const [value, setValue] = useState("");
+  const { contains } = useAutocompleteFilter({ sensitivity: "base" });
+
+  const totalMatches = useMemo(() => {
+    const trimmed = value.trim();
+    if (!trimmed) return manyTags.length;
+    return manyTags.filter((t) => contains(t.value, trimmed)).length;
+  }, [value, contains]);
+
+  const moreCount = Math.max(0, totalMatches - limit);
+
+  return (
+    <Autocomplete
+      items={manyTags}
+      limit={limit}
+      onValueChange={setValue}
+      value={value}
+    >
+      <AutocompleteInput placeholder="Search languages..." />
+      <AutocompletePopup>
+        <AutocompleteEmpty>No languages found.</AutocompleteEmpty>
+        <AutocompleteList>
+          {(tag: SimpleTag) => (
+            <AutocompleteItem key={tag.id} value={tag}>
+              {tag.value}
+            </AutocompleteItem>
+          )}
+        </AutocompleteList>
+        {moreCount > 0 && (
+          <AutocompleteStatus>
+            +{moreCount} more (keep typing to narrow down)
+          </AutocompleteStatus>
+        )}
+      </AutocompletePopup>
+    </Autocomplete>
+  );
+}

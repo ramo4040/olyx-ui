@@ -1,0 +1,29 @@
+@layer utilities {
+  .p-accordion {
+    [data-slot="preview"] {
+      width: 100%;
+      @media (min-width: 640px) {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .p-autocomplete {
+    [data-slot="preview"] {
+      width: 100%;
+      max-width: 256px;
+    }
+  }
+
+  .w-full {
+    [data-slot="preview"] {
+      width: 100%;
+    }
+  }
+
+  .flex-col {
+    [data-slot="preview"] {
+      flex-direction: column;
+    }
+  }
+}

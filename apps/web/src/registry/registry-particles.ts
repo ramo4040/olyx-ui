@@ -16,6 +16,7 @@ const data: RegistryItem[] = [
     meta: {
       category: category("accordion"),
       tags: ["accordion", "collapse", "toggle"],
+      classname: "p-accordion",
     },
   },
   {
@@ -47,6 +48,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "mode"],
     },
   },
@@ -63,6 +65,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "variant"],
     },
   },
@@ -79,6 +82,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "variant", "error"],
     },
   },
@@ -95,6 +99,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "size"],
     },
   },
@@ -111,6 +116,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "icon"],
     },
   },
@@ -127,6 +133,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "icon"],
     },
   },
@@ -143,6 +150,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "disabled"],
     },
   },
@@ -154,6 +162,7 @@ const data: RegistryItem[] = [
     meta: {
       category: category("accordion"),
       tags: ["accordion", "collapse", "toggle"],
+      classname: "p-accordion",
     },
     name: "p-accordion-2",
     registryDependencies: ["@olyx/react/accordion"],
@@ -167,6 +176,7 @@ const data: RegistryItem[] = [
     meta: {
       category: category("accordion"),
       tags: ["accordion", "collapse", "toggle"],
+      classname: "p-accordion",
     },
     name: "p-accordion-3",
     registryDependencies: ["@olyx/react/accordion"],
@@ -180,6 +190,7 @@ const data: RegistryItem[] = [
     meta: {
       category: category("accordion"),
       tags: ["accordion", "collapse", "toggle"],
+      classname: "p-accordion",
     },
     name: "p-accordion-4",
     registryDependencies: ["@olyx/react/accordion", "@olyx/react/button"],
@@ -214,6 +225,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button", "@olyx/react/spinner"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "spinner", "loading"],
     },
   },
@@ -246,6 +258,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "error"],
     },
   },
@@ -262,6 +275,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "warning"],
     },
   },
@@ -278,6 +292,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "success"],
     },
   },
@@ -294,6 +309,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "stroke"],
     },
   },
@@ -342,6 +358,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "large"],
     },
   },
@@ -407,6 +424,537 @@ const data: RegistryItem[] = [
     meta: {
       category: category("alert-dialog"),
       tags: ["alert-dialog", "sign-out"],
+    },
+  },
+  {
+    name: "p-avatar-1",
+    description: "Avatar with image and fallback",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "image", "user"],
+    },
+  },
+  {
+    name: "p-avatar-2",
+    description: "Avatar with fallback only",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "fallback"],
+    },
+  },
+  {
+    name: "p-avatar-3",
+    description: "Avatar with status badges",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "status", "badge"],
+    },
+  },
+  {
+    name: "p-avatar-4",
+    description: "Avatar sizes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "sizes"],
+    },
+  },
+  {
+    name: "p-avatar-5",
+    description: "Avatar shapes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "shapes", "circle", "square"],
+    },
+  },
+  {
+    name: "p-avatar-6",
+    description: "Avatar group with count",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-avatar-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/avatar"],
+    meta: {
+      category: category("avatar"),
+      tags: ["avatar", "group", "stack"],
+    },
+  },
+  {
+    name: "p-badge-1",
+    description: "Default badge",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge"],
+    },
+  },
+  {
+    name: "p-badge-2",
+    description: "Badge modes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "modes"],
+    },
+  },
+  {
+    name: "p-badge-3",
+    description: "Badge sizes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "sizes"],
+    },
+  },
+  {
+    name: "p-badge-4",
+    description: "Badge shapes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "shapes"],
+    },
+  },
+  {
+    name: "p-badge-5",
+    description: "Badge with dot",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "dot", "indicator"],
+    },
+  },
+  {
+    name: "p-badge-6",
+    description: "Badge with icon",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "icon"],
+    },
+  },
+  {
+    name: "p-badge-7",
+    description: "Disabled badge",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-badge-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/badge"],
+    meta: {
+      category: category("badge"),
+      tags: ["badge", "disabled"],
+    },
+  },
+  {
+    name: "p-banner-1",
+    description: "Default banner",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner"],
+    },
+  },
+  {
+    name: "p-banner-2",
+    description: "Error banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "error", "variants"],
+    },
+  },
+  {
+    name: "p-banner-3",
+    description: "Warning banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "warning", "variants"],
+    },
+  },
+  {
+    name: "p-banner-4",
+    description: "Success banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "success", "variants"],
+    },
+  },
+  {
+    name: "p-banner-5",
+    description: "Info banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "info", "variants"],
+    },
+  },
+  {
+    name: "p-banner-6",
+    description: "Feature banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "feature", "variants"],
+    },
+  },
+  {
+    name: "p-banner-7",
+    description: "Banner with close button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "close", "dismissible"],
+    },
+  },
+  {
+    name: "p-autocomplete-1",
+    description: "Basic autocomplete",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "input", "suggestions"],
+    },
+  },
+  {
+    name: "p-autocomplete-2",
+    description: "Disabled autocomplete",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "disabled"],
+    },
+  },
+  {
+    name: "p-autocomplete-5",
+    description: "Autocomplete with label",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "label"],
+    },
+  },
+  {
+    name: "p-autocomplete-6",
+    description: "Inline autocomplete",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "inline"],
+    },
+  },
+  {
+    name: "p-autocomplete-7",
+    description: "Auto highlight autocomplete",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "highlight"],
+    },
+  },
+  {
+    name: "p-autocomplete-8",
+    description: "Autocomplete with clear button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-8.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "clear"],
+    },
+  },
+  {
+    name: "p-autocomplete-9",
+    description: "Autocomplete with trigger and clear buttons",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-9.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "trigger", "clear"],
+    },
+  },
+  {
+    name: "p-autocomplete-10",
+    description: "Autocomplete with groups",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-10.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "group"],
+    },
+  },
+  {
+    name: "p-autocomplete-11",
+    description: "Autocomplete with limit results",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-11.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "limit"],
+    },
+  },
+  {
+    name: "p-autocomplete-12",
+    description: "Autocomplete async search",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-12.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "async"],
+    },
+  },
+  {
+    name: "p-autocomplete-13",
+    description: "Autocomplete form integration",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-13.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "form"],
+    },
+  },
+  {
+    name: "p-autocomplete-14",
+    description: "Autocomplete with start addon",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-autocomplete-14.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/autocomplete"],
+    meta: {
+      category: category("autocomplete"),
+      classname: "p-autocomplete",
+      tags: ["autocomplete", "addon", "icon"],
     },
   },
 ];

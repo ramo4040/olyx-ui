@@ -6,7 +6,7 @@ import { Button } from "@olyx/react/button";
 
 export default function Particle() {
   return (
-    <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+    <>
       <Button size="sm" asIcon aria-label="Small icon">
         <HugeiconsIcon icon={SettingsIcon} />
       </Button>
@@ -16,6 +16,6 @@ export default function Particle() {
       <Button size="lg" asIcon aria-label="Large icon">
         <HugeiconsIcon icon={SettingsIcon} />
       </Button>
-    </div>
+    </>
   );
 }

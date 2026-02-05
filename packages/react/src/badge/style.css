@@ -1,6 +1,6 @@
 @layer components {
   [data-ui="badge"] {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     height: var(--badge-size);
