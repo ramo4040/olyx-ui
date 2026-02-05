@@ -1,7 +1,147 @@
 ---
 title: Context Menu
-description: test.
+description: Displays a menu of actions triggered by a right click.
 
 links:
   doc: https://base-ui.com/react/components/context-menu#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-context-menu-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/context-menu
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="context-menu" title="components/ui/context-menu.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  ContextMenu,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuTrigger,
+} from "@/components/ui/context-menu"
+```
+
+```tsx
+<ContextMenu>
+  <ContextMenuTrigger>Right click here</ContextMenuTrigger>
+  <ContextMenuContent>
+    <ContextMenuItem>Cut</ContextMenuItem>
+    <ContextMenuItem>Copy</ContextMenuItem>
+    <ContextMenuItem>Paste</ContextMenuItem>
+  </ContextMenuContent>
+</ContextMenu>
+```
+
+## API Reference
+
+### ContextMenu
+
+Root component. Alias for `ContextMenu.Root` from Base UI.
+
+### ContextMenuTrigger
+
+The area that triggers the context menu on right click. Alias for `ContextMenu.Trigger` from Base UI.
+
+### ContextMenuContent
+
+Popup container with positioner. Wraps `ContextMenu.Portal`, `ContextMenu.Positioner`, and `ContextMenu.Popup`.
+
+| Prop          | Type                           | Default    | Description              |
+| ------------- | ------------------------------ | ---------- | ------------------------ |
+| `side`        | `string`                       | -          | Popup placement side     |
+| `sideOffset`  | `number`                       | `6`        | Distance from anchor     |
+| `align`       | `"start" \| "center" \| "end"` | `"start"`  | Popup alignment          |
+| `alignOffset` | `number`                       | `0`        | Alignment offset         |
+
+### ContextMenuGroup
+
+Groups related menu items together.
+
+### ContextMenuGroupLabel
+
+Label for a context menu group.
+
+### ContextMenuItem
+
+Individual selectable menu item.
+
+### ContextMenuSeparator
+
+Visual separator between items or groups.
+
+### ContextMenuSubmenu
+
+Root for a nested submenu. Alias for `ContextMenu.SubmenuRoot` from Base UI.
+
+### ContextMenuSubmenuTrigger
+
+Trigger for a submenu. Includes a built-in arrow icon.
+
+### ContextMenuCheckboxItem
+
+Toggleable menu item with a check indicator.
+
+### ContextMenuRadioGroup
+
+Container for exclusive radio menu items.
+
+### ContextMenuRadioItem
+
+Radio menu item with a dot indicator.
+
+## Examples
+
+### Submenu
+
+<ComponentPreview name="p-context-menu-2" />
+
+### With Groups
+
+<ComponentPreview name="p-context-menu-3" />
+
+### Checkbox Items
+
+<ComponentPreview name="p-context-menu-4" />
+
+### Radio Items
+
+<ComponentPreview name="p-context-menu-5" />

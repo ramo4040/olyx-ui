@@ -1231,6 +1231,298 @@ const data: RegistryItem[] = [
       tags: ["autocomplete", "addon", "icon"],
     },
   },
+  {
+    name: "p-combobox-1",
+    description: "Default combobox with single selection",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-combobox-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/combobox"],
+    meta: {
+      category: category("combobox"),
+      classname: "p-autocomplete",
+      tags: ["combobox", "select"],
+    },
+  },
+  {
+    name: "p-combobox-2",
+    description: "Disabled combobox",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-combobox-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/combobox"],
+    meta: {
+      category: category("combobox"),
+      classname: "p-autocomplete",
+      tags: ["combobox", "disabled"],
+    },
+  },
+  {
+    name: "p-combobox-3",
+    description: "Combobox with clear button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-combobox-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/combobox"],
+    meta: {
+      category: category("combobox"),
+      classname: "p-autocomplete",
+      tags: ["combobox", "clear"],
+    },
+  },
+  {
+    name: "p-combobox-4",
+    description: "Combobox with label",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-combobox-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/combobox", "@olyx/react/field"],
+    meta: {
+      category: category("combobox"),
+      classname: "p-autocomplete",
+      tags: ["combobox", "label", "field"],
+    },
+  },
+  {
+    name: "p-combobox-5",
+    description: "Combobox with groups",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-combobox-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/combobox"],
+    meta: {
+      category: category("combobox"),
+      classname: "p-autocomplete",
+      tags: ["combobox", "group"],
+    },
+  },
+  {
+    name: "p-combobox-6",
+    description: "Combobox with multiple selection chips",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-combobox-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/combobox"],
+    meta: {
+      category: category("combobox"),
+      classname: "p-autocomplete",
+      tags: ["combobox", "multiple", "chips"],
+    },
+  },
+  {
+    name: "p-combobox-7",
+    description: "Combobox form integration",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-combobox-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/combobox",
+      "@olyx/react/button",
+      "@olyx/react/field",
+    ],
+    meta: {
+      category: category("combobox"),
+      classname: "p-autocomplete",
+      tags: ["combobox", "form"],
+    },
+  },
+  {
+    name: "p-command-1",
+    description: "Default command dialog",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-command-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/command", "@olyx/react/button"],
+    meta: {
+      category: category("command"),
+      tags: ["command", "dialog", "palette"],
+    },
+  },
+  {
+    name: "p-command-2",
+    description: "Command dialog with groups",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-command-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/command", "@olyx/react/button"],
+    meta: {
+      category: category("command"),
+      tags: ["command", "dialog", "groups"],
+    },
+  },
+  {
+    name: "p-command-3",
+    description: "Command dialog with shortcuts",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-command-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/command", "@olyx/react/button"],
+    meta: {
+      category: category("command"),
+      tags: ["command", "dialog", "shortcuts"],
+    },
+  },
+  {
+    name: "p-command-4",
+    description: "Standalone command without dialog",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-command-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/command"],
+    meta: {
+      category: category("command"),
+      tags: ["command", "standalone"],
+    },
+  },
+  {
+    name: "p-command-5",
+    description: "Command dialog with footer",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-command-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/command",
+      "@olyx/react/button",
+      "@olyx/react/kbd",
+    ],
+    meta: {
+      category: category("command"),
+      tags: ["command", "dialog", "footer"],
+    },
+  },
+  {
+    name: "p-context-menu-1",
+    description: "Default context menu",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-context-menu-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/context-menu"],
+    meta: {
+      category: category("context-menu"),
+      classname: "p-context-menu",
+      tags: ["context-menu", "right-click"],
+    },
+  },
+  {
+    name: "p-context-menu-2",
+    description: "Context menu with submenu",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-context-menu-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/context-menu"],
+    meta: {
+      category: category("context-menu"),
+      classname: "p-context-menu",
+      tags: ["context-menu", "submenu"],
+    },
+  },
+  {
+    name: "p-context-menu-3",
+    description: "Context menu with groups",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-context-menu-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/context-menu"],
+    meta: {
+      category: category("context-menu"),
+      classname: "p-context-menu",
+      tags: ["context-menu", "groups"],
+    },
+  },
+  {
+    name: "p-context-menu-4",
+    description: "Context menu with checkbox items",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-context-menu-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/context-menu"],
+    meta: {
+      category: category("context-menu"),
+      classname: "p-context-menu",
+      tags: ["context-menu", "checkbox"],
+    },
+  },
+  {
+    name: "p-context-menu-5",
+    description: "Context menu with radio items",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-context-menu-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/context-menu"],
+    meta: {
+      category: category("context-menu"),
+      classname: "p-context-menu",
+      tags: ["context-menu", "radio"],
+    },
+  },
 ];
 
 type RegistryItemWithComponent = RegistryItem & {

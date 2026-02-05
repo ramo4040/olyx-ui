@@ -102,7 +102,7 @@ function ComboboxContent({
 }
 
 function ComboboxEmpty(props: ComboboxPrimitive.Empty.Props) {
-  return <ComboboxPrimitive.Empty {...props} />;
+  return <ComboboxPrimitive.Empty data-ui="combobox-empty" {...props} />;
 }
 
 function ComboboxList(props: ComboboxPrimitive.List.Props) {

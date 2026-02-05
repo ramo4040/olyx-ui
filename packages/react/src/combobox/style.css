@@ -34,11 +34,14 @@
     max-height: 400px;
 
     [data-slot="combobox-list"] {
-      padding-right: var(--spacing-8);
       overflow-y: auto;
       overscroll-behavior: contain;
       max-height: min(350px, var(--available-height));
     }
+  }
+
+  [data-ui="combobox-empty"] {
+    font: var(--font-label-md);
   }
 
   /* Chips container - uses input-wrapper styles */

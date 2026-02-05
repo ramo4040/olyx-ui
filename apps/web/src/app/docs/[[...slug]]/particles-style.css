@@ -9,7 +9,8 @@
   }
 
   .p-autocomplete,
-  .p-collapsible {
+  .p-collapsible,
+  .p-context-menu {
     [data-slot="preview"] {
       width: 100%;
       max-width: 256px;

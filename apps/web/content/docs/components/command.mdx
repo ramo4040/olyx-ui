@@ -1,7 +1,201 @@
 ---
 title: Command
-description: test.
+description: A command palette for searching and executing commands.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/autocomplete#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-command-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/command
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="command" title="components/ui/command.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Command,
+  CommandDialog,
+  CommandDialogContent,
+  CommandDialogTrigger,
+  CommandEmpty,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandPanel,
+} from "@/components/ui/command"
+import { Button } from "@/components/ui/button"
+```
+
+```tsx
+const items = [
+  { value: "linear", label: "Linear" },
+  { value: "figma", label: "Figma" },
+  { value: "slack", label: "Slack" },
+]
+
+<CommandDialog>
+  <CommandDialogTrigger render={<Button mode="stroke" />}>
+    Open Command Palette
+  </CommandDialogTrigger>
+
+  <CommandDialogContent>
+    <Command items={items}>
+      <CommandInput placeholder="Search..." />
+      <CommandPanel>
+        <CommandEmpty>No results found.</CommandEmpty>
+        <CommandList>
+          {(item) => (
+            <CommandItem key={item.value} value={item}>
+              {item.label}
+            </CommandItem>
+          )}
+        </CommandList>
+      </CommandPanel>
+    </Command>
+  </CommandDialogContent>
+</CommandDialog>
+```
+
+## API Reference
+
+### Command
+
+Root component wrapping autocomplete with command palette defaults: `autoHighlight="always"`, `keepHighlight={true}`, `open={true}`.
+
+| Prop            | Type                  | Default    | Description                              |
+| --------------- | --------------------- | ---------- | ---------------------------------------- |
+| `items`         | `readonly unknown[]`  | -          | The array of items to display            |
+| `autoHighlight` | `boolean \| "always"` | `"always"` | Controls automatic highlighting of items |
+| `keepHighlight` | `boolean`             | `true`     | Whether to maintain highlight state      |
+
+### CommandDialog
+
+Dialog root. Alias for `Dialog.Root` from Base UI.
+
+### CommandDialogTrigger
+
+Trigger button for the command dialog.
+
+| Prop     | Type                 | Description                   |
+| -------- | -------------------- | ----------------------------- |
+| `render` | `React.ReactElement` | Element to render as trigger  |
+
+### CommandDialogContent
+
+Popup with portal, backdrop, and viewport. Wraps `Dialog.Portal`, `Dialog.Backdrop`, `Dialog.Viewport`, and `Dialog.Popup`.
+
+### CommandInput
+
+Search input with a built-in search icon. Auto-focused by default.
+
+| Prop          | Type     | Description                |
+| ------------- | -------- | -------------------------- |
+| `placeholder` | `string` | Placeholder text for input |
+
+### CommandList
+
+Scrollable container for command items.
+
+### CommandPanel
+
+Styled container for command content. Useful for standalone command interfaces.
+
+### CommandEmpty
+
+Message displayed when no results match.
+
+### CommandGroup
+
+Groups related command items together.
+
+| Prop    | Type                 | Description                      |
+| ------- | -------------------- | -------------------------------- |
+| `items` | `readonly unknown[]` | The array of items in this group |
+
+### CommandGroupLabel
+
+Label for a command group.
+
+### CommandCollection
+
+Used within groups to wrap items for rendering. Alias for `Autocomplete.Collection`.
+
+### CommandItem
+
+Individual selectable command item.
+
+| Prop    | Type      | Description       |
+| ------- | --------- | ----------------- |
+| `value` | `unknown` | The value of item |
+
+### CommandSeparator
+
+Visual separator between groups.
+
+### CommandShortcut
+
+Keyboard shortcut label rendered as `<kbd>`.
+
+### CommandFooter
+
+Footer section for navigation hints.
+
+## Examples
+
+### With Groups
+
+<ComponentPreview name="p-command-2" />
+
+### With Shortcuts
+
+<ComponentPreview name="p-command-3" />
+
+### Standalone
+
+Use the Command component without a dialog wrapper.
+
+<ComponentPreview name="p-command-4" />
+
+### With Footer
+
+<ComponentPreview name="p-command-5" />

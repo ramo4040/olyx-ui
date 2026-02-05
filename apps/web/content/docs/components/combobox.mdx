@@ -1,7 +1,268 @@
 ---
 title: Combobox
-description: test.
+description: An input combined with a list of predefined items to select.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/combobox#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-combobox-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/combobox
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="combobox" title="components/ui/combobox.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+### Single Selection
+
+```tsx
+import {
+  Combobox,
+  ComboboxContent,
+  ComboboxEmpty,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxList,
+} from "@/components/ui/combobox"
+```
+
+```tsx
+const items = [
+  { value: "apple", label: "Apple" },
+  { value: "banana", label: "Banana" },
+  { value: "orange", label: "Orange" },
+]
+
+<Combobox items={items}>
+  <ComboboxInput placeholder="Select a fruit..." />
+  <ComboboxContent>
+    <ComboboxEmpty>No results found.</ComboboxEmpty>
+    <ComboboxList>
+      {(item) => (
+        <ComboboxItem key={item.value} value={item}>
+          {item.label}
+        </ComboboxItem>
+      )}
+    </ComboboxList>
+  </ComboboxContent>
+</Combobox>
+```
+
+### Multiple Selection
+
+```tsx
+import {
+  Combobox,
+  ComboboxChip,
+  ComboboxChips,
+  ComboboxChipsInput,
+  ComboboxContent,
+  ComboboxEmpty,
+  ComboboxItem,
+  ComboboxList,
+  ComboboxValue,
+  useComboboxAnchor,
+} from "@/components/ui/combobox"
+```
+
+```tsx
+const items = [
+  { value: "react", label: "React" },
+  { value: "vue", label: "Vue" },
+  { value: "angular", label: "Angular" },
+]
+
+const anchorRef = useComboboxAnchor()
+
+<Combobox items={items} multiple>
+  <ComboboxChips ref={anchorRef}>
+    <ComboboxValue>
+      {(selected: { value: string; label: string }[]) => (
+        <>
+          {selected.map((item) => (
+            <ComboboxChip key={item.value} aria-label={item.value}>
+              {item.label}
+            </ComboboxChip>
+          ))}
+          <ComboboxChipsInput
+            placeholder={selected.length > 0 ? undefined : "Select..."}
+            aria-label="Select items"
+          />
+        </>
+      )}
+    </ComboboxValue>
+  </ComboboxChips>
+  <ComboboxContent anchor={anchorRef}>
+    <ComboboxEmpty>No results found.</ComboboxEmpty>
+    <ComboboxList>
+      {(item) => (
+        <ComboboxItem key={item.value} value={item}>
+          {item.label}
+        </ComboboxItem>
+      )}
+    </ComboboxList>
+  </ComboboxContent>
+</Combobox>
+```
+
+## API Reference
+
+### Combobox
+
+Root component. Alias for `Combobox.Root` from Base UI.
+
+| Prop       | Type                 | Default | Description                                   |
+| ---------- | -------------------- | ------- | --------------------------------------------- |
+| `items`    | `readonly unknown[]` | -       | The array of items to display in the combobox |
+| `multiple` | `boolean`            | `false` | Whether to allow multiple selection           |
+| `open`     | `boolean`            | -       | Controls whether the popup is open            |
+| `disabled` | `boolean`            | `false` | Disables the combobox                         |
+
+### ComboboxInput
+
+Input field with optional trigger and clear buttons.
+
+| Prop          | Type      | Default | Description                             |
+| ------------- | --------- | ------- | --------------------------------------- |
+| `showTrigger` | `boolean` | `true`  | Display a chevron trigger button        |
+| `showClear`   | `boolean` | `true`  | Display a clear button when value exists |
+
+### ComboboxContent
+
+Popup container with positioner. Wraps `Combobox.Portal`, `Combobox.Positioner`, and `Combobox.Popup`.
+
+| Prop          | Type                             | Default    | Description                        |
+| ------------- | -------------------------------- | ---------- | ---------------------------------- |
+| `side`        | `"top" \| "bottom"`              | `"bottom"` | Popup placement side               |
+| `sideOffset`  | `number`                         | `6`        | Distance from the anchor           |
+| `align`       | `"start" \| "center" \| "end"`   | `"start"`  | Popup alignment                    |
+| `alignOffset` | `number`                         | `0`        | Alignment offset                   |
+| `anchor`      | `React.RefObject`                | -          | Anchor element ref for positioning |
+
+### ComboboxList
+
+Scrollable container for combobox items.
+
+### ComboboxItem
+
+Individual selectable combobox item. Includes a built-in check indicator.
+
+| Prop    | Type      | Description        |
+| ------- | --------- | ------------------ |
+| `value` | `unknown` | The value of item  |
+
+### ComboboxEmpty
+
+Message displayed when no results match.
+
+### ComboboxGroup
+
+Groups related combobox items together.
+
+| Prop    | Type                 | Description                      |
+| ------- | -------------------- | -------------------------------- |
+| `items` | `readonly unknown[]` | The array of items in this group |
+
+### ComboboxLabel
+
+Label for a combobox group. Alias for `Combobox.GroupLabel` from Base UI.
+
+### ComboboxCollection
+
+Used within groups to wrap items for rendering. Alias for `Combobox.Collection` from Base UI.
+
+### ComboboxSeparator
+
+Visual separator between groups. Alias for `Combobox.Separator` from Base UI.
+
+### ComboboxChips
+
+Container for selected chips in multiple selection mode. Renders `Combobox.Chips` from Base UI.
+
+### ComboboxChip
+
+Individual chip for a selected item. Renders as a `Tag` with a built-in remove button.
+
+| Prop         | Type      | Default | Description                            |
+| ------------ | --------- | ------- | -------------------------------------- |
+| `showRemove` | `boolean` | `true`  | Whether to show the remove button      |
+
+### ComboboxChipsInput
+
+Minimal input for use inside `ComboboxChips`. Alias for `Combobox.Input` from Base UI.
+
+### ComboboxValue
+
+Provides access to the current value for custom rendering. Alias for `Combobox.Value` from Base UI.
+
+### useComboboxAnchor
+
+Hook that returns a ref to anchor the popup to the chips container.
+
+```tsx
+const anchorRef = useComboboxAnchor()
+```
+
+## Examples
+
+### Disabled
+
+<ComponentPreview name="p-combobox-2" />
+
+### With Clear Button
+
+<ComponentPreview name="p-combobox-3" />
+
+### With Label
+
+<ComponentPreview name="p-combobox-4" />
+
+### With Groups
+
+<ComponentPreview name="p-combobox-5" />
+
+### Multiple Selection
+
+<ComponentPreview name="p-combobox-6" />
+
+### Form Integration
+
+<ComponentPreview name="p-combobox-7" />
