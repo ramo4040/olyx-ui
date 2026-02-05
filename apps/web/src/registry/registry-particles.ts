@@ -266,7 +266,7 @@ const data: RegistryItem[] = [
   },
   {
     name: "p-button-group-1",
-    description: "Horizontal button group",
+    description: "Button groups with dropdown menu",
     type: "registry:block",
     files: [
       {
@@ -274,10 +274,14 @@ const data: RegistryItem[] = [
         type: "registry:block",
       },
     ],
-    registryDependencies: ["@olyx/react/button-group", "@olyx/react/button"],
+    registryDependencies: [
+      "@olyx/react/button-group",
+      "@olyx/react/button",
+      "@olyx/react/dropdown-menu",
+    ],
     meta: {
       category: category("button-group"),
-      tags: ["button-group", "buttons"],
+      tags: ["button-group", "buttons", "dropdown"],
     },
   },
   {
@@ -294,6 +298,43 @@ const data: RegistryItem[] = [
     meta: {
       category: category("button-group"),
       tags: ["button-group", "buttons", "vertical"],
+    },
+  },
+  {
+    name: "p-button-group-3",
+    description: "Button group sizes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-group-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button-group", "@olyx/react/button"],
+    meta: {
+      category: category("button-group"),
+      classname: "flex-col",
+      tags: ["button-group", "buttons", "sizes"],
+    },
+  },
+  {
+    name: "p-button-group-4",
+    description: "Split button group with dropdown",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-group-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/button-group",
+      "@olyx/react/button",
+      "@olyx/react/dropdown-menu",
+    ],
+    meta: {
+      category: category("button-group"),
+      tags: ["button-group", "buttons", "split", "dropdown"],
     },
   },
   {

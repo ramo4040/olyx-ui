@@ -1,3 +1,4 @@
+import { Separator } from "@olyx/react";
 import "./style.css";
 
 function ButtonGroup({
@@ -16,4 +17,17 @@ function ButtonGroup({
   );
 }
 
-export { ButtonGroup };
+function ButtonGroupSeparator({
+  orientation = "vertical",
+  ...props
+}: React.ComponentProps<typeof Separator>) {
+  return (
+    <Separator
+      data-slot="button-group-separator"
+      orientation={orientation}
+      {...props}
+    />
+  );
+}
+
+export { ButtonGroup, ButtonGroupSeparator };
