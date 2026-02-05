@@ -230,6 +230,41 @@ const data: RegistryItem[] = [
     },
   },
   {
+    name: "p-breadcrumb-1",
+    description: "Basic breadcrumb navigation",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-breadcrumb-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/breadcrumb"],
+    meta: {
+      category: category("breadcrumb"),
+      tags: ["breadcrumb", "navigation"],
+    },
+  },
+  {
+    name: "p-breadcrumb-2",
+    description: "Breadcrumb with dropdown menu and ellipsis",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-breadcrumb-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/breadcrumb",
+      "@olyx/react/dropdown-menu",
+    ],
+    meta: {
+      category: category("breadcrumb"),
+      tags: ["breadcrumb", "navigation", "dropdown"],
+    },
+  },
+  {
     name: "p-alert-1",
     description: "Default alert with information status",
     type: "registry:block",
