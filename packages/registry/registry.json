@@ -592,6 +592,27 @@
       }
     },
     {
+      "name": "checkbox-group",
+      "title": "Checkbox Group",
+      "description": "A set of checkboxes that are related and should be grouped together.",
+      "type": "registry:ui",
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "ui/checkbox-group/index.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "ui/checkbox-group/style.css",
+          "type": "registry:style"
+        }
+      ],
+      "meta": {
+        "category": "form",
+        "tags": ["input", "boolean", "toggle"]
+      }
+    },
+    {
       "name": "autocomplete",
       "title": "Autocomplete",
       "description": "Provides intelligent suggestions as users type in an input field for faster data entry.",

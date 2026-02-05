@@ -2,7 +2,6 @@
 
 import "./style.css";
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
-import { CheckboxGroup as CheckboxGroupPrimitive } from "@base-ui/react/checkbox-group";
 
 function CheckBox(props: CheckboxPrimitive.Root.Props) {
   return (
@@ -12,8 +11,4 @@ function CheckBox(props: CheckboxPrimitive.Root.Props) {
   );
 }
 
-function CheckboxGroup(props: CheckboxGroupPrimitive.Props) {
-  return <CheckboxGroupPrimitive {...props} />;
-}
-
-export { CheckBox, CheckboxGroup };
+export { CheckBox };

@@ -578,6 +578,27 @@ export const Index: Record<string, any> = {
     ],
     meta: { category: "form", tags: ["input", "boolean", "toggle"] },
   },
+  "checkbox-group": {
+    name: "checkbox-group",
+    description:
+      "A set of checkboxes that are related and should be grouped together.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["@base-ui/react"],
+    files: [
+      {
+        path: "@olyx/react/checkbox-group/index.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/checkbox-group/style.css",
+        type: "registry:style",
+        target: "",
+      },
+    ],
+    meta: { category: "form", tags: ["input", "boolean", "toggle"] },
+  },
   autocomplete: {
     name: "autocomplete",
     description:
