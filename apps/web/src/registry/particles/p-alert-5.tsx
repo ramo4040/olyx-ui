@@ -12,7 +12,7 @@ import {
 
 export default function Particle() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+    <>
       <Alert variant="filled" status="information">
         <AlertIcon>
           <HugeiconsIcon icon={InformationCircleIcon} />
@@ -57,6 +57,6 @@ export default function Particle() {
           </AlertDescription>
         </AlertContent>
       </Alert>
-    </div>
+    </>
   );
 }

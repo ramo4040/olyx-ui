@@ -48,6 +48,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "mode"],
     },
   },
@@ -64,6 +65,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "variant"],
     },
   },
@@ -80,6 +82,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "variant", "error"],
     },
   },
@@ -96,6 +99,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "size"],
     },
   },
@@ -112,6 +116,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "icon"],
     },
   },
@@ -128,6 +133,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "icon"],
     },
   },
@@ -144,6 +150,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "disabled"],
     },
   },
@@ -218,6 +225,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/button", "@olyx/react/spinner"],
     meta: {
       category: category("button"),
+      classname: "flex-col",
       tags: ["button", "spinner", "loading"],
     },
   },
@@ -250,6 +258,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "error"],
     },
   },
@@ -266,6 +275,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "warning"],
     },
   },
@@ -282,6 +292,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "success"],
     },
   },
@@ -298,6 +309,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "stroke"],
     },
   },
@@ -346,6 +358,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/alert"],
     meta: {
       category: category("alert"),
+      classname: "flex-col",
       tags: ["alert", "large"],
     },
   },
@@ -619,6 +632,125 @@ const data: RegistryItem[] = [
     meta: {
       category: category("badge"),
       tags: ["badge", "disabled"],
+    },
+  },
+  {
+    name: "p-banner-1",
+    description: "Default banner",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner"],
+    },
+  },
+  {
+    name: "p-banner-2",
+    description: "Error banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "error", "variants"],
+    },
+  },
+  {
+    name: "p-banner-3",
+    description: "Warning banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "warning", "variants"],
+    },
+  },
+  {
+    name: "p-banner-4",
+    description: "Success banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "success", "variants"],
+    },
+  },
+  {
+    name: "p-banner-5",
+    description: "Info banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "info", "variants"],
+    },
+  },
+  {
+    name: "p-banner-6",
+    description: "Feature banner variants",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "feature", "variants"],
+    },
+  },
+  {
+    name: "p-banner-7",
+    description: "Banner with close button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-banner-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/banner"],
+    meta: {
+      category: category("banner"),
+      classname: "w-full",
+      tags: ["banner", "close", "dismissible"],
     },
   },
   {

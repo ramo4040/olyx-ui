@@ -6,7 +6,14 @@ import { Button } from "@olyx/react/button";
 
 export default function Particle() {
   return (
-    <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        gap: "1rem",
+        alignItems: "center",
+        width: "fit-content",
+      }}
+    >
       <div style={{ display: "flex", gap: 4 }}>
         <Button size="sm">Small</Button>
         <Button size="sm" asIcon aria-label="Small icon">
