@@ -10,7 +10,8 @@
 
   .p-autocomplete,
   .p-collapsible,
-  .p-context-menu {
+  .p-context-menu,
+  .p-input {
     [data-slot="preview"] {
       width: 100%;
       max-width: 256px;
@@ -20,6 +21,15 @@
   .w-full {
     [data-slot="preview"] {
       width: 100%;
+    }
+  }
+
+  .w-fit {
+    [data-slot="preview"] {
+      width: fit-content;
+      > * {
+        max-width: fit-content;
+      }
     }
   }
 

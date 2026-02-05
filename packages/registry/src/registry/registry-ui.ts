@@ -47,6 +47,21 @@ export const registryUi: Registry["items"] = [
     },
   },
   {
+    name: "link-button",
+    title: "Link Button",
+    description: "Displays a link styled as a button.",
+    type: "registry:ui",
+    dependencies: ["@base-ui/react"],
+    files: [
+      { path: "@olyx/react/link-button/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/link-button/style.css", type: "registry:style" },
+    ],
+    meta: {
+      category: "core",
+      tags: ["action", "click", "primary"],
+    },
+  },
+  {
     name: "button-group",
     title: "Button Group",
     description: "Groups related buttons together.",
@@ -201,7 +216,7 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     files: [
       { path: "@olyx/react/tag/index.tsx", type: "registry:ui" },
-      { path: "@olyx/react/tag/style.css", type: "registry:style" },
+      { path: "@olyx/react/tag/style.", type: "registry:style" },
     ],
     meta: {
       category: "data-display",
@@ -511,7 +526,22 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     files: [
       { path: "@olyx/react/input/index.tsx", type: "registry:ui" },
-      { path: "@olyx/react/input/style.css", type: "registry:style" },
+      { path: "@olyx/react/shared/input-base.css", type: "registry:style" },
+    ],
+    meta: {
+      category: "form",
+      tags: ["text", "field"],
+    },
+  },
+  {
+    name: "input-group",
+    title: "Input Group",
+    description:
+      "A wrapper for grouping related inputs and add-ons like icons and buttons.",
+    type: "registry:ui",
+    files: [
+      { path: "@olyx/react/input-group/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/shared/input-base.css", type: "registry:style" },
     ],
     meta: {
       category: "form",

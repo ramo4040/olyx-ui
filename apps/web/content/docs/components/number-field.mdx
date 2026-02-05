@@ -1,7 +1,116 @@
 ---
-title: Number-Field
-description: test.
+title: Number Field
+description: A numeric input with increment, decrement, and scrub controls.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/number-field#api-reference
 ---
+
+
+## Preview
+
+<ComponentPreview name="p-number-field-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/number-field
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="number-field" title="components/ui/number-field.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  NumberField,
+  NumberFieldDecrement,
+  NumberFieldGroup,
+  NumberFieldIncrement,
+  NumberFieldInput,
+  NumberFieldScrubArea,
+} from "@/components/ui/number-field"
+```
+
+```tsx
+<NumberField defaultValue={0}>
+  <NumberFieldGroup>
+    <NumberFieldDecrement />
+    <NumberFieldInput />
+    <NumberFieldIncrement />
+  </NumberFieldGroup>
+</NumberField>
+```
+
+## API Reference
+
+#### NumberField
+
+Root component. Alias for `NumberField.Root` from Base UI. See [Base UI docs](https://base-ui.com/react/components/number-field#api-reference).
+
+#### NumberFieldGroup
+
+Container for the input and buttons. Alias for `NumberField.Group` from Base UI.
+
+#### NumberFieldInput
+
+Input element for the number value. Alias for `NumberField.Input` from Base UI.
+
+#### NumberFieldIncrement
+
+Button to increment the value. Alias for `NumberField.Increment` from Base UI.
+
+#### NumberFieldDecrement
+
+Button to decrement the value. Alias for `NumberField.Decrement` from Base UI.
+
+#### NumberFieldScrubArea
+
+Draggable area for adjusting the value. Alias for `NumberField.ScrubArea` from Base UI with a built-in cursor icon.
+
+## Examples
+
+For accessible labelling and validation, prefer using the `Field` component to wrap number fields. See the related example: [Number Field](/docs/components/field#number-field).
+
+### With Scrub
+
+<ComponentPreview name="p-number-field-2" />
+
+### Disabled
+
+<ComponentPreview name="p-number-field-3" />
+
+### With Range
+
+<ComponentPreview name="p-number-field-4" />

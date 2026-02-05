@@ -46,6 +46,9 @@ function FieldsetLegend(props: FieldsetPrimitive.Legend.Props) {
   return <FieldsetPrimitive.Legend data-ui="fieldset-legend" {...props} />;
 }
 
+const FieldControl = FieldPrimitive.Control;
+const FieldValidity = FieldPrimitive.Validity;
+
 export {
   Field,
   FieldLabel,
@@ -55,4 +58,6 @@ export {
   FieldsetDescription,
   FieldsetLegend,
   FieldGroup,
+  FieldControl,
+  FieldValidity,
 };

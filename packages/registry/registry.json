@@ -64,6 +64,27 @@
       }
     },
     {
+      "name": "link-button",
+      "title": "Link Button",
+      "description": "Displays a link styled as a button.",
+      "type": "registry:ui",
+      "dependencies": ["@base-ui/react"],
+      "files": [
+        {
+          "path": "ui/link-button/index.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "ui/link-button/style.css",
+          "type": "registry:style"
+        }
+      ],
+      "meta": {
+        "category": "core",
+        "tags": ["action", "click", "primary"]
+      }
+    },
+    {
       "name": "button-group",
       "title": "Button Group",
       "description": "Groups related buttons together.",
@@ -276,7 +297,7 @@
           "type": "registry:ui"
         },
         {
-          "path": "ui/tag/style.css",
+          "path": "ui/tag/style.",
           "type": "registry:style"
         }
       ],
@@ -686,7 +707,27 @@
           "type": "registry:ui"
         },
         {
-          "path": "ui/input/style.css",
+          "path": "ui/shared/input-base.css",
+          "type": "registry:style"
+        }
+      ],
+      "meta": {
+        "category": "form",
+        "tags": ["text", "field"]
+      }
+    },
+    {
+      "name": "input-group",
+      "title": "Input Group",
+      "description": "A wrapper for grouping related inputs and add-ons like icons and buttons.",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "ui/input-group/index.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "ui/shared/input-base.css",
           "type": "registry:style"
         }
       ],

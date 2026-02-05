@@ -1731,6 +1731,687 @@ const data: RegistryItem[] = [
       tags: ["dropdown-menu", "submenu"],
     },
   },
+  {
+    name: "p-field-1",
+    description: "Default field with label and input",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-1.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/input"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "label", "form"],
+    },
+  },
+  {
+    name: "p-field-2",
+    description: "Field with description text",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-2.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/input"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "description"],
+    },
+  },
+  {
+    name: "p-field-3",
+    description: "Field with error validation",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-3.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/input"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "error", "validation"],
+    },
+  },
+  {
+    name: "p-field-4",
+    description: "Horizontal field orientation",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-4.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/input"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "horizontal"],
+    },
+  },
+  {
+    name: "p-field-5",
+    description: "Field with validity state display",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-5.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/input"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "validity", "state"],
+    },
+  },
+  {
+    name: "p-field-6",
+    description: "Fieldset with legend and multiple fields",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-6.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/input"],
+    meta: {
+      category: category("field"),
+      tags: ["field", "fieldset"],
+    },
+  },
+  {
+    name: "p-field-7",
+    description: "Disabled field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-7.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/input"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "disabled"],
+    },
+  },
+  {
+    name: "p-field-8",
+    description: "Autocomplete field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-8.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/autocomplete"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "autocomplete"],
+    },
+  },
+  {
+    name: "p-field-9",
+    description: "Combobox field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-9.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/combobox"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "combobox"],
+    },
+  },
+  {
+    name: "p-field-10",
+    description: "Combobox multiple field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-10.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/combobox"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "combobox", "multiple"],
+    },
+  },
+  {
+    name: "p-field-11",
+    description: "Textarea field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-11.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/textarea"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "textarea"],
+    },
+  },
+  {
+    name: "p-field-12",
+    description: "Select field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-12.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/select"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "select"],
+    },
+  },
+  {
+    name: "p-field-13",
+    description: "Checkbox field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-13.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/checkbox"],
+    meta: {
+      category: category("field"),
+      classname: "w-fit",
+      tags: ["field", "checkbox"],
+    },
+  },
+  {
+    name: "p-field-14",
+    description: "Checkbox group field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-14.tsx", type: "registry:block" },
+    ],
+    registryDependencies: [
+      "@olyx/react/field",
+      "@olyx/react/checkbox",
+      "@olyx/react/checkbox-group",
+    ],
+    meta: {
+      category: category("field"),
+      tags: ["field", "checkbox-group"],
+    },
+  },
+  {
+    name: "p-field-15",
+    description: "Radio group field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-15.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/radio"],
+    meta: {
+      category: category("field"),
+      tags: ["field", "radio"],
+    },
+  },
+  {
+    name: "p-field-16",
+    description: "Switch field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-16.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/switch"],
+    meta: {
+      category: category("field"),
+      classname: "w-fit",
+      tags: ["field", "switch"],
+    },
+  },
+  {
+    name: "p-field-17",
+    description: "Slider field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-17.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/slider"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "slider"],
+    },
+  },
+  {
+    name: "p-field-18",
+    description: "Number field within field",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-18.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/number-field"],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "number-field"],
+    },
+  },
+  {
+    name: "p-field-19",
+    description: "Complete form example",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-field-19.tsx", type: "registry:block" },
+    ],
+    registryDependencies: [
+      "@olyx/react/field",
+      "@olyx/react/input",
+      "@olyx/react/select",
+      "@olyx/react/textarea",
+      "@olyx/react/checkbox",
+      "@olyx/react/button",
+    ],
+    meta: {
+      category: category("field"),
+      classname: "p-input",
+      tags: ["field", "form"],
+    },
+  },
+  {
+    name: "p-input-1",
+    description: "Default input with placeholder",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-input-1.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/input"],
+    meta: {
+      category: category("input"),
+      classname: "p-input",
+      tags: ["input", "form"],
+    },
+  },
+  {
+    name: "p-input-2",
+    description: "Disabled input",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-input-2.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/input"],
+    meta: {
+      category: category("input"),
+      classname: "p-input",
+      tags: ["input", "disabled"],
+    },
+  },
+
+  {
+    name: "p-input-4",
+    description: "Input with label and description",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-input-4.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/field", "@olyx/react/input"],
+    meta: {
+      category: category("input"),
+      classname: "p-input",
+      tags: ["input", "label", "field"],
+    },
+  },
+  {
+    name: "p-input-group-1",
+    description: "Input group with start icon",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-input-group-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/input-group", "@olyx/react/input"],
+    meta: {
+      category: category("input-group"),
+      classname: "p-input",
+      tags: ["input-group", "icon"],
+    },
+  },
+  {
+    name: "p-input-group-2",
+    description: "Input group with end icon",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-input-group-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/input-group", "@olyx/react/input"],
+    meta: {
+      category: category("input-group"),
+      classname: "p-input",
+      tags: ["input-group", "icon"],
+    },
+  },
+  {
+    name: "p-input-group-3",
+    description: "Input group with start affix",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-input-group-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/input-group", "@olyx/react/input"],
+    meta: {
+      category: category("input-group"),
+      classname: "p-input",
+      tags: ["input-group", "affix"],
+    },
+  },
+  {
+    name: "p-input-group-4",
+    description: "Input group with end affix",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-input-group-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/input-group", "@olyx/react/input"],
+    meta: {
+      category: category("input-group"),
+      classname: "p-input",
+      tags: ["input-group", "affix"],
+    },
+  },
+  {
+    name: "p-input-group-5",
+    description: "Input group with start and end affix",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-input-group-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/input-group", "@olyx/react/input"],
+    meta: {
+      category: category("input-group"),
+      classname: "p-input",
+      tags: ["input-group", "affix"],
+    },
+  },
+  {
+    name: "p-input-group-6",
+    description: "Input group with inline affix",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-input-group-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/input-group", "@olyx/react/input"],
+    meta: {
+      category: category("input-group"),
+      classname: "p-input",
+      tags: ["input-group", "affix", "inline"],
+    },
+  },
+  {
+    name: "p-input-group-7",
+    description: "Input group with keyboard shortcut",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-input-group-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/input-group",
+      "@olyx/react/input",
+      "@olyx/react/kbd",
+    ],
+    meta: {
+      category: category("input-group"),
+      tags: ["input-group", "kbd"],
+      classname: "p-input",
+    },
+  },
+  {
+    name: "p-input-group-8",
+    description: "Disabled input group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-input-group-8.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/input-group", "@olyx/react/input"],
+    meta: {
+      category: category("input-group"),
+      tags: ["input-group", "disabled"],
+      classname: "p-input",
+    },
+  },
+  {
+    name: "p-input-group-9",
+    description: "Input group with button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-input-group-9.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/input-group",
+      "@olyx/react/input",
+      "@olyx/react/button",
+    ],
+    meta: {
+      category: category("input-group"),
+      tags: ["input-group", "button"],
+      classname: "p-input",
+    },
+  },
+  {
+    name: "p-kbd-1",
+    description: "Single key and key combination",
+    type: "registry:block",
+    files: [{ path: "registry/particles/p-kbd-1.tsx", type: "registry:block" }],
+    registryDependencies: ["@olyx/react/kbd"],
+    meta: {
+      category: category("kbd"),
+      tags: ["kbd", "keyboard", "shortcut"],
+    },
+  },
+  {
+    name: "p-link-button-1",
+    description: "Default link button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-link-button-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/link-button"],
+    meta: {
+      category: category("link-button"),
+      tags: ["link-button"],
+    },
+  },
+  {
+    name: "p-link-button-2",
+    description: "Gray variant link button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-link-button-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/link-button"],
+    meta: {
+      category: category("link-button"),
+      tags: ["link-button", "gray"],
+    },
+  },
+  {
+    name: "p-link-button-3",
+    description: "Primary variant link button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-link-button-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/link-button"],
+    meta: {
+      category: category("link-button"),
+      tags: ["link-button", "primary"],
+    },
+  },
+  {
+    name: "p-link-button-4",
+    description: "Error variant link button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-link-button-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/link-button"],
+    meta: {
+      category: category("link-button"),
+      tags: ["link-button", "error"],
+    },
+  },
+  {
+    name: "p-link-button-5",
+    description: "Small size link button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-link-button-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/link-button"],
+    meta: {
+      category: category("link-button"),
+      tags: ["link-button", "small"],
+    },
+  },
+  {
+    name: "p-link-button-6",
+    description: "Link button without underline",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-link-button-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/link-button"],
+    meta: {
+      category: category("link-button"),
+      tags: ["link-button", "underline"],
+    },
+  },
+  {
+    name: "p-link-button-7",
+    description: "Disabled link button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-link-button-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/link-button"],
+    meta: {
+      category: category("link-button"),
+      tags: ["link-button", "disabled"],
+    },
+  },
+  {
+    name: "p-number-field-1",
+    description: "Default number field",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-number-field-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/number-field"],
+    meta: {
+      category: category("number-field"),
+      tags: ["number-field", "form"],
+    },
+  },
+  {
+    name: "p-number-field-2",
+    description: "Number field with scrub area",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-number-field-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/number-field"],
+    meta: {
+      category: category("number-field"),
+      tags: ["number-field", "scrub"],
+    },
+  },
+  {
+    name: "p-number-field-3",
+    description: "Disabled number field",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-number-field-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/number-field"],
+    meta: {
+      category: category("number-field"),
+      tags: ["number-field", "disabled"],
+    },
+  },
+  {
+    name: "p-number-field-4",
+    description: "Number field with min/max range",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-number-field-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/number-field"],
+    meta: {
+      category: category("number-field"),
+      tags: ["number-field", "range"],
+    },
+  },
+  {
+    name: "p-number-field-5",
+    description: "Number field with step increment",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-number-field-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/number-field"],
+    meta: {
+      category: category("number-field"),
+      tags: ["number-field", "step"],
+    },
+  },
 ];
 
 type RegistryItemWithComponent = RegistryItem & {

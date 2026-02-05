@@ -62,6 +62,26 @@ export const Index: Record<string, any> = {
     ],
     meta: { category: "core", tags: ["action", "click", "primary"] },
   },
+  "link-button": {
+    name: "link-button",
+    description: "Displays a link styled as a button.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: ["@base-ui/react"],
+    files: [
+      {
+        path: "@olyx/react/link-button/index.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/link-button/style.css",
+        type: "registry:style",
+        target: "",
+      },
+    ],
+    meta: { category: "core", tags: ["action", "click", "primary"] },
+  },
   "button-group": {
     name: "button-group",
     description: "Groups related buttons together.",
@@ -274,7 +294,7 @@ export const Index: Record<string, any> = {
         target: "",
       },
       {
-        path: "@olyx/react/tag/style.css",
+        path: "@olyx/react/tag/style.",
         type: "registry:style",
         target: "",
       },
@@ -675,7 +695,28 @@ export const Index: Record<string, any> = {
         target: "",
       },
       {
-        path: "@olyx/react/input/style.css",
+        path: "@olyx/react/shared/input-base.css",
+        type: "registry:style",
+        target: "",
+      },
+    ],
+    meta: { category: "form", tags: ["text", "field"] },
+  },
+  "input-group": {
+    name: "input-group",
+    description:
+      "A wrapper for grouping related inputs and add-ons like icons and buttons.",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    dependencies: undefined,
+    files: [
+      {
+        path: "@olyx/react/input-group/index.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/shared/input-base.css",
         type: "registry:style",
         target: "",
       },

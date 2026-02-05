@@ -1,7 +1,179 @@
 ---
 title: Field
-description: test.
+description: A form field component with label, description, and validation.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/field#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-field-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/field
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="field" title="components/ui/field.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Field, FieldLabel, FieldDescription, FieldError } from "@/components/ui/field"
+import { Input } from "@/components/ui/input"
+```
+
+```tsx
+<Field>
+  <FieldLabel>Email</FieldLabel>
+  <Input type="email" placeholder="you@example.com" />
+  <FieldDescription>We'll never share your email.</FieldDescription>
+</Field>
+```
+
+## API Reference
+
+#### Field
+
+Root component. Styled wrapper for `Field.Root` from Base UI.
+
+| Prop          | Type                         | Default      |
+| ------------- | ---------------------------- | ------------ |
+| `orientation` | `"horizontal" \| "vertical"` | `"vertical"` |
+
+All props from [Base UI Field](https://base-ui.com/react/components/field#api-reference) are also supported, including `invalid` and `disabled`.
+
+#### FieldLabel
+
+Label for the field. Alias for `Field.Label` from Base UI.
+
+#### FieldDescription
+
+Description text below the field. Alias for `Field.Description` from Base UI.
+
+#### FieldError
+
+Error message displayed when the field is invalid. Alias for `Field.Error` from Base UI.
+
+#### FieldGroup
+
+Container for grouping multiple fields with vertical flex layout.
+
+#### Fieldset
+
+Root fieldset component. Alias for `Fieldset.Root` from Base UI.
+
+#### FieldsetLegend
+
+Legend for a fieldset. Alias for `Fieldset.Legend` from Base UI.
+
+#### FieldsetDescription
+
+Description text for a fieldset.
+
+## Examples
+
+### With Description
+
+<ComponentPreview name="p-field-2" />
+
+### With Error
+
+<ComponentPreview name="p-field-3" />
+
+### Validity
+
+<ComponentPreview name="p-field-5"  align="start" />
+
+### Horizontal
+
+<ComponentPreview name="p-field-4" />
+
+### Fieldset
+
+<ComponentPreview name="p-field-6" />
+
+### Disabled
+
+<ComponentPreview name="p-field-7" />
+
+### Autocomplete
+
+<ComponentPreview name="p-field-8" />
+
+### Combobox
+
+<ComponentPreview name="p-field-9" />
+
+### Combobox Multiple
+
+<ComponentPreview name="p-field-10" />
+
+### Textarea
+
+<ComponentPreview name="p-field-11" />
+
+### Select
+
+<ComponentPreview name="p-field-12" />
+
+### Checkbox
+
+<ComponentPreview name="p-field-13" />
+
+### Checkbox Group
+
+<ComponentPreview name="p-field-14" />
+
+### Radio Group
+
+<ComponentPreview name="p-field-15" />
+
+### Switch
+
+<ComponentPreview name="p-field-16" />
+
+### Slider
+
+<ComponentPreview name="p-field-17" />
+
+### Number Field
+
+<ComponentPreview name="p-field-18" />
+
+### Complete Form
+
+<ComponentPreview name="p-field-19" />

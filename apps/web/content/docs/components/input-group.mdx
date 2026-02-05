@@ -1,0 +1,113 @@
+---
+title: Input Group
+description: A wrapper for composing inputs with icons, affixes, and other elements.
+---
+
+<ComponentPreview name="p-input-group-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/input-group
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="input-group" title="components/ui/input-group.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/input"
+import { InputWrapper, InputIcon, InputAffix } from "@/components/ui/input-group"
+```
+
+```tsx
+<InputWrapper>
+  <InputIcon>
+    <StarIcon />
+  </InputIcon>
+  <Input placeholder="Add to favorites" />
+</InputWrapper>
+```
+
+## API Reference
+
+#### InputWrapper
+
+Container that wraps an input with icons and affixes. Renders as a `<label>` element.
+
+#### InputIcon
+
+Container for SVG icons. Automatically sizes icons to match the input.
+
+#### InputAffix
+
+Text or content placed before or after the input. When `inline` is false, a border separator is shown.
+
+| Prop     | Type      | Default |
+| -------- | --------- | ------- |
+| `inline` | `boolean` | `false` |
+
+## Examples
+
+### With End Icon
+
+<ComponentPreview name="p-input-group-2" />
+
+### With Start Affix
+
+<ComponentPreview name="p-input-group-3" />
+
+### With End Affix
+
+<ComponentPreview name="p-input-group-4" />
+
+### With Start and End Affix
+
+<ComponentPreview name="p-input-group-5" />
+
+### With Inline Affix
+
+<ComponentPreview name="p-input-group-6" />
+
+### With Keyboard Shortcut
+
+<ComponentPreview name="p-input-group-7" />
+
+### Disabled
+
+<ComponentPreview name="p-input-group-8" />
+
+### With Button
+
+<ComponentPreview name="p-input-group-9" />
