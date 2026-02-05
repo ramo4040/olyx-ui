@@ -1,7 +1,77 @@
 ---
 title: Button Group
-description: test.
-
-links:
-  doc: https://base-ui.com/react/components/${page}#api-reference
+description: A container that groups related buttons together with consistent styling.
 ---
+
+## Preview
+
+<ComponentPreview name="p-button-group-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/button-group
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="button-group" title="components/ui/button-group.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { ButtonGroup } from "@/components/ui/button-group"
+import { Button } from "@/components/ui/button"
+```
+
+```tsx
+<ButtonGroup>
+  <Button>Previous</Button>
+  <Button>Next</Button>
+</ButtonGroup>
+```
+
+## Accessibility
+
+- The `ButtonGroup` component has the `role` attribute set to `group`.
+- Use `Tab` to navigate between buttons.
+- Use `aria-label` or `aria-labelledby` to label the button group.
+
+## API Reference
+
+### ButtonGroup
+
+Container that groups related buttons with consistent styling.
+
+| Prop          | Type                         | Default        |
+| ------------- | ---------------------------- | -------------- |
+| `orientation` | `"horizontal" \| "vertical"` | `"horizontal"` |
+
+## Examples
+
+### Vertical
+
+<ComponentPreview name="p-button-group-2" />

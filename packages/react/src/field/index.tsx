@@ -2,8 +2,20 @@ import "./style.css";
 import { Field as FieldPrimitive } from "@base-ui/react/field";
 import { Fieldset as FieldsetPrimitive } from "@base-ui/react/fieldset";
 
-function Field(props: FieldPrimitive.Root.Props) {
-  return <FieldPrimitive.Root role="group" data-ui="field" {...props} />;
+function Field({
+  orientation = "vertical",
+  ...props
+}: FieldPrimitive.Root.Props & {
+  orientation?: "horizontal" | "vertical";
+}) {
+  return (
+    <FieldPrimitive.Root
+      role="group"
+      data-ui="field"
+      data-orientation={orientation}
+      {...props}
+    />
+  );
 }
 
 function FieldLabel(props: FieldPrimitive.Label.Props) {

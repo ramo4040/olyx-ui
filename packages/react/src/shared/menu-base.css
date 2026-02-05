@@ -49,6 +49,7 @@
       white-space: nowrap;
       cursor: pointer;
       border-left: 2px solid transparent;
+      text-decoration: none;
 
       /* Icon */
       svg {

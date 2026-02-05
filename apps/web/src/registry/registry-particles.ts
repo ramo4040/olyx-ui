@@ -230,6 +230,239 @@ const data: RegistryItem[] = [
     },
   },
   {
+    name: "p-breadcrumb-1",
+    description: "Basic breadcrumb navigation",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-breadcrumb-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/breadcrumb"],
+    meta: {
+      category: category("breadcrumb"),
+      tags: ["breadcrumb", "navigation"],
+    },
+  },
+  {
+    name: "p-breadcrumb-2",
+    description: "Breadcrumb with dropdown menu and ellipsis",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-breadcrumb-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/breadcrumb",
+      "@olyx/react/dropdown-menu",
+    ],
+    meta: {
+      category: category("breadcrumb"),
+      tags: ["breadcrumb", "navigation", "dropdown"],
+    },
+  },
+  {
+    name: "p-button-group-1",
+    description: "Horizontal button group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-group-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button-group", "@olyx/react/button"],
+    meta: {
+      category: category("button-group"),
+      tags: ["button-group", "buttons"],
+    },
+  },
+  {
+    name: "p-button-group-2",
+    description: "Vertical button group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-button-group-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/button-group", "@olyx/react/button"],
+    meta: {
+      category: category("button-group"),
+      tags: ["button-group", "buttons", "vertical"],
+    },
+  },
+  {
+    name: "p-checkbox-1",
+    description: "Default checkbox",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-checkbox-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/checkbox"],
+    meta: {
+      category: category("checkbox"),
+      tags: ["checkbox", "form"],
+    },
+  },
+  {
+    name: "p-checkbox-2",
+    description: "Disabled checkbox",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-checkbox-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/checkbox"],
+    meta: {
+      category: category("checkbox"),
+      tags: ["checkbox", "form", "disabled"],
+    },
+  },
+  {
+    name: "p-checkbox-3",
+    description: "Indeterminate checkbox",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-checkbox-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/checkbox"],
+    meta: {
+      category: category("checkbox"),
+      tags: ["checkbox", "form", "indeterminate"],
+    },
+  },
+  {
+    name: "p-checkbox-group-1",
+    description: "Basic checkbox group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-checkbox-group-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/checkbox-group",
+      "@olyx/react/checkbox",
+      "@olyx/react/field",
+    ],
+    meta: {
+      category: category("checkbox-group"),
+      tags: ["checkbox-group", "form"],
+    },
+  },
+  {
+    name: "p-checkbox-group-2",
+    description: "Checkbox group with disabled item",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-checkbox-group-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/checkbox-group",
+      "@olyx/react/checkbox",
+      "@olyx/react/field",
+    ],
+    meta: {
+      category: category("checkbox-group"),
+      tags: ["checkbox-group", "form", "disabled"],
+    },
+  },
+  {
+    name: "p-checkbox-group-3",
+    description: "Checkbox group with parent checkbox",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-checkbox-group-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/checkbox-group",
+      "@olyx/react/checkbox",
+      "@olyx/react/field",
+    ],
+    meta: {
+      category: category("checkbox-group"),
+      tags: ["checkbox-group", "form", "parent"],
+    },
+  },
+  {
+    name: "p-checkbox-group-4",
+    description: "Nested parent checkbox group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-checkbox-group-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/checkbox-group",
+      "@olyx/react/checkbox",
+      "@olyx/react/field",
+    ],
+    meta: {
+      category: category("checkbox-group"),
+      tags: ["checkbox-group", "form", "nested"],
+    },
+  },
+  {
+    name: "p-checkbox-group-5",
+    description: "Checkbox group form integration",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-checkbox-group-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/checkbox-group",
+      "@olyx/react/checkbox",
+      "@olyx/react/button",
+      "@olyx/react/field",
+    ],
+    meta: {
+      category: category("checkbox-group"),
+      tags: ["checkbox-group", "form", "controlled"],
+    },
+  },
+  {
+    name: "p-collapsible-1",
+    description: "Basic collapsible panel",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-collapsible-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/collapsible", "@olyx/react/button"],
+    meta: {
+      category: category("collapsible"),
+      classname: "p-collapsible",
+      tags: ["collapsible", "toggle", "panel"],
+    },
+  },
+  {
     name: "p-alert-1",
     description: "Default alert with information status",
     type: "registry:block",

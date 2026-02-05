@@ -441,6 +441,22 @@ export const registryUi: Registry["items"] = [
     },
   },
   {
+    name: "checkbox-group",
+    title: "Checkbox Group",
+    description:
+      "A set of checkboxes that are related and should be grouped together.",
+    type: "registry:ui",
+    dependencies: ["@base-ui/react"],
+    files: [
+      { path: "@olyx/react/checkbox-group/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/checkbox-group/style.css", type: "registry:style" },
+    ],
+    meta: {
+      category: "form",
+      tags: ["input", "boolean", "toggle"],
+    },
+  },
+  {
     name: "autocomplete",
     title: "Autocomplete",
     description:

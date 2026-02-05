@@ -1,0 +1,114 @@
+---
+title: Checkbox Group
+description: Provides shared state management for a series of checkboxes.
+
+links:
+  doc: https://base-ui.com/react/components/checkbox-group#api-reference
+---
+
+## Preview
+
+<ComponentPreview name="p-checkbox-group-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/checkbox-group
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="checkbox-group" title="components/ui/checkbox-group.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { CheckBox } from "@/components/ui/checkbox"
+import { CheckboxGroup } from "@/components/ui/checkbox-group"
+import { Field, FieldLabel } from "@/components/ui/field"
+```
+
+```tsx
+<CheckboxGroup>
+  <Field>
+    <CheckBox defaultChecked />
+    <FieldLabel>Next.js</FieldLabel>
+  </Field>
+  <Field>
+    <CheckBox />
+    <FieldLabel>Vite</FieldLabel>
+  </Field>
+  <Field>
+    <CheckBox />
+    <FieldLabel>Astro</FieldLabel>
+  </Field>
+</CheckboxGroup>
+```
+
+## API Reference
+
+### CheckboxGroup
+
+Styled wrapper for `CheckboxGroup.Root` from Base UI. Provides shared state management for a group of checkboxes.
+
+| Prop              | Type                  | Default     |
+| ----------------- | --------------------- | ----------- |
+| `value`           | `string[]`            | `undefined` |
+| `defaultValue`    | `string[]`            | `undefined` |
+| `onValueChange`   | `(value: string[]) => void` | `undefined` |
+| `disabled`        | `boolean`             | `false`     |
+| `allValues`       | `string[]`            | `undefined` |
+| `preserveChildStates` | `boolean`         | `false`     |
+
+**Parent Checkbox:** To use a parent checkbox that controls all children, add the `allValues` prop to `CheckboxGroup` with an array of all child values, and add the `parent` prop to the parent `CheckBox`.
+
+For complete props documentation, see [Base UI CheckboxGroup](https://base-ui.com/react/components/checkbox-group#api-reference).
+
+## Examples
+
+For accessible group labelling and validation, prefer wrapping checkbox groups with `Field` and `Fieldset`. See the related example: [Checkbox group field](/ui/docs/components/field#checkbox-group-field).
+
+### With Disabled Item
+
+<ComponentPreview name="p-checkbox-group-2" />
+
+### Parent Checkbox
+
+<ComponentPreview name="p-checkbox-group-3" />
+
+### Nested Parent Checkbox
+
+<ComponentPreview name="p-checkbox-group-4" />
+
+### Form Integration
+
+<ComponentPreview name="p-checkbox-group-5" />

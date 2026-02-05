@@ -1,7 +1,106 @@
 ---
 title: Breadcrumb
-description: test.
-
-links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+description: Displays the path to the current resource using a hierarchy of links.
 ---
+
+## Preview
+
+<ComponentPreview name="p-breadcrumb-2" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/breadcrumb
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="breadcrumb" title="components/ui/breadcrumb.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+```
+
+```tsx
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+## API Reference
+
+### Breadcrumb
+
+Root navigation container with `aria-label="breadcrumb"`.
+
+### BreadcrumbList
+
+Ordered list container for breadcrumb items.
+
+### BreadcrumbItem
+
+Individual breadcrumb item container.
+
+### BreadcrumbLink
+
+Link element for navigable breadcrumb items. Supports the `render` prop to use custom link components (e.g., Next.js Link).
+
+| Prop     | Type                 | Default | Description                                    |
+| -------- | -------------------- | ------- | ---------------------------------------------- |
+| `render` | `React.ReactElement` | -       | Render as a different element (e.g., Next.js Link) |
+
+### BreadcrumbSeparator
+
+Separator between breadcrumb items. Defaults to a chevron icon but accepts custom children.
+
+### BreadcrumbEllipsis
+
+Ellipsis indicator for collapsed breadcrumb items.
+
+## Examples
+
+### With custom separator
+
+<ComponentPreview name="p-breadcrumb-1" />
