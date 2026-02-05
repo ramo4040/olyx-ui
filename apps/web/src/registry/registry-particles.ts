@@ -1523,6 +1523,214 @@ const data: RegistryItem[] = [
       tags: ["context-menu", "radio"],
     },
   },
+  {
+    name: "p-dialog-1",
+    description: "Default dialog",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-dialog-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/dialog", "@olyx/react/button"],
+    meta: {
+      category: category("dialog"),
+      tags: ["dialog", "modal"],
+    },
+  },
+  {
+    name: "p-dialog-2",
+    description: "Dialog with custom footer buttons",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-dialog-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/dialog", "@olyx/react/button"],
+    meta: {
+      category: category("dialog"),
+      tags: ["dialog", "modal", "custom-footer"],
+    },
+  },
+  {
+    name: "p-dialog-3",
+    description: "Dialog without close button",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-dialog-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/dialog", "@olyx/react/button"],
+    meta: {
+      category: category("dialog"),
+      tags: ["dialog", "modal", "no-close"],
+    },
+  },
+  {
+    name: "p-dialog-4",
+    description: "Nested dialogs",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-dialog-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/dialog", "@olyx/react/button"],
+    meta: {
+      category: category("dialog"),
+      tags: ["dialog", "modal", "nested"],
+    },
+  },
+  {
+    name: "p-drawer-1",
+    description: "Default bottom drawer with handle",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-drawer-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/drawer", "@olyx/react/button"],
+    meta: {
+      category: category("drawer"),
+      tags: ["drawer", "bottom", "handle"],
+    },
+  },
+  {
+    name: "p-drawer-2",
+    description: "Right side drawer",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-drawer-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/drawer", "@olyx/react/button"],
+    meta: {
+      category: category("drawer"),
+      tags: ["drawer", "right", "side"],
+    },
+  },
+  {
+    name: "p-drawer-3",
+    description: "Left side drawer",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-drawer-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/drawer", "@olyx/react/button"],
+    meta: {
+      category: category("drawer"),
+      tags: ["drawer", "left", "side"],
+    },
+  },
+  {
+    name: "p-drawer-4",
+    description: "Top drawer",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-drawer-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/drawer", "@olyx/react/button"],
+    meta: {
+      category: category("drawer"),
+      tags: ["drawer", "top"],
+    },
+  },
+  {
+    name: "p-dropdown-menu-1",
+    description: "Default dropdown menu with icons",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-dropdown-menu-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/dropdown-menu", "@olyx/react/button"],
+    meta: {
+      category: category("dropdown-menu"),
+      tags: ["dropdown-menu", "icons"],
+    },
+  },
+  {
+    name: "p-dropdown-menu-2",
+    description: "Dropdown menu with groups",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-dropdown-menu-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/dropdown-menu", "@olyx/react/button"],
+    meta: {
+      category: category("dropdown-menu"),
+      tags: ["dropdown-menu", "groups"],
+    },
+  },
+  {
+    name: "p-dropdown-menu-3",
+    description: "Dropdown menu with checkbox items",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-dropdown-menu-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/dropdown-menu", "@olyx/react/button"],
+    meta: {
+      category: category("dropdown-menu"),
+      tags: ["dropdown-menu", "checkbox"],
+    },
+  },
+  {
+    name: "p-dropdown-menu-4",
+    description: "Dropdown menu with radio group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-dropdown-menu-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/dropdown-menu", "@olyx/react/button"],
+    meta: {
+      category: category("dropdown-menu"),
+      tags: ["dropdown-menu", "radio"],
+    },
+  },
+  {
+    name: "p-dropdown-menu-5",
+    description: "Dropdown menu with submenu",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-dropdown-menu-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/dropdown-menu", "@olyx/react/button"],
+    meta: {
+      category: category("dropdown-menu"),
+      tags: ["dropdown-menu", "submenu"],
+    },
+  },
 ];
 
 type RegistryItemWithComponent = RegistryItem & {

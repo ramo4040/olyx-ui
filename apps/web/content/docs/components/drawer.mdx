@@ -1,7 +1,140 @@
 ---
 title: Drawer
-description: test.
+description: A panel that slides in from the edge of the screen.
 
 links:
-  doc: https://base-ui.com/react/components/drawer#api-reference
+  doc: https://vaul.emilkowal.ski/getting-started
 ---
+
+## Preview
+
+<ComponentPreview name="p-drawer-1" />
+
+## About
+
+Drawer is built on top of [Vaul](https://github.com/emilkowalski/vaul) by [emilkowalski](https://twitter.com/emilkowalski).
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/drawer
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install vaul-base
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="drawer" title="components/ui/drawer.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHandle,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+```
+
+```tsx
+<Drawer>
+  <DrawerTrigger>Open</DrawerTrigger>
+  <DrawerContent>
+    <DrawerHandle />
+    <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+    <DrawerDescription>This action cannot be undone.</DrawerDescription>
+    <DrawerFooter>
+      <Button>Submit</Button>
+    </DrawerFooter>
+  </DrawerContent>
+</Drawer>
+```
+
+## API Reference
+
+### Drawer
+
+Root component. Wraps `Drawer.Root` from Vaul.
+
+| Prop        | Type                                          | Default    |
+| ----------- | --------------------------------------------- | ---------- |
+| `direction` | `"top" \| "bottom" \| "left" \| "right"`      | `"bottom"` |
+
+### DrawerTrigger
+
+Trigger element that opens the drawer.
+
+### DrawerContent
+
+Content container. Wraps `Drawer.Portal`, `Drawer.Overlay`, and `Drawer.Content`.
+
+### DrawerHandle
+
+Drag handle indicator. Visible only for `bottom` direction.
+
+### DrawerHeader
+
+Container for the title, description, close button, and a separator.
+
+### DrawerFooter
+
+Footer section with a separator and action buttons.
+
+### DrawerTitle
+
+Title component. Wraps `Drawer.Title` from Vaul.
+
+### DrawerDescription
+
+Description component. Wraps `Drawer.Description` from Vaul.
+
+### DrawerClose
+
+Close button rendered as an icon button with a cancel icon.
+
+## Examples
+
+### Right Side
+
+<ComponentPreview name="p-drawer-2" />
+
+### Left Side
+
+<ComponentPreview name="p-drawer-3" />
+
+### Top
+
+<ComponentPreview name="p-drawer-4" />

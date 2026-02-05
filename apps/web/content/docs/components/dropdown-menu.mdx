@@ -1,7 +1,151 @@
 ---
 title: Dropdown Menu
-description: test.
+description: A list of actions in a dropdown, enhanced with keyboard navigation.
 
 links:
-  doc: https://base-ui.com/react/components/dropdown-menu#api-reference
+  doc: https://base-ui.com/react/components/menu#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-dropdown-menu-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/dropdown-menu
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="dropdown-menu" title="components/ui/dropdown-menu.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuGroupLabel,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+```
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuItem>Profile</DropdownMenuItem>
+    <DropdownMenuItem>Settings</DropdownMenuItem>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>Log Out</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+## API Reference
+
+### DropdownMenu
+
+Root component. Alias for `Menu.Root` from Base UI.
+
+### DropdownMenuTrigger
+
+Trigger button that opens the menu. Alias for `Menu.Trigger` from Base UI.
+
+### DropdownMenuContent
+
+Popup container that displays the menu content. Wraps `Menu.Portal`, `Menu.Positioner`, and `Menu.Popup`.
+
+| Prop          | Type                                           | Default    |
+| ------------- | ---------------------------------------------- | ---------- |
+| `side`        | `"top" \| "bottom" \| "left" \| "right"`       | -          |
+| `align`       | `"start" \| "center" \| "end"`                 | `"start"`  |
+| `sideOffset`  | `number`                                       | `6`        |
+| `alignOffset` | `number`                                       | `0`        |
+
+### DropdownMenuGroup
+
+Groups related menu items. Alias for `Menu.Group` from Base UI.
+
+### DropdownMenuGroupLabel
+
+Label for a menu group. Alias for `Menu.GroupLabel` from Base UI.
+
+### DropdownMenuItem
+
+Individual selectable menu item. Alias for `Menu.Item` from Base UI.
+
+### DropdownMenuSeparator
+
+Visual separator between items or groups. Alias for `Menu.Separator` from Base UI.
+
+### DropdownMenuCheckboxItem
+
+Toggleable menu item with a check indicator.
+
+### DropdownMenuRadioGroup
+
+Container for exclusive radio menu items. Alias for `Menu.RadioGroup` from Base UI.
+
+### DropdownMenuRadioItem
+
+Radio menu item with a dot indicator.
+
+### DropdownMenuSubmenu
+
+Submenu container. Alias for `Menu.SubmenuRoot` from Base UI.
+
+### DropdownMenuSubmenuTrigger
+
+Trigger for opening a submenu. Includes a built-in arrow icon.
+
+## Examples
+
+### With Groups
+
+<ComponentPreview name="p-dropdown-menu-2" />
+
+### Checkbox Items
+
+<ComponentPreview name="p-dropdown-menu-3" />
+
+### Radio Group
+
+<ComponentPreview name="p-dropdown-menu-4" />
+
+### Submenu
+
+<ComponentPreview name="p-dropdown-menu-5" />

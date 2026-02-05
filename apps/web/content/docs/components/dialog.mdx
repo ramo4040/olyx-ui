@@ -1,7 +1,144 @@
 ---
 title: Dialog
-description: test.
+description: A popup that opens on top of the entire page.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/dialog#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-dialog-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/dialog
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="dialog" title="components/ui/dialog.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+```
+
+```tsx
+<Dialog>
+  <DialogTrigger>Open Dialog</DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Dialog Title</DialogTitle>
+      <DialogDescription>Dialog Description</DialogDescription>
+    </DialogHeader>
+    <DialogFooter>
+      <Button>Save</Button>
+    </DialogFooter>
+  </DialogContent>
+</Dialog>
+```
+
+## API Reference
+
+### Dialog
+
+Root component. Alias for `Dialog.Root` from Base UI.
+
+### DialogTrigger
+
+Trigger button that opens the dialog. Alias for `Dialog.Trigger` from Base UI.
+
+### DialogContent
+
+Popup container that displays the dialog content. Wraps `Dialog.Portal`, `Dialog.Backdrop`, and `Dialog.Popup`.
+
+| Prop              | Type      | Default |
+| ----------------- | --------- | ------- |
+| `showCloseButton` | `boolean` | `true`  |
+
+### DialogHeader
+
+Container for the dialog title and description.
+
+### DialogFooter
+
+Footer section for action buttons. Includes a built-in close button by default.
+
+| Prop              | Type      | Default |
+| ----------------- | --------- | ------- |
+| `showCloseButton` | `boolean` | `true`  |
+
+### DialogTitle
+
+Title component. Alias for `Dialog.Title` from Base UI.
+
+### DialogDescription
+
+Description component. Alias for `Dialog.Description` from Base UI.
+
+### DialogClose
+
+Close button component. Alias for `Dialog.Close` from Base UI.
+
+### DialogPortal
+
+Portal component for rendering outside the DOM hierarchy. Alias for `Dialog.Portal` from Base UI.
+
+### DialogOverlay
+
+Backdrop/overlay component. Alias for `Dialog.Backdrop` from Base UI.
+
+## Examples
+
+### Custom Footer
+
+<ComponentPreview name="p-dialog-2" />
+
+### Without Close Button
+
+<ComponentPreview name="p-dialog-3" />
+
+### Nested Dialogs
+
+<ComponentPreview name="p-dialog-4" />

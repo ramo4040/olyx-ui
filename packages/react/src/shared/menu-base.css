@@ -37,7 +37,6 @@
       gap: var(--spacing-8);
       position: relative;
       align-items: center;
-      justify-content: space-between;
       width: 100%;
       height: 36px;
       padding: var(--spacing-8);
@@ -77,6 +76,10 @@
           background-color: var(--color-surface-container-low);
         }
       }
+    }
+
+    [data-ui$="-menu-submenu-trigger"] {
+      justify-content: space-between;
     }
 
     [data-ui$="-menu-checkbox-item"],
