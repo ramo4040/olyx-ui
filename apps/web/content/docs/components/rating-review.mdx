@@ -1,7 +1,69 @@
 ---
 title: Rating Review
-description: test.
-
-links:
-  doc: https://base-ui.com/react/components/rating-review#api-reference
+description: A read-only star or heart rating display.
 ---
+
+## Preview
+
+<ComponentPreview name="p-rating-review-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/rating-review
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="rating-review" title="components/ui/rating-review.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { RatingReview } from "@/components/ui/rating-review"
+```
+
+```tsx
+<RatingReview value={4} />
+```
+
+## API Reference
+
+### RatingReview
+
+Read-only rating display. Uses HugeIcons internally for star and heart icons.
+
+| Prop      | Type                | Default  |
+| --------- | ------------------- | -------- |
+| `variant` | `"star" \| "heart"` | `"star"` |
+| `value`   | `number`            | `0`      |
+| `max`     | `number`            | `5`      |
+
+## Examples
+
+### Heart Variant
+
+<ComponentPreview name="p-rating-review-2" />

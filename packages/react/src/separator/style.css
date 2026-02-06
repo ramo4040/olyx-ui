@@ -20,6 +20,7 @@
 
     &[data-variant="solid-text"],
     &[data-variant="underline"] {
+      width: 100%;
       font: var(--font-label-md);
       color: var(--color-on-surface-variant);
       text-transform: uppercase;
@@ -27,7 +28,7 @@
 
       &[data-variant="solid-text"] {
         padding: var(--spacing-6) calc(var(--spacing-16) + var(--spacing-4));
-        background-color: var(--separator-color);
+        background-color: var(--color-surface);
       }
 
       &[data-variant="underline"] {
@@ -37,6 +38,7 @@
     }
 
     &[data-variant="content"] {
+      width: 100%;
       display: flex;
       gap: var(--spacing-10);
       align-items: center;
@@ -56,7 +58,7 @@
         width: var(--separator-width);
         height: var(--separator-height);
         content: "";
-        background-color: var(--separator-color);
+        background-color: var(--color-surface-variant);
       }
     }
   }

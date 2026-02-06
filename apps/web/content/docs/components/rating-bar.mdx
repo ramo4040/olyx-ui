@@ -1,7 +1,96 @@
 ---
 title: Rating Bar
-description: test.
-
-links:
-  doc: https://base-ui.com/react/components/rating-bar#api-reference
+description: An interactive star or number rating input.
 ---
+
+## Preview
+
+<ComponentPreview name="p-rating-bar-2" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/rating-bar
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="rating-bar" title="components/ui/rating-bar.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { RatingBar, RatingBarItem } from "@/components/ui/rating-bar"
+```
+
+```tsx
+<RatingBar defaultValue="3">
+  {[1, 2, 3, 4, 5].map((n) => (
+    <RatingBarItem key={n} value={String(n)}>
+      {n}
+    </RatingBarItem>
+  ))}
+</RatingBar>
+```
+
+## API Reference
+
+### RatingBar
+
+Root component. Wraps `RadioGroup` with rating-specific styling.
+
+| Prop      | Type                    | Default |
+| --------- | ----------------------- | ------- |
+| `size`    | `"sm" \| "md" \| "lg"` | `"md"`  |
+| `styling` | `"star" \| "heart"`     | —       |
+
+### RatingBarItem
+
+Individual rating option. Wraps `RadioGroupItem` from the radio component.
+
+## Examples
+
+### Custom data
+
+<ComponentPreview name="p-rating-bar-1" />
+
+### Heart Styling
+
+<ComponentPreview name="p-rating-bar-3" />
+
+### Small Size
+
+<ComponentPreview name="p-rating-bar-4" />
+
+### Large Size
+
+<ComponentPreview name="p-rating-bar-5" />

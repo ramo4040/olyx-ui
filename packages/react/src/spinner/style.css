@@ -24,7 +24,7 @@
     }
 
     svg {
-      fill: var(--color-on-background);
+      fill: currentColor;
       width: 100%;
       height: 100%;
       animation: rotate 1s linear infinite;

@@ -4,10 +4,11 @@ import { Progress as ProgressPrimitive } from "@base-ui/react/progress";
 function Progress({ children, ...props }: ProgressPrimitive.Root.Props) {
   return (
     <ProgressPrimitive.Root data-ui="progress" {...props}>
-      {children}
-      <ProgressTrack>
-        <ProgressIndicator />
-      </ProgressTrack>
+      {children ?? (
+        <ProgressTrack>
+          <ProgressIndicator />
+        </ProgressTrack>
+      )}
     </ProgressPrimitive.Root>
   );
 }

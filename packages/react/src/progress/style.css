@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-4);
+    width: 100%;
 
     [data-ui="progress-value"],
     [data-ui="progress-label"] {

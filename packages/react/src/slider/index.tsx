@@ -1,11 +1,12 @@
 import "./style.css";
 import { Slider as SliderPrimitive } from "@base-ui/react/slider";
 
-function Slider(props: SliderPrimitive.Root.Props) {
+function Slider({ children, ...props }: SliderPrimitive.Root.Props) {
   const isRange =
     Array.isArray(props.value) || Array.isArray(props.defaultValue);
   return (
     <SliderPrimitive.Root data-ui="slider" {...props}>
+      {children}
       <SliderPrimitive.Control data-ui="slider-control">
         <SliderPrimitive.Track data-ui="slider-track">
           <SliderPrimitive.Indicator data-ui="slider-indicator" />
@@ -23,4 +24,7 @@ function Slider(props: SliderPrimitive.Root.Props) {
   );
 }
 
-export { Slider };
+function SliderValue({ ...props }: SliderPrimitive.Value.Props) {
+  return <SliderPrimitive.Value data-ui="slider-value" {...props} />;
+}
+export { Slider, SliderValue };

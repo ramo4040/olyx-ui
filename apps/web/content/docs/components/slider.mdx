@@ -1,7 +1,82 @@
 ---
 title: Slider
-description: test.
+description: An input where the user selects a value from within a given range.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/slider#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-slider-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/slider
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="slider" title="components/ui/slider.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Slider } from "@/components/ui/slider"
+```
+
+```tsx
+<Slider defaultValue={40} />
+```
+
+## API Reference
+
+### Slider
+
+Root component. Styled wrapper for `Slider.Root` from Base UI. Automatically detects range mode when `value` or `defaultValue` is an array.
+
+## Examples
+
+For accessible labelling and validation, prefer using the `Field` component to wrap sliders. See the related example: [Slider field](/ui/docs/components/field#slider-field).
+
+### Range
+
+<ComponentPreview name="p-slider-2" />
+
+### Vertical
+
+<ComponentPreview name="p-slider-3" />
+
+### Slider with Label and Value
+
+<ComponentPreview name="p-slider-4" />

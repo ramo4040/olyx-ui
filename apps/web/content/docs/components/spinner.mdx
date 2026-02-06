@@ -1,7 +1,75 @@
 ---
 title: Spinner
-description: test.
-
-links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+description: An indicator that can be used to show a loading state.
 ---
+
+## Preview
+
+<ComponentPreview name="p-spinner-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/spinner
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="spinner" title="components/ui/spinner.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Spinner } from "@/components/ui/spinner"
+```
+
+```tsx
+<Spinner />
+```
+
+## API Reference
+
+### Spinner
+
+A spinning SVG indicator for loading states.
+
+| Prop   | Type                            | Default |
+| ------ | ------------------------------- | ------- |
+| `size` | `"xs" \| "sm" \| "md" \| "lg"` | `"sm"`  |
+
+## Examples
+
+### Sizes
+
+<ComponentPreview name="p-spinner-2" />
+
+### Input Group
+
+<ComponentPreview name="p-spinner-3" />
+
+### Button
+
+<ComponentPreview name="p-spinner-4" />

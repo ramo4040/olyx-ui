@@ -1,7 +1,129 @@
 ---
 title: Select
-description: test.
+description: A common form component for choosing a predefined value in a dropdown menu.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/select#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-select-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/select
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="select" title="components/ui/select.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+```
+
+```tsx
+<Select defaultValue="next">
+  <SelectTrigger>
+    <SelectValue placeholder="Select framework" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="next">Next.js</SelectItem>
+    <SelectItem value="vite">Vite</SelectItem>
+    <SelectItem value="astro">Astro</SelectItem>
+  </SelectContent>
+</Select>
+```
+
+## API Reference
+
+### Select
+
+Root component. Alias for `Select.Root` from Base UI.
+
+### SelectTrigger
+
+Trigger button that opens the select dropdown. Styled wrapper for `Select.Trigger` from Base UI.
+
+### SelectValue
+
+Displays the selected value. Styled wrapper for `Select.Value` from Base UI.
+
+### SelectContent
+
+Popup container for select options. Wraps `Select.Portal`, `Select.Positioner`, and `Select.Popup` from Base UI.
+
+| Prop                   | Type      | Default    |
+| ---------------------- | --------- | ---------- |
+| `side`                 | `string`  | `"bottom"` |
+| `sideOffset`           | `number`  | `4`        |
+| `align`                | `string`  | `"center"` |
+| `alignOffset`          | `number`  | `0`        |
+| `alignItemWithTrigger` | `boolean` | `false`    |
+
+### SelectItem
+
+Individual select option. Styled wrapper for `Select.Item` from Base UI with built-in indicator.
+
+### SelectGroup
+
+Groups related select items. Alias for `Select.Group` from Base UI.
+
+### SelectLabel
+
+Label for a select group. Styled wrapper for `Select.GroupLabel` from Base UI.
+
+### SelectSeparator
+
+Visual separator between items. Styled wrapper for `Select.Separator` from Base UI.
+
+## Examples
+
+For accessible labelling and validation, prefer using the `Field` component to wrap selects. See the related example: [Select field](/ui/docs/components/field#select-field).
+
+### Disabled
+
+<ComponentPreview name="p-select-4" />
+
+### With Groups
+
+<ComponentPreview name="p-select-5" />

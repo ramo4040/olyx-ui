@@ -11,7 +11,8 @@
   .p-autocomplete,
   .p-collapsible,
   .p-context-menu,
-  .p-input {
+  .p-input,
+  .p-separator {
     [data-slot="preview"] {
       width: 100%;
       max-width: 256px;

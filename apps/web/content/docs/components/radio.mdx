@@ -1,7 +1,95 @@
 ---
-title: Radio
-description: test.
+title: Radio Group
+description: A set of checkable buttons where no more than one can be checked at a time.
 
 links:
-  doc: https://base-ui.com/react/components/radio#api-reference
+  doc: https://base-ui.com/react/components/radio-group#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-radio-group-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/radio
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="radio" title="components/ui/radio.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio"
+```
+
+```tsx
+<RadioGroup defaultValue="next">
+  <Field>
+    <RadioGroupItem value="next" />
+    <FieldLabel>Next.js</FieldLabel> 
+  </Field>
+  <Field>
+    <RadioGroupItem value="vite" />
+    <FieldLabel>Vite</FieldLabel>
+  </Field>
+  <Field>
+    <RadioGroupItem value="astro" />
+    <FieldLabel>Astro</FieldLabel>
+  </Field>
+</RadioGroup>
+```
+
+## API Reference
+
+### RadioGroup
+
+Root component. Styled wrapper for `RadioGroup.Root` from Base UI with flex column layout.
+
+### RadioGroupItem
+
+Individual radio button. Styled wrapper for `Radio.Root` from Base UI with built-in indicator.
+
+## Examples
+
+For accessible labelling and validation, prefer using the `Field` component to wrap radio buttons. See the related example: [Radio Group field](/ui/docs/components/field#radio-group-field).
+
+### Disabled
+
+<ComponentPreview name="p-radio-group-2" />
+
+### With Description
+
+<ComponentPreview name="p-radio-group-3" />

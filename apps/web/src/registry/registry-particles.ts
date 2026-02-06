@@ -2657,6 +2657,552 @@ const data: RegistryItem[] = [
       tags: ["preview-card", "light"],
     },
   },
+  {
+    name: "p-progress-1",
+    description: "Default progress bar",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-progress-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/progress"],
+    meta: {
+      category: category("progress"),
+      classname: "p-input",
+      tags: ["progress", "loading"],
+    },
+  },
+  {
+    name: "p-progress-2",
+    description: "Progress with label and value",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-progress-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/progress"],
+    meta: {
+      category: category("progress"),
+      classname: "p-input",
+      tags: ["progress", "label", "value"],
+    },
+  },
+  {
+    name: "p-progress-3",
+    description: "Progress with formatted value",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-progress-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/progress"],
+    meta: {
+      category: category("progress"),
+      classname: "p-input",
+      tags: ["progress", "format", "value"],
+    },
+  },
+  {
+    name: "p-radio-group-1",
+    description: "Default radio group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-radio-group-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/radio", "@olyx/react/field"],
+    meta: {
+      category: category("radio"),
+      tags: ["radio", "form"],
+    },
+  },
+  {
+    name: "p-radio-group-2",
+    description: "Disabled radio group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-radio-group-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/radio", "@olyx/react/field"],
+    meta: {
+      category: category("radio"),
+      tags: ["radio", "disabled"],
+    },
+  },
+  {
+    name: "p-radio-group-3",
+    description: "Radio group with description",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-radio-group-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/radio", "@olyx/react/field"],
+    meta: {
+      category: category("radio"),
+      tags: ["radio", "description"],
+    },
+  },
+  {
+    name: "p-rating-bar-1",
+    description: "Default number rating bar",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-rating-bar-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/rating-bar"],
+    meta: {
+      category: category("rating-bar"),
+      tags: ["rating", "input"],
+    },
+  },
+  {
+    name: "p-rating-bar-2",
+    description: "Rating bar with star styling",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-rating-bar-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/rating-bar"],
+    meta: {
+      category: category("rating-bar"),
+      tags: ["rating", "star"],
+    },
+  },
+  {
+    name: "p-rating-bar-3",
+    description: "Rating bar with heart styling",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-rating-bar-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/rating-bar"],
+    meta: {
+      category: category("rating-bar"),
+      tags: ["rating", "heart"],
+    },
+  },
+  {
+    name: "p-rating-bar-4",
+    description: "Small size rating bar",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-rating-bar-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/rating-bar"],
+    meta: {
+      category: category("rating-bar"),
+      tags: ["rating", "size", "small"],
+    },
+  },
+  {
+    name: "p-rating-bar-5",
+    description: "Large size rating bar",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-rating-bar-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/rating-bar"],
+    meta: {
+      category: category("rating-bar"),
+      tags: ["rating", "size", "large"],
+    },
+  },
+  {
+    name: "p-rating-review-1",
+    description: "Default star rating review",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-rating-review-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/rating-review"],
+    meta: {
+      category: category("rating-review"),
+      tags: ["rating", "review", "star"],
+    },
+  },
+  {
+    name: "p-rating-review-2",
+    description: "Heart variant rating review",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-rating-review-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/rating-review"],
+    meta: {
+      category: category("rating-review"),
+      tags: ["rating", "review", "heart"],
+    },
+  },
+  {
+    name: "p-scroll-area-1",
+    description: "Default vertical scroll area",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-scroll-area-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/scroll-area"],
+    meta: {
+      category: category("scroll-area"),
+      tags: ["scroll", "overflow"],
+    },
+  },
+  {
+    name: "p-scroll-area-3",
+    description: "Scroll area with both scrollbars",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-scroll-area-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/scroll-area"],
+    meta: {
+      category: category("scroll-area"),
+      tags: ["scroll", "horizontal", "vertical"],
+    },
+  },
+  {
+    name: "p-scroll-area-4",
+    description: "Scroll area with fade effect",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-scroll-area-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/scroll-area"],
+    meta: {
+      category: category("scroll-area"),
+      tags: ["scroll", "fade"],
+    },
+  },
+  {
+    name: "p-select-1",
+    description: "Default select",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-select-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/select"],
+    meta: {
+      category: category("select"),
+      classname: "p-input",
+      tags: ["select", "form"],
+    },
+  },
+  {
+    name: "p-select-4",
+    description: "Disabled select",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-select-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/select"],
+    meta: {
+      category: category("select"),
+      classname: "p-input",
+      tags: ["select", "disabled"],
+    },
+  },
+  {
+    name: "p-select-5",
+    description: "Select with groups",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-select-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/select"],
+    meta: {
+      category: category("select"),
+      classname: "p-input",
+      tags: ["select", "group"],
+    },
+  },
+  {
+    name: "p-separator-1",
+    description: "Default line separator",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-separator-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/separator"],
+    meta: {
+      category: category("separator"),
+      classname: "w-fit",
+      tags: ["separator", "divider"],
+    },
+  },
+  {
+    name: "p-separator-2",
+    description: "Solid text separator",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-separator-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/separator"],
+    meta: {
+      category: category("separator"),
+      classname: "p-separator",
+      tags: ["separator", "text"],
+    },
+  },
+  {
+    name: "p-separator-3",
+    description: "Content separator",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-separator-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/separator"],
+    meta: {
+      category: category("separator"),
+      classname: "p-separator",
+      tags: ["separator", "content"],
+    },
+  },
+  {
+    name: "p-separator-4",
+    description: "Underline separator",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-separator-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/separator"],
+    meta: {
+      category: category("separator"),
+      classname: "p-separator",
+      tags: ["separator", "underline"],
+    },
+  },
+  {
+    name: "p-skeleton-1",
+    description: "Card skeleton layout",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-skeleton-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/skeleton"],
+    meta: {
+      category: category("skeleton"),
+      tags: ["skeleton", "loading"],
+    },
+  },
+  {
+    name: "p-skeleton-2",
+    description: "Skeleton lines",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-skeleton-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/skeleton"],
+    meta: {
+      category: category("skeleton"),
+      tags: ["skeleton", "lines"],
+    },
+  },
+  {
+    name: "p-slider-1",
+    description: "Default slider",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-slider-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/slider"],
+    meta: {
+      category: category("slider"),
+      classname: "p-input",
+      tags: ["slider", "range", "input"],
+    },
+  },
+  {
+    name: "p-slider-2",
+    description: "Range slider",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-slider-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/slider"],
+    meta: {
+      category: category("slider"),
+      classname: "p-input",
+      tags: ["slider", "range"],
+    },
+  },
+  {
+    name: "p-slider-3",
+    description: "Vertical slider",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-slider-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/slider"],
+    meta: {
+      category: category("slider"),
+      tags: ["slider", "vertical"],
+    },
+  },
+  {
+    name: "p-slider-4",
+    description: "Slider with Label and Value",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-slider-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/slider", "@olyx/react/field"],
+    meta: {
+      category: category("slider"),
+      classname: "p-input",
+      tags: ["slider", "label", "value"],
+    },
+  },
+  {
+    name: "p-spinner-1",
+    description: "Default spinner",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-spinner-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/spinner"],
+    meta: {
+      category: category("spinner"),
+      tags: ["spinner", "loading"],
+    },
+  },
+  {
+    name: "p-spinner-2",
+    description: "Spinner sizes",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-spinner-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/spinner"],
+    meta: {
+      category: category("spinner"),
+      tags: ["spinner", "size"],
+    },
+  },
+  {
+    name: "p-spinner-3",
+    description: "Spinner in input group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-spinner-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/spinner",
+      "@olyx/react/input-group",
+      "@olyx/react/input",
+    ],
+    meta: {
+      category: category("spinner"),
+      classname: "p-input",
+      tags: ["spinner", "input", "loading"],
+    },
+  },
+  {
+    name: "p-spinner-4",
+    description: "Loading button with spinner",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-spinner-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/spinner", "@olyx/react/button"],
+    meta: {
+      category: category("spinner"),
+      tags: ["spinner", "button", "loading"],
+    },
+  },
 ];
 
 type RegistryItemWithComponent = RegistryItem & {

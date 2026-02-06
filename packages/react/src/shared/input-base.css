@@ -11,7 +11,7 @@
     padding-inline: var(--inline-padding);
     border: 1px solid var(--color-surface-variant);
     border-radius: var(--radius-md);
-    background-color: var(--color-background);
+    background-color: var(--color-surface);
     box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
     color: var(--color-on-background);
     font: var(--font-body-md);
@@ -44,6 +44,7 @@
     &:has(input:disabled) {
       border-color: transparent;
       background-color: var(--surface-low);
+      color: color-mix(in oklab, currentcolor 50%, transparent);
       box-shadow: none;
     }
 
