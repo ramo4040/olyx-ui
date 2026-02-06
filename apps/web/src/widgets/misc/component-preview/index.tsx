@@ -15,8 +15,9 @@ export const ComponentPreview: FC<Props> = ({
   align = "center",
   ...props
 }) => {
-  const Preview = particles[name].component;
-  const classname = particles[name].meta?.classname;
+  const particle = particles[name];
+  const Preview = particle.component;
+  const classname = particle.meta?.classname;
 
   return (
     <Tabs
@@ -37,11 +38,41 @@ export const ComponentPreview: FC<Props> = ({
       </TabsPanel>
 
       <TabsPanel className="tab-panel" value="code">
-        <ComponentSource
-          collapsible={false}
-          name={name}
-          src={particles[name].files[0].path}
-        />
+        {particle.files.length > 1 ? (
+          <Tabs defaultValue="tsx" className="inner-tabs">
+            <TabsList className="inner-tabs-list">
+              <TabsTab value="tsx" className="tab">
+                particle.tsx
+              </TabsTab>
+              <TabsTab value="css" className="tab">
+                style.css
+              </TabsTab>
+            </TabsList>
+
+            <TabsPanel value="tsx">
+              <ComponentSource
+                collapsible={false}
+                name={name}
+                src={particle.files[0].path}
+              />
+            </TabsPanel>
+
+            <TabsPanel value="css">
+              <ComponentSource
+                collapsible={false}
+                name={name}
+                language="css"
+                src={particle.files[1].path}
+              />
+            </TabsPanel>
+          </Tabs>
+        ) : (
+          <ComponentSource
+            collapsible={false}
+            name={name}
+            src={particle.files[0].path}
+          />
+        )}
       </TabsPanel>
     </Tabs>
   );

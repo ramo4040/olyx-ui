@@ -20,6 +20,7 @@
     background-color: var(--color-surface-container-lowest);
     padding: var(--spacing-4);
     outline: none;
+    min-width: 150px;
 
     transform-origin: var(--transform-origin);
     &[data-starting-style],
@@ -75,6 +76,10 @@
         &:focus-visible {
           background-color: var(--color-surface-container-low);
         }
+      }
+
+      [data-ui="kbd"] {
+        margin-left: auto;
       }
     }
 

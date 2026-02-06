@@ -34,7 +34,7 @@ export const mdxComponents = {
 
     return (
       <h2 {...props} data-ui="docs-h2" id={id}>
-        <LinkButton href={`#${id}`} underline={false} variant="gray">
+        <LinkButton href={`#${id}`} underline={false} variant="black">
           {children}
         </LinkButton>
       </h2>
@@ -52,7 +52,7 @@ export const mdxComponents = {
 
     return (
       <h3 {...props} data-ui="docs-h3" id={id}>
-        <LinkButton href={`#${id}`} underline={false}>
+        <LinkButton href={`#${id}`} underline={false} variant="black">
           {children}
         </LinkButton>
       </h3>
@@ -70,7 +70,9 @@ export const mdxComponents = {
   hr: ({ ...props }: React.ComponentProps<"div">) => (
     <Separator data-ui="docs-separator" {...props} />
   ),
-  a: ({ ...props }: React.ComponentProps<"a">) => <LinkButton {...props} />,
+  a: ({ ...props }: React.ComponentProps<"a">) => (
+    <LinkButton {...props} variant="black" />
+  ),
   code: ({
     __raw__,
     __bun__,

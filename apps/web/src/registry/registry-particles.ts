@@ -2361,6 +2361,7 @@ const data: RegistryItem[] = [
     registryDependencies: ["@olyx/react/number-field"],
     meta: {
       category: category("number-field"),
+      classname: "w-fit",
       tags: ["number-field", "scrub"],
     },
   },
@@ -2410,6 +2411,250 @@ const data: RegistryItem[] = [
     meta: {
       category: category("number-field"),
       tags: ["number-field", "step"],
+    },
+  },
+  {
+    name: "p-navigation-menu-1",
+    description: "Default navigation menu with dropdown panels",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-navigation-menu-1.tsx",
+        type: "registry:block",
+      },
+      {
+        path: "registry/particles/styles/p-navigation-menu-1.css",
+        type: "registry:style",
+      },
+    ],
+    registryDependencies: ["@olyx/react/navigation-menu"],
+    meta: {
+      category: category("navigation-menu"),
+      tags: ["navigation-menu", "navigation"],
+    },
+  },
+  {
+    name: "p-navigation-menu-2",
+    description: "Navigation menu with direct links",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-navigation-menu-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/navigation-menu"],
+    meta: {
+      category: category("navigation-menu"),
+      tags: ["navigation-menu", "links"],
+    },
+  },
+  {
+    name: "p-navigation-menu-3",
+    description: "Vertical navigation menu",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-navigation-menu-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/navigation-menu"],
+    meta: {
+      category: category("navigation-menu"),
+      tags: ["navigation-menu", "vertical"],
+    },
+  },
+  {
+    name: "p-menu-bar-1",
+    description: "Default menubar with File, Edit, View menus",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-menu-bar-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/menu-bar"],
+    meta: {
+      category: category("menu-bar"),
+      classname: "p-menu-bar",
+      tags: ["menu-bar", "menubar"],
+    },
+  },
+  {
+    name: "p-menu-bar-2",
+    description: "Menubar with checkbox items",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-menu-bar-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/menu-bar"],
+    meta: {
+      category: category("menu-bar"),
+      classname: "p-menu-bar",
+      tags: ["menu-bar", "checkbox"],
+    },
+  },
+  {
+    name: "p-menu-bar-3",
+    description: "Menubar with radio group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-menu-bar-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/menu-bar"],
+    meta: {
+      category: category("menu-bar"),
+      classname: "p-menu-bar",
+      tags: ["menu-bar", "radio"],
+    },
+  },
+  {
+    name: "p-menu-bar-4",
+    description: "Menubar with submenu",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-menu-bar-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/menu-bar"],
+    meta: {
+      category: category("menu-bar"),
+      classname: "p-menu-bar",
+      tags: ["menu-bar", "submenu"],
+    },
+  },
+  {
+    name: "p-pagination-1",
+    description: "Default pagination",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-pagination-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/pagination"],
+    meta: {
+      category: category("pagination"),
+      tags: ["pagination", "navigation"],
+    },
+  },
+  {
+    name: "p-pagination-2",
+    description: "Rounded pagination",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-pagination-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/pagination"],
+    meta: {
+      category: category("pagination"),
+      tags: ["pagination", "rounded"],
+    },
+  },
+  {
+    name: "p-popover-1",
+    description: "Default popover with title and description",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-popover-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/popover", "@olyx/react/button"],
+    meta: {
+      category: category("popover"),
+      tags: ["popover", "popup"],
+    },
+  },
+  {
+    name: "p-popover-2",
+    description: "Popover positioned on top",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-popover-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/popover", "@olyx/react/button"],
+    meta: {
+      category: category("popover"),
+      tags: ["popover", "positioning"],
+    },
+  },
+  {
+    name: "p-popover-3",
+    description: "Popover as tooltip",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-popover-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/popover",
+      "@olyx/react/input-group",
+      "@olyx/react/input",
+      "@olyx/react/button",
+    ],
+    meta: {
+      category: category("popover"),
+      classname: "p-input",
+      tags: ["popover", "tooltip"],
+    },
+  },
+  {
+    name: "p-preview-card-1",
+    description: "Default preview card with dark variant",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-preview-card-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/preview-card",
+      "@olyx/react/link-button",
+    ],
+    meta: {
+      category: category("preview-card"),
+      tags: ["preview-card", "hover"],
+    },
+  },
+  {
+    name: "p-preview-card-2",
+    description: "Preview card with light variant",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-preview-card-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/preview-card",
+      "@olyx/react/link-button",
+    ],
+    meta: {
+      category: category("preview-card"),
+      tags: ["preview-card", "light"],
     },
   },
 ];

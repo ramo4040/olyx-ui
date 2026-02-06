@@ -16,12 +16,12 @@
     color: var(--color-on-background);
     font: var(--font-body-md);
     outline: 0;
-    transition: all var(--transition-standard-default-spatial);
+    transition: all var(--transition-expressive-fast-effects);
 
     /* Placeholder */
     &::placeholder {
       color: color-mix(in oklab, currentcolor 50%, transparent);
-      transition: all var(--transition-standard-default-spatial);
+      transition: all var(--transition-expressive-fast-effects);
     }
 
     /* Focuse */

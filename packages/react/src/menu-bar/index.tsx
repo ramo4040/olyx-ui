@@ -15,7 +15,7 @@ import {
   DropdownMenuSubmenu,
   DropdownMenuSubmenuTrigger,
   DropdownMenuTrigger,
-} from "../dropdown-menu";
+} from "@olyx/react/dropdown-menu";
 
 function Menubar({ className, ...props }: MenubarPrimitive.Props) {
   return <MenubarPrimitive data-ui="menubar" {...props} />;
@@ -59,10 +59,9 @@ function MenubarLabel({
 }
 
 function MenubarItem({
-  inset,
   ...props
-}: React.ComponentProps<typeof DropdownMenuItem> & { inset?: boolean }) {
-  return <DropdownMenuItem data-inset={inset} {...props} />;
+}: React.ComponentProps<typeof DropdownMenuItem>) {
+  return <DropdownMenuItem {...props} />;
 }
 
 function MenubarSeparator({

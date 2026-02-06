@@ -38,4 +38,10 @@
       flex-direction: column;
     }
   }
+
+  .p-menu-bar {
+    [data-slot="preview"] {
+      max-width: 300px;
+    }
+  }
 }

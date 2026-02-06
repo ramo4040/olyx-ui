@@ -1,7 +1,158 @@
 ---
 title: Menu Bar
-description: test.
+description: A visually persistent menu common in desktop applications that provides quick access to commands.
 
 links:
-  doc: https://base-ui.com/react/components/menu-bar#api-reference
+  doc: https://base-ui.com/react/components/menubar#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-menu-bar-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/menu-bar
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="menu-bar" title="components/ui/menu-bar.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Menubar,
+  MenubarContent,
+  MenubarGroup,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarTrigger,
+} from "@/components/ui/menu-bar"
+```
+
+```tsx
+<Menubar>
+  <MenubarMenu>
+    <MenubarTrigger>File</MenubarTrigger>
+    <MenubarContent>
+      <MenubarGroup>
+        <MenubarItem>New Tab</MenubarItem>
+        <MenubarItem>New Window</MenubarItem>
+      </MenubarGroup>
+      <MenubarSeparator />
+      <MenubarGroup>
+        <MenubarItem>Share</MenubarItem>
+        <MenubarItem>Print</MenubarItem>
+      </MenubarGroup>
+    </MenubarContent>
+  </MenubarMenu>
+</Menubar>
+```
+
+## API Reference
+
+#### Menubar
+
+Root container. Wraps `Menubar` from Base UI with border and background styling.
+
+#### MenubarMenu
+
+Menu root. Alias for `DropdownMenu`.
+
+#### MenubarTrigger
+
+Trigger button for a menu. Styled wrapper for `DropdownMenuTrigger` with menubar-specific styling.
+
+#### MenubarContent
+
+Popup content for a menu. Alias for `DropdownMenuContent`.
+
+| Prop          | Type                                           | Default    |
+| ------------- | ---------------------------------------------- | ---------- |
+| `side`        | `"top" \| "bottom" \| "left" \| "right"`       | `"top"`    |
+| `align`       | `"start" \| "center" \| "end"`                 | `"start"`  |
+| `sideOffset`  | `number`                                       | `8`        |
+| `alignOffset` | `number`                                       | `0`        |
+
+#### MenubarGroup
+
+Groups related menu items. Alias for `DropdownMenuGroup`.
+
+#### MenubarLabel
+
+Label for a menu group. Alias for `DropdownMenuGroupLabel`.
+
+#### MenubarItem
+
+Individual selectable menu item. Alias for `DropdownMenuItem`.
+
+#### MenubarSeparator
+
+Visual separator between items or groups. Alias for `DropdownMenuSeparator`.
+
+#### MenubarSub
+
+Submenu container. Alias for `DropdownMenuSubmenu`.
+
+#### MenubarSubTrigger
+
+Trigger for opening a submenu. Alias for `DropdownMenuSubmenuTrigger`.
+
+#### MenubarCheckboxItem
+
+Toggleable menu item with a check indicator. Alias for `DropdownMenuCheckboxItem`.
+
+#### MenubarRadioGroup
+
+Container for exclusive radio menu items. Alias for `DropdownMenuRadioGroup`.
+
+#### MenubarRadioItem
+
+Radio menu item with a dot indicator. Alias for `DropdownMenuRadioItem`.
+
+## Examples
+
+### Checkbox
+
+<ComponentPreview name="p-menu-bar-2" />
+
+### Radio
+
+<ComponentPreview name="p-menu-bar-3" />
+
+### Submenu
+
+<ComponentPreview name="p-menu-bar-4" />

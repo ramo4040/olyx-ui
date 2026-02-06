@@ -1,7 +1,124 @@
 ---
 title: Pagination
-description: test.
-
-links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+description: A pagination with page navigation, next and previous links.
 ---
+
+## Preview
+
+<ComponentPreview name="p-pagination-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/pagination
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="pagination" title="components/ui/pagination.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
+```
+
+```tsx
+<Pagination>
+  <PaginationContent>
+    <PaginationItem>
+      <PaginationPrevious href="#" />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#" isActive>1</PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationLink href="#">2</PaginationLink>
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationEllipsis />
+    </PaginationItem>
+    <PaginationItem>
+      <PaginationNext href="#" />
+    </PaginationItem>
+  </PaginationContent>
+</Pagination>
+```
+
+## API Reference
+
+This is a custom component, not a Base UI wrapper.
+
+#### Pagination
+
+Root navigation container with `role="navigation"` and `aria-label="pagination"`.
+
+| Prop      | Type      | Default |
+| --------- | --------- | ------- |
+| `rounded` | `boolean` | `false` |
+
+#### PaginationContent
+
+Unordered list container for pagination items.
+
+#### PaginationItem
+
+Individual list item container.
+
+#### PaginationLink
+
+Link element for page numbers. Renders as a `Button` with `mode="stroke"` and `variant="neutral"`.
+
+| Prop       | Type      | Default |
+| ---------- | --------- | ------- |
+| `isActive` | `boolean` | -       |
+| `asIcon`   | `boolean` | `true`  |
+
+#### PaginationPrevious
+
+Link to the previous page. Includes a chevron left icon. Pass children to add a text label.
+
+#### PaginationNext
+
+Link to the next page. Includes a chevron right icon. Pass children to add a text label.
+
+#### PaginationEllipsis
+
+Ellipsis indicator for skipped pages. Displays "..." with `aria-hidden`.
+
+## Examples
+
+### Rounded
+
+<ComponentPreview name="p-pagination-2" />

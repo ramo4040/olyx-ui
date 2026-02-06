@@ -2,11 +2,7 @@
 
 import { Switch } from "@olyx/react";
 import { useTheme } from "next-themes";
-import {
-  AutocompleteExamples,
-  ComboboxExamples,
-  CommandExample,
-} from "@/components/examples";
+import { NavigationMenuExample } from "@/components/examples/navigation/navigation-menu";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -66,12 +62,10 @@ export default function Home() {
 
         <TableExample />
         <ButtonsExamples />
-        <NavigationMenuExample />
         <ComboboxExamples />
         <AutocompleteExamples />
         */}
-
-        <CommandExample />
+        <NavigationMenuExample />
       </div>
     </div>
   );

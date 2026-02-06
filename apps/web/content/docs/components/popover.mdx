@@ -1,7 +1,116 @@
 ---
 title: Popover
-description: test.
+description: An accessible popup anchored to a trigger button.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/popover#api-reference
 ---
+
+<ComponentPreview name="p-popover-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/popover
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="popover" title="components/ui/popover.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+```
+
+```tsx
+<Popover>
+  <PopoverTrigger>Open Popover</PopoverTrigger>
+  <PopoverContent>
+    <PopoverHeader>
+      <PopoverTitle>Popover Title</PopoverTitle>
+      <PopoverDescription>Popover description text.</PopoverDescription>
+    </PopoverHeader>
+  </PopoverContent>
+</Popover>
+```
+
+## API Reference
+
+#### Popover
+
+Root component. Alias for `Popover.Root` from Base UI.
+
+#### PopoverTrigger
+
+Trigger button that opens the popover. Alias for `Popover.Trigger` from Base UI.
+
+#### PopoverContent
+
+Popup container that displays the popover content. Wraps `Popover.Portal`, `Popover.Positioner`, and `Popover.Popup`.
+
+| Prop          | Type                                           | Default    |
+| ------------- | ---------------------------------------------- | ---------- |
+| `side`        | `"top" \| "bottom" \| "left" \| "right"`       | `"bottom"` |
+| `align`       | `"start" \| "center" \| "end"`                 | `"center"` |
+| `sideOffset`  | `number`                                       | `8`        |
+| `alignOffset` | `number`                                       | `0`        |
+
+#### PopoverHeader
+
+Container for the title and description. Plain `div` with bottom margin.
+
+#### PopoverTitle
+
+Title text for the popover. Styled wrapper for `Popover.Title` from Base UI.
+
+#### PopoverDescription
+
+Description text for the popover. Styled wrapper for `Popover.Description` from Base UI.
+
+## Examples
+
+### With Close Button
+
+<ComponentPreview name="p-popover-2" />
+
+### Tooltip Style
+
+<ComponentPreview name="p-popover-3" />

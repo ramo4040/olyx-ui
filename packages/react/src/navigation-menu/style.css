@@ -5,12 +5,10 @@
 
     &[aria-orientation="horizontal"] {
       flex-direction: row;
-      width: 100%;
     }
 
     &[aria-orientation="vertical"] {
       flex-direction: column;
-      height: 100%;
 
       [data-ui="navigation-menu-list"] {
         flex-direction: column;
@@ -164,7 +162,7 @@
 
   [data-ui="navigation-menu-popup"] {
     border-radius: var(--radius-md);
-    background-color: var(--color-background);
+    background-color: var(--color-surface-container-lowest);
     color: var(--color-on-background);
     transform-origin: var(--transform-origin);
     transition-property: opacity, transform, width, height;
@@ -173,6 +171,11 @@
     width: var(--popup-width);
     height: var(--popup-height);
     border: 1px solid var(--color-surface-variant);
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     &[data-starting-style],
     &[data-ending-style] {

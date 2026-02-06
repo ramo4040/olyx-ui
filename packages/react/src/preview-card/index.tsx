@@ -15,7 +15,7 @@ function PreviewCardContent({
   align,
   alignOffset,
   side,
-  sideOffset,
+  sideOffset = 8,
   variant = "dark",
   ...props
 }: PreviewCardPrimitive.Popup.Props & { variant?: "dark" | "light" } & Pick<

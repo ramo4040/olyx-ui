@@ -29,7 +29,7 @@
     }
 
     /* Rounded Styles */
-    &[data-rounded="true"] [data-slot="pagination-link"] {
+    &[data-rounded="true"] [data-ui="button"] {
       overflow: hidden;
       border-radius: var(--radius-rounded);
     }

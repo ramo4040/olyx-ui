@@ -1,7 +1,129 @@
 ---
 title: Navigation Menu
-description: test. 
+description: A collection of links for navigating websites.
 
 links:
   doc: https://base-ui.com/react/components/navigation-menu#api-reference
 ---
+
+<ComponentPreview name="p-navigation-menu-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/navigation-menu
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="navigation-menu" title="components/ui/navigation-menu.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu"
+```
+
+```tsx
+<NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>
+        Item One
+        <NavigationMenuIndicator />
+      </NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <NavigationMenuLink href="#">Link</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
+```
+
+## API Reference
+
+#### NavigationMenu
+
+Root component. Wraps `NavigationMenu.Root` from Base UI. Automatically includes the positioner and portal.
+
+#### NavigationMenuList
+
+Container for navigation items. Styled wrapper for `NavigationMenu.List` from Base UI.
+
+#### NavigationMenuItem
+
+Individual navigation item container. Styled wrapper for `NavigationMenu.Item` from Base UI.
+
+#### NavigationMenuTrigger
+
+Trigger button that opens the content panel. Styled wrapper for `NavigationMenu.Trigger` from Base UI.
+
+#### NavigationMenuContent
+
+Content panel displayed when a trigger is activated. Styled wrapper for `NavigationMenu.Content` from Base UI with slide animations.
+
+#### NavigationMenuLink
+
+Link element inside navigation content or as a direct navigation item. Styled wrapper for `NavigationMenu.Link` from Base UI.
+
+#### NavigationMenuIndicator
+
+Chevron icon that rotates when the associated trigger is open. Wraps `NavigationMenu.Icon` from Base UI.
+
+#### NavigationMenuPositioner
+
+Internal positioner component. Included automatically by `NavigationMenu`.
+
+| Prop          | Type                                           | Default    |
+| ------------- | ---------------------------------------------- | ---------- |
+| `side`        | `"top" \| "bottom" \| "left" \| "right"`       | `"bottom"` |
+| `sideOffset`  | `number`                                       | `8`        |
+| `align`       | `"start" \| "center" \| "end"`                 | `"start"`  |
+| `alignOffset` | `number`                                       | `0`        |
+
+## Examples
+
+### Direct Links
+
+<ComponentPreview name="p-navigation-menu-2" />
+
+### Vertical
+
+<ComponentPreview name="p-navigation-menu-3" />
