@@ -1,7 +1,92 @@
 ---
 title: Tabs
-description: test.
+description: A component for toggling between related panels on the same page.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/tabs#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-tabs-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/tabs
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="tabs" title="components/ui/tabs.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs"
+```
+
+```tsx
+<Tabs defaultValue="tab-1">
+  <TabsList>
+    <TabsTab value="tab-1">Tab 1</TabsTab>
+    <TabsTab value="tab-2">Tab 2</TabsTab>
+    <TabsTab value="tab-3">Tab 3</TabsTab>
+  </TabsList>
+  <TabsPanel value="tab-1">Tab 1 content</TabsPanel>
+  <TabsPanel value="tab-2">Tab 2 content</TabsPanel>
+  <TabsPanel value="tab-3">Tab 3 content</TabsPanel>
+</Tabs>
+```
+
+## API Reference
+
+### Tabs
+
+Root component. Styled wrapper for `Tabs.Root` from Base UI.
+
+### TabsList
+
+Container for tab triggers. Styled wrapper for `Tabs.List` from Base UI with a built-in `Tabs.Indicator`.
+
+### TabsTab
+
+Individual tab trigger. Styled wrapper for `Tabs.Tab` from Base UI.
+
+### TabsPanel
+
+Content panel for each tab. Styled wrapper for `Tabs.Panel` from Base UI.
+
+## Examples
+
+### Vertical Orientation
+
+<ComponentPreview name="p-tabs-3" />

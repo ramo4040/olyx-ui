@@ -1,7 +1,91 @@
 ---
 title: Status Badge
-description: tesst.
-
-links:
-  doc: https://base-ui.com/react/components/status-badge#api-reference
+description: A small indicator for displaying status, state, or category.
 ---
+
+## Preview
+
+<ComponentPreview name="p-status-badge-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/status-badge
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="status-badge" title="components/ui/status-badge.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { StatusBadge } from "@/components/ui/status-badge"
+```
+
+```tsx
+<StatusBadge status="success">Active</StatusBadge>
+```
+
+## API Reference
+
+### StatusBadge
+
+Renders a styled `<span>` via Base UI's `useRender` hook.
+
+| Prop      | Type                                                         | Default   |
+| --------- | ------------------------------------------------------------ | --------- |
+| `status`  | `"success" \| "warning" \| "failed" \| "disabled" \| "info"` | —         |
+| `variant` | `"light" \| "stroke"`                                        | `"light"` |
+| `doted`   | `boolean`                                                    | `false`   |
+
+## Examples
+
+### Success Status
+
+<ComponentPreview name="p-status-badge-6" />
+
+### Warning Status
+
+<ComponentPreview name="p-status-badge-2" />
+
+### Error Status
+
+<ComponentPreview name="p-status-badge-3" />
+
+### Info Status
+
+<ComponentPreview name="p-status-badge-4" />
+
+### Disabled Status
+
+<ComponentPreview name="p-status-badge-5" />

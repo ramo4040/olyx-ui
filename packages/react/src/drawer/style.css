@@ -39,7 +39,7 @@
   [data-ui="drawer-portal"] {
     --drawer-min-height: 40vh;
     --drawer-max-height: 80vh;
-    --drawer-min-width: 400px;
+    --drawer-min-width: 300px;
     --drawer-max-width: 100vw;
     --padding-block: var(--spacing-14);
 
@@ -56,6 +56,8 @@
       flex-direction: column;
       gap: var(--spacing-8);
       position: fixed;
+      inset-inline: var(--spacing-4);
+      margin-inline: auto;
       z-index: 55;
       padding: var(--padding-block) var(--spacing-24);
       background-color: var(--color-background);
@@ -64,7 +66,6 @@
       /* Default: Bottom */
       &[data-vaul-drawer-direction="bottom"] {
         bottom: var(--spacing-0);
-        left: var(--spacing-0);
         width: 100dvw;
         min-height: var(--drawer-min-height);
         max-height: var(--drawer-max-height);

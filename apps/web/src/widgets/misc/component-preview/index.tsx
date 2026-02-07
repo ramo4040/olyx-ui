@@ -49,7 +49,7 @@ export const ComponentPreview: FC<Props> = ({
               </TabsTab>
             </TabsList>
 
-            <TabsPanel value="tsx">
+            <TabsPanel value="tsx" className="inner-tab-panel">
               <ComponentSource
                 collapsible={false}
                 name={name}
@@ -57,7 +57,7 @@ export const ComponentPreview: FC<Props> = ({
               />
             </TabsPanel>
 
-            <TabsPanel value="css">
+            <TabsPanel value="css" className="inner-tab-panel">
               <ComponentSource
                 collapsible={false}
                 name={name}

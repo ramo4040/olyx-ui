@@ -3203,6 +3203,471 @@ const data: RegistryItem[] = [
       tags: ["spinner", "button", "loading"],
     },
   },
+  // Status Badge
+  {
+    name: "p-status-badge-1",
+    description: "Success status with 4 variations",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-status-badge-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/status-badge"],
+    meta: {
+      category: category("status-badge"),
+      tags: ["status-badge", "success"],
+    },
+  },
+  {
+    name: "p-status-badge-2",
+    description: "Warning status with 4 variations",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-status-badge-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/status-badge"],
+    meta: {
+      category: category("status-badge"),
+      tags: ["status-badge", "warning"],
+    },
+  },
+  {
+    name: "p-status-badge-3",
+    description: "Failed status with 4 variations",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-status-badge-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/status-badge"],
+    meta: {
+      category: category("status-badge"),
+      tags: ["status-badge", "error"],
+    },
+  },
+  {
+    name: "p-status-badge-4",
+    description: "Info status with 4 variations",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-status-badge-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/status-badge"],
+    meta: {
+      category: category("status-badge"),
+      tags: ["status-badge", "info"],
+    },
+  },
+  {
+    name: "p-status-badge-5",
+    description: "Disabled status with 4 variations",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-status-badge-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/status-badge"],
+    meta: {
+      category: category("status-badge"),
+      tags: ["status-badge", "disabled"],
+    },
+  },
+  {
+    name: "p-status-badge-6",
+    description: "Success status with 4 variations",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-status-badge-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/status-badge"],
+    meta: {
+      category: category("status-badge"),
+      tags: ["status-badge", "success"],
+    },
+  },
+  {
+    name: "p-switch-1",
+    description: "Default switch",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-switch-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/switch"],
+    meta: {
+      category: category("switch"),
+      tags: ["switch", "toggle"],
+    },
+  },
+  {
+    name: "p-switch-2",
+    description: "Disabled switch",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-switch-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/switch"],
+    meta: {
+      category: category("switch"),
+      tags: ["switch", "disabled"],
+    },
+  },
+  {
+    name: "p-switch-3",
+    description: "Switch with description",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-switch-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/switch", "@olyx/react/field"],
+    meta: {
+      category: category("switch"),
+      classname: "w-fit",
+      tags: ["switch", "field", "description"],
+    },
+  },
+  {
+    name: "p-switch-4",
+    description: "Card style switches",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-switch-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/switch", "@olyx/react/field"],
+    meta: {
+      category: category("switch"),
+      tags: ["switch", "card"],
+    },
+  },
+  {
+    name: "p-switch-5",
+    description: "Switch form integration",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-switch-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/switch",
+      "@olyx/react/field",
+      "@olyx/react/button",
+    ],
+    meta: {
+      category: category("switch"),
+      tags: ["switch", "form"],
+    },
+  },
+  {
+    name: "p-switch-6",
+    description: "Customizing switch size",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-switch-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/switch"],
+    meta: {
+      category: category("switch"),
+      tags: ["switch", "size"],
+    },
+  },
+  {
+    name: "p-table-1",
+    description: "Team members table",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-table-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/table",
+      "@olyx/react/checkbox",
+      "@olyx/react/avatar",
+      "@olyx/react/tag",
+      "@olyx/react/status-badge",
+      "@olyx/react/button",
+      "@olyx/react/dropdown-menu",
+    ],
+    meta: {
+      category: category("table"),
+      classname: "p-table",
+      tags: ["table", "data"],
+    },
+  },
+  {
+    name: "p-table-2",
+    description: "Project tracker table",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-table-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/table",
+      "@olyx/react/badge",
+      "@olyx/react/status-badge",
+      "@olyx/react/progress",
+      "@olyx/react/button",
+      "@olyx/react/dropdown-menu",
+    ],
+    meta: {
+      category: category("table"),
+      classname: "p-table",
+      tags: ["table", "project", "tracker"],
+    },
+  },
+  {
+    name: "p-tabs-1",
+    description: "Default tabs",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-tabs-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/tabs"],
+    meta: {
+      category: category("tabs"),
+      tags: ["tabs", "navigation"],
+    },
+  },
+  {
+    name: "p-tabs-3",
+    description: "Vertical orientation tabs",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-tabs-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/tabs"],
+    meta: {
+      category: category("tabs"),
+      tags: ["tabs", "vertical"],
+    },
+  },
+  {
+    name: "p-tag-1",
+    description: "Default tags",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-tag-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/tag"],
+    meta: {
+      category: category("tag"),
+      tags: ["tag", "label"],
+    },
+  },
+  {
+    name: "p-tag-2",
+    description: "Lighter variant tags",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-tag-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/tag"],
+    meta: {
+      category: category("tag"),
+      tags: ["tag", "lighter"],
+    },
+  },
+  {
+    name: "p-tag-3",
+    description: "Dismissible tags",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-tag-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/tag"],
+    meta: {
+      category: category("tag"),
+      tags: ["tag", "dismiss"],
+    },
+  },
+  {
+    name: "p-tag-4",
+    description: "Disabled tags",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-tag-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/tag"],
+    meta: {
+      category: category("tag"),
+      tags: ["tag", "disabled"],
+    },
+  },
+  {
+    name: "p-tag-5",
+    description: "Tags with icons",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-tag-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/tag"],
+    meta: {
+      category: category("tag"),
+      tags: ["tag", "icon"],
+    },
+  },
+  {
+    name: "p-textarea-1",
+    description: "Default textarea",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-textarea-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/textarea"],
+    meta: {
+      category: category("textarea"),
+      classname: "p-input",
+      tags: ["textarea", "form"],
+    },
+  },
+  {
+    name: "p-textarea-2",
+    description: "Small textarea",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-textarea-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/textarea"],
+    meta: {
+      category: category("textarea"),
+      classname: "p-input",
+      tags: ["textarea", "small"],
+    },
+  },
+  {
+    name: "p-textarea-3",
+    description: "Large textarea",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-textarea-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/textarea"],
+    meta: {
+      category: category("textarea"),
+      classname: "p-input",
+      tags: ["textarea", "large"],
+    },
+  },
+  {
+    name: "p-textarea-4",
+    description: "Disabled textarea",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-textarea-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/textarea"],
+    meta: {
+      category: category("textarea"),
+      classname: "p-input",
+      tags: ["textarea", "disabled"],
+    },
+  },
+  {
+    name: "p-textarea-5",
+    description: "Textarea with label",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-textarea-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/textarea", "@olyx/react/field"],
+    meta: {
+      category: category("textarea"),
+      classname: "p-input",
+      tags: ["textarea", "label"],
+    },
+  },
+  {
+    name: "p-textarea-6",
+    description: "Textarea form integration",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-textarea-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/textarea",
+      "@olyx/react/field",
+      "@olyx/react/button",
+    ],
+    meta: {
+      category: category("textarea"),
+      classname: "p-input",
+      tags: ["textarea", "form"],
+    },
+  },
 ];
 
 type RegistryItemWithComponent = RegistryItem & {

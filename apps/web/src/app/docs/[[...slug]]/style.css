@@ -196,7 +196,7 @@
       }
 
       [data-ui="tabs"] {
-        [data-ui="tabs-list"] {
+        [data-ui="tabs-list"]:not([data-slot="preview"] *) {
           background: none;
 
           [data-ui="tabs-indicator"] {

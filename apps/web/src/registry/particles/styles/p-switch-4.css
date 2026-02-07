@@ -1,0 +1,18 @@
+@layer misc {
+  .switch-field-4 {
+    border: 1px solid var(--color-surface-variant);
+    padding: var(--spacing-10);
+    border-radius: var(--radius-md);
+    width: fit-content;
+    gap: var(--spacing-16);
+    transition: var(--transition-expressive-default-effects);
+
+    &:hover {
+      background: var(--color-surface);
+    }
+
+    &[data-checked="true"] {
+      border-color: var(--color-primary);
+    }
+  }
+}

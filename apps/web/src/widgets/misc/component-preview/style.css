@@ -2,7 +2,8 @@
   [data-ui-docs="component-preview"] {
     margin-top: var(--spacing-24);
 
-    [data-ui="tabs-panel"] {
+    > [data-ui="tabs-panel"],
+    .inner-tab-panel {
       width: 100%;
       max-height: 450px;
       height: 450px;

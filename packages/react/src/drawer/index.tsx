@@ -1,10 +1,10 @@
 "use client";
 
-import { HugeiconsIcon } from "@hugeicons/react";
-import { Button } from "../button";
-import { Separator } from "../separator";
 import "./style.css";
 import { Cancel01Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Button } from "@olyx/react/button";
+import { Separator } from "@olyx/react/separator";
 import { Drawer as DrawerPrimitive } from "vaul-base";
 
 function Drawer({

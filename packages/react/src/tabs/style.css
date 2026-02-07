@@ -65,6 +65,12 @@
         top: var(--active-tab-top);
         width: var(--active-tab-width);
         height: var(--active-tab-height);
+
+        &[data-orientation="vertical"] {
+          left: 50%;
+          transform: translateX(-50%);
+          width: calc(100% - var(--spacing-4) * 2);
+        }
       }
     }
   }
