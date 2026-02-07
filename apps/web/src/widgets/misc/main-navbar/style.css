@@ -51,6 +51,60 @@
           padding-inline: var(--spacing-6);
         }
       }
+
+      .current-color {
+        width: var(--spacing-16);
+        height: var(--spacing-16);
+        border-radius: var(--radius-xs);
+        background-color: var(--color-primary);
+        margin-right: var(--spacing-4);
+      }
+    }
+  }
+}
+
+.color-picker-drawer {
+  width: 300px;
+  background: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-surface-variant);
+  justify-content: space-between;
+
+  > button {
+    width: 100%;
+  }
+
+  .colors {
+    display: flex;
+    gap: var(--spacing-12);
+
+    .color {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      aspect-ratio: 1;
+
+      p {
+        font: var(--font-body-md);
+        color: var(--color-on-surface-variant);
+        text-align: center;
+      }
+
+      > div {
+        height: 100%;
+        border-radius: var(--radius-lg);
+      }
+    }
+
+    .primary {
+      background-color: var(--color-primary);
+    }
+
+    .secondary {
+      background-color: var(--color-secondary);
+    }
+
+    .tertiary {
+      background-color: var(--color-tertiary);
     }
   }
 }

@@ -46,5 +46,6 @@ export * from "./src/tag";
 export * from "./src/textarea";
 export * from "./src/toast";
 export * from "./src/toggle";
+export * from "./src/toggle-group";
 export * from "./src/toolbar";
 export * from "./src/tooltip";

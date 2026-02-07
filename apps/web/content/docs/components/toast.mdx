@@ -1,7 +1,194 @@
 ---
 title: Toast
-description: test.
+description: A temporary notification that appears on screen to inform users.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/toast#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-toast-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/toast
+```
+
+Add the `StackedToastProvider` and `AnchoredToastProvider` to your app.
+
+```tsx title="app/layout.tsx"
+// [!code word:import { AnchoredToastProvider, StackedToastProvider } from "@/components/ui/toast"]
+// [!code word:<StackedToastProvider>]
+// [!code word:<AnchoredToastProvider>]
+// [!code word:</AnchoredToastProvider>]
+// [!code word:</StackedToastProvider>]
+import { AnchoredToastProvider, StackedToastProvider } from "@/components/ui/toast"
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head />
+      <body>
+        <StackedToastProvider>
+          <AnchoredToastProvider>
+            <main>{children}</main>
+          </AnchoredToastProvider>
+        </StackedToastProvider>
+      </body>
+    </html>
+  )
+}
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="toast" title="components/ui/toast.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+<Step>Add the `StackedToastProvider` and `AnchoredToastProvider` to your app.</Step>
+
+```tsx title="app/layout.tsx"
+// [!code word:import { AnchoredToastProvider, StackedToastProvider } from "@/components/ui/toast"]
+// [!code word:<StackedToastProvider>]
+// [!code word:<AnchoredToastProvider>]
+// [!code word:</AnchoredToastProvider>]
+// [!code word:</StackedToastProvider>]
+import { AnchoredToastProvider, StackedToastProvider } from "@/components/ui/toast"
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head />
+      <body>
+        <StackedToastProvider>
+          <AnchoredToastProvider>
+            <main>{children}</main>
+          </AnchoredToastProvider>
+        </StackedToastProvider>
+      </body>
+    </html>
+  )
+}
+```
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+### Stacked Toasts
+
+```tsx
+import { stackedToast } from "@/components/ui/toast"
+```
+
+```tsx
+stackedToast.default({
+  title: "Event has been created",
+  description: "Monday, January 3rd at 6:00pm",
+})
+```
+
+By default, toasts appear in the **bottom-right** corner. You can change this by setting the `position` prop on the `StackedToastProvider`.
+
+Allowed values: `top-left`, `top-center`, `top-right`, `bottom-left`, `bottom-center`, `bottom-right`.
+
+```tsx
+<StackedToastProvider position="top-center">{children}</StackedToastProvider>
+```
+
+### Anchored Toasts
+
+For toasts positioned relative to a specific element, use `anchoredToast`. The `AnchoredToastProvider` is typically added to your app layout alongside `StackedToastProvider`.
+
+```tsx
+import { anchoredToast } from "@/components/ui/toast"
+```
+
+```tsx
+anchoredToast.success({
+  title: "Copied!",
+  positionerProps: {
+    anchor: buttonRef.current,
+  },
+})
+```
+
+## API Reference
+
+### StackedToastProvider
+
+Provider component for stacked toasts. Wraps `Toast.Provider` from Base UI.
+
+| Prop       | Type                                                                                               | Default          |
+| ---------- | -------------------------------------------------------------------------------------------------- | ---------------- |
+| `position` | `"top-left" \| "top-center" \| "top-right" \| "bottom-left" \| "bottom-center" \| "bottom-right"` | `"bottom-right"` |
+
+### AnchoredToastProvider
+
+Provider component for toasts anchored to specific elements. Use with `anchoredToast`.
+
+### stackedToast
+
+Manager object for creating stacked toasts.
+
+| Method      | Description                  |
+| ----------- | ---------------------------- |
+| `default()` | Show a default toast         |
+| `success()` | Show a success toast         |
+| `error()`   | Show an error toast          |
+| `info()`    | Show an info toast           |
+| `warning()` | Show a warning toast         |
+| `loading()` | Show a loading toast         |
+| `update()`  | Update an existing toast     |
+| `remove()`  | Remove a toast               |
+| `promise()` | Show a toast from a promise  |
+
+### anchoredToast
+
+Manager object for creating anchored toasts. Same API as `stackedToast`, with `positionerProps.anchor` to attach to an element.
+
+## Examples
+
+### With Status
+
+<ComponentPreview name="p-toast-2" />
+
+### Loading
+
+<ComponentPreview name="p-toast-3" />
+
+### With Action
+
+<ComponentPreview name="p-toast-4" />
+
+### Anchored
+
+<ComponentPreview name="p-toast-5" />

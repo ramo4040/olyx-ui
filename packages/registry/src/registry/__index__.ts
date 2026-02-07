@@ -294,7 +294,7 @@ export const Index: Record<string, any> = {
         target: "",
       },
       {
-        path: "@olyx/react/tag/style.",
+        path: "@olyx/react/tag/style.css",
         type: "registry:style",
         target: "",
       },

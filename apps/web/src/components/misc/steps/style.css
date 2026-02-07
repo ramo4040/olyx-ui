@@ -1,6 +1,5 @@
 @layer components {
   [data-ui="docs-steps"] {
-    margin-bottom: 48px;
     counter-reset: step;
 
     h3 {

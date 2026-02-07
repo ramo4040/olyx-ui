@@ -1,7 +1,15 @@
 "use client";
 
 import "./style.css";
+import { ColorPickerIcon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import {
+  Button,
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
@@ -51,6 +59,42 @@ export const MainNavbar = () => {
               <NavigationMenuLink href="#">
                 <GitHubIcon />
               </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <Separator orientation="vertical" />
+
+            <NavigationMenuItem>
+              <Drawer modal={false}>
+                <DrawerTrigger
+                  render={
+                    <Button mode="ghost" variant="neutral">
+                      <div className="current-color" />
+                      <HugeiconsIcon icon={ColorPickerIcon} />
+                    </Button>
+                  }
+                />
+                <DrawerContent className="color-picker-drawer">
+                  <DrawerHeader>
+                    <DrawerTitle>Pick Color</DrawerTitle>
+                  </DrawerHeader>
+                  <div className="colors">
+                    <div className="color">
+                      <p>Primary</p>
+                      <div className="primary" />
+                    </div>
+                    <div className="color">
+                      <p>Secondary</p>
+                      <div className="secondary" />
+                    </div>
+                    <div className="color">
+                      <p>Tertiary</p>
+                      <div className="tertiary" />
+                    </div>
+                  </div>
+
+                  <Button>Save</Button>
+                </DrawerContent>
+              </Drawer>
             </NavigationMenuItem>
 
             <Separator orientation="vertical" />

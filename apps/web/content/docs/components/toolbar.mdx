@@ -1,7 +1,106 @@
 ---
 title: Toolbar
-description: test.
+description: A container for grouping a set of buttons and controls.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/toolbar#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-toolbar-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/toolbar
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="toolbar" title="components/ui/toolbar.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import {
+  Toolbar,
+  ToolbarButton,
+  ToolbarGroup,
+  ToolbarSeparator,
+} from "@/components/ui/toolbar"
+import { Toggle } from "@/components/ui/toggle"
+import { Button } from "@/components/ui/button"
+```
+
+```tsx
+<Toolbar>
+  <ToolbarGroup>
+    <ToolbarButton render={<Toggle size="sm" variant="ghost" />}>
+      Bold
+    </ToolbarButton>
+    <ToolbarButton render={<Toggle size="sm" variant="ghost" />}>
+      Italic
+    </ToolbarButton>
+  </ToolbarGroup>
+  <ToolbarSeparator />
+  <ToolbarButton render={<Button size="sm" />}>Save</ToolbarButton>
+</Toolbar>
+```
+
+## API Reference
+
+### Toolbar
+
+Root component. Styled wrapper for `Toolbar.Root` from Base UI.
+
+### ToolbarGroup
+
+Groups related toolbar items. Styled wrapper for `Toolbar.Group` from Base UI.
+
+### ToolbarButton
+
+Button within the toolbar. Alias for `Toolbar.Button` from Base UI. Use with `render` prop to render as Toggle or Button.
+
+### ToolbarSeparator
+
+Visual separator between toolbar items. Renders a vertical `Separator`.
+
+### ToolbarLink
+
+Link within the toolbar. Alias for `Toolbar.Link` from Base UI.
+
+### ToolbarInput
+
+Input within the toolbar. Alias for `Toolbar.Input` from Base UI.
+
+All props from [Base UI Toolbar](https://base-ui.com/react/components/toolbar#api-reference) are also supported.
