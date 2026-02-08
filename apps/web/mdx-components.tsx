@@ -14,7 +14,6 @@ import {
 import { CodeTabs, CopyButton, Step, Steps } from "@/components/misc";
 import {
   CodeCommandTabs,
-  ColorTable,
   ComponentPreview,
   ComponentSource,
 } from "@/widgets/misc";
@@ -141,5 +140,4 @@ export const mdxComponents = {
   ComponentSource,
   Steps,
   Step,
-  ColorTable,
 };
