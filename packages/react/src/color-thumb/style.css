@@ -1,0 +1,19 @@
+.react-aria-ColorThumb {
+  border: 2px solid var(--color-background);
+  box-shadow:
+    0 0 0 1px var(--color-on-background),
+    inset 0 0 0 1px var(--color-on-background);
+  width: var(--spacing-16);
+  height: var(--spacing-16);
+  border-radius: 50%;
+
+  &[data-focus-visible] {
+    width: var(--spacing-24);
+    height: var(--spacing-24);
+  }
+
+  &[data-disabled] {
+    background: gray !important;
+    opacity: 0.5;
+  }
+}

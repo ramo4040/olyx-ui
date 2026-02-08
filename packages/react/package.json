@@ -25,5 +25,8 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@olyx/config": "workspace:*"
+  },
+  "dependencies": {
+    "react-aria-components": "^1.15.1"
   }
 }

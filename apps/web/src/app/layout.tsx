@@ -14,8 +14,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "fluentx",
-  description: "fluentx",
+  title: "olyx ui",
+  description: "olyx ui",
 };
 
 export default function RootLayout({
