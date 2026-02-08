@@ -281,8 +281,20 @@
         width: var(--spacing-64);
         border-radius: var(--spacing-4);
       }
-    }
 
+      .spacing-box-example {
+        height: var(--spacing-16);
+        background-color: var(--color-primary);
+        display: inline-block;
+        border-radius: var(--spacing-2);
+      }
+
+      .border-radius-box-example {
+        width: 100px;
+        height: 100px;
+        background-color: var(--color-primary-container);
+      }
+    }
     /* Shiki dual theme: CSS variables approach */
 
     [data-line] span {

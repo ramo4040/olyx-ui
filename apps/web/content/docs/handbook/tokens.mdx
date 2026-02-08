@@ -1,10 +1,98 @@
 ---
 title: Tokens
-description: desc
+description: Spacing, radius, and shadows tokens that power every Olyx component.
 ---
 
-## Introduction
+Olyx ships a flat set of **CSS custom properties** — no Tailwind, no utility classes, no preprocessor. Every component references these tokens directly, so overriding one variable propagates everywhere.
 
-<div style={{backgroundColor:"red"}}>
-    Tokens are the building blocks of design systems. They are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes. These attributes can be anything from color values to typography styles, spacing values, and more. By using tokens, designers and developers can ensure consistency across a product or brand, as they can reference these tokens instead of hardcoding values directly into their designs or code.  
-</div>
+---
+
+## Spacing
+
+A linear pixel scale. Names match values — `--spacing-8` is `8px`.
+
+| Token | Value | Preview |
+|-------|-------|---------|
+| `--spacing-0` | `0` | <div style={{width: 0}} className='spacing-box-example' /> |
+| `--spacing-2` | `2px` | <div style={{width: '2px'}} className='spacing-box-example' /> |
+| `--spacing-4` | `4px` | <div style={{width: '4px'}} className='spacing-box-example' /> |
+| `--spacing-6` | `6px` | <div style={{width: '6px'}} className='spacing-box-example' /> |
+| `--spacing-8` | `8px` | <div style={{width: '8px'}} className='spacing-box-example' /> |
+| `--spacing-10` | `10px` | <div style={{width: '10px'}} className='spacing-box-example' /> |
+| `--spacing-12` | `12px` | <div style={{width: '12px'}} className='spacing-box-example' /> |
+| `--spacing-14` | `14px` | <div style={{width: '14px'}} className='spacing-box-example' /> |
+| `--spacing-16` | `16px` | <div style={{width: '16px'}} className='spacing-box-example' /> |
+| `--spacing-24` | `24px` | <div style={{width: '24px'}} className='spacing-box-example' /> |
+| `--spacing-32` | `32px` | <div style={{width: '32px'}} className='spacing-box-example' /> |
+| `--spacing-48` | `48px` | <div style={{width: '48px'}} className='spacing-box-example' /> |
+| `--spacing-64` | `64px` | <div style={{width: '64px'}} className='spacing-box-example' /> |
+
+---
+
+## Border Radius
+
+Semantic names from sharp corners to full circles. The `-inc` variants ("increment") sit between main stops for tighter control.
+
+| Token | Value | Preview |
+|-------|-------|---------|
+| `--radius-none` | `0px` | <div style={{ borderRadius: '0px'}} className='border-radius-box-example' /> |
+| `--radius-xs` | `4px` | <div style={{ borderRadius: '4px'}} className='border-radius-box-example' /> |
+| `--radius-sm` | `8px` | <div style={{ borderRadius: '8px'}} className='border-radius-box-example' /> |
+| `--radius-md` | `12px` | <div style={{ borderRadius: '12px'}} className='border-radius-box-example' /> |
+| `--radius-lg` | `16px` | <div style={{ borderRadius: '16px'}} className='border-radius-box-example' /> |
+| `--radius-lg-inc` | `20px` | <div style={{ borderRadius: '20px'}} className='border-radius-box-example' /> |
+| `--radius-xl` | `28px` | <div style={{ borderRadius: '28px'}} className='border-radius-box-example' /> |
+| `--radius-xl-inc` | `32px` | <div style={{ borderRadius: '32px'}} className='border-radius-box-example' /> |
+| `--radius-xxl` | `48px` | <div style={{ borderRadius: '48px'}} className='border-radius-box-example' /> |
+| `--radius-rounded` | `999px` | <div style={{ borderRadius: '999px'}} className='border-radius-box-example' /> |
+| `--radius-circled` | `50%` | <div style={{ borderRadius: '50%'}} className='border-radius-box-example' /> |
+
+---
+
+## Shadows
+
+Five elevation levels. Each shadow uses a two-layer approach — a tight key shadow and a wider ambient shadow — for realistic depth.
+
+| Token | Value | Preview |
+|-------|-------|---------|
+| `--shadow-1` | `0px 1px 2px rgb(0 0 0 / 30%), 0px 1px 3px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 1px 2px rgb(0 0 0 / 30%), 0px 1px 3px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+| `--shadow-2` | `0px 1px 2px rgb(0 0 0 / 30%), 0px 2px 6px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 1px 2px rgb(0 0 0 / 30%), 0px 2px 6px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+| `--shadow-3` | `0px 1px 3px rgb(0 0 0 / 30%), 0px 4px 8px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 1px 3px rgb(0 0 0 / 30%), 0px 4px 8px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+| `--shadow-4` | `0px 2px 3px rgb(0 0 0 / 30%), 0px 6px 10px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 2px 3px rgb(0 0 0 / 30%), 0px 6px 10px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+| `--shadow-5` | `0px 4px 4px rgb(0 0 0 / 30%), 0px 8px 12px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 4px 4px rgb(0 0 0 / 30%), 0px 8px 12px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+
+---
+
+## Customizing Tokens
+
+Override any token in your global CSS:
+
+```css
+:root {
+  --spacing-8: 0.5rem;      /* switch to rem */
+  --radius-md: 8px;          /* tighter corners */
+  --shadow-3: 0 4px 12px rgb(0 0 0 / 10%);  /* softer shadows */
+}
+```
+
+For component-scoped overrides:
+
+```css
+[data-ui="card"] {
+  --radius-md: 20px;  /* only affects cards */
+}
+```
+
+## Source 
+
+<ComponentSource src="assets/styles/_base/tokens.css" language="css" title="styles/_base/tokens.css" />
+
+
+---
+
+## Further Reading
+
+- [Colors](/docs/handbook/colors) — The full HCT-based color token system
+- [Typography](/docs/handbook/typography) — Font tokens and type scale
+- [Styling](/docs/handbook/styling) — How components consume these tokens
+- [M3 Design Tokens](https://m3.material.io/foundations/design-tokens/overview) — The design system that inspired this approach

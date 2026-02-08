@@ -1,7 +1,159 @@
 ---
 title: Typography
-description: desc
+description: Type scale, font tokens, and text styling in Olyx.
 ---
 
-## Introduction
+Olyx uses a type scale defined entirely in CSS custom properties. One font family variable, fifteen shorthand tokens, zero runtime overhead.
 
+## Font Family
+
+Olyx uses [DM Sans](https://fonts.google.com/specimen/DM+Sans) — a geometric sans-serif with clean proportions at small sizes and comfortable reading at body sizes.
+
+```css
+--font-family: var(--font-dm-sans), sans-serif;
+```
+
+Loaded via `next/font/google` with weights `400`, `500`, and `700`:
+
+```tsx
+import { DM_Sans } from "next/font/google";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-dm-sans",
+  preload: true,
+});
+```
+
+The `--font-dm-sans` CSS variable is set on `<html>` and consumed by `--font-family`.
+
+---
+
+## Type Scale
+
+Each token is a CSS `font` shorthand: `{weight} {size} / {line-height} {family}`. Apply it with a single property.
+
+### Display
+
+Large, attention-grabbing text. Hero sections, landing pages, marketing headlines.
+
+| Preview | Token | Weight | Size | Line Height |
+|---------|-------|--------|------|-------------|
+| <div style={{font: 'var(--font-display-lg)', color: 'var(--color-on-surface)'}}>Display Large</div> | `--font-display-lg` | 400 | 57px | 64px |
+| <div style={{font: 'var(--font-display-md)', color: 'var(--color-on-surface)'}}>Display Medium</div> | `--font-display-md` | 400 | 45px | 52px |
+| <div style={{font: 'var(--font-display-sm)', color: 'var(--color-on-surface)'}}>Display Small</div> | `--font-display-sm` | 400 | 36px | 44px |
+
+### Headline
+
+Section headings, page titles, dialog headers.
+
+| Preview | Token | Weight | Size | Line Height |
+|---------|-------|--------|------|-------------|
+| <div style={{font: 'var(--font-headline-lg)', color: 'var(--color-on-surface)'}}>Headline Large</div> | `--font-headline-lg` | 400 | 32px | 40px |
+| <div style={{font: 'var(--font-headline-md)', color: 'var(--color-on-surface)'}}>Headline Medium</div> | `--font-headline-md` | 400 | 28px | 36px |
+| <div style={{font: 'var(--font-headline-sm)', color: 'var(--color-on-surface)'}}>Headline Small</div> | `--font-headline-sm` | 400 | 24px | 32px |
+
+### Title
+
+Card titles, list headers, navigation items, component labels.
+
+| Preview | Token | Weight | Size | Line Height |
+|---------|-------|--------|------|-------------|
+| <div style={{font: 'var(--font-title-lg)', color: 'var(--color-on-surface)'}}>Title Large</div> | `--font-title-lg` | 400 | 22px | 28px |
+| <div style={{font: 'var(--font-title-md)', color: 'var(--color-on-surface)'}}>Title Medium</div> | `--font-title-md` | 500 | 16px | 24px |
+| <div style={{font: 'var(--font-title-sm)', color: 'var(--color-on-surface)'}}>Title Small</div> | `--font-title-sm` | 500 | 14px | 20px |
+
+### Body
+
+Paragraph text, descriptions, form content. This is where users spend most of their reading time.
+
+| Preview | Token | Weight | Size | Line Height |
+|---------|-------|--------|------|-------------|
+| <div style={{font: 'var(--font-body-lg)', color: 'var(--color-on-surface)'}}>Body Large — longer form content with comfortable reading line height.</div> | `--font-body-lg` | 400 | 16px | 24px |
+| <div style={{font: 'var(--font-body-md)', color: 'var(--color-on-surface)'}}>Body Medium — the default text style across Olyx components.</div> | `--font-body-md` | 400 | 14px | 20px |
+| <div style={{font: 'var(--font-body-sm)', color: 'var(--color-on-surface)'}}>Body Small — compact text, captions, and secondary information.</div> | `--font-body-sm` | 400 | 12px | 16px |
+
+### Label
+
+Buttons, chips, tabs, badges, form labels — concise text in interactive elements.
+
+| Preview | Token | Weight | Size | Line Height |
+|---------|-------|--------|------|-------------|
+| <div style={{font: 'var(--font-label-lg)', color: 'var(--color-on-surface)'}}>Label Large</div> | `--font-label-lg` | 400 | 14px | 20px |
+| <div style={{font: 'var(--font-label-md)', color: 'var(--color-on-surface)'}}>Label Medium</div> | `--font-label-md` | 400 | 12px | 16px |
+| <div style={{font: 'var(--font-label-sm)', color: 'var(--color-on-surface)'}}>Label Small</div> | `--font-label-sm` | 500 | 11px | 16px |
+
+---
+
+## Hierarchy at a Glance
+
+The full scale, ordered by size:
+
+| Token | Size | Weight | Role |
+|-------|------|--------|------|
+| `--font-display-lg` | 57px | 400 | Hero text |
+| `--font-display-md` | 45px | 400 | Large headlines |
+| `--font-display-sm` | 36px | 400 | Section heroes |
+| `--font-headline-lg` | 32px | 400 | Page titles |
+| `--font-headline-md` | 28px | 400 | Section headings |
+| `--font-headline-sm` | 24px | 400 | Subsection headings |
+| `--font-title-lg` | 22px | 400 | Card titles |
+| `--font-title-md` | 16px | 500 | List headers, nav items |
+| `--font-body-lg` | 16px | 400 | Long-form content |
+| `--font-title-sm` | 14px | 500 | Small titles |
+| `--font-label-lg` | 14px | 400 | Button text |
+| `--font-body-md` | 14px | 400 | Default body text |
+| `--font-body-sm` | 12px | 400 | Captions |
+| `--font-label-md` | 12px | 400 | Chip text, form hints |
+| `--font-label-sm` | 11px | 500 | Badges, micro-labels |
+
+---
+
+## Customizing
+
+### Swap the Font Family
+
+Replace `--font-family` to change the typeface globally:
+
+```css
+:root {
+  --font-family: "Inter", system-ui, sans-serif;
+}
+```
+
+If using `next/font`, define a new CSS variable and point `--font-family` to it:
+
+```tsx
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+```
+
+```css
+:root {
+  --font-family: var(--font-inter), sans-serif;
+}
+```
+
+---
+
+## Accessibility
+
+- **Minimum body size**: `--font-body-md` is `14px` — meets WCAG minimum. Prefer `--font-body-lg` (`16px`) for primary content.
+- **Line height**: All tokens have line heights ≥ 1.33× the font size. Body tokens hit 1.43× for comfortable reading.
+- **200% zoom**: The scale holds at 200% browser zoom without overlap or truncation.
+- **Font weight**: Avoid using weights below 400 for text smaller than 16px.
+
+---
+
+## Further Reading
+
+- [Tokens](/docs/handbook/tokens) — Spacing, radius, shadow, and motion tokens
+- [Colors](/docs/handbook/colors) — The HCT-based color system
+- [Styling](/docs/handbook/styling) — How components consume these tokens
+- [M3 Typography](https://m3.material.io/styles/typography/overview) — The type system that inspired this scale
