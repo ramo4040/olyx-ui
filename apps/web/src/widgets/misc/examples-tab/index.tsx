@@ -1,14 +1,8 @@
 "use client";
 
 import "./style.css";
-import {
-  Tabs,
-  TabsList,
-  TabsPanel,
-  TabsTab,
-  Toggle,
-  ToggleGroup,
-} from "@olyx/react";
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@olyx/react/tabs";
+import { ToggleGroup, ToggleGroupItem } from "@olyx/react/toggle-group";
 import { useState } from "react";
 import {
   Authentication,
@@ -42,15 +36,15 @@ export const ExamplesTab = () => {
               setExamplesColor(v.length ? v : [examplesColor[0]])
             }
           >
-            <Toggle className="toggle-item" value="primary">
+            <ToggleGroupItem className="toggle-item" value="primary">
               <span className="color primary" /> Primary
-            </Toggle>
-            <Toggle className="toggle-item" value="secondary">
+            </ToggleGroupItem>
+            <ToggleGroupItem className="toggle-item" value="secondary">
               <span className="color secondary" /> Secondary
-            </Toggle>
-            <Toggle className="toggle-item" value="tertiary">
+            </ToggleGroupItem>
+            <ToggleGroupItem className="toggle-item" value="tertiary">
               <span className="color tertiary" /> Tertiary
-            </Toggle>
+            </ToggleGroupItem>
           </ToggleGroup>
         </div>
 

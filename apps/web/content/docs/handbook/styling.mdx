@@ -1,0 +1,344 @@
+---
+title: Styling
+description: Learn how to style Olyx components using CSS and data attributes — zero Tailwind, zero class collisions, full control.
+---
+
+## Philosophy
+
+Olyx components are styled with **plain CSS** and **data attributes**. No Tailwind. No utility classes baked in. No `className` overrides wrestling with library internals.
+
+Every component exposes its styling surface through `data-*` attributes — `data-ui`, `data-variant`, `data-mode`, `data-size`, and more. You target them with CSS selectors. You win every time.
+
+**Why this matters:**
+
+- **No specificity wars** — Your styles don't compete with the library's classes.
+- **No `!important` hacks** — Layers handle cascade order. You write normal CSS.
+- **No class collisions** — Data attributes are namespaced by design. `data-ui="button"` will never collide with your app's `.button` class.
+- **Framework agnostic styling** — Works with CSS Modules, vanilla CSS, PostCSS, or any tool that outputs CSS. No preprocessor lock-in.
+
+---
+
+## How It Works
+
+Every Olyx component renders with a `data-ui` attribute that identifies it, plus additional `data-*` attributes for its current state:
+
+```tsx
+<Button variant="primary" mode="filled" size="lg">
+  Save
+</Button>
+```
+
+Renders as:
+
+```html
+<button
+  data-ui="button"
+  data-variant="primary"
+  data-mode="filled"
+  data-size="lg"
+>
+  Save
+</button>
+```
+
+We style it by targeting these attributes:
+
+```css
+[data-ui="button"] {
+  /* base styles for all buttons */
+}
+
+[data-ui="button"][data-variant="primary"] {
+  /* primary variant */
+}
+
+[data-ui="button"][data-mode="ghost"] {
+  /* ghost mode */
+}
+
+[data-ui="button"][data-size="sm"] {
+  /* small size */
+}
+```
+
+---
+
+## Data Attributes vs CSS Classes
+
+Here's a concrete comparison to show why data attributes are a better styling API for component libraries.
+
+### The CSS Class Approach (Other Libraries)
+
+```tsx
+{/* The library ships this: */}
+<button class="btn btn-primary btn-filled btn-lg">Save</button>
+```
+
+```css
+/* You want to customize it: */
+.btn-primary {
+  background: hotpink; /* ❌ might not apply — library's .btn-primary might be more specific */
+}
+
+/* So you escalate: */
+.btn.btn-primary {
+  background: hotpink; /* ❌ still loses to .btn.btn-primary.btn-filled */
+}
+
+/* Nuclear option: */
+.btn-primary {
+  background: hotpink !important; /* 💀 works, but now nothing can override you either */
+}
+```
+
+**Problems:**
+- Class name collisions with your app code
+- Specificity depends on how many classes the library stacks
+- Overriding requires matching or exceeding their specificity
+- `!important` is the only reliable escape hatch (and it's a trap)
+
+### The Data Attribute Approach (Olyx)
+
+```tsx
+<button data-ui="button" data-variant="primary" data-mode="filled" data-size="lg">Save</button>
+```
+
+```css
+[data-ui="button"][data-variant="primary"] {
+  background: hotpink; /* ✅ applies cleanly — same specificity as the library */
+}
+
+/* Want to scope it further? */
+.my-form [data-ui="button"][data-variant="primary"] {
+  background: hotpink; /* ✅ higher specificity, scoped to your context */
+}
+```
+
+**Why it works:**
+- `[data-ui="button"]` has the same specificity as `.btn` (0,1,0) — level playing field
+- No class name pollution in your markup
+- No guessing what internal class names the library uses
+- Your overrides compose naturally with CSS cascade
+
+### Side-by-Side Specificity
+
+| Selector | Specificity | Notes |
+|---|---|---|
+| `.btn` | 0,1,0 | Single class |
+| `.btn.btn-primary` | 0,2,0 | Two classes — harder to override |
+| `.btn.btn-primary.btn-filled` | 0,3,0 | Three classes — good luck |
+| `[data-ui="button"]` | 0,1,0 | Single attribute — same as one class |
+| `[data-ui="button"][data-variant="primary"]` | 0,2,0 | Predictable, composable |
+
+Data attributes keep specificity **flat and predictable**. You always know exactly what you're competing with.
+
+---
+
+## CSS Layers
+
+Olyx uses [CSS Cascade Layers](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) to give you explicit control over which styles take priority.
+
+### Layer Order
+
+Defined in [globals.css](apps/web/src/assets/styles/globals.css):
+
+```css
+@layer reset, base, utilities, components, misc, tokens;
+```
+
+Layers are applied in the order they're declared — **later layers have higher priority**:
+
+| Layer | Priority | Purpose | What Lives Here |
+|---|---|---|---|
+| `reset` | 1 (lowest) | Box model reset | `box-sizing: border-box`, zero margins/padding, font-family |
+| `base` | 2 | Global defaults | `html`/`body` styles, scroll behavior, scrollbar styling |
+| `utilities` | 3 | Helper classes | Reusable utility styles |
+| `components` | 4 | Component styles | All `[data-ui="*"]` component CSS |
+| `misc` | 5 | Miscellaneous | One-off styles, documentation-specific rules |
+| `tokens` | 6 (highest) | Design tokens | Colors, spacing, typography, radii — CSS custom properties |
+
+### Why Layers Matter
+
+Without layers, the only tools CSS gives you for priority control are **source order** and **specificity**. Both are fragile.
+
+With layers:
+
+```css
+/* This ALWAYS beats component styles, regardless of specificity or source order */
+@layer misc {
+  [data-ui="button"] {
+    border-radius: 999px;
+  }
+}
+```
+
+```css
+/* This NEVER beats component styles — it's in a lower-priority layer */
+@layer base {
+  [data-ui="button"] {
+    border-radius: 999px; /* ignored for buttons */
+  }
+}
+```
+
+### Overriding Component Styles
+
+To override an Olyx component, write your CSS **outside any layer** (unlayered styles always win) or in a higher-priority layer:
+
+```css
+/* Option 1: Unlayered — highest priority, always wins */
+[data-ui="button"][data-variant="primary"] {
+  background: var(--my-brand-color);
+}
+
+/* Option 2: In a higher layer like misc */
+@layer misc {
+  [data-ui="button"][data-variant="primary"] {
+    background: var(--my-brand-color);
+  }
+}
+```
+
+---
+
+## Common Data Attributes
+
+These are the data attributes used across Olyx components:
+
+| Attribute | Values (Examples) | Purpose |
+|---|---|---|
+| `data-ui` | `"button"`, `"badge"`, `"dialog-content"` | Identifies the component or sub-component |
+| `data-variant` | `"primary"`, `"neutral"`, `"error"` | Color/semantic variant |
+| `data-mode` | `"filled"`, `"stroke"`, `"lighter"`, `"ghost"` | Visual treatment |
+| `data-size` | `"sm"`, `"md"`, `"lg"` | Size scale |
+| `data-shape` | `"rounded"`, `"smoothed"` | Border radius style |
+| `data-status` | `"success"`, `"error"`, `"warning"`, `"information"` | Semantic status (Alert, Banner) |
+| `data-as-icon` | `"true"`, `"false"` | Icon-only button mode |
+| `data-orientation` | `"horizontal"`, `"vertical"` | Layout direction (Tabs, Toolbar) |
+
+### State Attributes (from Base UI)
+
+Components also expose state via attributes from Base UI:
+
+| Attribute | Meaning |
+|---|---|
+| `data-checked` | Checkbox/Switch is on |
+| `data-disabled` | Component is disabled |
+| `data-panel-open` | Accordion panel is expanded |
+| `data-popup-open` | Popover/Select is open |
+| `data-active` | Tab is active |
+| `aria-disabled="true"` | Accessibility-aware disabled state |
+
+---
+
+## Internal Custom Properties Pattern
+
+Olyx components use a two-layer custom property system. The **variant** sets scoped tokens, and the **mode** consumes them:
+
+```css
+/* Variant defines the palette */
+[data-ui="button"][data-variant="primary"] {
+  --color-button: var(--color-primary);
+  --color-on-button: var(--color-on-primary);
+  --color-button-border: var(--color-primary);
+  --color-button-container: var(--color-primary-container);
+}
+
+[data-ui="button"][data-variant="error"] {
+  --color-button: var(--color-error);
+  --color-on-button: var(--color-on-error);
+  --color-button-border: var(--color-error);
+  --color-button-container: var(--color-error-container);
+}
+
+/* Mode consumes the palette */
+[data-ui="button"][data-mode="filled"] {
+  background-color: var(--color-button);
+  color: var(--color-on-button);
+}
+
+[data-ui="button"][data-mode="stroke"] {
+  border-color: var(--color-button-border);
+  background-color: var(--color-on-button);
+  color: var(--color-button);
+}
+```
+
+This means adding a new variant is just defining four custom properties — the modes already know what to do with them.
+
+---
+
+## Customization Examples
+
+### Override a Specific Variant
+
+```css
+/* Make all primary filled buttons use your brand color */
+[data-ui="button"][data-variant="primary"] {
+  --color-button: #6d28d9;
+  --color-on-button: #fff;
+  --color-button-container: #ede9fe;
+}
+```
+
+All modes (`filled`, `stroke`, `lighter`, `ghost`) automatically adapt because they reference these same custom properties.
+
+### Scope Overrides to a Section
+
+```css
+.checkout-form [data-ui="button"][data-variant="primary"][data-mode="filled"] {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+}
+```
+
+### Create a New Visual Treatment
+
+```css
+/* A "glass" mode for buttons — doesn't exist in Olyx, you add it */
+[data-ui="button"][data-mode="glass"] {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+```
+
+```tsx
+{/* Use data-mode directly in JSX if you need to bypass the prop type */}
+<button data-ui="button" data-mode="glass" data-size="md">
+  Frosted
+</button>
+```
+
+---
+
+## Style File Structure
+
+Each component ships with two files:
+
+```
+packages/react/src/button/
+├── index.tsx        # Component logic + data attributes
+└── style.css        # Styles targeting data attributes
+```
+
+All component styles live inside `@layer components`:
+
+```css
+@layer components {
+  [data-ui="button"] {
+    /* ... */
+  }
+}
+```
+
+This ensures every component style sits at the same cascade layer — predictable, overridable, no surprises.
+
+---
+
+## Best Practices
+
+- **Use CSS custom properties** for theme-level changes (colors, spacing, radii). Variants already reference them.
+- **Override in higher layers or unlayered CSS** to guarantee your styles win without `!important`.
+- **Don't fight the cascade** — work with layers, not against them.

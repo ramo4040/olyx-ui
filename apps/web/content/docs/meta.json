@@ -1,4 +1,4 @@
 {
-  "pages": ["(root)", "components"],
+  "pages": ["overview", "handbook", "components"],
   "root": true
 }

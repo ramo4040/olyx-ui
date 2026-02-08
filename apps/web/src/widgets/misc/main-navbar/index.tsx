@@ -39,7 +39,7 @@ export const MainNavbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem className="link-item">
-                <NavigationMenuLink href="#">Blocks</NavigationMenuLink>
+                <NavigationMenuLink href="#">Particles</NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </div>

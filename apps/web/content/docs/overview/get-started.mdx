@@ -1,0 +1,101 @@
+---
+title: Get Started
+description: Install Olyx and add your first component in minutes.
+---
+
+This guide walks you through adding **Olyx** components to your React application.
+
+## Prerequisites
+
+- **Node.js 18+** or **Bun 1.3+**
+- **React 19+**
+- A project with CSS support (no Tailwind required — Olyx uses pure CSS custom properties)
+
+## Adding Components
+
+You can add components **automatically with the CLI** or **manually by copying the files**.
+
+### With the CLI
+
+Each component page provides a CLI command. The CLI creates the necessary files and installs dependencies for you.
+
+#### Install All UI Components
+
+Add every Olyx primitive at once:
+
+```bash
+npx olyx@latest add @olyx/ui
+```
+
+This installs all 50+ components in one go — button, dialog, tabs, select, and everything else.
+
+#### Install a Single Component
+
+```bash
+npx olyx@latest add @olyx/button
+```
+
+### Manually
+
+1. **Find a component** on the [Components](/docs/components) or [Particles](/docs/particles) pages.
+2. **Copy the code** from the component page.
+3. **Create a new file** in your project (e.g., `components/ui/button.tsx`) and paste the code.
+4. **Install dependencies** listed on the component page.
+5. **Import and use** the component in your app.
+
+## Add Your First Component
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx olyx@latest add @olyx/button
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the component code into your project.</Step>
+
+<ComponentSource name="button" title="components/ui/button.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+Then use it:
+
+```tsx
+import { Button } from "@/components/ui/button"
+
+export default function Page() {
+  return <Button variant="primary" mode="filled">Click me</Button>
+}
+```
+
+
+## Next Steps
+
+- Browse [Components](/docs/components) to see all 50+ available primitives
+- Read [Styling](/docs/handbook/styling) to understand the design token system
+- Learn about [Colors](/docs/handbook/colors) and the Alwan theme generator
+- Explore [Theming](/docs/handbook/theming) for dark mode support

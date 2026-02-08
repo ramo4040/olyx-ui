@@ -58,6 +58,7 @@ export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
+  const isComponentPage = params.slug?.[0] === "components";
   const page = source.getPage(params.slug);
 
   if (!page) notFound();
@@ -68,74 +69,85 @@ export default async function Page(props: {
 
   return (
     <div data-ui="docs-page">
-      <header>
-        <div className="description-container">
-          <div>
-            <h1>{doc.title}</h1>
-            <p>{doc.description}</p>
-          </div>
-          <div className="actions">
-            {links?.doc && (
-              <Button
-                size="sm"
-                variant="neutral"
-                mode="stroke"
-                render={
-                  <Link
-                    href={links.doc as any}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <HugeiconsIcon icon={LinkSquare02Icon} />
-                    API Reference
-                  </Link>
-                }
-              />
-            )}
-
-            <ButtonGroup>
-              <Button size="sm" variant="neutral" mode="stroke">
-                <HugeiconsIcon icon={Copy01Icon} /> Copy page
-              </Button>
-
-              <DropdownMenu>
-                <DropdownMenuTrigger
+      {isComponentPage && (
+        <header className="component-page-header">
+          <div className="description-container">
+            <div>
+              <h1>{doc.title}</h1>
+              <p>{doc.description}</p>
+            </div>
+            <div className="actions">
+              {links?.doc && (
+                <Button
+                  size="sm"
+                  variant="neutral"
+                  mode="stroke"
                   render={
-                    <Button size="sm" variant="neutral" mode="stroke">
-                      <HugeiconsIcon icon={ArrowDown01Icon} />
-                    </Button>
+                    <Link
+                      href={links.doc as any}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <HugeiconsIcon icon={LinkSquare02Icon} />
+                      API Reference
+                    </Link>
                   }
                 />
-                <DropdownMenuContent>
-                  <DropdownMenuItem>
-                    <Markdown />
-                    View as Markdown
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <V0 />
-                    Open in v0
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <OpenAI />
-                    Open in ChatGPT
-                  </DropdownMenuItem>
-                  <DropdownMenuItem>
-                    <ClaudeAI />
-                    Open in Claude
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </ButtonGroup>
+              )}
+
+              <ButtonGroup>
+                <Button size="sm" variant="neutral" mode="stroke">
+                  <HugeiconsIcon icon={Copy01Icon} /> Copy page
+                </Button>
+
+                <DropdownMenu>
+                  <DropdownMenuTrigger
+                    render={
+                      <Button size="sm" variant="neutral" mode="stroke">
+                        <HugeiconsIcon icon={ArrowDown01Icon} />
+                      </Button>
+                    }
+                  />
+                  <DropdownMenuContent>
+                    <DropdownMenuItem>
+                      <Markdown />
+                      View as Markdown
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <V0 />
+                      Open in v0
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <OpenAI />
+                      Open in ChatGPT
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <ClaudeAI />
+                      Open in Claude
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </ButtonGroup>
+            </div>
           </div>
-        </div>
-        <div className="example-container">
-          <div className="example" />
-        </div>
-      </header>
+          <div className="example-container">
+            <div className="example" />
+          </div>
+        </header>
+      )}
 
       {/* Render MDX content */}
       <main>
         <div data-ui="docs-content">
+          {!isComponentPage && (
+            <header className="page-header">
+              <h1>{doc.title}</h1>
+              <p>{doc.description}</p>
+              <Button size="sm" variant="neutral" mode="stroke">
+                <HugeiconsIcon icon={Copy01Icon} /> Copy page
+              </Button>
+            </header>
+          )}
           <MDX components={mdxComponents} />
         </div>
 

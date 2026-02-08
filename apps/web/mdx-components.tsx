@@ -14,6 +14,7 @@ import {
 import { CodeTabs, CopyButton, Step, Steps } from "@/components/misc";
 import {
   CodeCommandTabs,
+  ColorTable,
   ComponentPreview,
   ComponentSource,
 } from "@/widgets/misc";
@@ -68,7 +69,7 @@ export const mdxComponents = {
     <h6 data-ui="docs-h6" {...props} />
   ),
   hr: ({ ...props }: React.ComponentProps<"div">) => (
-    <Separator data-ui="docs-separator" {...props} />
+    <Separator data-slot="docs-separator" {...props} />
   ),
   a: ({ ...props }: React.ComponentProps<"a">) => (
     <LinkButton {...props} variant="black" />
@@ -140,4 +141,5 @@ export const mdxComponents = {
   ComponentSource,
   Steps,
   Step,
+  ColorTable,
 };
