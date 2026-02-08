@@ -13,20 +13,6 @@ Olyx uses [DM Sans](https://fonts.google.com/specimen/DM+Sans) — a geometric s
 --font-family: var(--font-dm-sans), sans-serif;
 ```
 
-Loaded via `next/font/google` with weights `400`, `500`, and `700`:
-
-```tsx
-import { DM_Sans } from "next/font/google";
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-  variable: "--font-dm-sans",
-  preload: true,
-});
-```
-
 The `--font-dm-sans` CSS variable is set on `<html>` and consumed by `--font-family`.
 
 ---
@@ -120,23 +106,6 @@ Replace `--font-family` to change the typeface globally:
 ```css
 :root {
   --font-family: "Inter", system-ui, sans-serif;
-}
-```
-
-If using `next/font`, define a new CSS variable and point `--font-family` to it:
-
-```tsx
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-```
-
-```css
-:root {
-  --font-family: var(--font-inter), sans-serif;
 }
 ```
 

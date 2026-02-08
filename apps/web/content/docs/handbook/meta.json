@@ -1,11 +1,4 @@
 {
-  "pages": [
-    "styling",
-    "colors",
-    "tokens",
-    "typography",
-    "animation",
-    "theming"
-  ],
+  "pages": ["styling", "colors", "tokens", "typography"],
   "title": "Handbook"
 }

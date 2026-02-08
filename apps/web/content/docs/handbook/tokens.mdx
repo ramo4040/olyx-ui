@@ -63,6 +63,127 @@ Five elevation levels. Each shadow uses a two-layer approach — a tight key sha
 
 ---
 
+
+## Motion
+
+Olyx motion tokens follow [Material Design 3's physics-based motion system](https://m3.material.io/styles/motion/overview/how-it-works). On the web, springs are approximated using cubic-bezier curves — the tokens below translate M3's spring parameters (stiffness, damping, velocity) into CSS timing functions.
+
+Motion splits into two dimensions: **motion scheme** (personality) and **token type** (what's being animated).
+
+---
+
+### Motion Schemes
+
+Material 3 defines two preset schemes that determine how your interface feels:
+
+| Scheme | Behavior | When to use |
+|--------|----------|-------------|
+| **Expressive** | Overshoots final values with noticeable bounce | Hero moments, key interactions, buttons, switches — anywhere you want emphasis and personality |
+| **Standard** | Eases into final values with subtle overshoot | Utilitarian products, background motion, layout shifts, content transitions |
+
+Expressive is M3's opinionated default and should be used for most interactive elements. Standard is more functional and subdued.
+
+---
+
+### Token Types
+
+Tokens are split by what they animate:
+
+| Type | Applies to | Examples |
+|------|-----------|----------|
+| **Spatial** | Position, size, scale, rotation, shape | `x`/`y` translation, `width`/`height`, `transform: scale()`, `border-radius` |
+| **Effects** | Visual properties where overshoot would be jarring | Opacity, color, shadows, blur — properties that shouldn't bounce |
+
+---
+
+### Speed Tiers
+
+Each scheme × type combination has three speeds:
+
+- **Fast** — Small components, quick interactions (buttons, switches)
+- **Default** — Medium elements, standard transitions (cards, panels)
+- **Slow** — Large elements, full-screen motion (drawers, sheets)
+
+---
+
+### Expressive Tokens
+
+**Spatial** — Noticeable overshoot and bounce for physical movement:
+
+| Token | Duration | Easing |
+|-------|----------|--------|
+| `--transition-expressive-fast-spatial` | `350ms` | `cubic-bezier(0.42, 1.67, 0.21, 0.9)` |
+| `--transition-expressive-default-spatial` | `500ms` | `cubic-bezier(0.38, 1.21, 0.22, 1)` |
+| `--transition-expressive-slow-spatial` | `650ms` | `cubic-bezier(0.39, 1.29, 0.35, 0.98)` |
+
+**Effects** — Smooth curves without overshoot for color/opacity:
+
+| Token | Duration | Easing |
+|-------|----------|--------|
+| `--transition-expressive-fast-effects` | `150ms` | `cubic-bezier(0.31, 0.94, 0.34, 1)` |
+| `--transition-expressive-default-effects` | `200ms` | `cubic-bezier(0.34, 0.8, 0.34, 1)` |
+| `--transition-expressive-slow-effects` | `300ms` | `cubic-bezier(0.34, 0.88, 0.34, 1)` |
+
+---
+
+### Standard Tokens
+
+**Spatial** — Subtle overshoot for more functional motion:
+
+| Token | Duration | Easing |
+|-------|----------|--------|
+| `--transition-standard-fast-spatial` | `350ms` | `cubic-bezier(0.27, 1.06, 0.18, 1)` |
+| `--transition-standard-default-spatial` | `500ms` | `cubic-bezier(0.27, 1.06, 0.18, 1)` |
+| `--transition-standard-slow-spatial` | `750ms` | `cubic-bezier(0.27, 1.06, 0.18, 1)` |
+
+**Effects** — Identical to expressive effects (no overshoot in either scheme):
+
+| Token | Duration | Easing |
+|-------|----------|--------|
+| `--transition-standard-fast-effects` | `150ms` | `cubic-bezier(0.31, 0.94, 0.34, 1)` |
+| `--transition-standard-default-effects` | `200ms` | `cubic-bezier(0.34, 0.8, 0.34, 1)` |
+| `--transition-standard-slow-effects` | `300ms` | `cubic-bezier(0.34, 0.88, 0.34, 1)` |
+
+---
+
+### Usage Pattern
+
+Token names follow this structure:
+
+```
+--transition-{scheme}-{speed}-{type}
+```
+
+**Examples:**
+
+```css
+/* Button press — expressive spatial movement + fast effect for background */
+[data-ui="button"] {
+  transition: 
+    transform var(--transition-expressive-fast-spatial),
+    background-color var(--transition-expressive-fast-effects);
+}
+
+/* Accordion expand — standard spatial for layout shifts */
+[data-ui="accordion-panel"] {
+  transition: height var(--transition-standard-default-spatial);
+}
+
+/* Dialog entrance — expressive spatial for movement, fast effect for fade */
+[data-ui="dialog"] {
+  transition: 
+    transform var(--transition-expressive-default-spatial),
+    opacity var(--transition-expressive-fast-effects);
+}
+
+/* Navigation drawer — slow spatial for large surface */
+[data-ui="drawer"] {
+  transition: transform var(--transition-standard-slow-spatial);
+}
+```
+
+---
+
 ## Customizing Tokens
 
 Override any token in your global CSS:
