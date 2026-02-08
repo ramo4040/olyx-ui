@@ -2,6 +2,8 @@ import "./style.css";
 import "./particles-style.css";
 import {
   ArrowDown01Icon,
+  ArrowLeft02Icon,
+  ArrowRight02Icon,
   Copy01Icon,
   LinkSquare02Icon,
 } from "@hugeicons/core-free-icons";
@@ -66,6 +68,20 @@ export default async function Page(props: {
   const doc = page.data;
   const MDX = doc.body;
   const links = doc.links;
+
+  const pageTree = source
+    .getPageTree()
+    .children.flatMap((child) =>
+      child.type === "page"
+        ? [child]
+        : child.type === "folder"
+          ? child.children.filter((c) => c.type === "page")
+          : [],
+    );
+
+  const currentPageIndex = pageTree.findIndex((p) => p.$id === page.path);
+  const prevLink = pageTree[currentPageIndex - 1];
+  const nextLink = pageTree[currentPageIndex + 1];
 
   return (
     <div data-ui="docs-page">
@@ -149,6 +165,29 @@ export default async function Page(props: {
             </header>
           )}
           <MDX components={mdxComponents} />
+
+          <div className="pagination">
+            {prevLink && (
+              <Link href={prevLink.url}>
+                <span>
+                  <HugeiconsIcon icon={ArrowLeft02Icon} />
+                  Previous
+                </span>
+
+                <p>{prevLink.name}</p>
+              </Link>
+            )}
+            {nextLink && (
+              <Link href={nextLink.url}>
+                <span>
+                  Up next
+                  <HugeiconsIcon icon={ArrowRight02Icon} />
+                </span>
+
+                <p>{nextLink.name}</p>
+              </Link>
+            )}
+          </div>
         </div>
 
         <DocsToc toc={doc.toc} />
