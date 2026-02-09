@@ -297,7 +297,7 @@
           "type": "registry:ui"
         },
         {
-          "path": "ui/tag/style.",
+          "path": "ui/tag/style.css",
           "type": "registry:style"
         }
       ],

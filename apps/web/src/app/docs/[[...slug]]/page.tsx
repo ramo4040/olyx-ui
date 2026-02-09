@@ -48,7 +48,7 @@ export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
-  const isComponentPage = params.slug?.[0] === "components";
+  const isComponentPage = params.slug?.includes("components");
   const page = source.getPage(params.slug);
 
   if (!page) notFound();

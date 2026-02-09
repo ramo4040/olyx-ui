@@ -216,7 +216,7 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     files: [
       { path: "@olyx/react/tag/index.tsx", type: "registry:ui" },
-      { path: "@olyx/react/tag/style.", type: "registry:style" },
+      { path: "@olyx/react/tag/style.css", type: "registry:style" },
     ],
     meta: {
       category: "data-display",
