@@ -6,7 +6,7 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { ScrollArea, Tabs, TabsList, TabsPanel, TabsTab } from "@olyx/react";
 import React from "react";
 import { CopyButton } from "@/components/misc";
-import { useConfig } from "@/lib/use-config";
+import { useConfig } from "@/hooks/use-config";
 
 type Props = React.ComponentProps<typeof Tabs> & {
   __npm__?: string;

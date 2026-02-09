@@ -1,0 +1,27 @@
+@layer misc {
+  .mobile-navbar-drawer {
+    .links-container {
+      height: 100%;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-48);
+
+      > div {
+        display: grid;
+        gap: var(--spacing-8);
+
+        h3 {
+          margin-bottom: var(--spacing-12);
+        }
+
+        .link {
+          font: var(--font-body-lg);
+          font-weight: 500;
+          color: var(--color-on-surface);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

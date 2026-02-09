@@ -48,7 +48,6 @@ export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
-  const isComponentPage = params.slug?.includes("components");
   const page = source.getPage(params.slug);
 
   if (!page) notFound();
@@ -75,13 +74,12 @@ export default async function Page(props: {
 
   return (
     <div data-ui="docs-page">
-      {isComponentPage && (
-        <header className="component-page-header">
-          <div className="description-container">
-            <div>
-              <h1>{doc.title}</h1>
-              <p>{doc.description}</p>
-            </div>
+      {/* Render MDX content */}
+      <main>
+        <div data-ui="docs-content">
+          <header className="page-header">
+            <h1>{doc.title}</h1>
+            <p>{doc.description}</p>
             <div className="actions">
               {links?.doc && (
                 <Button
@@ -103,23 +101,8 @@ export default async function Page(props: {
 
               <CopyMDXButton value={mdxContent} path={page.url} />
             </div>
-          </div>
-          <div className="example-container">
-            <div className="example" />
-          </div>
-        </header>
-      )}
+          </header>
 
-      {/* Render MDX content */}
-      <main>
-        <div data-ui="docs-content">
-          {!isComponentPage && (
-            <header className="page-header">
-              <h1>{doc.title}</h1>
-              <p>{doc.description}</p>
-              <CopyMDXButton value={mdxContent} path={page.url} />
-            </header>
-          )}
           <MDX components={mdxComponents} />
 
           <div className="pagination">
