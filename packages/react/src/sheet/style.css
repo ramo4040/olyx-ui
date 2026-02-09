@@ -12,7 +12,7 @@
       backdrop-filter: blur(4px);
       background-color: color-mix(in srgb, currentcolor 15%, transparent);
       z-index: 50;
-      transition: all var(--transition-expressive-slow-spatial);
+      transition: all var(--transition-standard-fast-spatial);
       opacity: 0;
 
       &[data-open] {
@@ -33,7 +33,7 @@
       padding: var(--padding-block) var(--spacing-24);
       background-color: var(--color-background);
       color: var(--color-on-background);
-      transition: all var(--transition-expressive-slow-spatial);
+      transition: all var(--transition-standard-fast-spatial);
       max-height: 100vh;
       overflow: auto;
 
@@ -56,10 +56,9 @@
         right: var(--spacing-0);
         bottom: var(--spacing-0);
         width: var(--sheet-min-width);
-        translate: 100% 0;
 
-        &[data-open] {
-          translate: 0 0;
+        &[data-starting-style] {
+          translate: 100% 0;
         }
 
         &[data-ending-style] {
@@ -81,10 +80,9 @@
         left: var(--spacing-0);
         bottom: var(--spacing-0);
         width: var(--sheet-min-width);
-        translate: -100% 0;
 
-        &[data-open] {
-          translate: 0 0;
+        &[data-starting-style] {
+          translate: -100% 0;
         }
 
         &[data-ending-style] {
@@ -107,10 +105,9 @@
         right: var(--spacing-0);
         min-height: var(--sheet-min-height);
         max-height: var(--sheet-max-height);
-        translate: 0 -100%;
 
-        &[data-open] {
-          translate: 0 0;
+        &[data-starting-style] {
+          translate: 0 -100%;
         }
 
         &[data-ending-style] {
@@ -125,10 +122,9 @@
         right: var(--spacing-0);
         min-height: var(--sheet-min-height);
         max-height: var(--sheet-max-height);
-        translate: 0 100%;
 
-        &[data-open] {
-          translate: 0 0;
+        &[data-starting-style] {
+          translate: 0 100%;
         }
 
         &[data-ending-style] {
