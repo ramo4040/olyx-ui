@@ -18,18 +18,25 @@
 
     &[data-size="lg"] {
       --toggle-size: 40px;
+      --svg-as-icon-size: var(--spacing-24);
+
       padding-inline: var(--spacing-8);
       border-radius: var(--radius-md);
     }
 
     &[data-size="md"] {
       --toggle-size: 32px;
+      --svg-as-icon-size: var(--spacing-14);
+
       padding-inline: var(--spacing-6);
       border-radius: var(--radius-sm);
     }
 
     &[data-size="sm"] {
       --toggle-size: 24px;
+      --svg-as-icon-size: var(--spacing-14);
+
+      font: var(--font-body-sm);
       padding-inline: var(--spacing-4);
       border-radius: var(--radius-xs);
     }
@@ -75,76 +82,8 @@
     svg {
       flex-shrink: 0;
       pointer-events: none;
-      width: 18px;
-      height: 18px;
-    }
-  }
-
-  [data-ui="toggle-group"] {
-    display: flex;
-    width: fit-content;
-    transition: all var(--transition-standard-default-spatial);
-    height: fit-content;
-
-    &[data-grouped="false"] {
-      gap: var(--spacing-8);
-    }
-
-    &[data-grouped="true"] {
-      [data-ui="toggle"] {
-        border: none;
-        border-radius: 0;
-      }
-
-      &[data-variant="primary"] {
-        border: 1px solid var(--color-surface-container-highest);
-
-        [data-ui="toggle"]:not(:last-child) {
-          border-bottom: 1px solid var(--color-surface-container-highest);
-        }
-      }
-    }
-
-    &[data-orientation="horizontal"] {
-      [data-ui="toggle"] {
-        &:first-child {
-          border-top-left-radius: inherit;
-          border-bottom-left-radius: inherit;
-        }
-
-        &:last-child {
-          border-top-right-radius: inherit;
-          border-bottom-right-radius: inherit;
-        }
-      }
-    }
-
-    &[data-orientation="vertical"] {
-      flex-direction: column;
-
-      [data-ui="toggle"] {
-        &:first-child {
-          border-top-left-radius: inherit;
-          border-top-right-radius: inherit;
-        }
-
-        &:last-child {
-          border-bottom-left-radius: inherit;
-          border-bottom-right-radius: inherit;
-        }
-      }
-    }
-
-    &[data-size="lg"] {
-      border-radius: var(--radius-md);
-    }
-
-    &[data-size="md"] {
-      border-radius: var(--radius-sm);
-    }
-
-    &[data-size="sm"] {
-      border-radius: var(--radius-xs);
+      width: var(--svg-as-icon-size);
+      height: var(--svg-as-icon-size);
     }
   }
 }

@@ -67,14 +67,3 @@ export type RegistryCategory = (typeof registryCategories)[number];
 export function category(name: RegistryCategory): RegistryCategory {
   return name;
 }
-
-/** Validate if string is a valid category */
-export function isValidCategory(value: string): value is RegistryCategory {
-  return registryCategories.includes(value as RegistryCategory);
-}
-
-/** Get sort order for category (for consistent ordering) */
-export function getCategorySortOrder(cat: string): number {
-  const idx = registryCategories.indexOf(cat as RegistryCategory);
-  return idx === -1 ? Number.POSITIVE_INFINITY : idx;
-}

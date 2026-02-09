@@ -3668,6 +3668,346 @@ const data: RegistryItem[] = [
       tags: ["textarea", "form"],
     },
   },
+  {
+    name: "p-toast-1",
+    description: "Default toast",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toast-1.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toast", "@olyx/react/button"],
+    meta: {
+      category: category("toast"),
+      tags: ["toast", "notification"],
+    },
+  },
+  {
+    name: "p-toast-2",
+    description: "Toast with status types",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toast-2.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toast", "@olyx/react/button"],
+    meta: {
+      category: category("toast"),
+      tags: ["toast", "status"],
+    },
+  },
+  {
+    name: "p-toast-3",
+    description: "Loading toast",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toast-3.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toast", "@olyx/react/button"],
+    meta: {
+      category: category("toast"),
+      tags: ["toast", "loading"],
+    },
+  },
+  {
+    name: "p-toast-4",
+    description: "Toast with action",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toast-4.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toast", "@olyx/react/button"],
+    meta: {
+      category: category("toast"),
+      tags: ["toast", "action"],
+    },
+  },
+  {
+    name: "p-toast-5",
+    description: "Anchored toast",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toast-5.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toast", "@olyx/react/button"],
+    meta: {
+      category: category("toast"),
+      tags: ["toast", "anchored"],
+    },
+  },
+  {
+    name: "p-toggle-1",
+    description: "Default toggle",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toggle-1.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toggle"],
+    meta: {
+      category: category("toggle"),
+      tags: ["toggle"],
+    },
+  },
+  {
+    name: "p-toggle-2",
+    description: "Ghost variant toggle",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toggle-2.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toggle"],
+    meta: {
+      category: category("toggle"),
+      tags: ["toggle", "ghost"],
+    },
+  },
+  {
+    name: "p-toggle-3",
+    description: "Toggle with icon and text",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toggle-3.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toggle"],
+    meta: {
+      category: category("toggle"),
+      tags: ["toggle", "icon"],
+    },
+  },
+  {
+    name: "p-toggle-4",
+    description: "Small toggle",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toggle-4.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toggle"],
+    meta: {
+      category: category("toggle"),
+      tags: ["toggle", "small"],
+    },
+  },
+  {
+    name: "p-toggle-5",
+    description: "Large toggle",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toggle-5.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toggle"],
+    meta: {
+      category: category("toggle"),
+      tags: ["toggle", "large"],
+    },
+  },
+  {
+    name: "p-toggle-6",
+    description: "Disabled toggle",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toggle-6.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/toggle"],
+    meta: {
+      category: category("toggle"),
+      tags: ["toggle", "disabled"],
+    },
+  },
+  {
+    name: "p-toggle-group-1",
+    description: "Default toggle group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-toggle-group-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/toggle-group"],
+    meta: {
+      category: category("toggle-group"),
+      tags: ["toggle-group"],
+    },
+  },
+  {
+    name: "p-toggle-group-2",
+    description: "Small toggle group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-toggle-group-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/toggle-group"],
+    meta: {
+      category: category("toggle-group"),
+      tags: ["toggle-group", "small"],
+    },
+  },
+  {
+    name: "p-toggle-group-3",
+    description: "Large toggle group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-toggle-group-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/toggle-group"],
+    meta: {
+      category: category("toggle-group"),
+      tags: ["toggle-group", "large"],
+    },
+  },
+  {
+    name: "p-toggle-group-4",
+    description: "Ghost variant toggle group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-toggle-group-4.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/toggle-group"],
+    meta: {
+      category: category("toggle-group"),
+      tags: ["toggle-group", "ghost"],
+    },
+  },
+  {
+    name: "p-toggle-group-5",
+    description: "Ungrouped toggle group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-toggle-group-5.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/toggle-group"],
+    meta: {
+      category: category("toggle-group"),
+      tags: ["toggle-group", "ungrouped"],
+    },
+  },
+  {
+    name: "p-toggle-group-6",
+    description: "Vertical toggle group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-toggle-group-6.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/toggle-group"],
+    meta: {
+      category: category("toggle-group"),
+      tags: ["toggle-group", "vertical"],
+    },
+  },
+  {
+    name: "p-toggle-group-7",
+    description: "Disabled toggle group",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-toggle-group-7.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/toggle-group"],
+    meta: {
+      category: category("toggle-group"),
+      tags: ["toggle-group", "disabled"],
+    },
+  },
+  {
+    name: "p-toolbar-1",
+    description: "Default toolbar",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-toolbar-1.tsx", type: "registry:block" },
+    ],
+    registryDependencies: [
+      "@olyx/react/toolbar",
+      "@olyx/react/toggle",
+      "@olyx/react/button",
+      "@olyx/react/toggle-group",
+      "@olyx/react/select",
+      "@olyx/react/number-field",
+    ],
+    meta: {
+      category: category("toolbar"),
+      tags: ["toolbar"],
+    },
+  },
+  {
+    name: "p-tooltip-1",
+    description: "Default tooltip",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-tooltip-1.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/tooltip", "@olyx/react/button"],
+    meta: {
+      category: category("tooltip"),
+      tags: ["tooltip"],
+    },
+  },
+  {
+    name: "p-tooltip-2",
+    description: "Light variant tooltip",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-tooltip-2.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/tooltip", "@olyx/react/button"],
+    meta: {
+      category: category("tooltip"),
+      tags: ["tooltip", "light"],
+    },
+  },
+  {
+    name: "p-tooltip-3",
+    description: "Tooltip positioning",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-tooltip-3.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/tooltip", "@olyx/react/button"],
+    meta: {
+      category: category("tooltip"),
+      tags: ["tooltip", "positioning"],
+    },
+  },
+  {
+    name: "p-tooltip-4",
+    description: "Small tooltip",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-tooltip-4.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/tooltip", "@olyx/react/button"],
+    meta: {
+      category: category("tooltip"),
+      tags: ["tooltip", "small"],
+    },
+  },
+  {
+    name: "p-tooltip-5",
+    description: "Large tooltip",
+    type: "registry:block",
+    files: [
+      { path: "registry/particles/p-tooltip-5.tsx", type: "registry:block" },
+    ],
+    registryDependencies: ["@olyx/react/tooltip", "@olyx/react/button"],
+    meta: {
+      category: category("tooltip"),
+      tags: ["tooltip", "large"],
+    },
+  },
 ];
 
 type RegistryItemWithComponent = RegistryItem & {

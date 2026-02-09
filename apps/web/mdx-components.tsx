@@ -68,7 +68,7 @@ export const mdxComponents = {
     <h6 data-ui="docs-h6" {...props} />
   ),
   hr: ({ ...props }: React.ComponentProps<"div">) => (
-    <Separator data-ui="docs-separator" {...props} />
+    <Separator data-slot="docs-separator" {...props} />
   ),
   a: ({ ...props }: React.ComponentProps<"a">) => (
     <LinkButton {...props} variant="black" />

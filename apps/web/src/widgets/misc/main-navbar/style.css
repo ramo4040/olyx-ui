@@ -51,6 +51,14 @@
           padding-inline: var(--spacing-6);
         }
       }
+
+      .current-color {
+        width: var(--spacing-16);
+        height: var(--spacing-16);
+        border-radius: var(--radius-xs);
+        background-color: var(--color-primary);
+        margin-right: var(--spacing-4);
+      }
     }
   }
 }

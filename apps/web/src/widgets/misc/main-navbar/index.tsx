@@ -1,7 +1,10 @@
 "use client";
 
 import "./style.css";
+import { ColorPickerIcon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import {
+  Button,
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
@@ -11,6 +14,7 @@ import {
 import { GitHubIcon } from "@/assets/svg/github";
 import { Logo } from "@/components/misc";
 import { DocsCommand } from "../docs-command";
+import { DrawerColorPicker } from "../drawer-color-picker";
 import { ThemeToggle } from "../theme-toggle";
 
 export const MainNavbar = () => {
@@ -35,7 +39,7 @@ export const MainNavbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem className="link-item">
-                <NavigationMenuLink href="#">Blocks</NavigationMenuLink>
+                <NavigationMenuLink href="#">Particles</NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </div>
@@ -51,6 +55,17 @@ export const MainNavbar = () => {
               <NavigationMenuLink href="#">
                 <GitHubIcon />
               </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <Separator orientation="vertical" />
+
+            <NavigationMenuItem>
+              <DrawerColorPicker>
+                <Button mode="ghost" variant="neutral">
+                  <div className="current-color" />
+                  <HugeiconsIcon icon={ColorPickerIcon} />
+                </Button>
+              </DrawerColorPicker>
             </NavigationMenuItem>
 
             <Separator orientation="vertical" />

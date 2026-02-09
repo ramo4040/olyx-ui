@@ -24,12 +24,12 @@ interface CodeFile {
 }
 
 function buildCodeFiles(
-  data: RegistryItemFiles,
+  data: RegistryItemFiles | null,
   defaultTitle?: string,
 ): CodeFile[] {
   const files: CodeFile[] = [];
 
-  if (data.tsx) {
+  if (data?.tsx) {
     files.push({
       code: data.tsx,
       language: "tsx",
@@ -37,7 +37,7 @@ function buildCodeFiles(
     });
   }
 
-  if (data.css) {
+  if (data?.css) {
     files.push({
       code: data.css,
       language: "css",
@@ -73,10 +73,6 @@ export const ComponentSource: FC<Props> = async ({
       "utf-8",
     );
     data = { tsx: file };
-  }
-
-  if (!data?.tsx) {
-    return null;
   }
 
   const codeFiles = buildCodeFiles(data, title);

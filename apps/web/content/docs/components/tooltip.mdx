@@ -1,7 +1,108 @@
 ---
 title: Tooltip
-description: test.
+description: A popup that appears when an element is hovered or focused, showing a hint.
 
 links:
-  doc: https://base-ui.com/react/components/$\{page\}\#api-reference
+  doc: https://base-ui.com/react/components/tooltip#api-reference
 ---
+
+## Preview
+
+<ComponentPreview name="p-tooltip-1" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTab value="cli">CLI</TabsTab>
+  <TabsTab value="manual">Manual</TabsTab>
+</TabsList>
+
+<TabsPanel value="cli">
+
+```bash
+npx shadcn@latest add @olyx/tooltip
+```
+
+</TabsPanel>
+
+<TabsPanel value="manual">
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @base-ui/react
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="tooltip" title="components/ui/tooltip.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsPanel>
+
+</CodeTabs>
+
+## Usage
+
+```tsx
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip"
+```
+
+```tsx
+<Tooltip>
+  <TooltipTrigger render={<Button variant="neutral" mode="stroke" />}>
+    Hover me
+  </TooltipTrigger>
+  <TooltipContent>Helpful hint</TooltipContent>
+</Tooltip>
+```
+
+## API Reference
+
+### Tooltip
+
+Root component. Wraps `Tooltip.Root` from Base UI with a built-in `TooltipProvider` (300ms delay).
+
+### TooltipTrigger
+
+Trigger element. Alias for `Tooltip.Trigger` from Base UI.
+
+### TooltipContent
+
+Popup container that displays the tooltip content. Also exported as `TooltipContent`.
+
+| Prop          | Type                                      | Default    |
+| ------------- | ----------------------------------------- | ---------- |
+| `side`        | `"top" \| "bottom" \| "left" \| "right"` | `"top"`    |
+| `align`       | `"start" \| "center" \| "end"`           | `"center"` |
+| `sideOffset`  | `number`                                  | `6`        |
+| `alignOffset` | `number`                                  | `0`        |
+| `size`        | `"sm" \| "md" \| "lg"`                   | `"md"`     |
+| `variant`     | `"dark" \| "light"`                       | `"dark"`   |
+
+All props from [Base UI Tooltip](https://base-ui.com/react/components/tooltip#api-reference) are also supported.
+
+## Examples
+
+### Light
+
+<ComponentPreview name="p-tooltip-2" />
+
+### Positioning
+
+<ComponentPreview name="p-tooltip-3" />
+
+### Small
+
+<ComponentPreview name="p-tooltip-4" />
+
+### Large
+
+<ComponentPreview name="p-tooltip-5" />

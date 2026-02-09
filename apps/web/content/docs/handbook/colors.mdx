@@ -1,0 +1,208 @@
+---
+title: Colors
+description: Explore the color palette of Olyx, including primary, secondary, and neutral colors, plus how to customize them with CSS variables.
+---
+
+Olyx uses an **HCT-inspired color system** built entirely in CSS custom properties. You set a single brand color — the rest is generated automatically with WCAG AA accessible contrast baked in.
+
+No JavaScript. No build step. Just CSS variables.
+
+---
+
+## HCT Color Space
+
+The system is based on [Material Design 3's HCT color space](https://m3.material.io/styles/color/system/how-the-system-works), which defines colors using three dimensions:
+
+| Dimension | What it controls | Range |
+|-----------|-----------------|-------|
+| **Hue** | The color itself (red, blue, green...) | `0–360` (circular) |
+| **Chroma** | How vivid or muted the color is | `0` (grey) → `~120` (most vivid) |
+| **Tone** | Lightness/darkness — **this is what drives contrast** | `0` (black) → `100` (white) |
+
+The key insight: **tone directly maps to perceived lightness**, which makes accessible contrast pairings predictable. Two colors with a tone difference ≥ 40 reliably produce ≥ 3:1 contrast. That's the entire trick.
+
+Our implementation approximates HCT using HSL with clamped saturation and computed lightness values — close enough for web rendering, no color science library required.
+
+---
+
+## Color Tokens
+
+All color tokens in Olyx follow the HCT-based color role pattern.
+
+### Primary
+
+| Preview | Color Name | CSS Token | Where to use |
+|---------|------------|-----------|--------------|
+| <div style={{backgroundColor: 'var(--color-primary)', color: 'var(--color-on-primary)'}} className='color-swatch'>Aa</div> | Primary | `--color-primary` | High-emphasis fills, primary actions, active states |
+| <div style={{backgroundColor: 'var(--color-on-primary)', color: 'var(--color-primary)'}} className='color-swatch'>Aa</div> | On Primary | `--color-on-primary` | Text and icons on primary color |
+| <div style={{backgroundColor: 'var(--color-primary-container)', color: 'var(--color-on-primary-container)'}} className='color-swatch'>Aa</div> | Primary Container | `--color-primary-container` | Standout container backgrounds |
+| <div style={{backgroundColor: 'var(--color-on-primary-container)', color: 'var(--color-primary-container)'}} className='color-swatch'>Aa</div> | On Primary Container | `--color-on-primary-container` | Text and icons on primary container |
+
+### Secondary
+
+| Preview | Color Name | CSS Token | Where to use |
+|---------|------------|-----------|--------------|
+| <div style={{backgroundColor: 'var(--color-secondary)', color: 'var(--color-on-secondary)'}} className='color-swatch'>Aa</div> | Secondary | `--color-secondary` | Less prominent components, filter chips, tonal buttons |
+| <div style={{backgroundColor: 'var(--color-on-secondary)', color: 'var(--color-secondary)'}} className='color-swatch'>Aa</div> | On Secondary | `--color-on-secondary` | Text and icons on secondary color |
+| <div style={{backgroundColor: 'var(--color-secondary-container)', color: 'var(--color-on-secondary-container)'}} className='color-swatch'>Aa</div> | Secondary Container | `--color-secondary-container` | Tonal container backgrounds |
+| <div style={{backgroundColor: 'var(--color-on-secondary-container)', color: 'var(--color-secondary-container)'}} className='color-swatch'>Aa</div> | On Secondary Container | `--color-on-secondary-container` | Text and icons on secondary container |
+
+### Tertiary
+
+| Preview | Color Name | CSS Token | Where to use |
+|---------|------------|-----------|--------------|
+| <div style={{backgroundColor: 'var(--color-tertiary)', color: 'var(--color-on-tertiary)'}} className='color-swatch'>Aa</div> | Tertiary | `--color-tertiary` | Contrasting accents, badges, input field highlights |
+| <div style={{backgroundColor: 'var(--color-on-tertiary)', color: 'var(--color-tertiary)'}} className='color-swatch'>Aa</div> | On Tertiary | `--color-on-tertiary` | Text and icons on tertiary color |
+| <div style={{backgroundColor: 'var(--color-tertiary-container)', color: 'var(--color-on-tertiary-container)'}} className='color-swatch'>Aa</div> | Tertiary Container | `--color-tertiary-container` | Accent container backgrounds |
+| <div style={{backgroundColor: 'var(--color-on-tertiary-container)', color: 'var(--color-tertiary-container)'}} className='color-swatch'>Aa</div> | On Tertiary Container | `--color-on-tertiary-container` | Text and icons on tertiary container |
+
+### Error
+
+| Preview | Color Name | CSS Token | Where to use |
+|---------|------------|-----------|--------------|
+| <div style={{backgroundColor: 'var(--color-error)', color: 'var(--color-on-error)'}} className='color-swatch'>Aa</div> | Error | `--color-error` | Error states, destructive actions, validation errors |
+| <div style={{backgroundColor: 'var(--color-on-error)', color: 'var(--color-error)'}} className='color-swatch'>Aa</div> | On Error | `--color-on-error` | Text and icons on error color |
+| <div style={{backgroundColor: 'var(--color-error-container)', color: 'var(--color-on-error-container)'}} className='color-swatch'>Aa</div> | Error Container | `--color-error-container` | Error message backgrounds, alert containers |
+| <div style={{backgroundColor: 'var(--color-on-error-container)', color: 'var(--color-error-container)'}} className='color-swatch'>Aa</div> | On Error Container | `--color-on-error-container` | Text and icons on error container |
+
+### Success
+
+| Preview | Color Name | CSS Token | Where to use |
+|---------|------------|-----------|--------------|
+| <div style={{backgroundColor: 'var(--color-success)', color: 'var(--color-on-success)'}} className='color-swatch'>Aa</div> | Success | `--color-success` | Success states, confirmations, positive feedback |
+| <div style={{backgroundColor: 'var(--color-on-success)', color: 'var(--color-success)'}} className='color-swatch'>Aa</div> | On Success | `--color-on-success` | Text and icons on success color |
+| <div style={{backgroundColor: 'var(--color-success-container)', color: 'var(--color-on-success-container)'}} className='color-swatch'>Aa</div> | Success Container | `--color-success-container` | Success message backgrounds |
+| <div style={{backgroundColor: 'var(--color-on-success-container)', color: 'var(--color-success-container)'}} className='color-swatch'>Aa</div> | On Success Container | `--color-on-success-container` | Text and icons on success container |
+
+### Info
+
+| Preview | Color Name | CSS Token | Where to use |
+|---------|------------|-----------|--------------|
+| <div style={{backgroundColor: 'var(--color-info)', color: 'var(--color-on-info)'}} className='color-swatch'>Aa</div> | Info | `--color-info` | Informational states, tips, help text |
+| <div style={{backgroundColor: 'var(--color-on-info)', color: 'var(--color-info)'}} className='color-swatch'>Aa</div> | On Info | `--color-on-info` | Text and icons on info color |
+| <div style={{backgroundColor: 'var(--color-info-container)', color: 'var(--color-on-info-container)'}} className='color-swatch'>Aa</div> | Info Container | `--color-info-container` | Info message backgrounds |
+| <div style={{backgroundColor: 'var(--color-on-info-container)', color: 'var(--color-info-container)'}} className='color-swatch'>Aa</div> | On Info Container | `--color-on-info-container` | Text and icons on info container |
+
+### Warning
+
+| Preview | Color Name | CSS Token | Where to use |
+|---------|------------|-----------|--------------|
+| <div style={{backgroundColor: 'var(--color-warning)', color: 'var(--color-on-warning)'}} className='color-swatch'>Aa</div> | Warning | `--color-warning` | Warning states, caution indicators |
+| <div style={{backgroundColor: 'var(--color-on-warning)', color: 'var(--color-warning)'}} className='color-swatch'>Aa</div> | On Warning | `--color-on-warning` | Text and icons on warning color |
+| <div style={{backgroundColor: 'var(--color-warning-container)', color: 'var(--color-on-warning-container)'}} className='color-swatch'>Aa</div> | Warning Container | `--color-warning-container` | Warning message backgrounds |
+| <div style={{backgroundColor: 'var(--color-on-warning-container)', color: 'var(--color-warning-container)'}} className='color-swatch'>Aa</div> | On Warning Container | `--color-on-warning-container` | Text and icons on warning container |
+
+### Surface
+
+| Preview | Color Name | CSS Token | Where to use |
+|---------|------------|-----------|--------------|
+| <div style={{backgroundColor: 'var(--color-background)', color: 'var(--color-on-background)'}} className='color-swatch'>Aa</div> | Background | `--color-background` | Default page background |
+| <div style={{backgroundColor: 'var(--color-on-background)', color: 'var(--color-background)'}} className='color-swatch'>Aa</div> | On Background | `--color-on-background` | Default text color on background |
+| <div style={{backgroundColor: 'var(--color-surface)', color: 'var(--color-on-surface)'}} className='color-swatch'>Aa</div> | Surface | `--color-surface` | Card and component backgrounds |
+| <div style={{backgroundColor: 'var(--color-on-surface)', color: 'var(--color-surface)'}} className='color-swatch'>Aa</div> | On Surface | `--color-on-surface` | Text and icons on surface |
+| <div style={{backgroundColor: 'var(--color-surface-variant)', color: 'var(--color-on-surface-variant)'}} className='color-swatch'>Aa</div> | Surface Variant | `--color-surface-variant` | Subtle surface differentiation |
+| <div style={{backgroundColor: 'var(--color-on-surface-variant)', color: 'var(--color-surface-variant)'}} className='color-swatch'>Aa</div> | On Surface Variant | `--color-on-surface-variant` | Text on surface variant |
+| <div style={{backgroundColor: 'var(--color-surface-container-lowest)', color: 'var(--color-on-surface)'}} className='color-swatch'>Aa</div> | Surface Container Lowest | `--color-surface-container-lowest` | Lowest elevation surface |
+| <div style={{backgroundColor: 'var(--color-surface-container-low)', color: 'var(--color-on-surface)'}} className='color-swatch'>Aa</div> | Surface Container Low | `--color-surface-container-low` | Low elevation surface |
+| <div style={{backgroundColor: 'var(--color-surface-container)', color: 'var(--color-on-surface)'}} className='color-swatch'>Aa</div> | Surface Container | `--color-surface-container` | Default container elevation |
+| <div style={{backgroundColor: 'var(--color-surface-container-high)', color: 'var(--color-on-surface)'}} className='color-swatch'>Aa</div> | Surface Container High | `--color-surface-container-high` | High elevation surface |
+| <div style={{backgroundColor: 'var(--color-surface-container-highest)', color: 'var(--color-on-surface)'}} className='color-swatch'>Aa</div> | Surface Container Highest | `--color-surface-container-highest` | Highest elevation surface |
+
+### Outline
+
+| Preview | Color Name | CSS Token | Where to use |
+|---------|------------|-----------|--------------|
+| <div style={{backgroundColor: 'var(--color-outline)', color: 'var(--color-surface)'}} className='color-swatch'>Aa</div> | Outline | `--color-outline` | Borders, dividers, focus rings |
+| <div style={{backgroundColor: 'var(--color-outline-variant)', color: 'var(--color-on-surface)'}} className='color-swatch'>Aa</div> | Outline Variant | `--color-outline-variant` | Subtle borders, decorative dividers |
+
+---
+
+## How It Works in Olyx
+
+### 1. Set Your Brand Color
+
+Two variables control everything:
+
+```css
+:root {
+  --brand-hue: 250;        /* 0–360, your brand's hue */
+  --brand-saturation: 60%; /* how vivid */
+}
+```
+
+### 2. Key Colors Are Derived
+
+From your brand, **five key color groups** are generated — same concept as [Material's key colors](https://m3.material.io/styles/color/system/how-the-system-works):
+
+| Key Color | Hue Derivation | Purpose |
+|-----------|---------------|---------|
+| **Primary** | `brand-hue` | High-emphasis elements (buttons, FABs, active states) |
+| **Secondary** | `brand-hue + 30°` | Less prominent elements (filter chips, tonal buttons) |
+| **Tertiary** | `brand-hue + 60°` | Contrasting accents (badges, input fields) |
+| **Neutral** | `brand-hue` at `5%` saturation | Surfaces and backgrounds |
+| **Neutral Variant** | `brand-hue` at `15%` saturation | Outlines and surface variants |
+
+### 3. Tones Are Assigned to Roles
+
+Each key color gets mapped to [color roles](https://m3.material.io/styles/color/roles) using specific tone values — light/dark modes simply swap which tones go where:
+
+| Role | Light Tone | Dark Tone | Usage |
+|------|-----------|-----------|-------|
+| `color-primary` | 40% | 80% | High-emphasis fills, text, icons |
+| `color-on-primary` | 100% | 20% | Text/icons **on** primary |
+| `color-primary-container` | 90% | 30% | Standout container fills |
+| `color-on-primary-container` | 10% | 90% | Text/icons **on** container |
+
+The same pattern repeats for secondary, tertiary, error, surface, and outline groups.
+
+---
+
+## WCAG Accessibility Guards
+
+The system doesn't just hope for accessibility — it **enforces** it:
+
+- **Saturation is clamped** per color group (e.g., primary: `5%–75%`) to prevent washed-out or over-saturated extremes.
+- **Lightness is dynamically adjusted** — high saturation colors get darker lightness values so white text stays readable.
+- **Container saturation is reduced** (85% of the main color in light mode, 55% in dark) to keep containers visually recessive.
+- **Dark mode boosts minimum lightness** proportionally to saturation, ensuring vibrant colors stay legible on dark backgrounds.
+
+This means you can throw basically any hue/saturation combo at it and the output will be accessible. Not 100% of edge cases — but ~99.99% of reasonable inputs.
+
+---
+
+## Customizing
+
+Change two variables, everything updates:
+
+```css
+:root {
+  --brand-hue: 160;       /* switch to teal */
+  --brand-saturation: 50%;
+}
+```
+
+For per-section theming, use the `[data-custom-theme]` attribute on any container:
+
+```html
+<section data-custom-theme style="--brand-hue: 340; --brand-saturation: 70%;">
+  <!-- this section gets a pink theme -->
+</section>
+```
+
+Dark mode is handled automatically via `[data-theme="dark"]` — all tone values flip, saturation ratios adjust, and container lightness inverts. No extra work.
+
+---
+
+## Source
+
+The complete token generation lives in a single CSS file:
+
+<ComponentSource src="assets/styles/_base/colors.css" language="css" title="style/_base/colors.css" />
+
+---
+
+## Further Reading
+
+- [M3 Color System Overview](https://m3.material.io/styles/color/system/overview) — What the system includes and what's new.
+- [M3 How the System Works](https://m3.material.io/styles/color/system/how-the-system-works) — The full pipeline from source color → key colors → tonal palettes → roles → UI.
+- [M3 Color Roles](https://m3.material.io/styles/color/roles) — All 26+ standard color roles, their purpose, and pairing rules.

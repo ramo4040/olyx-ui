@@ -9,7 +9,7 @@
   [data-ui="docs-page"] {
     width: 100%;
 
-    header {
+    header.component-page-header {
       display: flex;
       gap: var(--spacing-12);
       height: 300px;
@@ -113,6 +113,23 @@
       }
     }
 
+    header.page-header {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-12);
+      padding-block: var(--spacing-32);
+
+      h1 {
+        font: var(--font-display-lg);
+        font-weight: 500;
+      }
+
+      p {
+        font: var(--font-body-lg);
+        color: var(--color-on-surface-variant);
+      }
+    }
+
     main {
       display: flex;
       width: 100%;
@@ -185,7 +202,7 @@
         font-weight: 600;
       }
 
-      [data-ui="docs-separator"] {
+      [data-slot="docs-separator"] {
         margin-top: 16px;
         margin-bottom: 16px;
 
@@ -254,6 +271,15 @@
         &:hover {
           background: transparent;
         }
+      }
+
+      .color-swatch {
+        display: grid;
+        place-content: center;
+        font-size: var(--font-body-md);
+        height: var(--spacing-32);
+        width: var(--spacing-64);
+        border-radius: var(--spacing-4);
       }
     }
 

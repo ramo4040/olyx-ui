@@ -985,4 +985,34 @@ export const Index: Record<string, any> = {
     ],
     meta: { category: "navigation", tags: ["controls", "actions"] },
   },
+  "tokens.css": {
+    name: "tokens.css",
+    description: "CSS custom properties for theming and design tokens.",
+    type: "registry:style",
+    registryDependencies: undefined,
+    dependencies: undefined,
+    files: [
+      {
+        path: "@olyx/react/styles/_base/tokens.css",
+        type: "registry:style",
+        target: "",
+      },
+    ],
+    meta: { tags: ["design", "tokens", "css"] },
+  },
+  "colors.css": {
+    name: "colors.css",
+    description: "Color palette and CSS variables for theming.",
+    type: "registry:style",
+    registryDependencies: undefined,
+    dependencies: undefined,
+    files: [
+      {
+        path: "@olyx/react/styles/_base/colors.css",
+        type: "registry:style",
+        target: "",
+      },
+    ],
+    meta: { tags: ["colors", "palette", "css"] },
+  },
 };
