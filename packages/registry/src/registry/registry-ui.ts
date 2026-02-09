@@ -330,6 +330,22 @@ export const registryUi: Registry["items"] = [
       tags: ["popup", "overlay"],
     },
   },
+  {
+    name: "sheet",
+    title: "Sheet",
+    description: "A side panel that slides in from the edge of the screen.",
+    type: "registry:ui",
+    dependencies: ["@base-ui/react"],
+    registryDependencies: ["button", "separator"],
+    files: [
+      { path: "@olyx/react/sheet/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/sheet/style.css", type: "registry:style" },
+    ],
+    meta: {
+      category: "disclosure",
+      tags: ["drawer", "panel", "slide"],
+    },
+  },
   // ...feedback
   {
     name: "alert",

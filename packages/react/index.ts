@@ -35,6 +35,7 @@ export * from "./src/rating-review";
 export * from "./src/scroll-area";
 export * from "./src/select";
 export * from "./src/separator";
+export * from "./src/sheet";
 export * from "./src/skeleton";
 export * from "./src/slider";
 export * from "./src/spinner";

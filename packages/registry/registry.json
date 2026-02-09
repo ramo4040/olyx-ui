@@ -446,6 +446,28 @@
       }
     },
     {
+      "name": "sheet",
+      "title": "Sheet",
+      "description": "A side panel that slides in from the edge of the screen.",
+      "type": "registry:ui",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["button", "separator"],
+      "files": [
+        {
+          "path": "ui/sheet/index.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "ui/sheet/style.css",
+          "type": "registry:style"
+        }
+      ],
+      "meta": {
+        "category": "disclosure",
+        "tags": ["drawer", "panel", "slide"]
+      }
+    },
+    {
       "name": "alert",
       "title": "Alert",
       "description": "Displays a callout for user attention.",
