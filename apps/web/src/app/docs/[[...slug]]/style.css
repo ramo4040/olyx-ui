@@ -147,7 +147,6 @@
 
       a {
         width: 50%;
-        border: 1px solid var(--color-surface-variant);
         height: 90px;
         border-radius: var(--radius-lg);
         padding: var(--spacing-16) var(--spacing-24);
@@ -166,7 +165,6 @@
         &:hover {
           background-color: var(--color-primary-container);
           color: var(--color-on-primary-container);
-          border-color: var(--color-primary);
         }
 
         span {

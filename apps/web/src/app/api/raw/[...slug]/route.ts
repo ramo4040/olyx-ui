@@ -1,0 +1,35 @@
+import fs from "node:fs/promises";
+import path from "node:path";
+import { type NextRequest, NextResponse } from "next/server";
+
+export async function GET(
+  _request: NextRequest,
+  { params }: { params: Promise<{ slug: string[] }> },
+) {
+  const { slug } = await params;
+
+  const filePath = path.join(process.cwd(), "content", ...slug);
+
+  const mdxPath = filePath.endsWith(".mdx") ? filePath : `${filePath}.mdx`;
+  const mdPath = filePath.endsWith(".md") ? filePath : `${filePath}.md`;
+
+  try {
+    let content: string;
+
+    // Try .mdx first, then .md
+    try {
+      content = await fs.readFile(mdxPath, "utf-8");
+    } catch {
+      content = await fs.readFile(mdPath, "utf-8");
+    }
+
+    return new NextResponse(content, {
+      headers: {
+        "Cache-Control": "public, max-age=3600",
+        "Content-Type": "text/plain; charset=utf-8",
+      },
+    });
+  } catch {
+    return NextResponse.json({ error: "File not found" }, { status: 404 });
+  }
+}

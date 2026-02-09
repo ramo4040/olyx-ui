@@ -31,15 +31,19 @@ export const MainNavbar = () => {
             {/* Links */}
             <NavigationMenuList>
               <NavigationMenuItem className="link-item">
-                <NavigationMenuLink href="#">Docs</NavigationMenuLink>
+                <NavigationMenuLink href="/docs">Docs</NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem className="link-item">
-                <NavigationMenuLink href="#">Components</NavigationMenuLink>
+                <NavigationMenuLink href="/components">
+                  Components
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem className="link-item">
-                <NavigationMenuLink href="#">Particles</NavigationMenuLink>
+                <NavigationMenuLink href="/particles">
+                  Particles
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </div>

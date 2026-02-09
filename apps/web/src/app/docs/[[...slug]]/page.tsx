@@ -1,27 +1,15 @@
 import "./style.css";
 import "./particles-style.css";
 import {
-  ArrowDown01Icon,
   ArrowLeft02Icon,
   ArrowRight02Icon,
-  Copy01Icon,
   LinkSquare02Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  Button,
-  ButtonGroup,
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@olyx/react";
+import { Button } from "@olyx/react/button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ClaudeAI } from "@/assets/svg/claude";
-import { Markdown } from "@/assets/svg/markdown";
-import { OpenAI } from "@/assets/svg/openai";
-import { V0 } from "@/assets/svg/v0";
+import { CopyMDXButton } from "@/components/misc";
 import { source } from "@/lib/source";
 import { DocsToc } from "@/widgets/misc";
 import { mdxComponents } from "../../../../mdx-components";
@@ -69,6 +57,8 @@ export default async function Page(props: {
   const MDX = doc.body;
   const links = doc.links;
 
+  const mdxContent = await doc.getText("raw");
+
   const pageTree = source
     .getPageTree()
     .children.flatMap((child) =>
@@ -111,39 +101,7 @@ export default async function Page(props: {
                 />
               )}
 
-              <ButtonGroup>
-                <Button size="sm" variant="neutral" mode="stroke">
-                  <HugeiconsIcon icon={Copy01Icon} /> Copy page
-                </Button>
-
-                <DropdownMenu>
-                  <DropdownMenuTrigger
-                    render={
-                      <Button size="sm" variant="neutral" mode="stroke">
-                        <HugeiconsIcon icon={ArrowDown01Icon} />
-                      </Button>
-                    }
-                  />
-                  <DropdownMenuContent>
-                    <DropdownMenuItem>
-                      <Markdown />
-                      View as Markdown
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <V0 />
-                      Open in v0
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <OpenAI />
-                      Open in ChatGPT
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <ClaudeAI />
-                      Open in Claude
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </ButtonGroup>
+              <CopyMDXButton value={mdxContent} path={page.url} />
             </div>
           </div>
           <div className="example-container">
@@ -159,16 +117,14 @@ export default async function Page(props: {
             <header className="page-header">
               <h1>{doc.title}</h1>
               <p>{doc.description}</p>
-              <Button size="sm" variant="neutral" mode="stroke">
-                <HugeiconsIcon icon={Copy01Icon} /> Copy page
-              </Button>
+              <CopyMDXButton value={mdxContent} path={page.url} />
             </header>
           )}
           <MDX components={mdxComponents} />
 
           <div className="pagination">
             {prevLink && (
-              <Link href={prevLink.url}>
+              <Link href={{ pathname: prevLink.url }}>
                 <span>
                   <HugeiconsIcon icon={ArrowLeft02Icon} />
                   Previous
@@ -178,7 +134,7 @@ export default async function Page(props: {
               </Link>
             )}
             {nextLink && (
-              <Link href={nextLink.url}>
+              <Link href={{ pathname: nextLink.url }}>
                 <span>
                   Up next
                   <HugeiconsIcon icon={ArrowRight02Icon} />

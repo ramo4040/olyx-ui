@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [new URL("https://www.gravatar.com/avatar/**?d=identicon")],
   },
+  async rewrites() {
+    return [
+      {
+        destination: "/api/raw/docs/:path*",
+        source: "/docs/:path*.md",
+      },
+    ];
+  },
 };
 
 const withMDX = createMDX({
