@@ -14,7 +14,7 @@ import {
   AutocompleteItem,
   AutocompleteList,
   AutocompleteSeparator,
-} from "@olyx/react";
+} from "@olyx/react/autocomplete";
 import type * as React from "react";
 
 const CommandDialog = CommandDialogPrimitive.Root;

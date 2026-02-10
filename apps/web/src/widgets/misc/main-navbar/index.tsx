@@ -61,7 +61,7 @@ export const MainNavbar = () => {
           <NavigationMenuList className="actions-list">
             {/* Search */}
             <NavigationMenuItem className="search-item">
-              <DocsCommand />
+              <DocsCommand tree={docsTree} />
             </NavigationMenuItem>
 
             <Separator orientation="vertical" />
