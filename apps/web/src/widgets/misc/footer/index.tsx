@@ -39,7 +39,7 @@ export const Footer = () => {
 
         <div className="copyright">
           <div className="details">
-            <p>@{currentYear} Olyx</p>
+            <p>©{currentYear} Olyx</p>
             {bottomLinksSet.map((e) => {
               return (
                 <LinkButton href={e.url} size="sm" key={e.label}>

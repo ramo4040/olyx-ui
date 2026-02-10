@@ -1,25 +1,15 @@
 import "./style.css";
 import "./particles-style.css";
 import {
-  ArrowDown01Icon,
-  Copy01Icon,
+  ArrowLeft02Icon,
+  ArrowRight02Icon,
   LinkSquare02Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  Button,
-  ButtonGroup,
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@olyx/react";
+import { Button } from "@olyx/react/button";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ClaudeAI } from "@/assets/svg/claude";
-import { Markdown } from "@/assets/svg/markdown";
-import { OpenAI } from "@/assets/svg/openai";
-import { V0 } from "@/assets/svg/v0";
+import { CopyMDXButton } from "@/components/misc";
 import { source } from "@/lib/source";
 import { DocsToc } from "@/widgets/misc";
 import { mdxComponents } from "../../../../mdx-components";
@@ -58,7 +48,6 @@ export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
-  const isComponentPage = params.slug?.[0] === "components";
   const page = source.getPage(params.slug);
 
   if (!page) notFound();
@@ -67,15 +56,30 @@ export default async function Page(props: {
   const MDX = doc.body;
   const links = doc.links;
 
+  const mdxContent = await doc.getText("raw");
+
+  const pageTree = source
+    .getPageTree()
+    .children.flatMap((child) =>
+      child.type === "page"
+        ? [child]
+        : child.type === "folder"
+          ? child.children.filter((c) => c.type === "page")
+          : [],
+    );
+
+  const currentPageIndex = pageTree.findIndex((p) => p.$id === page.path);
+  const prevLink = pageTree[currentPageIndex - 1];
+  const nextLink = pageTree[currentPageIndex + 1];
+
   return (
     <div data-ui="docs-page">
-      {isComponentPage && (
-        <header className="component-page-header">
-          <div className="description-container">
-            <div>
-              <h1>{doc.title}</h1>
-              <p>{doc.description}</p>
-            </div>
+      {/* Render MDX content */}
+      <main>
+        <div data-ui="docs-content">
+          <header className="page-header">
+            <h1>{doc.title}</h1>
+            <p>{doc.description}</p>
             <div className="actions">
               {links?.doc && (
                 <Button
@@ -95,60 +99,34 @@ export default async function Page(props: {
                 />
               )}
 
-              <ButtonGroup>
-                <Button size="sm" variant="neutral" mode="stroke">
-                  <HugeiconsIcon icon={Copy01Icon} /> Copy page
-                </Button>
-
-                <DropdownMenu>
-                  <DropdownMenuTrigger
-                    render={
-                      <Button size="sm" variant="neutral" mode="stroke">
-                        <HugeiconsIcon icon={ArrowDown01Icon} />
-                      </Button>
-                    }
-                  />
-                  <DropdownMenuContent>
-                    <DropdownMenuItem>
-                      <Markdown />
-                      View as Markdown
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <V0 />
-                      Open in v0
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <OpenAI />
-                      Open in ChatGPT
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <ClaudeAI />
-                      Open in Claude
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </ButtonGroup>
+              <CopyMDXButton value={mdxContent} path={page.url} />
             </div>
-          </div>
-          <div className="example-container">
-            <div className="example" />
-          </div>
-        </header>
-      )}
+          </header>
 
-      {/* Render MDX content */}
-      <main>
-        <div data-ui="docs-content">
-          {!isComponentPage && (
-            <header className="page-header">
-              <h1>{doc.title}</h1>
-              <p>{doc.description}</p>
-              <Button size="sm" variant="neutral" mode="stroke">
-                <HugeiconsIcon icon={Copy01Icon} /> Copy page
-              </Button>
-            </header>
-          )}
           <MDX components={mdxComponents} />
+
+          <div className="pagination">
+            {prevLink && (
+              <Link href={{ pathname: prevLink.url }}>
+                <span>
+                  <HugeiconsIcon icon={ArrowLeft02Icon} />
+                  Previous
+                </span>
+
+                <p>{prevLink.name}</p>
+              </Link>
+            )}
+            {nextLink && (
+              <Link href={{ pathname: nextLink.url }}>
+                <span>
+                  Up next
+                  <HugeiconsIcon icon={ArrowRight02Icon} />
+                </span>
+
+                <p>{nextLink.name}</p>
+              </Link>
+            )}
+          </div>
         </div>
 
         <DocsToc toc={doc.toc} />

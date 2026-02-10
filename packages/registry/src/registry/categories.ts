@@ -45,6 +45,7 @@ export const registryCategories = [
   "scroll-area",
   "select",
   "separator",
+  "sheet",
   "skeleton",
   "slider",
   "spinner",

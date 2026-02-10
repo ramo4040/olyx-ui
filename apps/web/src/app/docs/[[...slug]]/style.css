@@ -8,110 +8,7 @@
 
   [data-ui="docs-page"] {
     width: 100%;
-
-    header.component-page-header {
-      display: flex;
-      gap: var(--spacing-12);
-      height: 300px;
-
-      > * {
-        border-radius: var(--radius-lg-inc);
-        flex: 1;
-      }
-
-      .description-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: var(--spacing-8);
-        padding: var(--spacing-32);
-        background-color: var(--color-surface-container-lowest);
-
-        h1 {
-          font: var(--font-display-lg);
-          font-weight: 500;
-        }
-
-        p {
-          font: var(--font-body-lg);
-          color: var(--color-on-surface-variant);
-        }
-
-        .actions {
-          display: flex;
-          gap: var(--spacing-8);
-        }
-      }
-
-      .example-container {
-        position: relative;
-        overflow: hidden;
-        padding: var(--spacing-24);
-        background-color: var(--color-surface-container-lowest);
-
-        &::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background-image:
-            linear-gradient(
-              to right,
-              var(--color-outline-variant) 1px,
-              transparent 1px
-            ),
-            linear-gradient(
-              to bottom,
-              var(--color-outline-variant) 1px,
-              transparent 1px
-            );
-          background-size: 20px 20px;
-          background-position:
-            0 0,
-            0 0;
-          mask-image:
-            repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            );
-          -webkit-mask-image:
-            repeating-linear-gradient(
-              to right,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            ),
-            repeating-linear-gradient(
-              to bottom,
-              black 0px,
-              black 3px,
-              transparent 3px,
-              transparent 8px
-            );
-          mask-composite: intersect;
-          -webkit-mask-composite: source-in;
-        }
-
-        .example {
-          position: relative;
-          z-index: 10;
-          width: 100%;
-          height: 100%;
-          border-radius: var(--radius-lg-inc);
-          background-color: var(--color-surface);
-        }
-      }
-    }
+    min-width: 0;
 
     header.page-header {
       display: flex;
@@ -128,21 +25,87 @@
         font: var(--font-body-lg);
         color: var(--color-on-surface-variant);
       }
+
+      .actions {
+        display: flex;
+        gap: var(--spacing-8);
+      }
     }
 
     main {
       display: flex;
       width: 100%;
-      gap: 80px;
+      min-width: 0;
+      gap: var(--spacing-24);
       margin-top: var(--spacing-12);
       padding-bottom: var(--spacing-64);
       background: var(--color-surface-container-lowest);
       border-radius: var(--radius-lg-inc);
+
+      @media (min-width: 1280px) {
+        gap: 80px;
+      }
+    }
+
+    .pagination {
+      display: flex;
+      gap: var(--spacing-12);
+      margin-top: var(--spacing-64);
+
+      a {
+        width: 50%;
+        height: 90px;
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-16) var(--spacing-24);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-decoration: none;
+        color: inherit;
+        background-color: var(--color-surface);
+        transition: var(--transition-standard-default-effects);
+
+        &:last-child {
+          margin-left: auto;
+        }
+
+        &:hover {
+          background-color: var(--color-primary-container);
+          color: var(--color-on-primary-container);
+        }
+
+        span {
+          display: flex;
+          gap: var(--spacing-4);
+          align-items: center;
+          font: var(--font-label-lg);
+
+          svg {
+            width: var(--spacing-16);
+            height: var(--spacing-16);
+          }
+        }
+
+        p {
+          font: var(--font-title-lg);
+          font-weight: 500;
+        }
+      }
     }
 
     [data-ui="docs-content"] {
-      width: 800px;
-      margin-left: 120px;
+      width: 100%;
+      min-width: 0;
+      padding-inline: var(--spacing-16);
+
+      @media (min-width: 768px) {
+        padding-inline: var(--spacing-24);
+      }
+
+      @media (min-width: 1280px) {
+        margin-left: 80px;
+        padding-inline: 0;
+      }
 
       [data-ui="docs-h1"] {
         margin-top: 8px;
@@ -281,8 +244,20 @@
         width: var(--spacing-64);
         border-radius: var(--spacing-4);
       }
-    }
 
+      .spacing-box-example {
+        height: var(--spacing-16);
+        background-color: var(--color-primary);
+        display: inline-block;
+        border-radius: var(--spacing-2);
+      }
+
+      .border-radius-box-example {
+        width: 100px;
+        height: 100px;
+        background-color: var(--color-primary-container);
+      }
+    }
     /* Shiki dual theme: CSS variables approach */
 
     [data-line] span {

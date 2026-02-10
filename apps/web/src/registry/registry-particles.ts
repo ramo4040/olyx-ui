@@ -3036,6 +3036,59 @@ const data: RegistryItem[] = [
     },
   },
   {
+    name: "p-sheet-1",
+    description: "Default sheet",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-sheet-1.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: [
+      "@olyx/react/sheet",
+      "@olyx/react/button",
+      "@olyx/react/field",
+      "@olyx/react/input",
+    ],
+    meta: {
+      category: category("sheet"),
+      tags: ["sheet", "panel", "drawer"],
+    },
+  },
+  {
+    name: "p-sheet-2",
+    description: "Inset sheet",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-sheet-2.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/sheet", "@olyx/react/button"],
+    meta: {
+      category: category("sheet"),
+      tags: ["sheet", "inset"],
+    },
+  },
+  {
+    name: "p-sheet-3",
+    description: "Sheet sides",
+    type: "registry:block",
+    files: [
+      {
+        path: "registry/particles/p-sheet-3.tsx",
+        type: "registry:block",
+      },
+    ],
+    registryDependencies: ["@olyx/react/sheet", "@olyx/react/button"],
+    meta: {
+      category: category("sheet"),
+      tags: ["sheet", "sides"],
+    },
+  },
+  {
     name: "p-skeleton-1",
     description: "Card skeleton layout",
     type: "registry:block",

@@ -3,7 +3,7 @@
 import "./style.css";
 import { Tabs } from "@olyx/react";
 import React from "react";
-import { useConfig } from "@/lib/use-config";
+import { useConfig } from "@/hooks/use-config";
 
 export function CodeTabs({ children }: React.ComponentProps<typeof Tabs>) {
   const [config, setConfig] = useConfig();

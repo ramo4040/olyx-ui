@@ -2,7 +2,9 @@
   [data-ui="docs-sidebar"] {
     --header-height: 56px;
 
-    width: 250px;
+    display: none;
+    width: 200px;
+    flex-shrink: 0;
     height: 80vh;
     overflow-y: auto;
     position: sticky;
@@ -10,6 +12,10 @@
     border-radius: var(--radius-lg);
     padding: var(--spacing-12);
     padding-top: 0;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
 
     scrollbar-width: none;
     -ms-overflow-style: none;

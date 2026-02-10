@@ -63,6 +63,10 @@
       background-color: var(--color-background);
       color: var(--color-on-background);
 
+      &:focus-visible {
+        outline: 0;
+      }
+
       /* Default: Bottom */
       &[data-vaul-drawer-direction="bottom"] {
         bottom: var(--spacing-0);

@@ -16,7 +16,10 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    width: min(600px, 90vw);
+    width: calc(100% - var(--spacing-32));
+    max-width: 576px;
+    max-height: min(calc(100vh - 8vh), 26rem);
+    min-height: 0;
     top: 40%;
     left: 50%;
     z-index: 55;
@@ -68,12 +71,15 @@
     display: grid;
     place-content: center;
     justify-content: stretch;
+    flex: 1;
+    min-height: 0;
 
     [data-ui="scroll-area"] {
       border: none;
       border-radius: none;
       padding: 0;
       padding-inline: var(--spacing-8);
+      min-height: 0;
 
       [data-ui="scroll-area-scrollbar"] {
         margin-inline: 0 var(--spacing-2);
@@ -107,6 +113,7 @@
         color: var(--color-on-background);
         font-weight: 500;
         user-select: none;
+        text-decoration: none;
 
         &:hover {
           background-color: var(--color-surface-container-low);

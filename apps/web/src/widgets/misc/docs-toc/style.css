@@ -4,6 +4,7 @@
     top: 100px;
     padding-bottom: 50px;
     margin-top: 100px;
+    width: 300px;
     align-self: flex-start;
     flex-shrink: 0;
     max-height: calc(100svh - 56px * 2);
@@ -57,6 +58,10 @@
       &:where([data-depth="3"], [data-depth="4"]) {
         margin-left: var(--spacing-12);
       }
+    }
+
+    @media (width < 1280px) {
+      display: none;
     }
   }
 }

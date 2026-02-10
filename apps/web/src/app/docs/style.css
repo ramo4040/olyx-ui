@@ -5,12 +5,16 @@
     flex: 1;
 
     > main {
-      width: 1536px;
+      width: 100%;
       flex: 1;
-      margin-inline: auto;
       display: flex;
-      margin-block: var(--spacing-32);
       gap: var(--spacing-32);
+      margin-block: var(--spacing-32);
+      padding-inline: var(--spacing-64);
+
+      @media (width < 1024px) {
+        padding-inline: var(--spacing-10);
+      }
     }
   }
 }

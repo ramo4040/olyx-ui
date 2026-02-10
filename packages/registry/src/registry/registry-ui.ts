@@ -216,7 +216,7 @@ export const registryUi: Registry["items"] = [
     type: "registry:ui",
     files: [
       { path: "@olyx/react/tag/index.tsx", type: "registry:ui" },
-      { path: "@olyx/react/tag/style.", type: "registry:style" },
+      { path: "@olyx/react/tag/style.css", type: "registry:style" },
     ],
     meta: {
       category: "data-display",
@@ -328,6 +328,22 @@ export const registryUi: Registry["items"] = [
     meta: {
       category: "disclosure",
       tags: ["popup", "overlay"],
+    },
+  },
+  {
+    name: "sheet",
+    title: "Sheet",
+    description: "A side panel that slides in from the edge of the screen.",
+    type: "registry:ui",
+    dependencies: ["@base-ui/react"],
+    registryDependencies: ["button", "separator"],
+    files: [
+      { path: "@olyx/react/sheet/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/sheet/style.css", type: "registry:style" },
+    ],
+    meta: {
+      category: "disclosure",
+      tags: ["drawer", "panel", "slide"],
     },
   },
   // ...feedback

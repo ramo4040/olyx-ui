@@ -23,49 +23,74 @@ import {
   CommandItem,
   CommandList,
   CommandPanel,
-  CommandSeparator,
-  CommandShortcut,
   Kbd,
   KbdGroup,
 } from "@olyx/react";
-import { Fragment, useEffect } from "react";
-
-interface Item {
-  value: string;
-  label: string;
-  shortcut?: string;
-}
-
-interface Group {
-  value: string;
-  items: Item[];
-}
-
-const suggestions: Item[] = [
-  { label: "Linear", shortcut: "⌘L", value: "linear" },
-  { label: "Figma", shortcut: "⌘F", value: "figma" },
-  { label: "Slack", shortcut: "⌘S", value: "slack" },
-  { label: "YouTube", shortcut: "⌘Y", value: "youtube" },
-  { label: "Raycast", shortcut: "⌘R", value: "raycast" },
-];
-
-const commands: Item[] = [
-  { label: "Clipboard History", shortcut: "⌘⇧C", value: "clipboard-history" },
-  { label: "Import Extension", shortcut: "⌘I", value: "import-extension" },
-  { label: "Create Snippet", shortcut: "⌘N", value: "create-snippet" },
-  { label: "System Preferences", shortcut: "⌘,", value: "system-preferences" },
-  { label: "Window Management", shortcut: "⌘⇧W", value: "window-management" },
-];
-
-const groupedItems: Group[] = [
-  { items: suggestions, value: "Suggestions" },
-  { items: commands, value: "Commands" },
-];
+import Link from "next/link";
+import { useEffect, useMemo } from "react";
+import { appConfig } from "@/lib/config";
+import type { source } from "@/lib/source";
 
 export const docsCommandHandle = CommandCreateHandle();
 
-export const DocsCommand = () => {
-  function handleItemClick(_item: Item) {
+interface PageItem {
+  value: string;
+  label: string;
+  url: string;
+  keywords?: string[];
+}
+
+interface PageGroup {
+  value: string;
+  items: PageItem[];
+}
+
+export const DocsCommand = ({ tree }: { tree: typeof source.pageTree }) => {
+  // Convert tree structure to grouped items
+  const groupedItems = useMemo<PageGroup[]>(() => {
+    const groups: PageGroup[] = [];
+
+    // Add nav items group
+    if (appConfig.navItems && appConfig.navItems.length > 0) {
+      groups.push({
+        value: "Olyx UI",
+        items: appConfig.navItems.map((item) => ({
+          value: `Navigation ${item.label}`,
+          label: item.label,
+          url: item.href,
+          keywords: ["nav", "navigation", item.label.toLowerCase()],
+        })),
+      });
+    }
+
+    // Add tree groups
+    tree.children.forEach((group) => {
+      if (group.type === "folder") {
+        const items: PageItem[] = [];
+        group.children.forEach((item) => {
+          if (item.type === "page") {
+            const itemName = item.name?.toString() || "";
+            items.push({
+              value: itemName ? `${group.name} ${itemName}` : "",
+              label: itemName,
+              url: item.url,
+            });
+          }
+        });
+        if (items.length > 0) {
+          groups.push({
+            value:
+              typeof group.name === "string" ? group.name : String(group.name),
+            items,
+          });
+        }
+      }
+    });
+
+    return groups;
+  }, [tree]);
+
+  function handleItemClick() {
     docsCommandHandle.close();
   }
 
@@ -99,32 +124,27 @@ export const DocsCommand = () => {
       />
 
       <CommandDialogContent>
-        <Command items={groupedItems} autoHighlight>
+        <Command autoHighlight items={groupedItems}>
           <CommandInput placeholder="Search for apps and commands..." />
           <CommandPanel>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandList>
-              {(group: Group, _index: number) => (
-                <Fragment key={group.value}>
-                  <CommandGroup items={group.items}>
-                    <CommandGroupLabel>{group.value}</CommandGroupLabel>
-                    <CommandCollection>
-                      {(item: Item) => (
-                        <CommandItem
-                          key={item.value}
-                          onClick={() => handleItemClick(item)}
-                          value={item.value}
-                        >
-                          <span className="flex-1">{item.label}</span>
-                          {item.shortcut && (
-                            <CommandShortcut>{item.shortcut}</CommandShortcut>
-                          )}
-                        </CommandItem>
-                      )}
-                    </CommandCollection>
-                  </CommandGroup>
-                  {groupedItems.length - 1 !== _index && <CommandSeparator />}
-                </Fragment>
+              {(group: PageGroup) => (
+                <CommandGroup key={group.value} items={group.items}>
+                  <CommandGroupLabel>{group.value}</CommandGroupLabel>
+                  <CommandCollection>
+                    {(item: PageItem) => (
+                      <CommandItem
+                        key={item.value}
+                        value={item.value}
+                        onClick={handleItemClick}
+                        render={
+                          <Link href={item.url as any}>{item.label}</Link>
+                        }
+                      />
+                    )}
+                  </CommandCollection>
+                </CommandGroup>
               )}
             </CommandList>
           </CommandPanel>

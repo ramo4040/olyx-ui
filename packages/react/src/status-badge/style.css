@@ -16,7 +16,7 @@
     /* Icon */
     & > svg {
       flex-shrink: 0;
-      color: var(--color-status-badge);
+      color: inherit;
       width: var(--icon-size);
       height: var(--icon-size);
     }

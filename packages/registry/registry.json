@@ -297,7 +297,7 @@
           "type": "registry:ui"
         },
         {
-          "path": "ui/tag/style.",
+          "path": "ui/tag/style.css",
           "type": "registry:style"
         }
       ],
@@ -443,6 +443,28 @@
       "meta": {
         "category": "disclosure",
         "tags": ["popup", "overlay"]
+      }
+    },
+    {
+      "name": "sheet",
+      "title": "Sheet",
+      "description": "A side panel that slides in from the edge of the screen.",
+      "type": "registry:ui",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["button", "separator"],
+      "files": [
+        {
+          "path": "ui/sheet/index.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "ui/sheet/style.css",
+          "type": "registry:style"
+        }
+      ],
+      "meta": {
+        "category": "disclosure",
+        "tags": ["drawer", "panel", "slide"]
       }
     },
     {

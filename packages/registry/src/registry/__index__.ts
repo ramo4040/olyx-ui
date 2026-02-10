@@ -294,7 +294,7 @@ export const Index: Record<string, any> = {
         target: "",
       },
       {
-        path: "@olyx/react/tag/style.",
+        path: "@olyx/react/tag/style.css",
         type: "registry:style",
         target: "",
       },
@@ -433,6 +433,26 @@ export const Index: Record<string, any> = {
       },
     ],
     meta: { category: "disclosure", tags: ["popup", "overlay"] },
+  },
+  sheet: {
+    name: "sheet",
+    description: "A side panel that slides in from the edge of the screen.",
+    type: "registry:ui",
+    registryDependencies: ["button", "separator"],
+    dependencies: ["@base-ui/react"],
+    files: [
+      {
+        path: "@olyx/react/sheet/index.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+      {
+        path: "@olyx/react/sheet/style.css",
+        type: "registry:style",
+        target: "",
+      },
+    ],
+    meta: { category: "disclosure", tags: ["drawer", "panel", "slide"] },
   },
   alert: {
     name: "alert",

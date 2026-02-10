@@ -1,10 +1,219 @@
 ---
 title: Tokens
-description: desc
+description: Spacing, radius, and shadows tokens that power every Olyx component.
 ---
 
-## Introduction
+Olyx ships a flat set of **CSS custom properties** — no Tailwind, no utility classes, no preprocessor. Every component references these tokens directly, so overriding one variable propagates everywhere.
 
-<div style={{backgroundColor:"red"}}>
-    Tokens are the building blocks of design systems. They are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes. These attributes can be anything from color values to typography styles, spacing values, and more. By using tokens, designers and developers can ensure consistency across a product or brand, as they can reference these tokens instead of hardcoding values directly into their designs or code.  
-</div>
+---
+
+## Spacing
+
+A linear pixel scale. Names match values — `--spacing-8` is `8px`.
+
+| Token | Value | Preview |
+|-------|-------|---------|
+| `--spacing-0` | `0` | <div style={{width: 0}} className='spacing-box-example' /> |
+| `--spacing-2` | `2px` | <div style={{width: '2px'}} className='spacing-box-example' /> |
+| `--spacing-4` | `4px` | <div style={{width: '4px'}} className='spacing-box-example' /> |
+| `--spacing-6` | `6px` | <div style={{width: '6px'}} className='spacing-box-example' /> |
+| `--spacing-8` | `8px` | <div style={{width: '8px'}} className='spacing-box-example' /> |
+| `--spacing-10` | `10px` | <div style={{width: '10px'}} className='spacing-box-example' /> |
+| `--spacing-12` | `12px` | <div style={{width: '12px'}} className='spacing-box-example' /> |
+| `--spacing-14` | `14px` | <div style={{width: '14px'}} className='spacing-box-example' /> |
+| `--spacing-16` | `16px` | <div style={{width: '16px'}} className='spacing-box-example' /> |
+| `--spacing-24` | `24px` | <div style={{width: '24px'}} className='spacing-box-example' /> |
+| `--spacing-32` | `32px` | <div style={{width: '32px'}} className='spacing-box-example' /> |
+| `--spacing-48` | `48px` | <div style={{width: '48px'}} className='spacing-box-example' /> |
+| `--spacing-64` | `64px` | <div style={{width: '64px'}} className='spacing-box-example' /> |
+
+---
+
+## Border Radius
+
+Semantic names from sharp corners to full circles. The `-inc` variants ("increment") sit between main stops for tighter control.
+
+| Token | Value | Preview |
+|-------|-------|---------|
+| `--radius-none` | `0px` | <div style={{ borderRadius: '0px'}} className='border-radius-box-example' /> |
+| `--radius-xs` | `4px` | <div style={{ borderRadius: '4px'}} className='border-radius-box-example' /> |
+| `--radius-sm` | `8px` | <div style={{ borderRadius: '8px'}} className='border-radius-box-example' /> |
+| `--radius-md` | `12px` | <div style={{ borderRadius: '12px'}} className='border-radius-box-example' /> |
+| `--radius-lg` | `16px` | <div style={{ borderRadius: '16px'}} className='border-radius-box-example' /> |
+| `--radius-lg-inc` | `20px` | <div style={{ borderRadius: '20px'}} className='border-radius-box-example' /> |
+| `--radius-xl` | `28px` | <div style={{ borderRadius: '28px'}} className='border-radius-box-example' /> |
+| `--radius-xl-inc` | `32px` | <div style={{ borderRadius: '32px'}} className='border-radius-box-example' /> |
+| `--radius-xxl` | `48px` | <div style={{ borderRadius: '48px'}} className='border-radius-box-example' /> |
+| `--radius-rounded` | `999px` | <div style={{ borderRadius: '999px'}} className='border-radius-box-example' /> |
+| `--radius-circled` | `50%` | <div style={{ borderRadius: '50%'}} className='border-radius-box-example' /> |
+
+---
+
+## Shadows
+
+Five elevation levels. Each shadow uses a two-layer approach — a tight key shadow and a wider ambient shadow — for realistic depth.
+
+| Token | Value | Preview |
+|-------|-------|---------|
+| `--shadow-1` | `0px 1px 2px rgb(0 0 0 / 30%), 0px 1px 3px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 1px 2px rgb(0 0 0 / 30%), 0px 1px 3px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+| `--shadow-2` | `0px 1px 2px rgb(0 0 0 / 30%), 0px 2px 6px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 1px 2px rgb(0 0 0 / 30%), 0px 2px 6px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+| `--shadow-3` | `0px 1px 3px rgb(0 0 0 / 30%), 0px 4px 8px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 1px 3px rgb(0 0 0 / 30%), 0px 4px 8px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+| `--shadow-4` | `0px 2px 3px rgb(0 0 0 / 30%), 0px 6px 10px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 2px 3px rgb(0 0 0 / 30%), 0px 6px 10px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+| `--shadow-5` | `0px 4px 4px rgb(0 0 0 / 30%), 0px 8px 12px rgb(0 0 0 / 15%)` | <div style={{width: '64px', height: '40px', backgroundColor: 'var(--color-surface)', boxShadow: '0px 4px 4px rgb(0 0 0 / 30%), 0px 8px 12px rgb(0 0 0 / 15%)', borderRadius: '8px'}} /> |
+
+---
+
+
+## Motion
+
+Olyx motion tokens follow [Material Design 3's physics-based motion system](https://m3.material.io/styles/motion/overview/how-it-works). On the web, springs are approximated using cubic-bezier curves — the tokens below translate M3's spring parameters (stiffness, damping, velocity) into CSS timing functions.
+
+Motion splits into two dimensions: **motion scheme** (personality) and **token type** (what's being animated).
+
+---
+
+### Motion Schemes
+
+Material 3 defines two preset schemes that determine how your interface feels:
+
+| Scheme | Behavior | When to use |
+|--------|----------|-------------|
+| **Expressive** | Overshoots final values with noticeable bounce | Hero moments, key interactions, buttons, switches — anywhere you want emphasis and personality |
+| **Standard** | Eases into final values with subtle overshoot | Utilitarian products, background motion, layout shifts, content transitions |
+
+Expressive is M3's opinionated default and should be used for most interactive elements. Standard is more functional and subdued.
+
+---
+
+### Token Types
+
+Tokens are split by what they animate:
+
+| Type | Applies to | Examples |
+|------|-----------|----------|
+| **Spatial** | Position, size, scale, rotation, shape | `x`/`y` translation, `width`/`height`, `transform: scale()`, `border-radius` |
+| **Effects** | Visual properties where overshoot would be jarring | Opacity, color, shadows, blur — properties that shouldn't bounce |
+
+---
+
+### Speed Tiers
+
+Each scheme × type combination has three speeds:
+
+- **Fast** — Small components, quick interactions (buttons, switches)
+- **Default** — Medium elements, standard transitions (cards, panels)
+- **Slow** — Large elements, full-screen motion (drawers, sheets)
+
+---
+
+### Expressive Tokens
+
+**Spatial** — Noticeable overshoot and bounce for physical movement:
+
+| Token | Duration | Easing |
+|-------|----------|--------|
+| `--transition-expressive-fast-spatial` | `350ms` | `cubic-bezier(0.42, 1.67, 0.21, 0.9)` |
+| `--transition-expressive-default-spatial` | `500ms` | `cubic-bezier(0.38, 1.21, 0.22, 1)` |
+| `--transition-expressive-slow-spatial` | `650ms` | `cubic-bezier(0.39, 1.29, 0.35, 0.98)` |
+
+**Effects** — Smooth curves without overshoot for color/opacity:
+
+| Token | Duration | Easing |
+|-------|----------|--------|
+| `--transition-expressive-fast-effects` | `150ms` | `cubic-bezier(0.31, 0.94, 0.34, 1)` |
+| `--transition-expressive-default-effects` | `200ms` | `cubic-bezier(0.34, 0.8, 0.34, 1)` |
+| `--transition-expressive-slow-effects` | `300ms` | `cubic-bezier(0.34, 0.88, 0.34, 1)` |
+
+---
+
+### Standard Tokens
+
+**Spatial** — Subtle overshoot for more functional motion:
+
+| Token | Duration | Easing |
+|-------|----------|--------|
+| `--transition-standard-fast-spatial` | `350ms` | `cubic-bezier(0.27, 1.06, 0.18, 1)` |
+| `--transition-standard-default-spatial` | `500ms` | `cubic-bezier(0.27, 1.06, 0.18, 1)` |
+| `--transition-standard-slow-spatial` | `750ms` | `cubic-bezier(0.27, 1.06, 0.18, 1)` |
+
+**Effects** — Identical to expressive effects (no overshoot in either scheme):
+
+| Token | Duration | Easing |
+|-------|----------|--------|
+| `--transition-standard-fast-effects` | `150ms` | `cubic-bezier(0.31, 0.94, 0.34, 1)` |
+| `--transition-standard-default-effects` | `200ms` | `cubic-bezier(0.34, 0.8, 0.34, 1)` |
+| `--transition-standard-slow-effects` | `300ms` | `cubic-bezier(0.34, 0.88, 0.34, 1)` |
+
+---
+
+### Usage Pattern
+
+Token names follow this structure:
+
+```
+--transition-{scheme}-{speed}-{type}
+```
+
+**Examples:**
+
+```css
+/* Button press — expressive spatial movement + fast effect for background */
+[data-ui="button"] {
+  transition: 
+    transform var(--transition-expressive-fast-spatial),
+    background-color var(--transition-expressive-fast-effects);
+}
+
+/* Accordion expand — standard spatial for layout shifts */
+[data-ui="accordion-panel"] {
+  transition: height var(--transition-standard-default-spatial);
+}
+
+/* Dialog entrance — expressive spatial for movement, fast effect for fade */
+[data-ui="dialog"] {
+  transition: 
+    transform var(--transition-expressive-default-spatial),
+    opacity var(--transition-expressive-fast-effects);
+}
+
+/* Navigation drawer — slow spatial for large surface */
+[data-ui="drawer"] {
+  transition: transform var(--transition-standard-slow-spatial);
+}
+```
+
+---
+
+## Customizing Tokens
+
+Override any token in your global CSS:
+
+```css
+:root {
+  --spacing-8: 0.5rem;      /* switch to rem */
+  --radius-md: 8px;          /* tighter corners */
+  --shadow-3: 0 4px 12px rgb(0 0 0 / 10%);  /* softer shadows */
+}
+```
+
+For component-scoped overrides:
+
+```css
+[data-ui="card"] {
+  --radius-md: 20px;  /* only affects cards */
+}
+```
+
+## Source 
+
+<ComponentSource src="assets/styles/_base/tokens.css" language="css" title="styles/_base/tokens.css" />
+
+
+---
+
+## Further Reading
+
+- [Colors](/docs/handbook/colors) — The full HCT-based color token system
+- [Typography](/docs/handbook/typography) — Font tokens and type scale
+- [Styling](/docs/handbook/styling) — How components consume these tokens
+- [M3 Design Tokens](https://m3.material.io/foundations/design-tokens/overview) — The design system that inspired this approach
