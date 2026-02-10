@@ -15,7 +15,7 @@
     display: grid;
     align-items: center;
 
-    transition: background-position var(--transition-expressive-default-spatial);
+    transition: background-position var(--transition-expressive-fast-spatial);
     background: linear-gradient(
       to right,
       var(--color-surface-container-high) 50%,
@@ -33,7 +33,7 @@
       background-color: var(--color-background);
 
       translate: 0 0;
-      transition: translate var(--transition-expressive-default-spatial);
+      transition: translate var(--transition-expressive-fast-spatial);
     }
 
     &[data-disabled] {

@@ -3,11 +3,9 @@
     &[data-slot="combobox-input"] {
       --number-btn: 0;
 
-      padding-inline: 0;
-
       [data-ui="combobox-input-actions"] {
         position: absolute;
-        right: 8px;
+        right: var(--spacing-8);
         display: flex;
         gap: var(--spacing-4);
         margin-left: auto;
@@ -62,7 +60,7 @@
     color: var(--color-on-background);
     font: var(--font-body-md);
     outline: 0;
-    transition: all var(--transition-standard-default-spatial);
+    transition: all var(--transition-expressive-fast-effects);
 
     /* Focus */
     &:focus-within {

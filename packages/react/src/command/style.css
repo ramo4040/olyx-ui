@@ -25,7 +25,7 @@
     z-index: 55;
     background: var(--color-background);
     border-radius: var(--radius-xl);
-    transition: var(--transition-standard-fast-spatial);
+    transition: var(--transition-expressive-default-spatial);
     box-shadow: 0 0 0 var(--spacing-4)
       color-mix(in oklab, var(--color-background) 30%, transparent);
     overflow: hidden;

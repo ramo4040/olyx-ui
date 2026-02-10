@@ -48,7 +48,7 @@
         top: var(--spacing-8);
         right: var(--spacing-8);
         color: var(--color-on-surface-variant);
-        transition: var(--transition-expressive-default-effects);
+        transition: var(--transition-expressive-fast-effects);
       }
 
       &[data-starting-style],

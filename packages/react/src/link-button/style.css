@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     width: fit-content;
-    transition: color var(--transition-standard-default-spatial);
+    transition: color var(--transition-standard-fast-effects);
     color: var(--color-link-button);
     gap: var(--spacing-4);
 
@@ -23,7 +23,7 @@
       position: absolute;
       width: 100%;
       height: 1px;
-      transition: opacity var(--transition-standard-fast-spatial);
+      transition: opacity var(--transition-standard-fast-effects);
       background-color: currentcolor;
       inset-block-end: var(--spacing-0);
     }

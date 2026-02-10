@@ -42,7 +42,7 @@
       height: 36px;
       padding: var(--spacing-8);
       overflow: hidden;
-      transition: var(--transition-standard-fast-spatial);
+      transition: var(--transition-standard-fast-effects);
       border: none;
       border-radius: var(--radius-sm);
       color: var(--color-on-background);

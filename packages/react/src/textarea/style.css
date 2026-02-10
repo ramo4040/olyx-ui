@@ -10,13 +10,13 @@
     outline: 0;
     box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
     font: var(--font-body-md);
-    transition: all var(--transition-standard-default-spatial);
+    transition: all var(--transition-expressive-fast-effects);
     resize: vertical;
     color: var(--color-on-background);
 
     /* Placeholder */
     &::placeholder {
-      transition: color var(--transition-standard-default-spatial);
+      transition: color var(--transition-expressive-fast-effects);
       color: color-mix(in oklab, currentcolor 50%, transparent);
     }
 

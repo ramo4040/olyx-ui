@@ -13,7 +13,7 @@
     border: 1px solid;
     text-decoration: none;
     cursor: pointer;
-    transition: all var(--transition-standard-default-spatial);
+    transition: all var(--transition-expressive-fast-effects);
     user-select: none;
 
     /* size */

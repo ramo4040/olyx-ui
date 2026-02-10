@@ -14,7 +14,7 @@
       --hover-bg: var(--color-surface-container);
 
       font: var(--font-body-md);
-      transition: var(--transition-expressive-default-spatial);
+      transition: var(--transition-standard-default-spatial);
 
       /*Border and border radius setup*/
       border: 1px solid var(--border-color);
@@ -82,7 +82,7 @@
         > div {
           position: relative;
           top: 0;
-          transition: filter var(--transition-standard-default-spatial);
+          transition: filter var(--transition-standard-default-effects);
         }
 
         &[data-starting-style] {

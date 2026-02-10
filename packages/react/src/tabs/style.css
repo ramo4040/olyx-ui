@@ -32,7 +32,7 @@
         color: var(--color-on-background);
         white-space: nowrap;
         user-select: none;
-        transition: var(--transition-expressive-slow-effects);
+        transition: var(--transition-expressive-fast-effects);
         z-index: 1;
         font: var(--font-label-lg);
         font-weight: 500;
@@ -58,7 +58,7 @@
         position: absolute;
         background-color: var(--color-surface-container-lowest);
         border-radius: var(--radius-sm);
-        transition: var(--transition-expressive-slow-effects);
+        transition: var(--transition-expressive-default-spatial);
         z-index: 0;
         inset: 0;
         left: var(--active-tab-left);

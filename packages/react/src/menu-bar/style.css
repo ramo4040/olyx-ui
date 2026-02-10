@@ -19,7 +19,7 @@
       background-color: var(--color-background);
       color: var(--color-on-background);
       user-select: none;
-      transition: var(--transition-expressive-default-effects);
+      transition: var(--transition-expressive-fast-effects);
       cursor: pointer;
       outline: 0;
 

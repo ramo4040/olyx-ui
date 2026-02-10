@@ -56,7 +56,7 @@
     border-radius: var(--radius-md);
     margin: var(--spacing-8);
     opacity: 0;
-    transition: opacity 150ms;
+    transition: opacity var(--transition-standard-fast-effects);
     pointer-events: none;
     z-index: 10;
 

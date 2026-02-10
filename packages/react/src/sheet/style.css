@@ -12,7 +12,7 @@
       backdrop-filter: blur(4px);
       background-color: color-mix(in srgb, currentcolor 15%, transparent);
       z-index: 50;
-      transition: all var(--transition-standard-fast-spatial);
+      transition: all var(--transition-standard-slow-effects);
       opacity: 0;
 
       &[data-open] {
@@ -33,7 +33,7 @@
       padding: var(--padding-block) var(--spacing-24);
       background-color: var(--color-background);
       color: var(--color-on-background);
-      transition: all var(--transition-standard-fast-spatial);
+      transition: all var(--transition-standard-slow-spatial);
       max-height: 100vh;
       overflow: auto;
 
