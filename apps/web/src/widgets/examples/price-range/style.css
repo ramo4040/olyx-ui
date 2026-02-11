@@ -1,6 +1,5 @@
 @layer misc {
   [data-ui="price-range"] {
-    width: 350px;
     padding: var(--spacing-16);
     background: var(--color-surface-container-lowest);
     border-radius: var(--radius-lg);

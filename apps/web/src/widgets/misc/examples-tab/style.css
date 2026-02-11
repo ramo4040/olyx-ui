@@ -43,7 +43,7 @@
     .tab-list {
       margin-bottom: var(--spacing-16);
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: var(--spacing-8);
 
@@ -68,15 +68,15 @@
     }
 
     .examples-panel {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: var(--spacing-8);
+      grid-auto-rows: 365px;
 
       > div {
         display: flex;
         flex-direction: column;
         gap: var(--spacing-8);
-        height: 365px;
       }
     }
   }

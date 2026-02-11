@@ -2,11 +2,13 @@
   [data-ui="button"] {
     --svg-size: 18px;
 
-    display: flex;
+    position: relative;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     height: var(--button-size);
     flex-shrink: 0;
+    white-space: nowrap;
     width: fit-content;
     font: var(--font-body-md);
     outline: none;

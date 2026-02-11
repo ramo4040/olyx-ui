@@ -2,7 +2,7 @@
   [data-ui="tag"] {
     display: flex;
     align-items: center;
-    width: fit-content;
+    width: max-content;
     flex-shrink: 0;
     height: var(--spacing-24);
     padding-inline: var(--spacing-8);

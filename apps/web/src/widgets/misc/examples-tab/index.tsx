@@ -4,6 +4,7 @@ import "./style.css";
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@olyx/react/tabs";
 import { ToggleGroup, ToggleGroupItem } from "@olyx/react/toggle-group";
 import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Authentication,
   LoadingCard,
@@ -18,9 +19,12 @@ import {
 
 export const ExamplesTab = () => {
   const [examplesColor, setExamplesColor] = useState(["primary"]);
+  const isMobile = useIsMobile();
 
   return (
     <section data-ui="examples-tab">
+      {isMobile && <p>img</p>}
+
       <Tabs defaultValue="examples" orientation="horizontal">
         <div className="tab-list">
           <TabsList>
@@ -57,17 +61,14 @@ export const ExamplesTab = () => {
             <div>
               <ProfileCardExample />
             </div>
-
             <div>
               <ProductCardExample />
               <PostComposer />
             </div>
-
             <div>
               <TeamInvite />
               <ToastGroup />
             </div>
-
             <div>
               <PriceRange />
               <LoadingCard />
