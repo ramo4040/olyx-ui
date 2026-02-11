@@ -17,12 +17,13 @@ export default function Page() {
 
       {/* <ExamplesTab /> */}
 
-      {/* <WhyOlyxSection /> */}
+      <WhyOlyxSection />
 
       <FeaturesSection />
 
-      {/* <Faq />
-
+      <Faq />
+      {/*
+        
       <Footer /> */}
     </div>
   );

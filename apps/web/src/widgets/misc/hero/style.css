@@ -11,6 +11,10 @@
 
     h1 {
       font: var(--font-display-lg);
+
+      @media (width <= 768px) {
+        font: var(--font-display-sm);
+      }
       font-weight: 500;
       text-wrap: balance;
     }

@@ -23,12 +23,14 @@
     }
 
     .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--spacing-24);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(var(--spacing-0), 4vw, var(--spacing-24));
     }
 
     .why-card {
+      width: 360px;
       border-radius: var(--radius-xl);
       padding: var(--spacing-24);
       display: flex;

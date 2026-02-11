@@ -66,7 +66,7 @@ export const MainNavbar = () => {
 
             <Separator orientation="vertical" />
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="github-link">
               <NavigationMenuLink href="#">
                 <GitHubIcon />
               </NavigationMenuLink>
