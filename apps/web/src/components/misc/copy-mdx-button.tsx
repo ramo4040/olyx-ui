@@ -36,7 +36,13 @@ export const CopyMDXButton: FC<{ value: string; path: string }> = ({
   const { copied, copy } = useCopy();
 
   const handleViewMarkdown = () => {
-    window.open(`${path}.md`, "_blank");
+    let mdUrl: string;
+    if (path.endsWith("/docs")) {
+      mdUrl = `${path}/index`;
+    } else {
+      mdUrl = path;
+    }
+    window.open(`${mdUrl}.md`, "_blank");
   };
 
   return (
