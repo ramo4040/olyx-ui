@@ -282,12 +282,12 @@
       border-radius: var(--radius-md);
       color: var(--color-on-background);
       outline: none;
-      background: var(--color-surface-container-lowest) !important;
+      background: var(--color-surface-container-lowest);
 
       pre {
         padding: var(--spacing-16) var(--spacing-16) 0 0;
         border-radius: var(--radius-md);
-        background: none !important;
+        background: none;
       }
 
       &:not(:has([data-ui="scroll-area"])) {
@@ -386,7 +386,7 @@
 
   [data-theme="dark"] [data-ui="docs-page"] {
     figure {
-      background: var(--color-background) !important;
+      background: var(--color-background);
     }
 
     [data-line-numbers] [data-line]::before {

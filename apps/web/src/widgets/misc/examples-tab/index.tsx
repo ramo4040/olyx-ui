@@ -4,9 +4,7 @@ import "./style.css";
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@olyx/react/tabs";
 import { ToggleGroup, ToggleGroupItem } from "@olyx/react/toggle-group";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { useState } from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Authentication,
   LoadingCard,
