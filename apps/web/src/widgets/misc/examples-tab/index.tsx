@@ -3,6 +3,8 @@
 import "./style.css";
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@olyx/react/tabs";
 import { ToggleGroup, ToggleGroupItem } from "@olyx/react/toggle-group";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
@@ -19,11 +21,20 @@ import {
 
 export const ExamplesTab = () => {
   const [examplesColor, setExamplesColor] = useState(["primary"]);
-  const isMobile = useIsMobile();
 
   return (
     <section data-ui="examples-tab">
-      {isMobile && <p>img</p>}
+      <div className="mobile-placeholder">
+        <Image
+          src={"/images/example-light.png"}
+          alt="Examples on mobile"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+          className="dark"
+        />
+      </div>
 
       <Tabs defaultValue="examples" orientation="horizontal">
         <div className="tab-list">

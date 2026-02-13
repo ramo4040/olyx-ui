@@ -497,11 +497,11 @@
         gap: var(--spacing-32);
 
         .feature-item {
-          flex-direction: column;
+          flex-direction: column-reverse;
           align-items: center;
 
           &.item-reverse {
-            flex-direction: column;
+            flex-direction: column-reverse;
           }
 
           > * {

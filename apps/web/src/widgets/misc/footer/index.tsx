@@ -25,7 +25,11 @@ export const Footer = () => {
                   <div className="links">
                     {e.links.map((e) => {
                       return (
-                        <LinkButton href={e.url} key={e.label}>
+                        <LinkButton
+                          href={e.url}
+                          key={e.label}
+                          underline={false}
+                        >
                           {e.label}
                         </LinkButton>
                       );
@@ -42,7 +46,12 @@ export const Footer = () => {
             <p>©{currentYear} Olyx</p>
             {bottomLinksSet.map((e) => {
               return (
-                <LinkButton href={e.url} size="sm" key={e.label}>
+                <LinkButton
+                  href={e.url}
+                  size="sm"
+                  key={e.label}
+                  underline={false}
+                >
                   {e.label}
                 </LinkButton>
               );
@@ -66,10 +75,6 @@ const bottomLinksSet = [
     url: "",
   },
   {
-    label: "FAQ",
-    url: "",
-  },
-  {
     label: "Changelog",
     url: "",
   },
@@ -83,20 +88,16 @@ const linksSet = [
   {
     name: "Pages",
     links: [
-      { label: "How to install ", url: "" },
-      { label: "How to customize ", url: "" },
-      { label: "Color system ", url: "" },
+      { label: "How to install ", url: "/docs/get-started" },
+      { label: "How to customize ", url: "/docs/handbook/styling" },
+      { label: "Color system ", url: "/docs/handbook/colors" },
     ],
   },
   {
     name: "Products",
     links: [
-      { label: "Component library", url: "" },
+      { label: "Component library", url: "/docs" },
       { label: "Theme generator", url: "" },
     ],
-  },
-  {
-    name: "Compare Libraries",
-    links: [{ label: "Shadcn/ui vs Olyx ui", url: "" }],
   },
 ];

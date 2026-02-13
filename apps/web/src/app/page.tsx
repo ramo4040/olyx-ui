@@ -15,16 +15,15 @@ export default function Page() {
 
       <Hero />
 
-      {/* <ExamplesTab /> */}
+      <ExamplesTab />
 
       <WhyOlyxSection />
 
       <FeaturesSection />
 
       <Faq />
-      {/*
-        
-      <Footer /> */}
+
+      <Footer />
     </div>
   );
 }

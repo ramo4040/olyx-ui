@@ -10,7 +10,7 @@ export default function Particle() {
   return (
     <InputWrapper>
       <Input placeholder="Enter your email" />
-      <Button size="sm" mode="lighter">
+      <Button size="sm" mode="lighter" variant="neutral">
         <HugeiconsIcon icon={Add01Icon} />
       </Button>
     </InputWrapper>

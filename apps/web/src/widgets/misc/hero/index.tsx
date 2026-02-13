@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./style.css";
 import { Badge, Button } from "@olyx/react";
 
@@ -12,10 +13,19 @@ export const Hero = () => {
         performant, and designed to adapt to your brand perfectly.
       </p>
       <div className="actions">
-        <Button size="lg">Get Started</Button>
-        <Button size="lg" mode="ghost">
-          View Components
-        </Button>
+        <Button
+          size="lg"
+          render={<Link href={{ pathname: "/docs" }}>Get Started</Link>}
+        />
+        <Button
+          size="lg"
+          mode="ghost"
+          render={
+            <Link href={{ pathname: "/docs/components/accordion" }}>
+              View Components
+            </Link>
+          }
+        />
       </div>
     </section>
   );
