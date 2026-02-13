@@ -1,4 +1,4 @@
-import type { Registry } from "../types";
+import type { Registry } from "./types";
 
 export const registryStyle: Registry["items"] = [
   {

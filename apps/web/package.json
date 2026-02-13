@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "clean": "rm -rf node_modules && rm -rf .turbo && rm -rf .next && rm -rf .source",
+    "registry:build": "tsx --tsconfig ./tsconfig.scripts.json ./scripts/build-registry.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.1.0",

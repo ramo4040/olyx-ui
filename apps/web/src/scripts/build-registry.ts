@@ -1,6 +1,6 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { registry } from "../src/registry/index.js";
+import { registry } from "@/registry";
 
 const ROOT = process.cwd();
 

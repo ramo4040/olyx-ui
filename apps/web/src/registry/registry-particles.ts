@@ -1,5 +1,6 @@
-import { category, type RegistryItem } from "@olyx/registry";
 import React, { type LazyExoticComponent } from "react";
+import { category } from "./categories";
+import type { RegistryItem } from "./types";
 
 const data: RegistryItem[] = [
   {
