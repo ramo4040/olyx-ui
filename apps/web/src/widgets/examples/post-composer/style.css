@@ -1,6 +1,5 @@
 @layer misc {
   .post-composer {
-    width: 370px;
     flex: 1;
     padding: var(--spacing-16);
     background: var(--color-surface-container-lowest);

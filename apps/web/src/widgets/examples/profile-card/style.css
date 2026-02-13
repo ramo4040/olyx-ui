@@ -2,7 +2,6 @@
   [data-ui="profile-card-example"] {
     display: grid;
     gap: var(--spacing-12);
-    width: 370px;
     padding: var(--spacing-12);
     border: 1px solid var(--color-surface-variant);
     border-radius: var(--radius-xl);
@@ -89,6 +88,10 @@
             color: var(--color-on-surface-variant);
           }
         }
+      }
+
+      > button {
+        width: 100%;
       }
     }
   }

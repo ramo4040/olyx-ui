@@ -8,13 +8,16 @@
     align-items: center;
     padding-bottom: 100px;
 
+    /* ── Title ── */
+
     .title {
       width: 60%;
+
       h1 {
-        font: var(--font-display-md);
-        text-wrap: balance;
+        font: var(--font-display-sm);
         font-weight: 500;
         text-align: center;
+        text-wrap: balance;
         color: var(--color-on-surface-variant);
 
         span {
@@ -22,6 +25,8 @@
         }
       }
     }
+
+    /* ── Feature List (shared) ── */
 
     .features-list {
       display: flex;
@@ -39,18 +44,18 @@
         }
 
         > * {
-          height: 440px;
-          max-height: 440px;
+          width: 440px;
+          max-width: 440px;
           aspect-ratio: 1;
           flex-shrink: 0;
         }
 
         .diagram {
-          padding: var(--spacing-16);
           display: flex;
           flex-direction: column;
           align-items: center;
           position: relative;
+          padding: var(--spacing-16);
           border-radius: var(--radius-xl-inc);
           background-color: var(--color-surface-container-lowest);
         }
@@ -77,22 +82,24 @@
       }
     }
 
+    /* ── Attr-Styling Feature ── */
+
     .attr-styling {
       .diagram {
         justify-content: space-between;
       }
 
       .files {
-        margin-top: 70px;
         position: relative;
         display: flex;
         align-items: end;
         height: fit-content;
+        margin-top: 70px;
 
         .connector {
           display: flex;
-          margin-bottom: -35px;
           position: relative;
+          margin-bottom: -35px;
 
           .file-connector {
             width: 120px;
@@ -135,10 +142,10 @@
           justify-items: center;
 
           svg {
-            color: var(--color-on-primary-container);
-            margin-bottom: calc(var(--spacing-24) * -1);
             width: var(--spacing-64);
             height: var(--spacing-64);
+            margin-bottom: calc(var(--spacing-24) * -1);
+            color: var(--color-on-primary-container);
           }
         }
 
@@ -151,14 +158,13 @@
       }
 
       .code-snippet {
-        height: 40%;
+        display: grid;
         width: 100%;
-        background-color: var(--color-surface-container-lowest);
-
-        border-radius: var(--radius-lg);
+        height: 40%;
         padding: var(--spacing-12);
         border: 1px solid var(--color-surface-variant);
-        display: grid;
+        border-radius: var(--radius-lg);
+        background-color: var(--color-surface-container-lowest);
 
         > div {
           display: flex;
@@ -173,21 +179,24 @@
         .wrong {
           color: var(--color-error);
         }
+
         .accepted {
           color: var(--color-success);
         }
       }
     }
 
+    /* ── HCT Color System Feature ── */
+
     .hct {
       .container {
-        padding-left: var(--spacing-12);
-        width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding-left: var(--spacing-12);
       }
 
       .main-color {
@@ -201,23 +210,23 @@
         display: flex;
 
         .color-list {
-          margin-left: var(--spacing-16);
-          padding-left: var(--spacing-16);
           display: flex;
           flex-direction: column;
-          border-left: 1px solid var(--color-surface-variant);
-          height: fit-content;
           gap: var(--spacing-6);
+          height: fit-content;
+          margin-left: var(--spacing-16);
+          padding-left: var(--spacing-16);
+          border-left: 1px solid var(--color-surface-variant);
           user-select: none;
 
           > div:not(.line) {
             position: relative;
-            border-radius: var(--radius-md);
             padding: var(--spacing-4) var(--spacing-12);
             border: 1px solid;
+            border-radius: var(--radius-md);
             background-color: var(--bg-color);
-            text-transform: uppercase;
             font: var(--font-label-md);
+            text-transform: uppercase;
 
             &:first-child {
               margin-top: var(--spacing-24);
@@ -260,20 +269,23 @@
 
             &.success {
               --bg-color: var(--color-success-container);
-              margin-top: var(--spacing-24);
               border-color: var(--color-success);
               color: var(--color-success);
+              margin-top: var(--spacing-24);
             }
+
             &.info {
               --bg-color: var(--color-info-container);
               border-color: var(--color-info);
               color: var(--color-info);
             }
+
             &.error {
               --bg-color: var(--color-error-container);
               border-color: var(--color-error);
               color: var(--color-error);
             }
+
             &.warning {
               --bg-color: var(--color-warning-container);
               border-color: var(--color-warning);
@@ -283,9 +295,9 @@
         }
 
         .on-color {
+          display: flex;
           margin-top: calc(var(--spacing-24) + var(--spacing-12));
           padding-left: var(--spacing-8);
-          display: flex;
 
           .line {
             width: 20px;
@@ -318,6 +330,8 @@
       }
     }
 
+    /* ── Tokens Feature ── */
+
     .tokens {
       .diagram {
         align-items: center;
@@ -333,8 +347,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: var(--spacing-6);
           flex-wrap: wrap;
+          gap: var(--spacing-6);
 
           .token {
             color: var(--color-error);
@@ -344,10 +358,10 @@
 
       .stack-container {
         position: relative;
-        height: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 300px;
         perspective: 800px;
         transform-style: preserve-3d;
 
@@ -391,56 +405,183 @@
 
       .layer {
         position: absolute;
-        width: 180px;
-        height: 100px;
-        border-radius: var(--radius-xl);
-        background: var(--color-surface-container-high);
-        border: 1px solid var(--color-outline-variant);
-        transition: transform 0.3s ease;
-        transform-style: preserve-3d;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: end;
-        font: var(--font-body-sm);
+        width: 180px;
+        height: 100px;
         padding-bottom: var(--spacing-8);
+        border: 1px solid var(--color-outline-variant);
+        border-radius: var(--radius-xl);
+        background: var(--color-surface-container-high);
+        font: var(--font-body-sm);
+        transition: transform 0.3s ease;
+        transform-style: preserve-3d;
 
         &.layer-1 {
-          transform: translateZ(0px) translateY(-30px) rotateX(50deg);
           z-index: 5;
+          transform: translateZ(0px) translateY(-30px) rotateX(50deg);
           background: var(--color-primary-container);
           border-color: var(--color-primary);
           color: var(--color-on-primary-container);
         }
 
         &.layer-2 {
-          transform: translateZ(0) translateY(0px) rotateX(50deg);
           z-index: 4;
+          transform: translateZ(0) translateY(0px) rotateX(50deg);
           background: var(--color-tertiary-container);
           border-color: var(--color-tertiary);
         }
 
         &.layer-3 {
-          transform: translateZ(0) translateY(30px) rotateX(50deg);
           z-index: 3;
+          transform: translateZ(0) translateY(30px) rotateX(50deg);
           background: var(--color-secondary-container);
           border-color: var(--color-secondary);
         }
 
         &.layer-4 {
-          transform: translateZ(0) translateY(60px) rotateX(50deg);
           z-index: 2;
+          transform: translateZ(0) translateY(60px) rotateX(50deg);
           background: var(--color-surface-container);
           border-color: var(--color-outline-variant);
         }
 
         &.layer-5 {
-          transform: translateZ(0) translateY(90px) rotateX(50deg);
           z-index: 1;
+          transform: translateZ(0) translateY(90px) rotateX(50deg);
           background: var(--color-surface-container-lowest);
+          border-color: var(--color-outline-variant);
           box-shadow: 0 4px 12px
             color-mix(in srgb, var(--color-on-background) 6%, transparent);
-          border-color: var(--color-outline-variant);
+        }
+      }
+    }
+
+    /* ── Responsive ── */
+
+    @media (width <= 1024px) {
+      width: 90vw;
+
+      .title {
+        width: 80%;
+      }
+
+      .features-list .feature-item {
+        > * {
+          width: 390px;
+          max-width: 390px;
+        }
+      }
+
+      .attr-styling .files .connector .file-connector {
+        width: 90px;
+      }
+    }
+
+    @media (width <= 768px) {
+      width: 92vw;
+      gap: var(--spacing-32);
+
+      .title {
+        width: 100%;
+
+        h1 {
+          font: var(--font-headline-sm);
+          font-weight: 500;
+        }
+      }
+
+      .features-list {
+        gap: var(--spacing-32);
+
+        .feature-item {
+          flex-direction: column-reverse;
+          align-items: center;
+
+          &.item-reverse {
+            flex-direction: column-reverse;
+          }
+
+          > * {
+            width: 100%;
+            max-width: 100%;
+          }
+
+          .description {
+            aspect-ratio: auto;
+            padding: var(--spacing-16) 0;
+          }
+        }
+      }
+
+      .attr-styling {
+        .diagram {
+          aspect-ratio: auto;
+          min-height: 400px;
+          padding-bottom: var(--spacing-32);
+        }
+
+        .files {
+          margin-top: 50px;
+
+          .connector .file-connector {
+            width: 80px;
+            height: 40px;
+          }
+
+          .attr-name .line {
+            height: 60px;
+          }
+
+          .file svg {
+            width: var(--spacing-48);
+            height: var(--spacing-48);
+          }
+        }
+
+        .code-snippet {
+          height: auto;
+
+          pre {
+            font-size: var(--font-body-sm);
+          }
+        }
+      }
+
+      .hct {
+        .diagram {
+          aspect-ratio: auto;
+          min-height: 380px;
+        }
+      }
+
+      .tokens {
+        .diagram {
+          aspect-ratio: auto;
+          min-height: 420px;
+        }
+      }
+    }
+
+    @media (width <= 480px) {
+      width: 95vw;
+      padding-bottom: 60px;
+
+      .attr-styling {
+        .files {
+          transform: scale(0.8);
+          margin-top: 40px;
+          transform-origin: center top;
+
+          .connector .file-connector {
+            width: 60px;
+          }
+        }
+
+        .code-snippet pre {
+          font-size: 0.65rem;
         }
       }
     }

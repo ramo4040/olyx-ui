@@ -8,7 +8,7 @@ export const appConfig = {
       label: "Docs",
     },
     {
-      href: "/components",
+      href: "/docs/components/accordion",
       label: "Components",
     },
   ],

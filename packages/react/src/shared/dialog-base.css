@@ -28,11 +28,14 @@
     position: fixed;
     top: 50%;
     left: 50%;
+    max-width: calc(95vw);
+    max-height: calc(100vh - 8vh);
+    min-height: 0;
     z-index: 55;
     background: var(--color-background);
     border-radius: var(--radius-xl);
     padding: var(--spacing-16) var(--spacing-24);
-    transition: var(--transition-standard-fast-spatial);
+    transition: var(--transition-expressive-default-spatial);
     box-shadow: 0 0 0 var(--spacing-4)
       color-mix(in oklab, var(--color-background) 30%, transparent);
 

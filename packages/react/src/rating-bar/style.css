@@ -72,12 +72,12 @@
 
       /* Interaction */
       cursor: pointer;
-      transition: 300ms ease-out;
+      transition: var(--transition-standard-fast-effects);
 
       svg {
         width: 100%;
         height: 100%;
-        transition: all var(--transition-standard-default-spatial);
+        transition: all var(--transition-standard-fast-effects);
       }
 
       &:hover,

@@ -11,6 +11,7 @@ import {
   NavigationMenuList,
   Separator,
 } from "@olyx/react";
+import Link from "next/link";
 import { GitHubIcon } from "@/assets/svg/github";
 import { Logo } from "@/components/misc";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -50,9 +51,9 @@ export const MainNavbar = () => {
             <NavigationMenuList>
               {appConfig.navItems.map((e) => (
                 <NavigationMenuItem key={e.label} className="link-item">
-                  <NavigationMenuLink href={e.href}>
-                    {e.label}
-                  </NavigationMenuLink>
+                  <NavigationMenuLink
+                    render={<Link href={{ pathname: e.href }}>{e.label}</Link>}
+                  />
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>
@@ -66,7 +67,7 @@ export const MainNavbar = () => {
 
             <Separator orientation="vertical" />
 
-            <NavigationMenuItem>
+            <NavigationMenuItem className="github-link">
               <NavigationMenuLink href="#">
                 <GitHubIcon />
               </NavigationMenuLink>

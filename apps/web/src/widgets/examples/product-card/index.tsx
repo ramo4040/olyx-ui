@@ -24,7 +24,6 @@ export const ProductCardExample = () => {
         <h4 className="title">Product Title</h4>
         <div className="badges">
           <Tag>Over-Ear</Tag>
-          <Tag>Bluetooth</Tag>
           <Tag>Wireless</Tag>
         </div>
         <div className="count">

@@ -107,7 +107,7 @@
   [data-ui="navigation-menu-indicator"] {
     display: grid;
     place-content: center;
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-standard-fast-spatial);
 
     svg {
       width: var(--spacing-16);
@@ -121,8 +121,8 @@
 
   [data-ui="navigation-menu-content"] {
     transition:
-      opacity calc(var(--duration) * 0.5) ease,
-      transform var(--duration) var(--easing);
+      opacity var(--transition-standard-fast-effects),
+      transform var(--transition-standard-fast-spatial);
     padding: var(--spacing-8);
     width: calc(100vw - 40px);
     height: 100%;
@@ -184,8 +184,8 @@
     }
 
     &[data-ending-style] {
-      transition-timing-function: ease;
-      transition-duration: 0.15s;
+      transition-timing-function: cubic-bezier(0.34, 0.8, 0.34, 1);
+      transition-duration: 150ms;
     }
   }
 

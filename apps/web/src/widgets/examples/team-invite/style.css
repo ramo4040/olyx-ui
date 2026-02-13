@@ -1,6 +1,5 @@
 @layer misc {
   [data-ui="team-invite"] {
-    width: 370px;
     height: fit-content;
     padding: var(--spacing-16);
     background: var(--color-surface-container-lowest);

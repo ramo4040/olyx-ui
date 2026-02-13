@@ -13,13 +13,21 @@
       background: transparent;
       box-shadow: none;
       outline: none;
+    }
 
-      &:first-child {
-        padding-inline-start: var(--spacing-0);
-      }
+    /* Input-group specific: wrapper owns the inline padding,
+       so strip it from the input at the edges to prevent doubling. */
+    &:not([data-slot]) {
+      padding-inline: var(--inline-padding);
 
-      &:last-child {
-        padding-inline-end: var(--spacing-0);
+      [data-ui="input"] {
+        &:first-child {
+          padding-inline-start: var(--spacing-0);
+        }
+
+        &:last-child {
+          padding-inline-end: var(--spacing-0);
+        }
       }
     }
 

@@ -9,7 +9,7 @@
 
     margin-inline: auto;
     width: 90vw;
-    padding-bottom: 150px;
+    padding-bottom: clamp(80px, 10vw, 150px);
 
     .panel-container {
       &[data-color="primary"] {
@@ -43,7 +43,7 @@
     .tab-list {
       margin-bottom: var(--spacing-16);
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: var(--spacing-8);
 
@@ -68,15 +68,40 @@
     }
 
     .examples-panel {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: var(--spacing-8);
+      grid-auto-rows: 365px;
 
       > div {
         display: flex;
         flex-direction: column;
         gap: var(--spacing-8);
-        height: 365px;
+      }
+    }
+
+    .mobile-placeholder {
+      display: none;
+      position: relative;
+    }
+
+    @media (width < 768px) {
+      [data-ui="tabs"] {
+        display: none;
+      }
+
+      .mobile-placeholder {
+        display: block;
+      }
+    }
+  }
+
+  [data-theme="dark"] {
+    [data-ui="examples-tab"] {
+      .mobile-placeholder {
+        img {
+          content: url("/images/example-dark.png");
+        }
       }
     }
   }

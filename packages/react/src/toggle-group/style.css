@@ -2,7 +2,7 @@
   [data-ui="toggle-group"] {
     display: flex;
     width: fit-content;
-    transition: all var(--transition-standard-default-spatial);
+    transition: all var(--transition-standard-fast-effects);
     height: fit-content;
 
     [data-ui="toggle-group-item"] {
@@ -20,7 +20,7 @@
       outline: 0;
       background-color: var(--color-toggle);
       border: 1px solid var(--color-toggle-border);
-      transition: all var(--transition-standard-default-spatial);
+      transition: all var(--transition-expressive-fast-effects);
 
       &[data-size="lg"] {
         --toggle-size: 40px;
