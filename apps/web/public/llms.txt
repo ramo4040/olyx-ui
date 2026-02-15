@@ -1,0 +1,71 @@
+# Olyx
+
+**Olyx** is a collection of beautifully designed, accessible, and composable React components. Built on top of [Base UI](https://base-ui.com/) and styled with pure CSS custom properties, it's designed for you to copy, paste, and own.
+
+## Overview
+
+- [Introduction](https://olyx.com/docs/index.md): A modern, accessible React component library built on Base UI.
+- [Get Started](https://olyx.com/docs/get-started.md): Install Olyx and add your first component in minutes.
+- [Roadmap](https://olyx.com/docs/roadmap.md): Current state of Olyx and where we're headed next.
+
+## Handbook
+
+- [Styling](https://olyx.com/docs/handbook/styling.md): Learn how to style Olyx components using CSS and data attributes.
+- [Colors](https://olyx.com/docs/handbook/colors.md): Explore the HCT-inspired color system with WCAG AA accessible contrast.
+- [Tokens](https://olyx.com/docs/handbook/tokens.md): Spacing, radius, and shadows tokens that power every Olyx component.
+- [Typography](https://olyx.com/docs/handbook/typography.md): Type scale, font tokens, and text styling in Olyx.
+
+## Components
+
+- [Accordion](https://olyx.com/docs/components/accordion.md): A set of collapsible panels with headings.
+- [Alert](https://olyx.com/docs/components/alert.md): A callout for displaying important information.
+- [Alert Dialog](https://olyx.com/docs/components/alert-dialog.md): A modal dialog that interrupts the user with important content and expects a response.
+- [Autocomplete](https://olyx.com/docs/components/autocomplete.md): Provide intelligent suggestions as users type in an input field for faster data entry and improved discoverability.
+- [Avatar](https://olyx.com/docs/components/avatar.md): An image element with a fallback for representing the user.
+- [Badge](https://olyx.com/docs/components/badge.md): A badge or a component that looks like a badge.
+- [Banner](https://olyx.com/docs/components/banner.md): A prominent message displayed at the top of the page or section.
+- [Breadcrumb](https://olyx.com/docs/components/breadcrumb.md): Displays the path to the current resource using a hierarchy of links.
+- [Button](https://olyx.com/docs/components/button.md): A button or a component that looks like a button.
+- [Button Group](https://olyx.com/docs/components/button-group.md): A container that groups related buttons together with consistent styling.
+- [Checkbox](https://olyx.com/docs/components/checkbox.md): A control allowing the user to toggle between checked and not checked.
+- [Checkbox Group](https://olyx.com/docs/components/checkbox-group.md): Provides shared state management for a series of checkboxes.
+- [Collapsible](https://olyx.com/docs/components/collapsible.md): A collapsible panel controlled by a button trigger.
+- [Combobox](https://olyx.com/docs/components/combobox.md): An input combined with a list of predefined items to select.
+- [Command](https://olyx.com/docs/components/command.md): A command palette for searching and executing commands.
+- [Context Menu](https://olyx.com/docs/components/context-menu.md): Displays a menu of actions triggered by a right click.
+- [Dialog](https://olyx.com/docs/components/dialog.md): A popup that opens on top of the entire page.
+- [Drawer](https://olyx.com/docs/components/drawer.md): A panel that slides in from the edge of the screen.
+- [Dropdown Menu](https://olyx.com/docs/components/dropdown-menu.md): A list of actions in a dropdown, enhanced with keyboard navigation.
+- [Field](https://olyx.com/docs/components/field.md): A form field component with label, description, and validation.
+- [Input](https://olyx.com/docs/components/input.md): A native input element.
+- [Input Group](https://olyx.com/docs/components/input-group.md): A wrapper for composing inputs with icons, affixes, and other elements.
+- [Kbd](https://olyx.com/docs/components/kbd.md): A component for displaying keyboard keys and shortcuts.
+- [Link Button](https://olyx.com/docs/components/link-button.md): A styled anchor element that looks like an inline text link.
+- [Menu Bar](https://olyx.com/docs/components/menu-bar.md): A visually persistent menu common in desktop applications that provides quick access to commands.
+- [Navigation Menu](https://olyx.com/docs/components/navigation-menu.md): A collection of links for navigating websites.
+- [Number Field](https://olyx.com/docs/components/number-field.md): A numeric input with increment, decrement, and scrub controls.
+- [Pagination](https://olyx.com/docs/components/pagination.md): A pagination with page navigation, next and previous links.
+- [Popover](https://olyx.com/docs/components/popover.md): An accessible popup anchored to a trigger button.
+- [Preview Card](https://olyx.com/docs/components/preview-card.md): A popup that appears when a link is hovered, showing a preview for sighted users.
+- [Progress](https://olyx.com/docs/components/progress.md): Displays the status of a task that takes a long time.
+- [Radio Group](https://olyx.com/docs/components/radio.md): A set of checkable buttons where no more than one can be checked at a time.
+- [Rating Bar](https://olyx.com/docs/components/rating-bar.md): An interactive star or number rating input.
+- [Rating Review](https://olyx.com/docs/components/rating-review.md): A read-only star or heart rating display.
+- [Scroll Area](https://olyx.com/docs/components/scroll-area.md): A native scroll container with custom scrollbars.
+- [Select](https://olyx.com/docs/components/select.md): A common form component for choosing a predefined value in a dropdown menu.
+- [Separator](https://olyx.com/docs/components/separator.md): A separator element accessible to screen readers.
+- [Sheet](https://olyx.com/docs/components/sheet.md): A side panel that slides in from the edge of the screen.
+- [Skeleton](https://olyx.com/docs/components/skeleton.md): A loading state placeholder for your components.
+- [Slider](https://olyx.com/docs/components/slider.md): An input where the user selects a value from within a given range.
+- [Spinner](https://olyx.com/docs/components/spinner.md): An indicator that can be used to show a loading state.
+- [Status Badge](https://olyx.com/docs/components/status-badge.md): A small indicator for displaying status, state, or category.
+- [Switch](https://olyx.com/docs/components/switch.md): A control that indicates whether a setting is on or off.
+- [Table](https://olyx.com/docs/components/table.md): A simple table component for displaying tabular data.
+- [Tabs](https://olyx.com/docs/components/tabs.md): A component for toggling between related panels on the same page.
+- [Tag](https://olyx.com/docs/components/tag.md): A compact label for categorizing or filtering content.
+- [Textarea](https://olyx.com/docs/components/textarea.md): A native textarea element.
+- [Toast](https://olyx.com/docs/components/toast.md): A temporary notification that appears on screen to inform users.
+- [Toggle](https://olyx.com/docs/components/toggle.md): A two-state button that can be toggled on or off.
+- [Toggle Group](https://olyx.com/docs/components/toggle-group.md): Provides a shared state to a series of toggle buttons.
+- [Toolbar](https://olyx.com/docs/components/toolbar.md): A container for grouping a set of buttons and controls.
+- [Tooltip](https://olyx.com/docs/components/tooltip.md): A popup that appears when an element is hovered or focused, showing a hint.

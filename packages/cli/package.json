@@ -1,0 +1,35 @@
+{
+  "name": "olyx",
+  "version": "0.0.1",
+  "description": "CLI for adding Olyx UI components to your project",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "olyx": "./bin/index.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "@clack/prompts": "^0.10.0",
+    "fs-extra": "^11.3.0",
+    "execa": "^9.5.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.15.0",
+    "typescript": "catalog:",
+    "tsup": "^8.4.0",
+    "@olyx/config": "workspace:*"
+  }
+}

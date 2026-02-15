@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { Index } from "@olyx/registry";
+import { Index } from "@/registry";
 
 export interface RegistryItemFiles {
   tsx: string;

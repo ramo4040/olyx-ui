@@ -5,7 +5,12 @@
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "clean": "rm -rf node_modules && rm -rf .turbo && rm -rf .next && rm -rf .source",
+    "registry:build": "bun run ./src/scripts/build-registry.ts",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "fumadocs-mdx",
+    "format:all": "biome check --write --unsafe --no-errors-on-unmatched"
   },
   "dependencies": {
     "@base-ui/react": "^1.1.0",
@@ -35,7 +40,6 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "typescript": "catalog:",
-    "@olyx/config": "workspace:*",
-    "@olyx/registry": "workspace:*"
+    "@olyx/config": "workspace:*"
   }
 }

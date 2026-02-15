@@ -2,7 +2,6 @@
 
 import { Switch } from "@olyx/react";
 import { useTheme } from "next-themes";
-import { NavigationMenuExample } from "@/components/examples/navigation/navigation-menu";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -20,53 +19,7 @@ export default function Home() {
           onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
         />
       </header>
-      <div style={{ display: "grid", gap: 40 }}>
-        {/*
-         <AvatarExamples />
-         <RadioExample />
-         <SwitchExample />
-         <TextareaExample />
-         <SpinnerExamples />
-         <CheckboxExample />
-         <KbdExample />
-         <FieldExample />
-         <SeparatorExample />
-         <AccordionExample />
-         <DrawerExample />
-         <PopoverExamples />
-         <SliderExample />
-         <ProgressExamples />
-         <CollapsibleExamples />
-         <PreviewCardExamples />
-         <TooltipExamples />
-         <ToogleExample />
-         <AlertExample />
-         <NumberFieldExamples />
-         <ContextMenuExample />
-         <ScrollAreaExample />
-         <AlertDialogExample />
-         <MenuBarExamples />
-         <ToolbarExample />
-         <RatingReviewExample />
-         <BreadCrumbExample />
-         <StatusBadgeExample />
-         <DropdownMenuExample />
-         <ComboboxExamples />
-         <BannerExamples />
-         <ToastExamples />
-         <TagExamples />
-         <BadgesExamples />
-         <RatingBarExamples />
-        <SelectExample />
-        <InputsExample />
-
-        <TableExample />
-        <ButtonsExamples />
-        <ComboboxExamples />
-        <AutocompleteExamples />
-        */}
-        <NavigationMenuExample />
-      </div>
+      <div> </div>
     </div>
   );
 }

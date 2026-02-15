@@ -20,7 +20,8 @@
     "dev": "turbo dev",
     "build": "turbo build",
     "check-types": "turbo check-types",
-    "dev:web": "turbo -F web dev"
+    "dev:web": "turbo -F web dev",
+    "start:web": "turbo -F web start"
   },
   "dependencies": {
     "dotenv": "catalog:",
