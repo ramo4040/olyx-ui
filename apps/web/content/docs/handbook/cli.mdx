@@ -1,0 +1,101 @@
+---
+title: CLI
+description: Use the Olyx CLI to initialize a project and add UI components.
+---
+
+The Olyx CLI ships as the `olyx` command.
+
+- Initialize a project: `olyx init`
+- Add components: `olyx add button card dialog`
+
+If you don’t have it installed globally, you can run it with `npx`:
+
+```bash
+npx olyx@latest init
+```
+
+## init
+
+Use `init` to set up Olyx UI in the current folder.
+
+What `init` does:
+
+- Creates (or confirms) your component install directory (default: `src/components/ui`)
+- Writes `components.json` with your chosen `componentDir`
+- Installs the base style files (`tokens.css` and `colors.css`) into your component directory
+- Tries to inject `@import` statements into your global CSS file (when it can detect it)
+
+```bash
+olyx init
+```
+
+**Help**
+
+```bash
+Usage: olyx init [options]
+
+Initialize Olyx UI in your project
+
+Options:
+  -h, --help  display help for command
+```
+
+Notes:
+
+- If you run `olyx init` in an empty folder (no `package.json`), it offers to scaffold a new project (Next.js, Vite, or TanStack Start) and then continues setup inside the created directory.
+- If global CSS injection can’t be done automatically, the CLI prints the exact `@import` lines you need to paste into your global stylesheet.
+
+---
+
+## add
+
+Use `add` to install one or more components from the registry into your project.
+
+```bash
+olyx add button
+```
+
+You can add multiple components at once:
+
+```bash
+olyx add button card dialog
+```
+
+If you run `add` without component names, it opens an interactive picker:
+
+```bash
+olyx add
+```
+
+What `add` does:
+
+- Ensures your project is initialized (creates `components.json` automatically if missing)
+- Fetches the component registry and resolves registry dependencies
+- Writes component files into your configured `componentDir`
+- Detects your package manager (bun/pnpm/yarn/npm) and installs any required npm dependencies
+- Prompts before overwriting existing components
+
+**Help**
+
+```bash
+Usage: olyx add [options] [components...]
+
+Add components to your project
+
+Arguments:
+  components  Components to add
+
+Options:
+  -h, --help  display help for command
+```
+
+---
+
+## How the registry is used
+
+Olyx is registry-driven: components are defined in a registry, and the CLI installs files + npm dependencies based on those registry entries.
+
+In this monorepo, the CLI currently reads the local registry file and component sources:
+
+- `apps/web/registry.json`
+- `packages/react/src`

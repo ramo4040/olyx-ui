@@ -66,7 +66,7 @@ export const registryUi: Registry["items"] = [
     title: "Button Group",
     description: "Groups related buttons together.",
     type: "registry:ui",
-    registryDependencies: ["button"],
+    registryDependencies: ["separator"],
     files: [
       { path: "@olyx/react/button-group/index.tsx", type: "registry:ui" },
       { path: "@olyx/react/button-group/style.css", type: "registry:style" },
@@ -264,6 +264,7 @@ export const registryUi: Registry["items"] = [
     dependencies: ["@base-ui/react"],
     files: [
       { path: "@olyx/react/context-menu/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/shared/menu-base.css", type: "registry:style" },
     ],
     meta: {
       category: "disclosure",
@@ -294,6 +295,7 @@ export const registryUi: Registry["items"] = [
     dependencies: ["@base-ui/react"],
     files: [
       { path: "@olyx/react/dropdown-menu/index.tsx", type: "registry:ui" },
+      { path: "@olyx/react/shared/menu-base.css", type: "registry:style" },
     ],
     meta: {
       category: "disclosure",
@@ -372,6 +374,7 @@ export const registryUi: Registry["items"] = [
     files: [
       { path: "@olyx/react/alert-dialog/index.tsx", type: "registry:ui" },
       { path: "@olyx/react/alert-dialog/style.css", type: "registry:style" },
+      { path: "@olyx/react/shared/dialog-base.css", type: "registry:style" },
     ],
     meta: {
       category: "feedback",
@@ -388,6 +391,7 @@ export const registryUi: Registry["items"] = [
     files: [
       { path: "@olyx/react/dialog/index.tsx", type: "registry:ui" },
       { path: "@olyx/react/dialog/style.css", type: "registry:style" },
+      { path: "@olyx/react/shared/dialog-base.css", type: "registry:style" },
     ],
     meta: {
       category: "feedback",
@@ -399,7 +403,6 @@ export const registryUi: Registry["items"] = [
     title: "Preview Card",
     description: "A card that displays a preview of content with actions.",
     type: "registry:ui",
-    registryDependencies: ["button"],
     files: [
       { path: "@olyx/react/preview-card/index.tsx", type: "registry:ui" },
       { path: "@olyx/react/preview-card/style.css", type: "registry:style" },
@@ -497,6 +500,7 @@ export const registryUi: Registry["items"] = [
     files: [
       { path: "@olyx/react/autocomplete/index.tsx", type: "registry:ui" },
       { path: "@olyx/react/autocomplete/style.css", type: "registry:style" },
+      { path: "@olyx/react/shared/select-base.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -513,6 +517,7 @@ export const registryUi: Registry["items"] = [
     files: [
       { path: "@olyx/react/combobox/index.tsx", type: "registry:ui" },
       { path: "@olyx/react/combobox/style.css", type: "registry:style" },
+      { path: "@olyx/react/shared/select-base.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -524,7 +529,6 @@ export const registryUi: Registry["items"] = [
     title: "Field",
     description: "A form field with label, input, and error message.",
     type: "registry:ui",
-    registryDependencies: ["input"],
     files: [
       { path: "@olyx/react/field/index.tsx", type: "registry:ui" },
       { path: "@olyx/react/field/style.css", type: "registry:style" },
@@ -604,6 +608,7 @@ export const registryUi: Registry["items"] = [
     files: [
       { path: "@olyx/react/select/index.tsx", type: "registry:ui" },
       { path: "@olyx/react/select/style.css", type: "registry:style" },
+      { path: "@olyx/react/shared/select-base.css", type: "registry:style" },
     ],
     meta: {
       category: "form",
@@ -755,7 +760,7 @@ export const registryUi: Registry["items"] = [
     description: "A container for grouping a set of controls.",
     type: "registry:ui",
     dependencies: ["@base-ui/react"],
-    registryDependencies: ["button"],
+    registryDependencies: ["separator"],
     files: [
       { path: "@olyx/react/toolbar/index.tsx", type: "registry:ui" },
       { path: "@olyx/react/toolbar/style.css", type: "registry:style" },

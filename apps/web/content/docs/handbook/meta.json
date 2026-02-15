@@ -1,4 +1,4 @@
 {
-  "pages": ["styling", "colors", "tokens", "typography"],
+  "pages": ["cli", "styling", "colors", "tokens", "typography"],
   "title": "Handbook"
 }

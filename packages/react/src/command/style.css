@@ -115,7 +115,8 @@
         user-select: none;
         text-decoration: none;
 
-        &:hover {
+        &:hover,
+        &[data-highlighted] {
           background-color: var(--color-surface-container-low);
         }
       }

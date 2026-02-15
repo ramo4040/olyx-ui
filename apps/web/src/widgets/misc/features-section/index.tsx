@@ -68,7 +68,7 @@ export const FeaturesSection = () => {
               <div className="accepted">
                 <HugeiconsIcon icon={CheckmarkCircle01Icon} />
                 <pre>
-                  {`<button ui-slot="button" data-variant="primary">
+                  {`<button data-ui="button">
     Button
 </button>
 `}
