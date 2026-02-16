@@ -287,7 +287,7 @@
       pre {
         padding: var(--spacing-16) var(--spacing-16) 0 0;
         border-radius: var(--radius-md);
-        background: none;
+        background: none !important;
       }
 
       &:not(:has([data-ui="scroll-area"])) {

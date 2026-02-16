@@ -28,7 +28,7 @@ import {
 } from "@olyx/react";
 import Link from "next/link";
 import { useEffect, useMemo } from "react";
-import { appConfig } from "@/lib/config";
+import { siteConfig } from "@/lib/config";
 import type { source } from "@/lib/source";
 
 export const docsCommandHandle = CommandCreateHandle();
@@ -51,10 +51,10 @@ export const DocsCommand = ({ tree }: { tree: typeof source.pageTree }) => {
     const groups: PageGroup[] = [];
 
     // Add nav items group
-    if (appConfig.navItems && appConfig.navItems.length > 0) {
+    if (siteConfig.navItems && siteConfig.navItems.length > 0) {
       groups.push({
         value: "Olyx UI",
-        items: appConfig.navItems.map((item) => ({
+        items: siteConfig.navItems.map((item) => ({
           value: `Navigation ${item.label}`,
           label: item.label,
           url: item.href,
