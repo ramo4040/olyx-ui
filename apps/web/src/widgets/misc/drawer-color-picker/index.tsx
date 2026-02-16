@@ -1,5 +1,6 @@
 "use client";
 
+import { Tooltip, TooltipContent, TooltipTrigger } from "@olyx/react";
 import "./style.css";
 import { Button } from "@olyx/react/button";
 import { ColorSlider } from "@olyx/react/color-slider";
@@ -88,7 +89,10 @@ export const DrawerColorPicker = ({
 
   return (
     <Drawer modal={false}>
-      <DrawerTrigger render={children} />
+      <Tooltip>
+        <TooltipTrigger render={<DrawerTrigger render={children} />} />
+        <TooltipContent>Change Color</TooltipContent>
+      </Tooltip>
       <DrawerContent
         className="color-picker-drawer"
         data-custom-theme

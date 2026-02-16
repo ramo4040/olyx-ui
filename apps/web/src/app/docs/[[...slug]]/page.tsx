@@ -141,6 +141,7 @@ export default async function Page(props: {
               <div className="actions">
                 {links?.doc && (
                   <Button
+                    nativeButton={false}
                     size="sm"
                     variant="neutral"
                     mode="stroke"
