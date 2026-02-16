@@ -17,7 +17,14 @@ export const ThemeToggle = () => {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === "d") {
+      const target = e.target as HTMLElement;
+
+      const isTyping =
+        target.tagName === "INPUT" ||
+        target.tagName === "TEXTAREA" ||
+        target.isContentEditable;
+
+      if (e.key.toLowerCase() === "d" && !isTyping) {
         e.preventDefault();
         setTheme(theme === "light" ? "dark" : "light");
       }

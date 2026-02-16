@@ -33,17 +33,19 @@
     }
 
     main {
-      display: flex;
       width: 100%;
       min-width: 0;
-      gap: var(--spacing-24);
       margin-top: var(--spacing-12);
-      padding-bottom: var(--spacing-64);
       background: var(--color-surface-container-lowest);
       border-radius: var(--radius-lg-inc);
 
-      @media (min-width: 1280px) {
-        gap: 80px;
+      > div {
+        display: flex;
+        gap: var(--spacing-24);
+
+        @media (min-width: 1280px) {
+          gap: 80px;
+        }
       }
     }
 
@@ -91,6 +93,11 @@
           font-weight: 500;
         }
       }
+    }
+
+    .footer {
+      margin-left: 80px;
+      padding-block: var(--spacing-32);
     }
 
     [data-ui="docs-content"] {

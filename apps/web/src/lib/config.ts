@@ -7,6 +7,7 @@ export const siteConfig = {
   ogImage: "/og.png",
   github: "https://github.com/ramo4040/olyx-ui",
   twitter: "@yassir_rouane",
+  githubUsername: "https://github.com/ramo4040",
   creator: "Yassir Rouane",
   keywords: [
     "react components",

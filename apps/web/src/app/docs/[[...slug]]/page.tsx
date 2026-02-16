@@ -7,6 +7,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Button } from "@olyx/react/button";
+import { LinkButton } from "@olyx/react/link-button";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -132,60 +133,84 @@ export default async function Page(props: {
       <JsonLd data={buildBreadcrumbSchema(params.slug, doc.title)} />
       {/* Render MDX content */}
       <main>
-        <div data-ui="docs-content">
-          <header className="page-header">
-            <h1>{doc.title}</h1>
-            <p>{doc.description}</p>
-            <div className="actions">
-              {links?.doc && (
-                <Button
-                  size="sm"
-                  variant="neutral"
-                  mode="stroke"
-                  render={
-                    <Link
-                      href={links.doc as any}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <HugeiconsIcon icon={LinkSquare02Icon} />
-                      API Reference
-                    </Link>
-                  }
-                />
+        <div>
+          <div data-ui="docs-content">
+            <header className="page-header">
+              <h1>{doc.title}</h1>
+              <p>{doc.description}</p>
+              <div className="actions">
+                {links?.doc && (
+                  <Button
+                    size="sm"
+                    variant="neutral"
+                    mode="stroke"
+                    render={
+                      <Link
+                        href={links.doc as any}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <HugeiconsIcon icon={LinkSquare02Icon} />
+                        API Reference
+                      </Link>
+                    }
+                  />
+                )}
+
+                <CopyMDXButton value={mdxContent} path={page.url} />
+              </div>
+            </header>
+
+            <MDX components={mdxComponents} />
+
+            <div className="pagination">
+              {prevLink && (
+                <Link href={{ pathname: prevLink.url }}>
+                  <span>
+                    <HugeiconsIcon icon={ArrowLeft02Icon} />
+                    Previous
+                  </span>
+
+                  <p>{prevLink.name}</p>
+                </Link>
               )}
+              {nextLink && (
+                <Link href={{ pathname: nextLink.url }}>
+                  <span>
+                    Up next
+                    <HugeiconsIcon icon={ArrowRight02Icon} />
+                  </span>
 
-              <CopyMDXButton value={mdxContent} path={page.url} />
+                  <p>{nextLink.name}</p>
+                </Link>
+              )}
             </div>
-          </header>
-
-          <MDX components={mdxComponents} />
-
-          <div className="pagination">
-            {prevLink && (
-              <Link href={{ pathname: prevLink.url }}>
-                <span>
-                  <HugeiconsIcon icon={ArrowLeft02Icon} />
-                  Previous
-                </span>
-
-                <p>{prevLink.name}</p>
-              </Link>
-            )}
-            {nextLink && (
-              <Link href={{ pathname: nextLink.url }}>
-                <span>
-                  Up next
-                  <HugeiconsIcon icon={ArrowRight02Icon} />
-                </span>
-
-                <p>{nextLink.name}</p>
-              </Link>
-            )}
           </div>
+
+          <DocsToc toc={doc.toc} />
         </div>
 
-        <DocsToc toc={doc.toc} />
+        <footer className="footer">
+          <p>
+            Built by{" "}
+            <LinkButton
+              href={siteConfig.githubUsername}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Yassir Rouane
+            </LinkButton>
+            . The source code is available on{" "}
+            <LinkButton
+              href={siteConfig.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </LinkButton>
+            .
+          </p>
+        </footer>
       </main>
     </div>
   );
