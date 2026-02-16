@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.css";
 
 import { Popover as PopoverPrimitive } from "@base-ui/react/popover";

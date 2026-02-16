@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.css";
 import { Tabs as TabsPrimitive } from "@base-ui/react/tabs";
 

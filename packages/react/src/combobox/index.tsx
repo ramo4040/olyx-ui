@@ -1,3 +1,5 @@
+"use client";
+
 import "../shared/select-base.css";
 import "./style.css";
 import { Combobox as ComboboxPrimitive } from "@base-ui/react";

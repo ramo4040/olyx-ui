@@ -1,3 +1,5 @@
+"use client";
+
 import "../shared/input-base.css";
 import { Input as InputPrimitive } from "@base-ui/react/input";
 

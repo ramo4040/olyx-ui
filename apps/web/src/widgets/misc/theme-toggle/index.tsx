@@ -42,7 +42,12 @@ export const ThemeToggle = () => {
       <TooltipTrigger
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         render={
-          <Button mode="ghost" variant="neutral" asIcon>
+          <Button
+            mode="ghost"
+            variant="neutral"
+            asIcon
+            aria-label="Toggle theme"
+          >
             <HugeiconsIcon icon={DarkModeIcon} />
           </Button>
         }

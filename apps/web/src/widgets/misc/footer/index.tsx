@@ -1,8 +1,8 @@
 import { Logo } from "@/components/misc";
 import "./style.css";
 import { LinkButton } from "@olyx/react";
-import Link from "next/link";
 import { GitHubIcon } from "@/assets/svg/github";
+import { siteConfig } from "@/lib/config";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -59,9 +59,15 @@ export const Footer = () => {
           </div>
 
           <div className="social-links">
-            <Link href={"/"} className="icon">
+            <a
+              href={siteConfig.github}
+              className="icon"
+              aria-label="View GitHub repository"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <GitHubIcon />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -72,15 +78,15 @@ export const Footer = () => {
 const bottomLinksSet = [
   {
     label: "License",
-    url: "",
+    url: "/license",
   },
   {
     label: "Changelog",
-    url: "",
+    url: "/changelog",
   },
   {
     label: "llms.txt",
-    url: "",
+    url: "/llms.txt",
   },
 ];
 
@@ -97,7 +103,7 @@ const linksSet = [
     name: "Products",
     links: [
       { label: "Component library", url: "/docs" },
-      { label: "Theme generator", url: "" },
+      { label: "Theme generator", url: "/theme-generator" },
     ],
   },
 ];

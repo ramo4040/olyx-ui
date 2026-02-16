@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css",
+    "./src/*/index.tsx"
+  ],
   "main": "./index.ts",
   "exports": {
     ".": "./index.ts",

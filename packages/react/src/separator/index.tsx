@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.css";
 
 import { Separator as SeparatorPrimititve } from "@base-ui/react/separator";

@@ -1,3 +1,5 @@
+"use client";
+
 import type React from "react";
 import "./style.css";
 import { FavouriteIcon, StarIcon } from "@hugeicons/core-free-icons";

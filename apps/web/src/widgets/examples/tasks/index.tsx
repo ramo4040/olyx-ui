@@ -92,7 +92,10 @@ export const TasksExample = () => {
             <InputIcon>
               <HugeiconsIcon icon={Search01Icon} />
             </InputIcon>
-            <Input placeholder="Search tasks..." />
+            <label htmlFor="task-search-input" className="visually-hidden">
+              Search tasks
+            </label>
+            <Input id="task-search-input" placeholder="Search tasks..." />
           </InputWrapper>
 
           <DropdownMenu>

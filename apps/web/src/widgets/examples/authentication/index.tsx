@@ -30,10 +30,27 @@ export function Authentication() {
             <p>Enter your email below to create your account</p>
           </div>
 
-          <form className="auth-form" onSubmit={(e) => e.preventDefault()}>
-            <Input type="email" placeholder="name@example.com" />
+          <form
+            className="auth-form"
+            onSubmit={(e) => e.preventDefault()}
+            aria-label="Account creation form"
+          >
+            <label htmlFor="email-input" className="visually-hidden">
+              Email address
+            </label>
+            <Input
+              id="email-input"
+              type="email"
+              placeholder="name@example.com"
+              aria-required="true"
+            />
 
-            <Button variant="primary" mode="filled" className="auth-submit-btn">
+            <Button
+              variant="primary"
+              mode="filled"
+              className="auth-submit-btn"
+              type="submit"
+            >
               Sign In with Email
             </Button>
           </form>

@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.css";
 import { Button as ButtonPrimitive } from "@base-ui/react/button";
 

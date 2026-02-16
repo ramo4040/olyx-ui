@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.css";
 import { Slider as SliderPrimitive } from "@base-ui/react/slider";
 

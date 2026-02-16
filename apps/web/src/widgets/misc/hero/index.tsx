@@ -1,6 +1,9 @@
-import Link from "next/link";
+"use client";
+
 import "./style.css";
-import { Badge, Button } from "@olyx/react";
+import { Badge } from "@olyx/react/badge";
+import { Button } from "@olyx/react/button";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -23,9 +26,7 @@ export const Hero = () => {
           mode="ghost"
           nativeButton={false}
           render={
-            <Link href={{ pathname: "/docs/components/accordion" }}>
-              View Components
-            </Link>
+            <Link href="/docs/components/accordion">View Components</Link>
           }
         />
       </div>
