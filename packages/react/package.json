@@ -1,8 +1,30 @@
 {
   "name": "@olyx/react",
-  "version": "0.0.1",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Modern, accessible React component library built on Base UI with native CSS",
   "type": "module",
+  "license": "MIT",
+  "author": "Olyx UI Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramo4040/olyx-ui.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://olyxui.com",
+  "bugs": {
+    "url": "https://github.com/ramo4040/olyx-ui/issues"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "design-system",
+    "base-ui",
+    "accessible",
+    "typescript",
+    "hct-color",
+    "css"
+  ],
   "sideEffects": [
     "**/*.css",
     "./src/*/index.tsx"
