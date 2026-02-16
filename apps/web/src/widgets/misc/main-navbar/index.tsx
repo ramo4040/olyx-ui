@@ -15,7 +15,7 @@ import Link from "next/link";
 import { GitHubIcon } from "@/assets/svg/github";
 import { Logo } from "@/components/misc";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { appConfig } from "@/lib/config";
+import { siteConfig } from "@/lib/config";
 import { source } from "@/lib/source";
 import { DocsCommand } from "../docs-command";
 import { DrawerColorPicker } from "../drawer-color-picker";
@@ -32,7 +32,7 @@ export const MainNavbar = () => {
         <NavigationMenuList className="main-navbar-list">
           <div className="links">
             {isMobile && (
-              <MobileNavbar items={appConfig.navItems} tree={docsTree}>
+              <MobileNavbar items={siteConfig.navItems} tree={docsTree}>
                 <Button
                   asIcon
                   size="md"
@@ -49,7 +49,7 @@ export const MainNavbar = () => {
 
             {/* Links */}
             <NavigationMenuList>
-              {appConfig.navItems.map((e) => (
+              {siteConfig.navItems.map((e) => (
                 <NavigationMenuItem key={e.label} className="link-item">
                   <NavigationMenuLink
                     render={<Link href={{ pathname: e.href }}>{e.label}</Link>}

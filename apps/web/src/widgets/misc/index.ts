@@ -12,5 +12,6 @@ export { FeaturesSection } from "./features-section";
 export { Footer } from "./footer";
 export { Hero } from "./hero";
 export { MainNavbar } from "./main-navbar";
+export { NotFoundCard } from "./not-found";
 export { ThemeToggle } from "./theme-toggle";
 export { WhyOlyxSection } from "./why-olyx-section";

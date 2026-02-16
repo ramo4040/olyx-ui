@@ -7,9 +7,13 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Button } from "@olyx/react/button";
+import { LinkButton } from "@olyx/react/link-button";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CopyMDXButton } from "@/components/misc";
+import { JsonLd } from "@/components/seo/json-ld";
+import { siteConfig } from "@/lib/config";
 import { source } from "@/lib/source";
 import { DocsToc } from "@/widgets/misc";
 import { mdxComponents } from "../../../../mdx-components";
@@ -24,7 +28,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: {
   params: Promise<{ slug?: string[] }>;
-}) {
+}): Promise<Metadata> {
   const params = await props.params;
   const page = source.getPage(params.slug);
 
@@ -38,9 +42,61 @@ export async function generateMetadata(props: {
     notFound();
   }
 
+  const ogDescription = `${doc.description} — Olyx UI React component library.`;
+  const ogImageUrl = params.slug
+    ? `${siteConfig.url}/api/og/${params.slug.join("/")}`
+    : `${siteConfig.url}/api/og/docs`;
+
   return {
-    description: doc.description,
-    title: `${doc.title} - olyx ui`,
+    title: doc.title,
+    description: ogDescription,
+    alternates: {
+      canonical: page.url,
+    },
+    openGraph: {
+      title: `${doc.title} - ${siteConfig.name}`,
+      description: ogDescription,
+      url: `${siteConfig.url}${page.url}`,
+      type: "article",
+      images: [{ url: ogImageUrl, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${doc.title} - ${siteConfig.name}`,
+      description: ogDescription,
+      images: [ogImageUrl],
+    },
+  };
+}
+
+function buildBreadcrumbSchema(slug: string[] | undefined, title: string) {
+  const items = [
+    { name: "Home", url: siteConfig.url },
+    { name: "Docs", url: `${siteConfig.url}/docs` },
+  ];
+
+  if (slug && slug.length > 1) {
+    const section = slug[0].charAt(0).toUpperCase() + slug[0].slice(1);
+    items.push({
+      name: section,
+      url: `${siteConfig.url}/docs/${slug[0]}`,
+    });
+  }
+
+  items.push({
+    name: title,
+    url: `${siteConfig.url}/docs/${slug?.join("/") ?? ""}`,
+  });
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
   };
 }
 
@@ -74,62 +130,88 @@ export default async function Page(props: {
 
   return (
     <div data-ui="docs-page">
+      <JsonLd data={buildBreadcrumbSchema(params.slug, doc.title)} />
       {/* Render MDX content */}
       <main>
-        <div data-ui="docs-content">
-          <header className="page-header">
-            <h1>{doc.title}</h1>
-            <p>{doc.description}</p>
-            <div className="actions">
-              {links?.doc && (
-                <Button
-                  size="sm"
-                  variant="neutral"
-                  mode="stroke"
-                  render={
-                    <Link
-                      href={links.doc as any}
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <HugeiconsIcon icon={LinkSquare02Icon} />
-                      API Reference
-                    </Link>
-                  }
-                />
+        <div>
+          <div data-ui="docs-content">
+            <header className="page-header">
+              <h1>{doc.title}</h1>
+              <p>{doc.description}</p>
+              <div className="actions">
+                {links?.doc && (
+                  <Button
+                    nativeButton={false}
+                    size="sm"
+                    variant="neutral"
+                    mode="stroke"
+                    render={
+                      <Link
+                        href={links.doc as any}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        <HugeiconsIcon icon={LinkSquare02Icon} />
+                        API Reference
+                      </Link>
+                    }
+                  />
+                )}
+
+                <CopyMDXButton value={mdxContent} path={page.url} />
+              </div>
+            </header>
+
+            <MDX components={mdxComponents} />
+
+            <div className="pagination">
+              {prevLink && (
+                <Link href={{ pathname: prevLink.url }}>
+                  <span>
+                    <HugeiconsIcon icon={ArrowLeft02Icon} />
+                    Previous
+                  </span>
+
+                  <p>{prevLink.name}</p>
+                </Link>
               )}
+              {nextLink && (
+                <Link href={{ pathname: nextLink.url }}>
+                  <span>
+                    Up next
+                    <HugeiconsIcon icon={ArrowRight02Icon} />
+                  </span>
 
-              <CopyMDXButton value={mdxContent} path={page.url} />
+                  <p>{nextLink.name}</p>
+                </Link>
+              )}
             </div>
-          </header>
-
-          <MDX components={mdxComponents} />
-
-          <div className="pagination">
-            {prevLink && (
-              <Link href={{ pathname: prevLink.url }}>
-                <span>
-                  <HugeiconsIcon icon={ArrowLeft02Icon} />
-                  Previous
-                </span>
-
-                <p>{prevLink.name}</p>
-              </Link>
-            )}
-            {nextLink && (
-              <Link href={{ pathname: nextLink.url }}>
-                <span>
-                  Up next
-                  <HugeiconsIcon icon={ArrowRight02Icon} />
-                </span>
-
-                <p>{nextLink.name}</p>
-              </Link>
-            )}
           </div>
+
+          <DocsToc toc={doc.toc} />
         </div>
 
-        <DocsToc toc={doc.toc} />
+        <footer className="footer">
+          <p>
+            Built by{" "}
+            <LinkButton
+              href={siteConfig.githubUsername}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Yassir Rouane
+            </LinkButton>
+            . The source code is available on{" "}
+            <LinkButton
+              href={siteConfig.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </LinkButton>
+            .
+          </p>
+        </footer>
       </main>
     </div>
   );

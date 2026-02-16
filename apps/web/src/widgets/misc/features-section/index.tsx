@@ -12,12 +12,12 @@ export const FeaturesSection = () => {
   return (
     <section data-ui="features-section">
       <div className="title">
-        <h1>
+        <h2>
           A <span>Design System</span> Built Like an Engine Experience the power
           of a <span>zero-conflict</span> styling architecture, where{" "}
           <span>HCT</span> color logic meets <span>native CSS</span> for
           ultimate creative freedom.
-        </h1>
+        </h2>
       </div>
 
       <div className="features-list">
