@@ -4,6 +4,7 @@ import { StackedToastProvider } from "@olyx/react";
 import type { Metadata, Viewport } from "next";
 import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import ErrorBoundary from "@/components/error-boundary";
 import { siteConfig } from "@/lib/config";
 
 const dmSans = DM_Sans({
@@ -85,6 +86,7 @@ export default function RootLayout({
       suppressHydrationWarning
       data-theme="light"
       className={dmSans.variable}
+      data-scroll-behavior="smooth"
     >
       <head />
 
@@ -96,8 +98,10 @@ export default function RootLayout({
             defaultTheme="system"
             enableSystem
           >
-            <StackedToastProvider timeout={3000} />
-            {children}
+            <ErrorBoundary>
+              <StackedToastProvider timeout={3000} />
+              {children}
+            </ErrorBoundary>
           </ThemeProvider>
         </div>
       </body>

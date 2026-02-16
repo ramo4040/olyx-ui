@@ -1,3 +1,5 @@
+"use client";
+
 import { Separator } from "@olyx/react";
 import "./style.css";
 

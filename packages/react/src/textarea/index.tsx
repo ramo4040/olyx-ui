@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.css";
 
 function Textarea(props: React.ComponentProps<"textarea">) {

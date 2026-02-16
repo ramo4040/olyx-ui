@@ -1,3 +1,5 @@
+"use client";
+
 import "./index.css";
 
 function Kbd(props: React.ComponentProps<"kbd">) {

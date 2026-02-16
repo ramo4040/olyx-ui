@@ -29,7 +29,10 @@ export const MainNavbar = () => {
   return (
     <header data-ui="main-navbar-header">
       <NavigationMenu data-ui="main-navbar">
-        <NavigationMenuList className="main-navbar-list">
+        <NavigationMenuList
+          className="main-navbar-list"
+          aria-label="Main navigation"
+        >
           <div className="links">
             {isMobile && (
               <MobileNavbar items={siteConfig.navItems} tree={docsTree}>
@@ -38,6 +41,7 @@ export const MainNavbar = () => {
                   size="md"
                   variant="neutral"
                   mode="ghost"
+                  aria-label="Open navigation menu"
                   render={<HugeiconsIcon icon={Menu09Icon} />}
                 />
               </MobileNavbar>
@@ -48,7 +52,7 @@ export const MainNavbar = () => {
             </NavigationMenuItem>
 
             {/* Links */}
-            <NavigationMenuList>
+            <NavigationMenuList aria-label="Primary navigation links">
               {siteConfig.navItems.map((e) => (
                 <NavigationMenuItem key={e.label} className="link-item">
                   <NavigationMenuLink
@@ -59,7 +63,10 @@ export const MainNavbar = () => {
             </NavigationMenuList>
           </div>
 
-          <NavigationMenuList className="actions-list">
+          <NavigationMenuList
+            className="actions-list"
+            aria-label="Site actions"
+          >
             {/* Search */}
             <NavigationMenuItem className="search-item">
               <DocsCommand tree={docsTree} />
@@ -68,7 +75,10 @@ export const MainNavbar = () => {
             <Separator orientation="vertical" />
 
             <NavigationMenuItem className="github-link">
-              <NavigationMenuLink href="#">
+              <NavigationMenuLink
+                href={siteConfig.github}
+                aria-label="View GitHub repository"
+              >
                 <GitHubIcon />
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -77,7 +87,11 @@ export const MainNavbar = () => {
 
             <NavigationMenuItem>
               <DrawerColorPicker>
-                <Button mode="ghost" variant="neutral">
+                <Button
+                  mode="ghost"
+                  variant="neutral"
+                  aria-label="Choose theme color"
+                >
                   <div className="current-color" />
                   <HugeiconsIcon icon={ColorPickerIcon} />
                 </Button>
