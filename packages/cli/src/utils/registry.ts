@@ -1,36 +1,16 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import type { Registry, RegistryItem } from "../types.js";
-
-const isLocal = true;
 
 /**
  * Remote GitHub sources (production mode)
  */
 const REMOTE_REGISTRY_URL =
-  "https://raw.githubusercontent.com/olyxui/olyx/main/apps/web/registry.json";
+  "https://raw.githubusercontent.com/ramo4040/olyx-ui/refs/heads/main/apps/web/registry.json";
 
 const REMOTE_RAW_BASE =
-  "https://raw.githubusercontent.com/olyxui/olyx/main/packages/react/src";
-
-/**
- * Local filesystem sources (development mode)
- */
-const LOCAL_REGISTRY_PATH = path.resolve(
-  "/home/ramo/Desktop/hajib-ui/apps/web/registry.json",
-);
-
-const LOCAL_RAW_BASE = path.resolve(
-  "/home/ramo/Desktop/hajib-ui/packages/react/src",
-);
+  "https://raw.githubusercontent.com/ramo4040/olyx-ui/refs/heads/main/packages/react/src";
 
 /** Fetch the full registry (local or remote) */
 export async function fetchRegistry(): Promise<Registry> {
-  if (isLocal) {
-    const file = await readFile(LOCAL_REGISTRY_PATH, "utf-8");
-    return JSON.parse(file) as Registry;
-  }
-
   const res = await fetch(REMOTE_REGISTRY_URL);
   if (!res.ok) {
     throw new Error(
@@ -82,12 +62,6 @@ export function resolveDependencies(
  */
 export async function fetchFileContent(registryPath: string): Promise<string> {
   const repoPath = registryPath.replace(/^ui\//, "");
-
-  if (isLocal) {
-    const filePath = path.join(LOCAL_RAW_BASE, repoPath);
-    return readFile(filePath, "utf-8");
-  }
-
   const url = `${REMOTE_RAW_BASE}/${repoPath}`;
 
   const res = await fetch(url);

@@ -56,7 +56,7 @@
 
       a {
         width: 50%;
-        height: 90px;
+        height: fit-content;
         border-radius: var(--radius-lg);
         padding: var(--spacing-16) var(--spacing-24);
         display: flex;
@@ -96,8 +96,16 @@
     }
 
     .footer {
-      margin-left: 80px;
       padding-block: var(--spacing-32);
+
+      @media (min-width: 768px) {
+        padding-inline: var(--spacing-24);
+      }
+
+      @media (min-width: 1280px) {
+        margin-left: 80px;
+        padding-inline: 0;
+      }
     }
 
     [data-ui="docs-content"] {

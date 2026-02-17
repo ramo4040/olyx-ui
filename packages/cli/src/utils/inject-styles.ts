@@ -84,8 +84,19 @@ export async function injectStyleImports(
 
   const injection = [
     "/* Olyx Design Tokens */",
-    `@import "${tokensRel}";`,
-    `@import "${colorsRel}";`,
+    `@import url("${colorsRel}") layer(tokens);`,
+    `@import url("${tokensRel}") layer(tokens);`,
+    "",
+    "@layer reset, base, utilities, components, misc, tokens;",
+    "",
+    "@layer reset {",
+    "  * {",
+    "    box-sizing: border-box;",
+    "    margin: 0;",
+    "    padding: 0;",
+    "    font-family: var(--font-family);",
+    "  }",
+    "}",
     "",
   ].join("\n");
 
