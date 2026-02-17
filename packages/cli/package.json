@@ -1,9 +1,28 @@
 {
   "name": "olyx",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "CLI for adding Olyx UI components to your project",
   "type": "module",
   "license": "MIT",
+  "author": "Yassir Rouane",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramo4040/olyx-ui.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://olyxui.com",
+  "bugs": {
+    "url": "https://github.com/ramo4040/olyx-ui/issues"
+  },
+  "keywords": [
+    "olyx",
+    "cli",
+    "components",
+    "ui",
+    "react",
+    "copy-paste",
+    "component-library"
+  ],
   "bin": {
     "olyx": "./bin/index.js"
   },

@@ -1,7 +1,10 @@
 {
   "name": "@olyx/web",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Olyx UI documentation and component showcase website",
   "private": true,
+  "author": "Olyx UI Team",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",

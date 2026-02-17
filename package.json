@@ -1,6 +1,27 @@
 {
   "name": "olyx",
+  "version": "1.0.0",
+  "description": "Olyx UI - Modern, accessible React component library built on Base UI with native CSS",
   "private": true,
+  "author": "Yassir Rouane",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramo4040/olyx-ui.git"
+  },
+  "homepage": "https://olyxui.com",
+  "bugs": {
+    "url": "https://github.com/ramo4040/olyx-ui/issues"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "design-system",
+    "base-ui",
+    "accessible",
+    "typescript"
+  ],
   "workspaces": {
     "packages": [
       "apps/*",

@@ -1,8 +1,11 @@
 {
   "name": "@olyx/config",
   "version": "0.0.0",
+  "description": "Shared configuration for Olyx UI monorepo",
   "private": true,
   "type": "module",
+  "author": "Olyx UI Team",
+  "license": "MIT",
   "exports": {
     "./tsconfig.base.json": "./tsconfig.base.json",
     "./types": "./types.ts"
