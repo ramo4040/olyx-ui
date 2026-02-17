@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from "commander";
-import { add, init } from "./commands/index.js";
+import { add, init, list } from "./commands/index.js";
 
 const program = new Command();
 
@@ -21,5 +21,12 @@ program
   .description("Add components to your project")
   .argument("[components...]", "Components to add")
   .action(add);
+
+program
+  .command("list")
+  .description("List all available components")
+  .action(async () => {
+    await list();
+  });
 
 program.parse();

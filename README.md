@@ -1,138 +1,201 @@
+<div align="center">
+
 ![Olyx UI - Modern React Component Library](./apps/web/public/og.png)
 
-<h3 align="center">Olyx UI</h3>
-<p align="center">Modern, accessible React components built on <strong>Base UI</strong> with native CSS.</p>
+# Olyx UI
 
-<p align="center">
-  <a href="https://olyxui.com">Website</a> · 
-  <a href="https://olyxui.com/docs">Documentation</a> · 
-  <a href="https://olyxui.com/docs/components/accordion">Components</a>
-</p>
+**50+ React components. Native CSS. No class soup.**
 
-## About Olyx UI
+Accessible, composable components built on [Base UI](https://base-ui.com/) with modern CSS and [HCT color science](https://material.io/blog/science-of-color-design). Copy, paste, and own your UI.
 
-**Olyx UI** is a collection of 50+ beautifully designed, accessible, and composable React components that you can copy, paste, and own. Built on top of [Base UI](https://base-ui.com/) and styled with native CSS using the HCT color system, Olyx UI gives you production-ready components without the bloat.
+[![npm version](https://img.shields.io/npm/v/@olyx/react?style=flat-square&color=blue)](https://www.npmjs.com/package/@olyx/react)
+[![npm downloads](https://img.shields.io/npm/dm/@olyx/react?style=flat-square)](https://www.npmjs.com/package/@olyx/react)
+[![GitHub stars](https://img.shields.io/github/stars/ramo4040/olyx-ui?style=flat-square)](https://github.com/ramo4040/olyx-ui/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
 
-Unlike traditional component libraries that lock you into a specific styling solution, Olyx UI embraces the **copy-paste philosophy**. Every component is yours to customize, extend, and adapt to your exact needs. No package dependencies to maintain, no breaking changes to worry about, just clean, readable code that you control.
+[Documentation](https://olyxui.com/docs) · [Components](https://olyxui.com/docs/components/accordion) · [Get Started](https://olyxui.com/docs/get-started)
 
-### Why Olyx UI?
+</div>
 
-- **🎨 Native CSS First** - Leverage modern CSS features with HCT color system for perceptually uniform colors
-- **♿ Accessibility Built-In** - WCAG 2.1 compliant components built on Base UI primitives
-- **📦 Zero Lock-In** - Copy-paste components you own, not npm packages you depend on
-- **⚡ Performance Focused** - Minimal runtime, tree-shakeable, and optimized for React 19
-- **🎯 Type-Safe** - Full TypeScript support with intelligent autocomplete
-- **🎭 Unstyled Foundation** - Base UI primitives give you complete styling freedom
-- **🚀 CLI Powered** - Add components to your project with a single command
+---
+
+## Why Olyx?
+
+Most React component libraries style with Tailwind utilities. Your button ends up looking like this:
+
+```tsx
+// ❌ Other libraries — CSS dump in your JSX
+<button className="inline-flex items-center justify-center rounded-md text-sm
+  font-medium ring-offset-background transition-colors focus-visible:outline-none
+  focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none
+  disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90
+  h-10 px-4 py-2">
+  Click me
+</button>
+```
+
+Olyx keeps your markup clean. The styling lives in CSS where it belongs:
+
+```tsx
+// ✅ Olyx — props, not class strings
+<Button variant="primary" mode="filled" size="md">
+  Click me
+</Button>
+```
+
+```css
+/* Scoped by data attributes — readable, overridable, debuggable */
+[data-ui="button"][data-mode="filled"] {
+  background-color: var(--color-button);
+  color: var(--color-on-button);
+}
+```
 
 ## Quick Start
 
-### Installation
-
-Add components to your project using the Olyx CLI:
-
 ```sh
-# Install the CLI globally
-bun add -g olyx
+# Initialize Olyx in your project
+npx olyx init
 
-# Add a component to your project
-olyx add button
-
-# Add multiple components
-olyx add button input dialog
+# Add components
+npx olyx add button
+npx olyx add button input dialog
 ```
 
-Or install without the CLI:
+Or copy component code directly from [the docs](https://olyxui.com/docs/components/accordion).
 
-```sh
-# Copy component code from the website
-# Visit https://olyxui.com/docs/components
+### Requirements
+
+- React 19+
+- TypeScript 5+ (recommended)
+
+## Architecture
+
+### Native CSS with Data Attributes
+
+Every component uses `data-*` attributes for variant styling. No runtime CSS-in-JS, no utility class concatenation:
+
+```tsx
+// Component outputs clean, semantic markup
+<ButtonPrimitive
+  data-ui="button"
+  data-variant={variant}
+  data-mode={mode}
+  data-size={size}
+  {...rest}
+>
+  {children}
+</ButtonPrimitive>
 ```
 
-### Prerequisites
+CSS handles the visual logic using `@layer`, custom properties, and modern selectors:
 
-Olyx UI components require:
+```css
+@layer components {
+  [data-ui="button"] {
+    display: inline-flex;
+    align-items: center;
+    height: var(--button-size);
+    transition: all var(--transition-expressive-fast-effects);
+  }
 
-- React 19.0.0 or later
-- TypeScript 5.0 or later (recommended)
+  [data-ui="button"][data-size="md"] {
+    --button-size: 36px;
+    padding-inline: var(--spacing-12);
+    border-radius: var(--radius-md);
+  }
+}
+```
+
+### Base UI Foundation
+
+Built on [Base UI](https://base-ui.com/) — the unstyled primitive layer from the MUI team. Every component inherits proper accessibility, keyboard navigation, and focus management out of the box.
+
+### HCT Color System
+
+Colors powered by Google's [HCT (Hue-Chroma-Tone)](https://material.io/blog/science-of-color-design) color space. Unlike RGB/HSL where "same lightness" doesn't mean "same perceived brightness," HCT is perceptually uniform. This means:
+
+- Colors at the same tone level have identical perceived brightness
+- Automatic dark mode palettes that maintain contrast ratios
+- WCAG AA compliance built into the color math
 
 ## Repository Structure
 
-This is a monorepo managed with [Turborepo](https://turbo.build/repo) containing:
+Monorepo managed with [Turborepo](https://turbo.build/repo):
 
 ```
-olyx/
+olyx-ui/
 ├── apps/
-│   └── web/              # Documentation website (Next.js)
+│   └── web/              # Documentation site (Next.js 16, Fumadocs)
 ├── packages/
-│   ├── react/            # React component library
-│   ├── cli/              # CLI tool for component installation
-│   └── config/           # Shared TypeScript configurations
+│   ├── react/            # @olyx/react — component library
+│   ├── cli/              # CLI for copy-paste installation
+│   └── config/           # Shared TypeScript configuration
 ```
 
-### Development Stack
+### Stack
 
-- **Framework**: [React 19](https://react.dev/) with [Next.js 16](https://nextjs.org/)
-- **UI Primitives**: [Base UI](https://base-ui.com/) by MUI
-- **Styling**: Native CSS with HCT color system
-- **Type Safety**: [TypeScript](https://www.typescriptlang.org/)
-- **Build Tool**: [Bun](https://bun.sh/) for fast installs and builds
-- **Linting**: [Biome](https://biomejs.dev/) for consistent code quality
-- **Monorepo**: [Turborepo](https://turbo.build/repo) for efficient builds
-- **Documentation**: [Fumadocs](https://fumadocs.dev/) for interactive component docs
+| Tool | Purpose |
+|------|---------|
+| [React 19](https://react.dev/) | UI framework |
+| [Base UI](https://base-ui.com/) | Accessible unstyled primitives |
+| [TypeScript](https://www.typescriptlang.org/) | Type safety |
+| [Bun](https://bun.sh/) | Runtime & package manager |
+| [Biome](https://biomejs.dev/) | Linting & formatting |
+| [Turborepo](https://turbo.build/repo) | Monorepo builds |
+| [Fumadocs](https://fumadocs.dev/) | Documentation framework |
 
 ## Local Development
-
-### Setup
-
-Clone the repository and install dependencies:
 
 ```sh
 git clone https://github.com/ramo4040/olyx-ui.git
 cd olyx-ui
 bun install
+
+# Start all apps
+bun dev
+
+# Start docs site only
+bun dev:web
+
+# Lint & type check
+bun check
+bun check-types
 ```
 
 ## Contributing
 
-We welcome contributions from the community! Whether it's:
+Contributions welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions and guidelines.
 
-- 🐛 Bug reports and fixes
-- ✨ New component requests
-- 📝 Documentation improvements
-- 🎨 Design system enhancements
-- ♿ Accessibility improvements
+Whether it's bug reports, new components, documentation improvements, or accessibility fixes — all contributions are valued.
 
+## Roadmap
 
-### Reporting Issues
-
-Found a bug or have a feature request? [Open an issue](https://github.com/ramo4040/olyx-ui/issues) on GitHub.
+- 🎨 Figma design kit
+- 🛠️ Theme generator / playground
+- 🧩 More components
+- 📦 Package size optimizations
 
 ## License
 
-This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
-
-You are free to use, modify, and distribute this software for any purpose, commercial or non-commercial.
+[MIT](./LICENSE) — use it however you want, commercially or otherwise.
 
 ## Acknowledgements
 
-Olyx UI stands on the shoulders of giants:
-
-- **[Base UI](https://base-ui.com/)** - For providing the accessible, unstyled primitives that form our foundation
-- **[React](https://react.dev/)** - The declarative UI library that powers modern web development
-- **[Fumadocs](https://fumadocs.dev/)** - For the excellent documentation framework
-- **[Biome](https://biomejs.dev/)** - For fast, reliable linting and formatting
-- **[Bun](https://bun.sh/)** - For blazing-fast JavaScript runtime and package management
+- [Base UI](https://base-ui.com/) — Accessible primitives that form the foundation
+- [React](https://react.dev/) — The UI library powering it all
+- [Fumadocs](https://fumadocs.dev/) — Documentation framework
+- [Biome](https://biomejs.dev/) — Fast linting and formatting
+- [Bun](https://bun.sh/) — Runtime and package management
 
 ## Connect
 
-- **Website**: [olyxui.com](https://olyxui.com)
-- **Documentation**: [olyxui.com/docs](https://olyxui.com/docs)
-- **GitHub**: [@ramo4040](https://github.com/ramo4040)
-- **Twitter**: [@yassir_rouane](https://twitter.com/yassir_rouane)
-- **Creator**: [Yassir Rouane](https://www.linkedin.com/in/yassir-rouane)
+- **Website** — [olyxui.com](https://olyxui.com)
+- **Docs** — [olyxui.com/docs](https://olyxui.com/docs)
+- **GitHub** — [@ramo4040](https://github.com/ramo4040)
+- **Twitter/X** — [@yassir_rouane](https://twitter.com/yassir_rouane)
+- **LinkedIn** — [Yassir Rouane](https://www.linkedin.com/in/yassir-rouane)
 
 ---
 
-<p align="center">Built with ❤️ by <a href="https://github.com/ramo4040">Yassir Rouane</a></p>
-<p align="center">Made for developers who value control, quality, and accessibility.</p>
+<p align="center">Built by <a href="https://github.com/ramo4040">Yassir Rouane</a></p>

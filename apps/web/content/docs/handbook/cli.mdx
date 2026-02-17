@@ -6,8 +6,7 @@ description: Use the Olyx CLI to initialize a project and add UI components.
 The Olyx CLI ships as the `olyx` command.
 
 - Initialize a project: `olyx init`
-- Add components: `olyx add button card dialog`
-
+- Add components: `olyx add button card dialog`- List components: `olyx list`
 If you don’t have it installed globally, you can run it with `npx`:
 
 ```bash
@@ -84,6 +83,38 @@ Add components to your project
 
 Arguments:
   components  Components to add
+
+Options:
+  -h, --help  display help for command
+```
+
+---
+
+## list
+
+Use `list` to display all available components from the registry.
+
+```bash
+olyx list
+```
+
+Or with npx:
+
+```bash
+npx olyx@latest list
+```
+
+What `list` does:
+
+- Fetches the component registry
+- Displays all available UI components in alphabetical order
+
+**Help**
+
+```bash
+Usage: olyx list [options]
+
+List all available components
 
 Options:
   -h, --help  display help for command
