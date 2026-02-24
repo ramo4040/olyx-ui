@@ -1,5 +1,5 @@
 {
-  "name": "olyx",
+  "name": "@olyx/cli",
   "version": "1.0.0",
   "description": "CLI for adding Olyx UI components to your project",
   "type": "module",
