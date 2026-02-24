@@ -8,8 +8,8 @@
 
 Accessible, composable components built on [Base UI](https://base-ui.com/) with modern CSS and [HCT color science](https://material.io/blog/science-of-color-design). Copy, paste, and own your UI.
 
-[![npm version](https://img.shields.io/npm/v/@olyx/react?style=flat-square&color=blue)](https://www.npmjs.com/package/@olyx/react)
-[![npm downloads](https://img.shields.io/npm/dm/@olyx/react?style=flat-square)](https://www.npmjs.com/package/@olyx/react)
+[![npm version](https://img.shields.io/npm/v/@olyx/cli?style=flat-square&color=blue)](https://www.npmjs.com/package/@olyx/cli)
+[![npm downloads](https://img.shields.io/npm/dm/@olyx/cli?style=flat-square)](https://www.npmjs.com/package/@olyx/react)
 [![GitHub stars](https://img.shields.io/github/stars/ramo4040/olyx-ui?style=flat-square)](https://github.com/ramo4040/olyx-ui/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
 
