@@ -35,7 +35,8 @@
   },
   "type": "module",
   "scripts": {
-    "check": "biome check --write .",
+    "lint:check": "biome check",
+    "lint": "biome check --write .",
     "clean": "rm -rf node_modules && rm -rf .turbo && rm -rf .next && rm -rf .source",
     "prepare": "husky",
     "dev": "turbo dev",

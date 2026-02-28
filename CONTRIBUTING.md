@@ -77,7 +77,7 @@ Use design tokens everywhere — `--color-*`, `--spacing-*`, `--radius-*`, `--fo
 ## Before Submitting
 
 ```sh
-bun check        # lint + format
+bun lint         # lint + format
 bun check-types  # TypeScript
 bun build        # full build
 ```

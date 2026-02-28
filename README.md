@@ -159,7 +159,7 @@ bun dev
 bun dev:web
 
 # Lint & type check
-bun check
+bun lint
 bun check-types
 ```
 
