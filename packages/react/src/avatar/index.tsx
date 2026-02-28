@@ -19,7 +19,7 @@ const Avatar = ({
       data-ui="avatar"
       data-shape={shape}
       tabIndex={0}
-      style={{ "--avatar-size": `${size}px` }}
+      style={{ "--avatar-size": `${size}px` } as React.CSSProperties}
       {...props}
     >
       {children}
