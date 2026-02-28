@@ -1,6 +1,5 @@
 @layer components {
   [data-ui="avatar"] {
-    --avatar-size: attr(data-size px, 60px);
     --avatar-indicator-size: calc(var(--avatar-size) / 4);
 
     position: relative;
