@@ -17,9 +17,9 @@ const Avatar = ({
   return (
     <AvatarPrimitive.Root
       data-ui="avatar"
-      data-size={size}
       data-shape={shape}
       tabIndex={0}
+      style={{ "--avatar-size": `${size}px` } as React.CSSProperties}
       {...props}
     >
       {children}
