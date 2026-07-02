@@ -41,7 +41,7 @@
       }
 
       &:last-child {
-        color: var(--color--on-background);
+        color: var(--color-on-surface);
       }
 
       [data-ui="breadcrumb-link"] {

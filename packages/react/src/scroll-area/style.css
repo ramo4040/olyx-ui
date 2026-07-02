@@ -31,7 +31,7 @@
           height: min(30px, var(--scroll-area-overflow-y-start));
           background: linear-gradient(
             to bottom,
-            color-mix(in srgb, var(--color-background) 80%, transparent),
+            color-mix(in srgb, var(--color-surface) 80%, transparent),
             transparent
           );
         }
@@ -42,7 +42,7 @@
           height: min(30px, var(--scroll-area-overflow-y-end, 30px));
           background: linear-gradient(
             to top,
-            color-mix(in srgb, var(--color-background) 80%, transparent),
+            color-mix(in srgb, var(--color-surface) 80%, transparent),
             transparent
           );
         }

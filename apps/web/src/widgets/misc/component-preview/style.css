@@ -7,7 +7,7 @@
       width: 100%;
       max-height: 450px;
       height: 450px;
-      border: 1px solid var(--color-surface-variant);
+      border: 1px solid var(--color-outline-variant);
       border-radius: var(--radius-md);
 
       &:focus-visible {
@@ -64,7 +64,7 @@
 
     .inner-tabs {
       gap: 0;
-      border: 1px solid var(--color-surface-variant);
+      border: 1px solid var(--color-outline-variant);
       border-radius: var(--radius-md);
       background-color: var(--color-surface);
 

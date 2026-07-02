@@ -24,7 +24,7 @@
 
     .links {
       padding-left: var(--spacing-12);
-      border-left: 1px solid var(--color-surface-variant);
+      border-left: 1px solid var(--color-outline-variant);
       display: flex;
       flex-direction: column;
       gap: 0;

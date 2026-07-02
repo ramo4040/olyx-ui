@@ -4,7 +4,7 @@
 
     min-height: 82px;
     padding: var(--spacing-10) var(--spacing-12);
-    border: 1px solid var(--color-surface-variant);
+    border: 1px solid var(--color-outline-variant);
     border-radius: var(--radius-md);
     background-color: var(--color-surface);
     outline: 0;
@@ -12,7 +12,7 @@
     font: var(--font-body-md);
     transition: all var(--transition-expressive-fast-effects);
     resize: vertical;
-    color: var(--color-on-background);
+    color: var(--color-on-surface);
 
     /* Placeholder */
     &::placeholder {

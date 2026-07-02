@@ -11,9 +11,9 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-8);
-    border: 1px solid var(--color-surface-variant);
+    border: 1px solid var(--color-outline-variant);
     border-radius: var(--radius-md);
-    background-color: var(--color-background);
+    background-color: var(--color-surface);
     box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
     padding: var(--spacing-2) var(--spacing-8);
     transition: all var(--transition-expressive-fast-effects);
@@ -40,7 +40,7 @@
       outline: 0;
       background-color: transparent;
       text-align: center;
-      color: var(--color-on-background);
+      color: var(--color-on-surface);
 
       -moz-appearance: textfield;
       &::-webkit-outer-spin-button,

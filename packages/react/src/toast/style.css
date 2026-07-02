@@ -2,8 +2,8 @@
   [data-ui="toast-anchored-root"],
   [data-ui="toast-stacked-root"] {
     &[data-type="default"] {
-      --color-toast: var(--color-background);
-      border-color: var(--color-surface-variant);
+      --color-toast: var(--color-surface);
+      border-color: var(--color-outline-variant);
     }
 
     &[data-type="success"] {
@@ -64,8 +64,8 @@
       margin-top: var(--spacing-8);
       padding-inline: var(--spacing-12);
       gap: var(--spacing-6);
-      color: var(--color-background);
-      background-color: var(--color-on-background);
+      color: var(--color-surface);
+      background-color: var(--color-on-surface);
     }
   }
 
@@ -111,7 +111,7 @@
   }
 
   [data-ui="toast-stacked-root"] {
-    --color-on-toast: var(--color-on-background);
+    --color-on-toast: var(--color-on-surface);
     --gap: var(--spacing-8);
     --peek: var(--spacing-12);
     --scale: calc(max(0, 1 - (var(--toast-index) * 0.1)));
@@ -129,29 +129,21 @@
       linear-gradient(
         to right,
         var(--color-surface-container-lowest) 0%,
-        color-mix(in oklab, var(--color-toast) 4%, var(--color-background) 100%)
+        color-mix(in oklab, var(--color-toast) 4%, var(--color-surface) 100%)
           40%,
         var(--color-surface-container-lowest) 100%
       ),
       linear-gradient(
         110deg,
-        color-mix(
-            in oklab,
-            var(--color-toast) 10%,
-            var(--color-background) 100%
-          )
+        color-mix(in oklab, var(--color-toast) 10%, var(--color-surface) 100%)
           0%,
-        color-mix(
-            in oklab,
-            var(--color-toast) 15%,
-            var(--color-background) 100%
-          )
+        color-mix(in oklab, var(--color-toast) 15%, var(--color-surface) 100%)
           100%
       )
       border-box;
 
     background-clip: padding-box, border-box;
-    color: var(--color-on-background);
+    color: var(--color-on-surface);
     border: 1px solid transparent;
     width: 100%;
     border-radius: var(--radius-xl);
@@ -306,13 +298,8 @@
       border-radius: var(--radius-md);
       background: linear-gradient(
         110deg,
-        color-mix(in oklab, var(--color-toast) 1%, var(--color-background) 100%)
-          0%,
-        color-mix(
-            in oklab,
-            var(--color-toast) 30%,
-            var(--color-background) 100%
-          )
+        color-mix(in oklab, var(--color-toast) 1%, var(--color-surface) 100%) 0%,
+        color-mix(in oklab, var(--color-toast) 30%, var(--color-surface) 100%)
           100%
       );
       display: grid;
@@ -324,7 +311,7 @@
         content: "";
         width: var(--size);
         height: var(--size);
-        background: var(--color-background);
+        background: var(--color-surface);
         border-radius: var(--spacing-8);
         position: absolute;
         top: 50%;
@@ -371,7 +358,7 @@
     padding: var(--spacing-8);
     border-radius: var(--radius-sm);
     border: 1px solid
-      color-mix(in oklab, var(--color-toast) 20%, var(--color-background) 100%);
+      color-mix(in oklab, var(--color-toast) 20%, var(--color-surface) 100%);
     transform-origin: var(--transform-origin);
     transition:
       transform var(--transition-standard-fast-spatial),
@@ -379,7 +366,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 15px -3px
-      color-mix(in srgb, var(--color-on-background) 5%, transparent);
+      color-mix(in srgb, var(--color-on-surface) 5%, transparent);
 
     &[data-starting-style],
     &[data-ending-style] {
@@ -390,8 +377,7 @@
     background: linear-gradient(
       to right,
       var(--color-surface-container-lowest) 0%,
-      color-mix(in oklab, var(--color-toast) 5%, var(--color-background) 100%)
-        40%,
+      color-mix(in oklab, var(--color-toast) 5%, var(--color-surface) 100%) 40%,
       var(--color-surface-container-lowest) 100%
     );
 

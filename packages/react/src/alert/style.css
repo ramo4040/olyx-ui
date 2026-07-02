@@ -93,9 +93,9 @@
     }
 
     &[data-variant="stroke"] {
-      border: 1px solid var(--color-surface-variant);
+      border: 1px solid var(--color-outline-variant);
       box-shadow: 0 10px 32px -12px
-        color-mix(in srgb, var(--color-on-background) 15%, transparent);
+        color-mix(in srgb, var(--color-on-surface) 15%, transparent);
 
       svg {
         color: var(--color-alert);

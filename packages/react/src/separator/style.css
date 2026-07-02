@@ -1,6 +1,6 @@
 @layer components {
   [data-ui="separator"] {
-    --separator-color: var(--color-surface-variant);
+    --separator-color: var(--color-outline-variant);
 
     &[data-orientation="vertical"] {
       --separator-width: 1px;
@@ -58,7 +58,7 @@
         width: var(--separator-width);
         height: var(--separator-height);
         content: "";
-        background-color: var(--color-surface-variant);
+        background-color: var(--color-outline-variant);
       }
     }
   }

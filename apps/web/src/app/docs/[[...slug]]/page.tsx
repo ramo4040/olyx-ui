@@ -51,7 +51,7 @@ export async function generateMetadata(props: {
     title: doc.title,
     description: ogDescription,
     alternates: {
-      canonical: page.url,
+      canonical: `${siteConfig.url}${page.url}`,
     },
     openGraph: {
       title: `${doc.title} - ${siteConfig.name}`,

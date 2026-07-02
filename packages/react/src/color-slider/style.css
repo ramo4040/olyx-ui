@@ -14,7 +14,7 @@
   .react-aria-SliderOutput {
     grid-area: output;
     text-align: end;
-    color: var(--color-on-background);
+    color: var(--color-on-surface);
   }
 
   .react-aria-SliderTrack {

@@ -35,7 +35,7 @@
 
     /* Variant */
     &[data-variant="stroke"] {
-      border: 1px solid var(--color-surface-variant);
+      border: 1px solid var(--color-outline-variant);
       color: var(--color-status-badge);
     }
 
@@ -80,19 +80,19 @@
       --color-on-status-badge: color-mix(
         in oklch,
         var(--color-status-badge) 10%,
-        var(--color-background)
+        var(--color-surface)
       );
 
       --color-status-badge-container: color-mix(
         in oklch,
         var(--color-status-badge) 25%,
-        var(--color-background)
+        var(--color-surface)
       );
 
       --color-on-status-badge-container: color-mix(
         in oklch,
         var(--color-status-badge) 85%,
-        var(--color-background)
+        var(--color-surface)
       );
     }
   }

@@ -30,15 +30,15 @@
       aspect-ratio: 1;
 
       border-radius: var(--radius-rounded);
-      background-color: var(--color-background);
+      background-color: var(--color-surface);
 
       translate: 0 0;
       transition: translate var(--transition-expressive-fast-spatial);
     }
 
     &[data-disabled] {
-      border-color: var(--color-surface-variant);
-      background: var(--color-background);
+      border-color: var(--color-outline-variant);
+      background: var(--color-surface);
       pointer-events: none;
 
       [data-ui="thumb"] {

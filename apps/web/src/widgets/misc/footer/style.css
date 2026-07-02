@@ -97,7 +97,7 @@
           .icon {
             width: var(--spacing-24);
             height: var(--spacing-24);
-            color: var(--color-on-background);
+            color: var(--color-on-surface);
           }
         }
       }

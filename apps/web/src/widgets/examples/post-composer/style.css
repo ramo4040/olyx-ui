@@ -4,7 +4,7 @@
     padding: var(--spacing-16);
     background: var(--color-surface-container-lowest);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--color-surface-variant);
+    border: 1px solid var(--color-outline-variant);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,7 +26,7 @@
         .post-user-name {
           font: var(--font-body-md);
           font-weight: 600;
-          color: var(--color-on-background);
+          color: var(--color-on-surface);
         }
 
         .post-user-handle {

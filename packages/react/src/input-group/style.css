@@ -2,7 +2,7 @@
   [data-ui="input-wrapper"] {
     display: flex;
     place-items: center;
-    border: 1px solid var(--color-surface-variant);
+    border: 1px solid var(--color-outline-variant);
 
     /* Input */
     [data-ui="input"] {
@@ -49,12 +49,12 @@
 
       &[data-inline="false"] {
         &:first-child {
-          border-right: 1px solid var(--color-surface-variant);
+          border-right: 1px solid var(--color-outline-variant);
           padding-right: var(--inline-padding);
         }
 
         &:last-child {
-          border-left: 1px solid var(--color-surface-variant);
+          border-left: 1px solid var(--color-outline-variant);
           padding-left: var(--inline-padding);
         }
       }
