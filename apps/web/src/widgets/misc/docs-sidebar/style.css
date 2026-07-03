@@ -32,7 +32,7 @@
 
       &[data-active] {
         background-color: var(--color-surface-container-lowest);
-        border: 1px solid var(--color-outline-variant);
+        border: 1px solid var(--color-surface-container-highest);
         box-shadow: 0 2px 5px -3px
           color-mix(in srgb, var(--color-on-surface) 8%, transparent);
       }

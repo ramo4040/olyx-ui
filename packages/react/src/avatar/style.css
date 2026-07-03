@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-surface-container-highest);
+    background-color: var(--color-surface-container-high);
     user-select: none;
 
     &[data-shape="circle"] {

@@ -127,15 +127,15 @@ function ContextMenuRadioItem(props: ContextMenuPrimitive.RadioItem.Props) {
 
 export {
   ContextMenu,
-  ContextMenuTrigger,
+  ContextMenuCheckboxItem,
   ContextMenuContent,
   ContextMenuGroup,
   ContextMenuGroupLabel,
   ContextMenuItem,
+  ContextMenuRadioGroup,
+  ContextMenuRadioItem,
   ContextMenuSeparator,
   ContextMenuSubmenu,
   ContextMenuSubmenuTrigger,
-  ContextMenuCheckboxItem,
-  ContextMenuRadioGroup,
-  ContextMenuRadioItem,
+  ContextMenuTrigger,
 };

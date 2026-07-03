@@ -109,11 +109,11 @@ function SelectItem({
 
 export {
   Select,
-  SelectTrigger,
   SelectContent,
   SelectGroup,
-  SelectValue,
   SelectItem,
   SelectLabel,
   SelectSeparator,
+  SelectTrigger,
+  SelectValue,
 };

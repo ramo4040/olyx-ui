@@ -53,6 +53,6 @@
     "@olyx/config": "workspace:*"
   },
   "dependencies": {
-    "react-aria-components": "^1.15.1"
+    "react-aria-components": "^1.19.0"
   }
 }

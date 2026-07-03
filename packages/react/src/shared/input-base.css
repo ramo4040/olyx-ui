@@ -8,9 +8,9 @@
     width: 100%;
     position: relative;
     height: 36px;
-    border: 1px solid var(--color-outline-variant);
+    border: 1px solid var(--color-surface-container-highest);
     border-radius: var(--radius-md);
-    background-color: var(--color-surface);
+    background-color: var(--color-surface-container-lowest);
     box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
     color: var(--color-on-surface);
     font: var(--font-body-md);
@@ -25,8 +25,9 @@
 
     /* Focuse */
     &:focus-within {
-      border-color: var(--color-outline);
-      box-shadow: 0 0 0 2px var(--color-primary-container);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px
+        color-mix(in oklab, var(--color-primary) 35%, transparent);
     }
 
     /* hover */
@@ -52,7 +53,8 @@
       border-color: var(--color-error);
 
       &:focus-within {
-        box-shadow: 0 0 0 2px var(--color-error-container);
+        box-shadow: 0 0 0 2px
+          color-mix(in oklab, var(--color-error) 35%, transparent);
       }
     }
   }

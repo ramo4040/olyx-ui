@@ -160,7 +160,7 @@
     }
 
     &[data-variant="stroke"] {
-      border-block-end: 1px solid var(--color-outline-variant);
+      border-block-end: 1px solid var(--color-surface-container-highest);
 
       svg {
         color: inherit;

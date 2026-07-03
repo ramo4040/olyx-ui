@@ -1,7 +1,7 @@
 @layer components {
   [data-ui="tooltip-portal"] {
     [data-ui="tooltip-content"] {
-      border: 0.5px solid var(--color-outline-variant);
+      border: 0.5px solid var(--color-surface-container-highest);
       color: var(--color-tooltip);
       background-color: var(--color-on-tooltip);
       transform-origin: var(--transform-origin);
@@ -15,7 +15,7 @@
       /* Variant */
       &[data-variant="light"] {
         --color-tooltip: var(--color-on-surface);
-        --color-on-tooltip: var(--color-surface);
+        --color-on-tooltip: var(--color-surface-container-lowest);
       }
 
       &[data-variant="dark"] {

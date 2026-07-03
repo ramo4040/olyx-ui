@@ -87,12 +87,12 @@ function DrawerClose({
 
 export {
   Drawer,
-  DrawerTrigger,
+  DrawerClose,
   DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
   DrawerHandle,
   DrawerHeader,
-  DrawerFooter,
   DrawerTitle,
-  DrawerDescription,
-  DrawerClose,
+  DrawerTrigger,
 };

@@ -37,8 +37,8 @@ function ToolbarInput(props: ToolBarPrimitive.Input.Props) {
 export {
   Toolbar,
   ToolbarButton,
-  ToolbarLink,
-  ToolbarSeparator,
   ToolbarGroup,
   ToolbarInput,
+  ToolbarLink,
+  ToolbarSeparator,
 };

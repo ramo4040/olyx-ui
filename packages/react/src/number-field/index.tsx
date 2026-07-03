@@ -61,9 +61,9 @@ function NumberFieldDecrement(props: NumberFieldPrimitive.Decrement.Props) {
 
 export {
   NumberField,
-  NumberFieldScrubArea,
-  NumberFieldGroup,
-  NumberFieldInput,
-  NumberFieldIncrement,
   NumberFieldDecrement,
+  NumberFieldGroup,
+  NumberFieldIncrement,
+  NumberFieldInput,
+  NumberFieldScrubArea,
 };

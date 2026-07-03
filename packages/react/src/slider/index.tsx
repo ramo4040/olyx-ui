@@ -29,4 +29,5 @@ function Slider({ children, ...props }: SliderPrimitive.Root.Props) {
 function SliderValue({ ...props }: SliderPrimitive.Value.Props) {
   return <SliderPrimitive.Value data-ui="slider-value" {...props} />;
 }
+
 export { Slider, SliderValue };

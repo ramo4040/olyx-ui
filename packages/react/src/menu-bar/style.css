@@ -4,7 +4,7 @@
     align-items: center;
     gap: var(--spacing-4);
     padding: var(--spacing-6);
-    border: 1px solid var(--color-outline-variant);
+    border: 1px solid var(--color-surface-container-highest);
     width: fit-content;
     background-color: var(--color-surface);
     border-radius: var(--radius-md);
@@ -28,7 +28,8 @@
       }
 
       &:focus-visible {
-        box-shadow: 0 0 0 2px var(--color-surface-container-high);
+        box-shadow: 0 0 0 2px
+          color-mix(in oklab, var(--color-primary) 35%, transparent);
       }
 
       &:not([data-disabled]) {

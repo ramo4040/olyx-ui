@@ -1,11 +1,11 @@
 @layer misc {
   [data-ui="examples-tab"] {
-    --original-primary-hue: var(--primary-hue);
-    --original-primary-sat: var(--primary-sat);
-    --original-secondary-hue: var(--secondary-hue);
-    --original-secondary-sat: var(--secondary-sat);
-    --original-tertiary-hue: var(--tertiary-hue);
-    --original-tertiary-sat: var(--tertiary-sat);
+    --original-primary-h: var(--primary-h);
+    --original-primary-c: var(--primary-c);
+    --original-secondary-h: var(--secondary-h);
+    --original-secondary-c: var(--secondary-c);
+    --original-tertiary-h: var(--tertiary-h);
+    --original-tertiary-c: var(--tertiary-c);
 
     margin-inline: auto;
     width: 90vw;
@@ -13,30 +13,30 @@
 
     .panel-container {
       &[data-color="primary"] {
-        --primary-hue: var(--original-primary-hue);
-        --primary-sat: var(--original-primary-sat);
-        --secondary-hue: var(--original-secondary-hue);
-        --secondary-sat: var(--original-secondary-sat);
-        --tertiary-hue: var(--original-tertiary-hue);
-        --tertiary-sat: var(--original-tertiary-sat);
+        --primary-h: var(--original-primary-h);
+        --primary-c: var(--original-primary-c);
+        --secondary-h: var(--original-secondary-h);
+        --secondary-c: var(--original-secondary-c);
+        --tertiary-h: var(--original-tertiary-h);
+        --tertiary-c: var(--original-tertiary-c);
       }
 
       &[data-color="secondary"] {
-        --primary-hue: var(--original-secondary-hue);
-        --primary-sat: var(--original-secondary-sat);
-        --secondary-hue: var(--original-primary-hue);
-        --secondary-sat: var(--original-primary-sat);
-        --tertiary-hue: var(--original-tertiary-hue);
-        --tertiary-sat: var(--original-tertiary-sat);
+        --primary-h: var(--original-secondary-h);
+        --primary-c: var(--original-secondary-c);
+        --secondary-h: var(--original-primary-h);
+        --secondary-c: var(--original-primary-c);
+        --tertiary-h: var(--original-tertiary-h);
+        --tertiary-c: var(--original-tertiary-c);
       }
 
       &[data-color="tertiary"] {
-        --primary-hue: var(--original-tertiary-hue);
-        --primary-sat: var(--original-tertiary-sat);
-        --secondary-hue: var(--original-secondary-hue);
-        --secondary-sat: var(--original-secondary-sat);
-        --tertiary-hue: var(--original-primary-hue);
-        --tertiary-sat: var(--original-primary-sat);
+        --primary-h: var(--original-tertiary-h);
+        --primary-c: var(--original-tertiary-c);
+        --secondary-h: var(--original-secondary-h);
+        --secondary-c: var(--original-secondary-c);
+        --tertiary-h: var(--original-primary-h);
+        --tertiary-c: var(--original-primary-c);
       }
     }
 

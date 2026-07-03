@@ -26,4 +26,4 @@ function TabsPanel(props: TabsPrimitive.Panel.Props) {
   return <TabsPrimitive.Panel data-ui="tabs-panel" {...props} />;
 }
 
-export { Tabs, TabsList, TabsTab, TabsPanel };
+export { Tabs, TabsList, TabsPanel, TabsTab };

@@ -239,7 +239,7 @@
 
       [data-ui="table-header"] {
         background: transparent;
-        border-bottom: 1px solid var(--color-outline-variant);
+        border-bottom: 1px solid var(--color-surface-container-highest);
         th {
           font-weight: 600;
         }
@@ -293,7 +293,7 @@
       height: inherit;
       overflow: hidden;
       margin-top: var(--spacing-24);
-      border: 1px solid var(--color-outline-variant);
+      border: 1px solid var(--color-surface-container-highest);
       border-radius: var(--radius-md);
       color: var(--color-on-surface);
       outline: none;
@@ -334,7 +334,7 @@
       align-items: center;
       gap: var(--spacing-8);
       padding: var(--spacing-12) var(--spacing-24);
-      border-bottom: 1px solid var(--color-outline-variant);
+      border-bottom: 1px solid var(--color-surface-container-highest);
       font: var(--font-label-lg);
       font-family: monospace;
       color: var(--color-on-surface);

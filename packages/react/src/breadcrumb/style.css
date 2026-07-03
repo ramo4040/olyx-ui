@@ -32,7 +32,8 @@
       }
 
       &:has(a:focus-visible) {
-        box-shadow: 0 0 0 3px var(--color-surface-container-high);
+        box-shadow: 0 0 0 3px
+          color-mix(in oklab, var(--color-primary) 35%, transparent);
       }
 
       &:hover {

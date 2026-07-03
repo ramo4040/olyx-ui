@@ -101,13 +101,13 @@ function AlertDialogDescription({
 
 export {
   AlertDialog,
-  AlertDialogTrigger,
-  AlertDialogPortal,
   AlertDialogClose,
-  AlertDialogOverlay,
   AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogFooter,
-  AlertDialogTitle,
   AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  AlertDialogPortal,
+  AlertDialogTitle,
+  AlertDialogTrigger,
 };

@@ -17,7 +17,7 @@
       height: 6px;
 
       &:hover {
-        background-color: var(--color-outline-variant);
+        background-color: var(--color-surface-container-highest);
       }
     }
 
@@ -47,7 +47,11 @@
       position: fixed;
       inset: 0;
       backdrop-filter: blur(4px);
-      background-color: color-mix(in srgb, currentcolor 15%, transparent);
+      background-color: color-mix(
+        in srgb,
+        var(--color-on-surface) 32%,
+        transparent
+      );
       z-index: 50;
     }
 

@@ -42,4 +42,4 @@ function PreviewCardContent({
   );
 }
 
-export { PreviewCard, PreviewCardTrigger, PreviewCardContent };
+export { PreviewCard, PreviewCardContent, PreviewCardTrigger };

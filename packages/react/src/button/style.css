@@ -104,13 +104,15 @@
       --color-on-button: var(--color-on-primary);
       --color-button-border: var(--color-primary);
       --color-button-container: var(--color-primary-container);
+      --color-button-focus-ring: var(--color-primary);
     }
 
     &[data-variant="neutral"] {
       --color-button: var(--color-on-surface);
-      --color-on-button: var(--color-surface);
-      --color-button-border: var(--color-outline-variant);
-      --color-button-container: var(--color-surface-container-high);
+      --color-on-button: var(--color-surface-container-lowest);
+      --color-button-border: var(--color-surface-variant);
+      --color-button-container: var(--color-surface-container-low);
+      --color-button-focus-ring: var(--color-primary);
     }
 
     &[data-variant="link"] {
@@ -118,6 +120,7 @@
       --color-on-button: var(--color-on-surface);
       --color-button-border: transparent;
       --color-button-container: transparent;
+      --color-button-focus-ring: var(--color-primary);
       border-radius: 0;
 
       background:
@@ -141,6 +144,7 @@
       --color-on-button: var(--color-on-error);
       --color-button-border: var(--color-error);
       --color-button-container: var(--color-error-container);
+      --color-button-focus-ring: var(--color-error);
     }
 
     /* Active */
@@ -151,7 +155,7 @@
     /* Focus */
     &:focus-visible {
       box-shadow: 0 0 0 3px
-        color-mix(in oklab, var(--color-button) 30%, transparent);
+        color-mix(in oklab, var(--color-button-focus-ring) 35%, transparent);
     }
 
     /* Disabled */

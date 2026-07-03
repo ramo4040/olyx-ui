@@ -14,7 +14,7 @@
       transparent
     );
     width: 100%;
-    border: 1px solid var(--color-outline-variant);
+    border: 1px solid var(--color-surface-container-high);
     height: 56px;
     display: flex;
 
