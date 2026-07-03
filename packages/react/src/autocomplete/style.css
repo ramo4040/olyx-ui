@@ -58,8 +58,8 @@
   }
 
   [data-ui="autocomplete-status"]:has(
-      + [data-ui="scroll-area"] [data-slot="autocomplete-list"]:not(:empty)
-    ) {
+    + [data-ui="scroll-area"] [data-slot="autocomplete-list"]:not(:empty)
+  ) {
     margin-bottom: var(--spacing-12);
   }
 

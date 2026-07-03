@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: space-between;
     isolation: isolate;
-    border: 1px solid var(--color-outline-variant);
-    background-color: var(--color-surface);
+    border: 1px solid var(--color-surface-container-highest);
+    background-color: var(--color-surface-container-lowest);
     color: var(--color-on-surface-variant);
     font: var(--font-body-md);
     height: 36px;
@@ -22,23 +22,26 @@
     svg {
       width: 16px;
       height: 16px;
-      color: var(--color-outline);
+      color: var(--color-on-surface-variant);
     }
 
     &:not([data-disabled]) {
       &[data-popup-open],
       &:focus-visible {
-        box-shadow: 0 0 0 2px var(--color-primary-container);
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 2px
+          color-mix(in oklab, var(--color-primary) 35%, transparent);
       }
 
       &:hover {
-        border-color: var(--color-outline);
+        border-color: var(--color-surface-container-highest);
         background-color: var(--color-surface-container-low);
       }
 
       &:focus-visible {
         border-color: var(--color-primary);
-        box-shadow: 0 0 0 3px var(--color-primary-container);
+        box-shadow: 0 0 0 3px
+          color-mix(in oklab, var(--color-primary) 35%, transparent);
       }
     }
 

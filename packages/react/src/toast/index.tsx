@@ -192,14 +192,14 @@ const stackedToast = createToastApi(toastManager);
 const anchoredToast = createToastApi(anchoredToastManager);
 
 export {
-  StackedToastProvider,
   AnchoredToastProvider,
-  stackedToast,
   anchoredToast,
-  toastManager,
   anchoredToastManager,
-  type ToastType,
+  StackedToastProvider,
+  type StackedToastProviderProps,
+  stackedToast,
   type ToastOptions,
   type ToastPosition,
-  type StackedToastProviderProps,
+  type ToastType,
+  toastManager,
 };

@@ -17,7 +17,7 @@
 
     /* Variant */
     &[data-variant="stroke"] {
-      border-color: var(--color-outline-variant);
+      border-color: var(--color-surface-container-highest);
       background-color: var(--color-surface);
     }
 
@@ -29,15 +29,15 @@
     &:where(
         :hover,
         :has([data-slot="tag-dismiss"]:focus-visible):not(
-            [aria-disabled="true"]
-          )
+          [aria-disabled="true"]
+        )
       ) {
       &[data-variant="stroke"] {
         border-color: transparent;
         background-color: var(--color-surface-container-high);
       }
       &[data-variant="lighter"] {
-        border-color: var(--color-outline-variant);
+        border-color: var(--color-surface-container-highest);
         background-color: var(--color-surface);
       }
     }

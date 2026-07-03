@@ -3,7 +3,7 @@
   [data-ui="toast-stacked-root"] {
     &[data-type="default"] {
       --color-toast: var(--color-surface);
-      border-color: var(--color-outline-variant);
+      border-color: var(--color-surface-container-high);
     }
 
     &[data-type="success"] {

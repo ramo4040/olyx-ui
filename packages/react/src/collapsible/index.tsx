@@ -22,4 +22,4 @@ function CollapsiblePanel(props: CollapsiblePrimitive.Panel.Props) {
   return <CollapsiblePrimitive.Panel data-ui="collapsible-panel" {...props} />;
 }
 
-export { Collapsible, CollapsibleTrigger, CollapsiblePanel };
+export { Collapsible, CollapsiblePanel, CollapsibleTrigger };

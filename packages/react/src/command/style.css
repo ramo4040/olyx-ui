@@ -47,7 +47,7 @@
       border-radius: 0;
       padding-inline: var(--spacing-16);
       height: var(--spacing-48);
-      border-bottom: 1px solid var(--color-outline-variant);
+      border-bottom: 1px solid var(--color-surface-container-highest);
 
       [data-slot="start-addon"] {
         left: var(--spacing-16);

@@ -11,20 +11,17 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-8);
-    border: 1px solid var(--color-outline-variant);
+    border: 1px solid var(--color-surface-container-highest);
     border-radius: var(--radius-md);
-    background-color: var(--color-surface);
+    background-color: var(--color-surface-container-lowest);
     box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
-    padding: var(--spacing-2) var(--spacing-8);
+    padding: var(--spacing-2) var(--spacing-4);
     transition: all var(--transition-expressive-fast-effects);
 
     &:has(input:focus-within) {
-      border-color: var(--color-primary-container);
-      box-shadow: 0 0 0 2px var(--color-primary-container);
-    }
-
-    &:hover:not(:focus-within, [data-disabled]) {
-      background-color: var(--surface-low);
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px
+        color-mix(in oklab, var(--color-primary) 35%, transparent);
     }
 
     &[data-disabled] {
@@ -49,7 +46,7 @@
       }
 
       &[data-disabled] {
-        color: var(--color-surface-container-highest);
+        color: color-mix(in srgb, var(--color-on-surface) 38%, transparent);
       }
     }
   }

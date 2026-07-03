@@ -1,6 +1,6 @@
 @layer components {
   [data-ui="preview-card-content"] {
-    border: 0.5px solid var(--color-outline-variant);
+    border: 0.5px solid var(--color-surface-container-highest);
     color: var(--color-preview-card);
     background-color: var(--color-on-preview-card);
     transform-origin: var(--transform-origin);

@@ -53,13 +53,13 @@ const FieldValidity = FieldPrimitive.Validity;
 
 export {
   Field,
-  FieldLabel,
+  FieldControl,
   FieldDescription,
   FieldError,
+  FieldGroup,
+  FieldLabel,
   Fieldset,
   FieldsetDescription,
   FieldsetLegend,
-  FieldGroup,
-  FieldControl,
   FieldValidity,
 };

@@ -31,4 +31,4 @@ function AccordionContent({ ...props }: AccordionPrimitive.Panel.Props) {
   return <AccordionPrimitive.Panel data-ui="accordion-content" {...props} />;
 }
 
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+export { Accordion, AccordionContent, AccordionItem, AccordionTrigger };

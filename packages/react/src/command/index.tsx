@@ -161,9 +161,9 @@ function CommandFooter({ ...props }: React.ComponentProps<"div">) {
 }
 
 export {
-  CommandCreateHandle,
   Command,
   CommandCollection,
+  CommandCreateHandle,
   CommandDialog,
   CommandDialogContent,
   CommandDialogTrigger,

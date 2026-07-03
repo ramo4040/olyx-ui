@@ -9,7 +9,7 @@
     [data-ui="accordion-item"] {
       --padding-inline: var(--spacing-12);
       --padding-block: var(--spacing-10);
-      --border-color: var(--color-outline-variant);
+      --border-color: var(--color-surface-container-high);
       --hover-bg: var(--color-surface-container);
 
       font: var(--font-body-md);

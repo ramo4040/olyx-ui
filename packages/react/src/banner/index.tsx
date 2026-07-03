@@ -46,4 +46,4 @@ function BannerClose({ ...props }: React.ComponentProps<"button">) {
   );
 }
 
-export { Banner, BannerContent, BannerClose, BannerIcon };
+export { Banner, BannerClose, BannerContent, BannerIcon };

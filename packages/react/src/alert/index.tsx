@@ -54,9 +54,9 @@ function AlertClose(props: React.ComponentProps<"button">) {
 
 export {
   Alert,
+  AlertClose,
   AlertContent,
-  AlertTitle,
   AlertDescription,
   AlertIcon,
-  AlertClose,
+  AlertTitle,
 };

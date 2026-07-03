@@ -113,15 +113,15 @@ function SheetPanel({ ...props }: React.ComponentProps<"div">) {
 
 export {
   Sheet,
-  SheetTrigger,
-  SheetClose,
   SheetBackdrop,
   SheetBackdrop as SheetOverlay,
+  SheetClose,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetPanel,
   SheetPopup,
   SheetPopup as SheetContent,
-  SheetHeader,
-  SheetFooter,
   SheetTitle,
-  SheetDescription,
-  SheetPanel,
+  SheetTrigger,
 };

@@ -10,7 +10,11 @@
       position: fixed;
       inset: 0;
       backdrop-filter: blur(4px);
-      background-color: color-mix(in srgb, currentcolor 15%, transparent);
+      background-color: color-mix(
+        in srgb,
+        var(--color-on-surface) 32%,
+        transparent
+      );
       z-index: 50;
       transition: all var(--transition-standard-slow-effects);
       opacity: 0;
@@ -31,7 +35,7 @@
       position: fixed;
       z-index: 55;
       padding: var(--padding-block) var(--spacing-24);
-      background-color: var(--color-surface);
+      background-color: var(--color-surface-container-lowest);
       color: var(--color-on-surface);
       transition: all var(--transition-standard-slow-spatial);
       max-height: 100vh;
@@ -137,7 +141,7 @@
         @media (min-width: 640px) {
           margin: var(--spacing-16);
           border-radius: var(--radius-xl-inc);
-          border: 1px solid var(--color-outline-variant);
+          border: 1px solid var(--color-surface-container-highest);
 
           &[data-side="right"] {
             right: var(--spacing-16);

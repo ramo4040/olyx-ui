@@ -170,7 +170,7 @@
     transition-timing-function: var(--easing);
     width: var(--popup-width);
     height: var(--popup-height);
-    border: 1px solid var(--color-outline-variant);
+    border: 1px solid var(--color-surface-container-highest);
 
     a {
       text-decoration: none;

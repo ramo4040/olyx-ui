@@ -9,4 +9,4 @@ const Step: FC<ComponentProps<"h3">> = (props) => {
   return <h3 {...props} />;
 };
 
-export { Steps, Step };
+export { Step, Steps };

@@ -33,4 +33,4 @@ function InputAffix({
   );
 }
 
-export { InputWrapper, InputIcon, InputAffix };
+export { InputAffix, InputIcon, InputWrapper };

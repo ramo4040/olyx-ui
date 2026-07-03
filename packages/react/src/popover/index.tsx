@@ -79,12 +79,12 @@ function PopoverDescription(props: PopoverPrimitive.Description.Props) {
 }
 
 export {
-  PopoverCreateHandle,
   Popover,
-  PopoverTrigger,
-  PopoverContent,
   PopoverClose,
+  PopoverContent,
+  PopoverCreateHandle,
+  PopoverDescription,
   PopoverHeader,
   PopoverTitle,
-  PopoverDescription,
+  PopoverTrigger,
 };

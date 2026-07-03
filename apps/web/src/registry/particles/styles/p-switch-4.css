@@ -1,6 +1,6 @@
 @layer misc {
   .switch-field-4 {
-    border: 1px solid var(--color-outline-variant);
+    border: 1px solid var(--color-surface-container-highest);
     padding: var(--spacing-10);
     border-radius: var(--radius-md);
     width: fit-content;

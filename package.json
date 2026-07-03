@@ -50,8 +50,8 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "turbo": "^2.6.3",
-    "@biomejs/biome": "^2.3.10",
+    "turbo": "^2.10.2",
+    "@biomejs/biome": "^2.5.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "typescript": "catalog:"

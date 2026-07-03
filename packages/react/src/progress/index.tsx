@@ -35,8 +35,8 @@ function ProgressValue(props: ProgressPrimitive.Value.Props) {
 
 export {
   Progress,
+  ProgressIndicator,
   ProgressLabel,
   ProgressTrack,
-  ProgressIndicator,
   ProgressValue,
 };

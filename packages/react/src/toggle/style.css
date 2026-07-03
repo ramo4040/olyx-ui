@@ -42,15 +42,17 @@
     }
 
     &[data-variant="primary"] {
-      --color-toggle: var(--color-surface);
+      --color-toggle: var(--color-surface-container-lowest);
       --color-on-toggle: var(--color-on-surface);
-      --color-toggle-border: var(--color-surface-container-highest);
+      --color-toggle-border: var(--color-surface-container-high);
       --color-toggle-container: var(--color-primary-container);
+      --color-on-toggle-container: var(--color-on-primary-container);
+      --color-toggle-focus-ring: var(--color-primary);
       box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 2%, transparent);
 
       &:hover:not(:disabled, &[data-pressed]),
       &[data-pressed] {
-        color: var(--color-primary);
+        color: var(--color-on-toggle-container);
         background-color: var(--color-toggle-container);
         border-color: transparent;
       }
@@ -61,21 +63,25 @@
       --color-on-toggle: var(--color-on-surface);
       --color-toggle-border: transparent;
       --color-toggle-container: var(--color-surface-container-high);
+      --color-on-toggle-container: var(--color-on-surface);
+      --color-toggle-focus-ring: var(--color-primary);
 
       &:hover:not(:disabled, &[data-pressed]),
       &[data-pressed] {
+        color: var(--color-on-toggle-container);
         background-color: var(--color-toggle-container);
       }
     }
 
     /* Focus */
     &:focus-visible {
-      box-shadow: 0 0 0 3px var(--color-toggle-container);
+      box-shadow: 0 0 0 3px
+        color-mix(in oklab, var(--color-toggle-focus-ring) 35%, transparent);
     }
 
     &:disabled {
       pointer-events: none;
-      border-color: none;
+      border-color: transparent;
       opacity: 0.38;
     }
 

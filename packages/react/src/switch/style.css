@@ -37,7 +37,7 @@
     }
 
     &[data-disabled] {
-      border-color: var(--color-outline-variant);
+      border-color: var(--color-surface-container-highest);
       background: var(--color-surface);
       pointer-events: none;
 
@@ -62,7 +62,8 @@
 
     &:not([aria-disabled]) {
       &:focus-visible {
-        outline: var(--spacing-2) solid var(--color-primary-container);
+        outline: var(--spacing-2) solid
+          color-mix(in oklab, var(--color-primary) 45%, transparent);
       }
     }
   }

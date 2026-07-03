@@ -64,9 +64,9 @@ const AvatarGroup = ({ ...props }: React.ComponentProps<"div">) => {
 
 export {
   Avatar,
-  AvatarFallback,
-  AvatarImage,
   AvatarBadge,
-  AvatarGroupCount,
+  AvatarFallback,
   AvatarGroup,
+  AvatarGroupCount,
+  AvatarImage,
 };

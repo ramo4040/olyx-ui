@@ -76,7 +76,7 @@
     /* Variant */
     &[data-variant="primary"] {
       --color-badge: var(--color-primary-container);
-      --color-on-badge: var(--color-primary);
+      --color-on-badge: var(--color-on-primary-container);
       --color-badge-border: var(--color-primary);
     }
 
