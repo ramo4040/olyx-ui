@@ -42,31 +42,79 @@ export async function generateMetadata(props: {
     notFound();
   }
 
-  const ogDescription = `${doc.description} — Olyx UI React component library.`;
+  const title = buildMetadataTitle(doc.title, params.slug);
+  const description = buildMetadataDescription(doc.description, params.slug);
   const ogImageUrl = params.slug
     ? `${siteConfig.url}/api/og/${params.slug.join("/")}`
     : `${siteConfig.url}/api/og/docs`;
 
   return {
-    title: doc.title,
-    description: ogDescription,
+    title: {
+      absolute: title,
+    },
+    description,
     alternates: {
       canonical: `${siteConfig.url}${page.url}`,
     },
     openGraph: {
-      title: `${doc.title} - ${siteConfig.name}`,
-      description: ogDescription,
+      title,
+      description,
       url: `${siteConfig.url}${page.url}`,
       type: "article",
       images: [{ url: ogImageUrl, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${doc.title} - ${siteConfig.name}`,
-      description: ogDescription,
+      title,
+      description,
       images: [ogImageUrl],
     },
   };
+}
+
+function buildMetadataTitle(title: string, slug: string[] | undefined) {
+  if (!slug?.length) {
+    return "Olyx UI React Component Library";
+  }
+
+  if (slug[0] === "components") {
+    if (slug.length === 1) {
+      return "Olyx UI React Components";
+    }
+
+    return `${title} React Component - Olyx UI`;
+  }
+
+  const intentTitles: Record<string, string> = {
+    "get-started": "Install Olyx UI React Components",
+    roadmap: "Olyx UI Roadmap",
+    cli: "Olyx UI CLI Usage",
+    colors: "Olyx UI Color System",
+    styling: "Style Olyx UI Components",
+    tokens: "Olyx UI Design Tokens",
+    typography: "Olyx UI Typography System",
+  };
+
+  return intentTitles[slug.at(-1) ?? ""] ?? `${title} - Olyx UI`;
+}
+
+function buildMetadataDescription(
+  description: string,
+  slug: string[] | undefined,
+) {
+  if (slug?.[0] === "components" && slug.length > 1) {
+    return `Build an accessible React ${slug.at(-1)?.replaceAll("-", " ")} component with Olyx UI, Base UI primitives, TypeScript examples, native CSS, and copy-and-own source.`;
+  }
+
+  if (slug?.[0] === "components") {
+    return "Browse Olyx UI React components by category, from forms and navigation to feedback, overlays, data display, and copy-and-own Base UI primitives.";
+  }
+
+  if (description.length >= 120) {
+    return description;
+  }
+
+  return `${description} Learn the React, Base UI, TypeScript, and native CSS details needed to install, customize, and own Olyx UI components.`;
 }
 
 function buildBreadcrumbSchema(slug: string[] | undefined, title: string) {

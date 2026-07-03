@@ -63,6 +63,50 @@ const softwareSchema = {
   },
 };
 
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: siteConfig.title,
+  url: siteConfig.url,
+  description: siteConfig.description,
+  isPartOf: {
+    "@type": "WebSite",
+    name: siteConfig.name,
+    url: siteConfig.url,
+  },
+  about: {
+    "@type": "SoftwareApplication",
+    name: siteConfig.name,
+  },
+  author: {
+    "@type": "Person",
+    name: siteConfig.creator,
+    url: "https://www.linkedin.com/in/yassir-rouane",
+  },
+  dateModified: "2026-07-03",
+};
+
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: siteConfig.name,
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Web",
+  url: siteConfig.url,
+  description: siteConfig.description,
+  softwareVersion: "1.0",
+  author: {
+    "@type": "Person",
+    name: siteConfig.creator,
+    url: "https://www.linkedin.com/in/yassir-rouane",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -116,6 +160,8 @@ export default function Page() {
       <JsonLd data={websiteSchema} />
       <JsonLd data={organizationSchema} />
       <JsonLd data={softwareSchema} />
+      <JsonLd data={webPageSchema} />
+      <JsonLd data={softwareApplicationSchema} />
       <JsonLd data={faqSchema} />
 
       <MainNavbar />

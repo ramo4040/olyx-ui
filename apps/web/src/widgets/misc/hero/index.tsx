@@ -19,7 +19,9 @@ export const Hero = () => {
         <Button
           size="lg"
           nativeButton={false}
-          render={<Link href={{ pathname: "/docs" }}>Get Started</Link>}
+          render={
+            <Link href={{ pathname: "/docs/get-started" }}>Get Started</Link>
+          }
         />
         <Button
           size="lg"

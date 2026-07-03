@@ -13,15 +13,15 @@ const data = [
   },
   {
     icon: <HugeiconsIcon icon={SourceCodeIcon} />,
-    title: "Native CSS. No Tailwind Bullshit",
+    title: "Native CSS. No Tailwind Required",
     description:
-      "Modern CSS with HCT color variables. No 47-class div soup. No build-time bloat.",
+      "Modern CSS with HCT color variables. No utility-class dependency. No build-time styling lock-in.",
   },
   {
     icon: <HugeiconsIcon icon={SparklesIcon} />,
-    title: "Unique By Design",
+    title: "Copy-and-Own Workflow",
     description:
-      "Tired of every site looking like ******? We too. Fresh components, bold patterns, zero template fatigue.",
+      "Install or copy each component into your app, then edit the source, tokens, styles, and behavior directly.",
   },
 ];
 
@@ -30,7 +30,7 @@ export function WhyOlyxSection() {
     <section data-ui="why-olyx-section">
       <div className="section-header">
         <p>Why Olyx?</p>
-        <h2>Built different. Not another Library clone.</h2>
+        <h2>Accessible primitives with direct ownership.</h2>
       </div>
 
       <div className="cards-grid">
