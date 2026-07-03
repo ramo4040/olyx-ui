@@ -74,15 +74,17 @@
     }
 
     /* Hover */
-    &:hover:not(:disabled, [aria-disabled="true"]) {
-      color: color-mix(
-        in srgb,
-        var(--color-link-button),
-        var(--color-on-surface) 30%
-      );
+    @media (hover: hover) and (pointer: fine) {
+      &:hover:not(:disabled, [aria-disabled="true"]) {
+        color: color-mix(
+          in srgb,
+          var(--color-link-button),
+          var(--color-on-surface) 30%
+        );
 
-      &::before {
-        opacity: 1;
+        &::before {
+          opacity: 1;
+        }
       }
     }
   }

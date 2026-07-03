@@ -75,12 +75,14 @@
           color: var(--color-on-banner);
         }
 
-        &:hover {
-          background-color: color-mix(
-            in srgb,
-            var(--color-on-banner) 12%,
-            transparent
-          );
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            background-color: color-mix(
+              in srgb,
+              var(--color-on-banner) 12%,
+              transparent
+            );
+          }
         }
 
         &:active {
@@ -110,12 +112,14 @@
           color: var(--color-on-banner-container);
         }
 
-        &:hover {
-          background-color: color-mix(
-            in srgb,
-            var(--color-on-banner-container) 12%,
-            transparent
-          );
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            background-color: color-mix(
+              in srgb,
+              var(--color-on-banner-container) 12%,
+              transparent
+            );
+          }
         }
 
         &:active {
@@ -141,12 +145,14 @@
           color: var(--color-on-banner-container);
         }
 
-        &:hover {
-          background-color: color-mix(
-            in srgb,
-            var(--color-on-banner-container) 12%,
-            transparent
-          );
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            background-color: color-mix(
+              in srgb,
+              var(--color-on-banner-container) 12%,
+              transparent
+            );
+          }
         }
 
         &:active {
@@ -171,12 +177,14 @@
           color: var(--color-banner);
         }
 
-        &:hover {
-          background-color: color-mix(
-            in srgb,
-            var(--color-banner) 12%,
-            transparent
-          );
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            background-color: color-mix(
+              in srgb,
+              var(--color-banner) 12%,
+              transparent
+            );
+          }
         }
 
         &:active {

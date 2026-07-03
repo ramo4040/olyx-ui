@@ -2,7 +2,9 @@
   [data-ui="toggle-group"] {
     display: flex;
     width: fit-content;
-    transition: all var(--transition-standard-fast-effects);
+    transition:
+      background-color var(--transition-standard-fast-effects),
+      border-color var(--transition-standard-fast-effects);
     height: fit-content;
 
     &[data-orientation="horizontal"] {
@@ -62,7 +64,11 @@
       outline: 0;
       background-color: var(--color-toggle);
       border: 1px solid var(--color-toggle-border);
-      transition: all var(--transition-expressive-fast-effects);
+      transition:
+        background-color var(--transition-expressive-fast-effects),
+        border-color var(--transition-expressive-fast-effects),
+        box-shadow var(--transition-expressive-fast-effects),
+        color var(--transition-expressive-fast-effects);
 
       &[data-size="lg"] {
         --toggle-size: 40px;
@@ -91,11 +97,18 @@
         --color-toggle-focus-ring: var(--color-primary);
         box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 2%, transparent);
 
-        &:hover:not(:disabled, &[data-pressed]),
         &[data-pressed] {
           color: var(--color-on-toggle-container);
           background-color: var(--color-toggle-container);
           border-color: transparent;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          &:hover:not(:disabled, &[data-pressed]) {
+            color: var(--color-on-toggle-container);
+            background-color: var(--color-toggle-container);
+            border-color: transparent;
+          }
         }
       }
 
@@ -107,10 +120,16 @@
         --color-on-toggle-container: var(--color-on-surface);
         --color-toggle-focus-ring: var(--color-primary);
 
-        &:hover:not(:disabled, &[data-pressed]),
         &[data-pressed] {
           color: var(--color-on-toggle-container);
           background-color: var(--color-toggle-container);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          &:hover:not(:disabled, &[data-pressed]) {
+            color: var(--color-on-toggle-container);
+            background-color: var(--color-toggle-container);
+          }
         }
       }
 

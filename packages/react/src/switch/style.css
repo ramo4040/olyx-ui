@@ -67,4 +67,11 @@
       }
     }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-ui="switch"],
+    [data-ui="switch"] [data-ui="thumb"] {
+      transition: background-color var(--transition-expressive-fast-effects);
+    }
+  }
 }

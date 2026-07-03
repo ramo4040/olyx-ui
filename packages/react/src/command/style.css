@@ -25,7 +25,9 @@
     z-index: 55;
     background: var(--color-surface);
     border-radius: var(--radius-xl);
-    transition: var(--transition-expressive-default-spatial);
+    transition:
+      opacity var(--transition-expressive-fast-effects),
+      box-shadow var(--transition-expressive-fast-effects);
     box-shadow: 0 0 0 var(--spacing-4)
       color-mix(in oklab, var(--color-surface) 30%, transparent);
     overflow: hidden;
@@ -36,7 +38,6 @@
     &[data-starting-style],
     &[data-ending-style] {
       opacity: 0;
-      transform: translate(-50%, -50%) scale(0.9);
     }
   }
 
@@ -115,9 +116,14 @@
         user-select: none;
         text-decoration: none;
 
-        &:hover,
         &[data-highlighted] {
           background-color: var(--color-surface-container-low);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            background-color: var(--color-surface-container-low);
+          }
         }
       }
 

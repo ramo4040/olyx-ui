@@ -27,7 +27,7 @@
       fill: currentColor;
       width: 100%;
       height: 100%;
-      animation: rotate 1s linear infinite;
+      animation: rotate var(--transition-standard-slow-spatial) infinite;
     }
   }
 
@@ -37,6 +37,12 @@
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-ui="spinner"] svg {
+      animation: none;
     }
   }
 }

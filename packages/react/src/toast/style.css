@@ -59,7 +59,11 @@
       text-decoration: none;
       cursor: pointer;
       border-radius: var(--radius-sm);
-      transition: all var(--transition-expressive-fast-effects);
+      transition:
+        background-color var(--transition-expressive-fast-effects),
+        border-color var(--transition-expressive-fast-effects),
+        color var(--transition-expressive-fast-effects),
+        box-shadow var(--transition-expressive-fast-effects);
       user-select: none;
       margin-top: var(--spacing-8);
       padding-inline: var(--spacing-12);
@@ -153,10 +157,10 @@
     user-select: none;
 
     transition:
-      transform var(--transition-standard-slow-spatial),
+      transform var(--transition-standard-default-spatial),
       opacity var(--transition-standard-slow-effects),
       height var(--transition-standard-fast-spatial),
-      scale var(--transition-standard-default-spatial);
+      scale var(--transition-standard-fast-spatial);
 
     cursor: grab;
     z-index: calc(1000 - var(--toast-index));
@@ -268,10 +272,11 @@
     [data-slot="toast-close"] {
       position: absolute;
       top: var(--spacing-12);
-      right: -30%;
+      right: var(--spacing-12);
       rotate: -40deg;
       opacity: 0;
       filter: blur(10px);
+      translate: var(--spacing-24) 0;
       background: var(--color-surface-container);
       border: none;
       color: var(--color-on-toast);
@@ -281,7 +286,11 @@
       height: var(--spacing-16);
       display: grid;
       place-items: center;
-      transition: all var(--transition-standard-default-spatial);
+      transition:
+        filter var(--transition-standard-default-effects),
+        opacity var(--transition-standard-default-effects),
+        rotate var(--transition-standard-fast-spatial),
+        translate var(--transition-standard-fast-spatial);
 
       svg {
         width: 60%;
@@ -327,12 +336,14 @@
       }
     }
 
-    &:hover {
-      [data-slot="toast-close"] {
-        right: var(--spacing-12);
-        rotate: unset;
-        filter: unset;
-        opacity: 1;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        [data-slot="toast-close"] {
+          rotate: unset;
+          filter: unset;
+          opacity: 1;
+          translate: 0 0;
+        }
       }
     }
 
@@ -392,6 +403,25 @@
 
     [data-ui="toast-icon"] {
       display: flex;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-ui="toast-stacked-root"],
+    [data-ui="toast-anchored-root"] {
+      transition: opacity var(--transition-standard-fast-effects);
+
+      &[data-starting-style],
+      &[data-ending-style] {
+        transform: none;
+      }
+    }
+
+    [data-ui="toast-stacked-content"] [data-slot="toast-close"] {
+      transition: opacity var(--transition-standard-fast-effects);
+      filter: none;
+      rotate: unset;
+      translate: 0 0;
     }
   }
 }

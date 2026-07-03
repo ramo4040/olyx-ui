@@ -15,7 +15,11 @@
     border-radius: var(--radius-md);
     cursor: pointer;
     outline: 0;
-    transition: var(--transition-expressive-fast-effects);
+    transition:
+      background-color var(--transition-expressive-fast-effects),
+      border-color var(--transition-expressive-fast-effects),
+      box-shadow var(--transition-expressive-fast-effects),
+      color var(--transition-expressive-fast-effects);
     user-select: none;
 
     [data-ui="icon"],
@@ -33,9 +37,11 @@
           color-mix(in oklab, var(--color-primary) 35%, transparent);
       }
 
-      &:hover {
-        border-color: var(--color-surface-container-highest);
-        background-color: var(--color-surface-container-low);
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          border-color: var(--color-surface-container-highest);
+          background-color: var(--color-surface-container-low);
+        }
       }
 
       &:focus-visible {
