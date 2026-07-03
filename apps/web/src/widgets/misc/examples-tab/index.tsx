@@ -26,9 +26,9 @@ export const ExamplesTab = () => {
         <Image
           src={"/images/example-light.png"}
           alt="Examples on mobile"
-          width={0}
-          height={0}
-          sizes="100vw"
+          width={1200}
+          height={900}
+          sizes="(max-width: 768px) 100vw, 1200px"
           style={{ width: "100%", height: "auto" }}
           className="dark"
         />

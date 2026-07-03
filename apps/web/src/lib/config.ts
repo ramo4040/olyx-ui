@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Olyx UI - Modern React Component Library Built on Base UI",
   description:
     "50+ accessible, composable React components built on Base UI with native CSS and HCT color system. Copy, paste, and own your UI. Open source.",
-  url: "https://olyxui.com",
+  url: "https://www.olyxui.com",
   ogImage: "/og.png",
   github: "https://github.com/ramo4040/olyx-ui",
   twitter: "@yassir_rouane",

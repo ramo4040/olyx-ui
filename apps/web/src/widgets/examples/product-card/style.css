@@ -10,7 +10,8 @@
     .image {
       position: relative;
       aspect-ratio: 1;
-      height: 100%;
+      width: 96px;
+      height: 96px;
       flex-shrink: 0;
       border-radius: var(--radius-md);
       background-color: var(--color-surface-container-low);

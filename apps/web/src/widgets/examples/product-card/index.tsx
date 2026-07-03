@@ -17,7 +17,12 @@ export const ProductCardExample = () => {
   return (
     <div data-ui="product-card-example">
       <div className="image">
-        <Image src="/images/product.png" alt="Product Image" fill />
+        <Image
+          src="/images/product.png"
+          alt="Black wireless over-ear headphones"
+          fill
+          sizes="96px"
+        />
       </div>
 
       <div className="details">
