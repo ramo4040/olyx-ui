@@ -2,7 +2,7 @@
   [data-ui="select-positioner"],
   [data-ui="combobox-positioner"],
   [data-ui="autocomplete-positioner"] {
-    z-index: 50;
+    z-index: 60;
     min-width: var(--anchor-width);
     max-width: var(--available-width);
     user-select: none;

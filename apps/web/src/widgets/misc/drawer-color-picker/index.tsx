@@ -12,16 +12,32 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@olyx/react/drawer";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@olyx/react/select";
 import { useEffect, useState } from "react";
 import { type Color, parseColor } from "react-aria-components";
 
 const COLOR_CONFIG = {
   DEFAULT_HUE: 250,
-  DEFAULT_SATURATION: 60,
+  DEFAULT_CHROMA: 0.18,
   LIGHTNESS: 50,
-  SATURATION_MIN: 5,
-  SATURATION_MAX: 75,
+  CHROMA_MIN: 0.01,
+  CHROMA_MAX: 0.32,
 } as const;
+
+const HARMONY_OPTIONS = [
+  { label: "Complementary", value: "complementary" },
+  { label: "Triadic", value: "triadic" },
+  { label: "Analogous", value: "analogous" },
+  { label: "Monochromatic", value: "monochromatic" },
+] as const;
+
+type Harmony = (typeof HARMONY_OPTIONS)[number]["value"];
 
 const PREVIEW_COLORS = [
   { name: "Primary", className: "primary" },
@@ -29,28 +45,48 @@ const PREVIEW_COLORS = [
   { name: "Tertiary", className: "tertiary" },
 ] as const;
 
-const createHSL = (hue: number, saturation: number): string =>
-  `hsl(${hue}, ${saturation}%, ${COLOR_CONFIG.LIGHTNESS}%)`;
+const HARMONY_OFFSETS: Record<
+  Harmony,
+  { secondary: number; tertiary: number }
+> = {
+  complementary: { secondary: 180, tertiary: 150 },
+  triadic: { secondary: 120, tertiary: 240 },
+  analogous: { secondary: 30, tertiary: -30 },
+  monochromatic: { secondary: 0, tertiary: 0 },
+};
 
-const clampSaturation = (value: number): number =>
-  Math.max(
-    COLOR_CONFIG.SATURATION_MIN,
-    Math.min(value, COLOR_CONFIG.SATURATION_MAX),
-  );
+const clampChroma = (value: number): number =>
+  Math.max(COLOR_CONFIG.CHROMA_MIN, Math.min(value, COLOR_CONFIG.CHROMA_MAX));
 
 const getCSSVariable = (property: string): number => {
   const value = getComputedStyle(document.documentElement).getPropertyValue(
     property,
   );
-  return Number.parseInt(value, 10) || 0;
+  return Number.parseFloat(value) || 0;
 };
 
-const getHSLChannels = (color: Color) => {
+const chromaToSaturation = (chroma: number): number =>
+  (clampChroma(chroma) / COLOR_CONFIG.CHROMA_MAX) * 100;
+
+const saturationToChroma = (saturation: number): number =>
+  clampChroma((saturation / 100) * COLOR_CONFIG.CHROMA_MAX);
+
+const createSliderColor = (hue: number, chroma: number): string =>
+  `hsl(${hue}, ${chromaToSaturation(chroma)}%, ${COLOR_CONFIG.LIGHTNESS}%)`;
+
+const getOKLCHChannels = (color: Color) => {
   const hsl = color.toFormat("hsl");
   return {
     hue: hsl.getChannelValue("hue"),
-    saturation: hsl.getChannelValue("saturation"),
+    chroma: saturationToChroma(hsl.getChannelValue("saturation")),
   };
+};
+
+const getRootHarmony = (): Harmony => {
+  const harmony = document.documentElement.dataset.harmony;
+  return HARMONY_OPTIONS.some((option) => option.value === harmony)
+    ? (harmony as Harmony)
+    : "monochromatic";
 };
 
 export const DrawerColorPicker = ({
@@ -60,32 +96,36 @@ export const DrawerColorPicker = ({
 }) => {
   const [currentValue, setCurrentValue] = useState(() =>
     parseColor(
-      createHSL(COLOR_CONFIG.DEFAULT_HUE, COLOR_CONFIG.DEFAULT_SATURATION),
+      createSliderColor(COLOR_CONFIG.DEFAULT_HUE, COLOR_CONFIG.DEFAULT_CHROMA),
     ),
   );
+  const [harmony, setHarmony] = useState<Harmony>("monochromatic");
 
   useEffect(() => {
-    const hue = getCSSVariable("--brand-hue") || COLOR_CONFIG.DEFAULT_HUE;
-    const saturation = clampSaturation(
-      getCSSVariable("--brand-saturation") || COLOR_CONFIG.DEFAULT_SATURATION,
+    const hue = getCSSVariable("--base-hue") || COLOR_CONFIG.DEFAULT_HUE;
+    const chroma = clampChroma(
+      getCSSVariable("--base-chroma") || COLOR_CONFIG.DEFAULT_CHROMA,
     );
-    setCurrentValue(parseColor(createHSL(hue, saturation)));
+    setCurrentValue(parseColor(createSliderColor(hue, chroma)));
+    setHarmony(getRootHarmony());
   }, []);
 
   const handleSave = () => {
-    const { hue, saturation } = getHSLChannels(currentValue);
-    const safeSaturation = clampSaturation(saturation);
+    const { hue, chroma } = getOKLCHChannels(currentValue);
+    const safeChroma = clampChroma(chroma);
 
-    setCurrentValue(parseColor(createHSL(hue, safeSaturation)));
+    setCurrentValue(parseColor(createSliderColor(hue, safeChroma)));
 
-    document.documentElement.style.setProperty("--brand-hue", hue.toString());
+    document.documentElement.style.setProperty("--base-hue", hue.toString());
     document.documentElement.style.setProperty(
-      "--brand-saturation",
-      `${safeSaturation}%`,
+      "--base-chroma",
+      safeChroma.toString(),
     );
+    document.documentElement.dataset.harmony = harmony;
   };
 
-  const { hue, saturation } = getHSLChannels(currentValue);
+  const { hue, chroma } = getOKLCHChannels(currentValue);
+  const harmonyOffsets = HARMONY_OFFSETS[harmony];
 
   return (
     <Drawer modal={false}>
@@ -96,10 +136,13 @@ export const DrawerColorPicker = ({
       <DrawerContent
         className="color-picker-drawer"
         data-custom-theme
+        data-harmony={harmony}
         style={
           {
-            "--brand-hue": hue,
-            "--brand-saturation": `${saturation}%`,
+            "--base-hue": hue,
+            "--base-chroma": chroma,
+            "--secondary-offset": harmonyOffsets.secondary,
+            "--tertiary-offset": harmonyOffsets.tertiary,
           } as React.CSSProperties
         }
       >
@@ -117,7 +160,23 @@ export const DrawerColorPicker = ({
             ))}
           </div>
 
-          {currentValue.toString()}
+          <div className="theme-controls">
+            <Select
+              value={harmony}
+              onValueChange={(value) => setHarmony(value as Harmony)}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="Select harmony" />
+              </SelectTrigger>
+              <SelectContent>
+                {HARMONY_OPTIONS.map((option) => (
+                  <SelectItem key={option.value} value={option.value}>
+                    {option.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
 
           <div className="sliders">
             <ColorSlider
@@ -130,7 +189,7 @@ export const DrawerColorPicker = ({
               channel="saturation"
               value={currentValue}
               onChange={setCurrentValue}
-              label="Saturation"
+              label="Chroma"
             />
           </div>
         </div>

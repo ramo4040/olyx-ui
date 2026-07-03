@@ -1,11 +1,12 @@
-:root {
+:root,
+[data-custom-theme] {
   /* Base — OKLCH values
      L: Lightness [0 - 1]
      C: Chroma [0 | 0.4]
      H: Hue [0 - 360] */
   --base-lightness: 0.5;
   --base-chroma: 0.18;
-  --base-hue: 250;
+  --base-hue: 265;
 
   /* Harmony offsets (°) */
   &[data-harmony="complementary"] {
@@ -160,7 +161,8 @@
   --color-on-surface-variant: oklch(0.38 var(--neutral-ch));
 }
 
-[data-theme="dark"] {
+[data-theme="dark"],
+[data-theme="dark"] [data-custom-theme] {
   /* Chroma */
   --primary-c: clamp(0.01, calc(var(--base-chroma) * 0.95), 0.36);
   --secondary-c: clamp(0.01, calc(var(--base-chroma) * 0.9), 0.34);

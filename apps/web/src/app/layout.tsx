@@ -85,7 +85,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       data-theme="light"
-      data-harmony="monochromatic"
+      data-harmony="analogous"
       className={dmSans.variable}
       data-scroll-behavior="smooth"
     >
