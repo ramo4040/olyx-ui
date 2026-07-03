@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: space-between;
     isolation: isolate;
-    border: 1px solid var(--color-surface-variant);
-    background-color: var(--color-background);
+    border: 1px solid var(--color-outline-variant);
+    background-color: var(--color-surface);
     color: var(--color-on-surface-variant);
     font: var(--font-body-md);
     height: 36px;

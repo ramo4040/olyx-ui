@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     creator: siteConfig.twitter,
   },
   alternates: {
-    canonical: "/",
+    canonical: siteConfig.url,
   },
   robots: {
     index: true,
@@ -85,6 +85,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       data-theme="light"
+      data-harmony="analogous"
       className={dmSans.variable}
       data-scroll-behavior="smooth"
     >

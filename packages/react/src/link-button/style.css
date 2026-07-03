@@ -78,7 +78,7 @@
       color: color-mix(
         in srgb,
         var(--color-link-button),
-        var(--color-on-background) 30%
+        var(--color-on-surface) 30%
       );
 
       &::before {

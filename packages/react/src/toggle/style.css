@@ -42,8 +42,8 @@
     }
 
     &[data-variant="primary"] {
-      --color-toggle: var(--color-background);
-      --color-on-toggle: var(--color-on-background);
+      --color-toggle: var(--color-surface);
+      --color-on-toggle: var(--color-on-surface);
       --color-toggle-border: var(--color-surface-container-highest);
       --color-toggle-container: var(--color-primary-container);
       box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 2%, transparent);
@@ -58,7 +58,7 @@
 
     &[data-variant="ghost"] {
       --color-toggle: transparent;
-      --color-on-toggle: var(--color-on-background);
+      --color-on-toggle: var(--color-on-surface);
       --color-toggle-border: transparent;
       --color-toggle-container: var(--color-surface-container-high);
 

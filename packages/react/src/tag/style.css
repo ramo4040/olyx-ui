@@ -17,8 +17,8 @@
 
     /* Variant */
     &[data-variant="stroke"] {
-      border-color: var(--color-surface-variant);
-      background-color: var(--color-background);
+      border-color: var(--color-outline-variant);
+      background-color: var(--color-surface);
     }
 
     &[data-variant="lighter"] {
@@ -37,8 +37,8 @@
         background-color: var(--color-surface-container-high);
       }
       &[data-variant="lighter"] {
-        border-color: var(--color-surface-variant);
-        background-color: var(--color-background);
+        border-color: var(--color-outline-variant);
+        background-color: var(--color-surface);
       }
     }
 
@@ -74,13 +74,13 @@
       }
 
       &:focus-visible {
-        color: var(--color-on-background);
+        color: var(--color-on-surface);
       }
     }
 
     /* Hover */
     &:hover > i {
-      color: var(--color-on-background);
+      color: var(--color-on-surface);
     }
 
     /* Disabled */

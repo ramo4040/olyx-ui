@@ -12,7 +12,7 @@
   }
 
   [data-ui="field-label"] {
-    color: var(--color-on-background);
+    color: var(--color-on-surface);
     font: var(--font-body-md);
 
     /* Disabled */
@@ -54,7 +54,7 @@
     gap: var(--spacing-16);
 
     [data-ui="fieldset-legend"] {
-      color: var(--color-on-background);
+      color: var(--color-on-surface);
       font: var(--font-body-lg);
       font-weight: 500;
     }

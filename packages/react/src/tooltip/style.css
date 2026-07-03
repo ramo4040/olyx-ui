@@ -1,7 +1,7 @@
 @layer components {
   [data-ui="tooltip-portal"] {
     [data-ui="tooltip-content"] {
-      border: 0.5px solid var(--color-surface-variant);
+      border: 0.5px solid var(--color-outline-variant);
       color: var(--color-tooltip);
       background-color: var(--color-on-tooltip);
       transform-origin: var(--transform-origin);
@@ -14,13 +14,13 @@
 
       /* Variant */
       &[data-variant="light"] {
-        --color-tooltip: var(--color-on-background);
-        --color-on-tooltip: var(--color-background);
+        --color-tooltip: var(--color-on-surface);
+        --color-on-tooltip: var(--color-surface);
       }
 
       &[data-variant="dark"] {
-        --color-tooltip: var(--color-background);
-        --color-on-tooltip: var(--color-on-background);
+        --color-tooltip: var(--color-surface);
+        --color-on-tooltip: var(--color-on-surface);
       }
 
       /* Size */

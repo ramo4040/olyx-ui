@@ -14,7 +14,7 @@
       transparent
     );
     width: 100%;
-    border: 1px solid var(--color-surface-variant);
+    border: 1px solid var(--color-outline-variant);
     height: 56px;
     display: flex;
 
@@ -52,7 +52,7 @@
       }
 
       .link-item {
-        color: var(--color-on-background);
+        color: var(--color-on-surface);
 
         a {
           padding-inline: var(--spacing-6);

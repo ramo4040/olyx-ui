@@ -107,15 +107,15 @@
     }
 
     &[data-variant="neutral"] {
-      --color-button: var(--color-on-background);
-      --color-on-button: var(--color-background);
-      --color-button-border: var(--color-surface-variant);
+      --color-button: var(--color-on-surface);
+      --color-on-button: var(--color-surface);
+      --color-button-border: var(--color-outline-variant);
       --color-button-container: var(--color-surface-container-high);
     }
 
     &[data-variant="link"] {
       --color-button: transparent;
-      --color-on-button: var(--color-on-background);
+      --color-on-button: var(--color-on-surface);
       --color-button-border: transparent;
       --color-button-container: transparent;
       border-radius: 0;

@@ -14,7 +14,7 @@
       background: linear-gradient(
         90deg,
         transparent,
-        var(--color-background),
+        var(--color-surface),
         transparent
       );
     }

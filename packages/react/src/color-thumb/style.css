@@ -1,8 +1,8 @@
 .react-aria-ColorThumb {
-  border: 2px solid var(--color-background);
+  border: 2px solid var(--color-surface);
   box-shadow:
-    0 0 0 1px var(--color-on-background),
-    inset 0 0 0 1px var(--color-on-background);
+    0 0 0 1px var(--color-on-surface),
+    inset 0 0 0 1px var(--color-on-surface);
   width: var(--spacing-16);
   height: var(--spacing-16);
   border-radius: 50%;
