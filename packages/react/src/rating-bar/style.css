@@ -72,17 +72,27 @@
 
       /* Interaction */
       cursor: pointer;
-      transition: var(--transition-standard-fast-effects);
+      transition:
+        background-color var(--transition-standard-fast-effects),
+        box-shadow var(--transition-standard-fast-effects);
 
       svg {
         width: 100%;
         height: 100%;
-        transition: all var(--transition-standard-fast-effects);
+        transition:
+          color var(--transition-standard-fast-effects),
+          fill var(--transition-standard-fast-effects),
+          scale var(--transition-standard-fast-effects);
       }
 
-      &:hover,
       &:focus-visible {
         background-color: var(--color-surface-container-low);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: var(--color-surface-container-low);
+        }
       }
 
       &:focus-visible {

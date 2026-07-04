@@ -10,7 +10,7 @@
       position: absolute;
       inset: 0;
       transform: translateX(-100%);
-      animation: pulse 1s infinite;
+      animation: pulse var(--transition-standard-slow-spatial) infinite;
       background: linear-gradient(
         90deg,
         transparent,
@@ -27,6 +27,12 @@
   @keyframes pulse {
     100% {
       transform: translateX(100%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-ui="skeleton"]::before {
+      animation: none;
     }
   }
 }

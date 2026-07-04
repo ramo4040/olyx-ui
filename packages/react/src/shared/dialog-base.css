@@ -39,7 +39,10 @@
     background: var(--color-surface);
     border-radius: var(--radius-xl);
     padding: var(--spacing-16) var(--spacing-24);
-    transition: var(--transition-expressive-default-spatial);
+    transition:
+      opacity var(--transition-expressive-default-effects),
+      transform var(--transition-expressive-fast-spatial),
+      box-shadow var(--transition-expressive-default-effects);
     box-shadow: 0 0 0 var(--spacing-4)
       color-mix(in oklab, var(--color-surface) 30%, transparent);
 
@@ -81,6 +84,20 @@
     &[data-ending-style] {
       opacity: 0;
       transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-ui="dialog-content"],
+    [data-ui="alert-dialog-content"] {
+      transition:
+        opacity var(--transition-expressive-fast-effects),
+        box-shadow var(--transition-expressive-fast-effects);
+
+      &[data-starting-style],
+      &[data-ending-style] {
+        transform: translate(-50%, -50%) scale(1);
+      }
     }
   }
 }

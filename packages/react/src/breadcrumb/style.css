@@ -18,7 +18,9 @@
       border-radius: var(--radius-sm);
       outline: 0;
       cursor: pointer;
-      transition: var(--transition-standard-fast-effects);
+      transition:
+        box-shadow var(--transition-standard-fast-effects),
+        color var(--transition-standard-fast-effects);
 
       > * {
         display: flex;
@@ -36,9 +38,11 @@
           color-mix(in oklab, var(--color-primary) 35%, transparent);
       }
 
-      &:hover {
-        text-decoration: underline;
-        text-underline-offset: 2px;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 2px;
+        }
       }
 
       &:last-child {

@@ -60,7 +60,11 @@
     color: var(--color-on-surface);
     font: var(--font-body-md);
     outline: 0;
-    transition: all var(--transition-expressive-fast-effects);
+    transition:
+      background-color var(--transition-expressive-fast-effects),
+      border-color var(--transition-expressive-fast-effects),
+      box-shadow var(--transition-expressive-fast-effects),
+      color var(--transition-expressive-fast-effects);
 
     /* Focus */
     &:focus-within {

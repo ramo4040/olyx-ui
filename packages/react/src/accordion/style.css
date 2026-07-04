@@ -13,7 +13,11 @@
       --hover-bg: var(--color-surface-container);
 
       font: var(--font-body-md);
-      transition: var(--transition-standard-default-spatial);
+      transition:
+        background-color var(--transition-standard-default-effects),
+        border-color var(--transition-standard-default-effects),
+        border-radius var(--transition-standard-default-effects),
+        margin var(--transition-standard-default-effects);
 
       /*Border and border radius setup*/
       border: 1px solid var(--border-color);
@@ -60,7 +64,7 @@
 
         svg {
           color: var(--color-on-surface-variant);
-          transition: transform var(--transition-expressive-default-spatial);
+          transition: transform var(--transition-expressive-fast-spatial);
           width: var(--spacing-16);
           height: var(--spacing-16);
         }
@@ -73,7 +77,10 @@
       [data-ui="accordion-content"] {
         padding-inline: var(--padding-inline);
         padding-bottom: var(--padding-block);
-        transition: height var(--transition-standard-default-spatial);
+        transition:
+          height var(--transition-standard-fast-spatial),
+          opacity var(--transition-standard-fast-effects),
+          padding var(--transition-standard-fast-effects);
         color: var(--color-on-surface-variant);
         height: var(--accordion-panel-height);
         overflow: hidden;
@@ -123,13 +130,30 @@
       }
 
       /* Hover */
-      &:hover {
-        background-color: var(--hover-bg);
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: var(--hover-bg);
+        }
       }
 
       /* Active */
       &:has([data-ui="accordion-trigger"]:focus-visible) {
         background-color: var(--hover-bg);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-ui="accordion"] {
+      [data-ui="accordion-item"] {
+        transition:
+          background-color var(--transition-standard-fast-effects),
+          border-color var(--transition-standard-fast-effects);
+
+        [data-ui="accordion-trigger"] svg,
+        [data-ui="accordion-content"] {
+          transition: opacity var(--transition-standard-fast-effects);
+        }
       }
     }
   }

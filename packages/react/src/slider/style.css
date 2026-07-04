@@ -88,8 +88,10 @@
       }
     }
 
-    &:not(&[data-disabled]):hover [data-ui="slider-thumb"] {
-      border-width: 2px;
+    @media (hover: hover) and (pointer: fine) {
+      &:not(&[data-disabled]):hover [data-ui="slider-thumb"] {
+        border-width: 2px;
+      }
     }
   }
 }

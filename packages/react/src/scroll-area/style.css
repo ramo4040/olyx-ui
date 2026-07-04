@@ -22,7 +22,7 @@
           width: 100%;
           position: absolute;
           pointer-events: none;
-          transition: height var(--transition-standard-default-spatial);
+          transition: opacity var(--transition-standard-default-effects);
         }
 
         &::before {
@@ -61,7 +61,7 @@
     z-index: 10;
 
     &[data-scrolling] {
-      transition-duration: 0ms;
+      transition: none;
     }
 
     &[data-hovering],

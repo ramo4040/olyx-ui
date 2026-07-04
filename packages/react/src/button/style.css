@@ -14,7 +14,12 @@
     border: 1px solid;
     text-decoration: none;
     cursor: pointer;
-    transition: all var(--transition-expressive-fast-effects);
+    transition:
+      background-color var(--transition-expressive-fast-effects),
+      border-color var(--transition-expressive-fast-effects),
+      box-shadow var(--transition-expressive-fast-effects),
+      color var(--transition-expressive-fast-effects),
+      scale var(--transition-expressive-fast-effects);
     user-select: none;
 
     /* size */
@@ -53,15 +58,9 @@
       background-color: var(--color-button);
       color: var(--color-on-button);
 
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        background-color: color-mix(in srgb, var(--color-button), black 10%);
-
-        &[data-variant="neutral"] {
-          background-color: color-mix(
-            in srgb,
-            var(--color-button),
-            var(--color-on-button) 10%
-          );
+      @media (hover: hover) and (pointer: fine) {
+        &:hover:not(:disabled, [aria-disabled="true"]) {
+          background-color: color-mix(in srgb, var(--color-button), black 10%);
         }
       }
     }
@@ -71,9 +70,11 @@
       background-color: var(--color-on-button);
       color: var(--color-button);
 
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        border-color: transparent;
-        background-color: var(--color-button-container);
+      @media (hover: hover) and (pointer: fine) {
+        &:hover:not(:disabled, [aria-disabled="true"]) {
+          border-color: transparent;
+          background-color: var(--color-button-container);
+        }
       }
     }
 
@@ -82,9 +83,11 @@
       background-color: var(--color-button-container);
       color: var(--color-button);
 
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        border-color: var(--color-button-border);
-        background-color: transparent;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover:not(:disabled, [aria-disabled="true"]) {
+          border-color: var(--color-button-border);
+          background-color: transparent;
+        }
       }
     }
 
@@ -93,8 +96,10 @@
       background-color: transparent;
       color: var(--color-button);
 
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        background-color: var(--color-button-container);
+      @media (hover: hover) and (pointer: fine) {
+        &:hover:not(:disabled, [aria-disabled="true"]) {
+          background-color: var(--color-button-container);
+        }
       }
     }
 
@@ -115,6 +120,19 @@
       --color-button-focus-ring: var(--color-primary);
     }
 
+    @media (hover: hover) and (pointer: fine) {
+      &[data-mode="filled"][data-variant="neutral"]:hover:not(
+          :disabled,
+          [aria-disabled="true"]
+        ) {
+        background-color: color-mix(
+          in srgb,
+          var(--color-button),
+          var(--color-on-button) 10%
+        );
+      }
+    }
+
     &[data-variant="link"] {
       --color-button: transparent;
       --color-on-button: var(--color-on-surface);
@@ -133,9 +151,11 @@
         1px var(--d, 0);
       background-repeat: no-repeat;
 
-      &:hover:not(:disabled, [aria-disabled="true"]) {
-        --d: 10px;
-        background-color: transparent;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover:not(:disabled, [aria-disabled="true"]) {
+          --d: 10px;
+          background-color: transparent;
+        }
       }
     }
 
@@ -149,7 +169,7 @@
 
     /* Active */
     &:active {
-      scale: 0.99;
+      scale: 0.97;
     }
 
     /* Focus */

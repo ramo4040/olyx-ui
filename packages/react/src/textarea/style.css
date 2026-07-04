@@ -10,7 +10,11 @@
     outline: 0;
     box-shadow: 0 1px 2px 0 color-mix(in srgb, currentcolor 3%, transparent);
     font: var(--font-body-md);
-    transition: all var(--transition-expressive-fast-effects);
+    transition:
+      background-color var(--transition-expressive-fast-effects),
+      border-color var(--transition-expressive-fast-effects),
+      box-shadow var(--transition-expressive-fast-effects),
+      color var(--transition-expressive-fast-effects);
     resize: vertical;
     color: var(--color-on-surface);
 
@@ -28,11 +32,13 @@
     }
 
     /* Hover */
-    &:hover:not(:focus-within, :disabled) {
-      background-color: var(--surface-low);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover:not(:focus-within, :disabled) {
+        background-color: var(--surface-low);
 
-      &::placeholder {
-        color: var(--color-on-surface-variant);
+        &::placeholder {
+          color: var(--color-on-surface-variant);
+        }
       }
     }
 

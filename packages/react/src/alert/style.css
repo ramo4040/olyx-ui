@@ -122,9 +122,11 @@
       color: currentcolor;
       border-color: transparent;
 
-      &[data-slot="alert-close"]:hover {
-        background-color: color-mix(in srgb, currentcolor 10%, transparent);
-        color: currentcolor;
+      @media (hover: hover) and (pointer: fine) {
+        &[data-slot="alert-close"]:hover {
+          background-color: color-mix(in srgb, currentcolor 10%, transparent);
+          color: currentcolor;
+        }
       }
     }
   }

@@ -6,7 +6,10 @@
     flex-shrink: 0;
     height: var(--spacing-24);
     padding-inline: var(--spacing-8);
-    transition: var(--transition-standard-fast-effects);
+    transition:
+      background-color var(--transition-standard-fast-effects),
+      border-color var(--transition-standard-fast-effects),
+      color var(--transition-standard-fast-effects);
     border: 1px solid;
     border-radius: calc(var(--radius-sm) - var(--spacing-2));
     color: var(--color-on-surface-variant);
@@ -27,7 +30,6 @@
     }
 
     &:where(
-        :hover,
         :has([data-slot="tag-dismiss"]:focus-visible):not(
           [aria-disabled="true"]
         )
@@ -39,6 +41,19 @@
       &[data-variant="lighter"] {
         border-color: var(--color-surface-container-highest);
         background-color: var(--color-surface);
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        &[data-variant="stroke"] {
+          border-color: transparent;
+          background-color: var(--color-surface-container-high);
+        }
+        &[data-variant="lighter"] {
+          border-color: var(--color-surface-container-highest);
+          background-color: var(--color-surface);
+        }
       }
     }
 
@@ -69,8 +84,10 @@
       margin-inline: calc(var(--spacing-6) * -1) calc(var(--spacing-4) * -1);
       padding: 0;
 
-      &:hover {
-        background-color: transparent;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: transparent;
+        }
       }
 
       &:focus-visible {
@@ -79,8 +96,10 @@
     }
 
     /* Hover */
-    &:hover > i {
-      color: var(--color-on-surface);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover > i {
+        color: var(--color-on-surface);
+      }
     }
 
     /* Disabled */

@@ -19,7 +19,10 @@
       padding: var(--spacing-6);
       background-color: var(--color-surface-container-lowest);
       outline: 0;
-      transition: var(--transition-expressive-default-effects);
+      transition:
+        opacity var(--transition-expressive-default-effects),
+        scale var(--transition-expressive-default-effects),
+        filter var(--transition-expressive-default-effects);
       transform-origin: var(--transform-origin);
       width: 100%;
       max-height: min(var(--available-height), 23rem);
@@ -90,10 +93,15 @@
         }
 
         &:not([data-disabled]) {
-          &:hover,
           &:focus-visible,
           &[data-highlighted] {
             background-color: var(--color-surface-container-high);
+          }
+
+          @media (hover: hover) and (pointer: fine) {
+            &:hover {
+              background-color: var(--color-surface-container-high);
+            }
           }
         }
       }
@@ -101,10 +109,27 @@
       &[data-starting-style],
       &[data-ending-style] {
         filter: blur(10px);
-        scale: 0;
+        scale: 0.95;
         opacity: 0;
         overflow-x: hidden;
         overflow-y: auto;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-ui="select-positioner"],
+    [data-ui="combobox-positioner"],
+    [data-ui="autocomplete-positioner"] {
+      [data-ui$="-content"] {
+        transition:
+          opacity var(--transition-expressive-fast-effects),
+          filter var(--transition-expressive-fast-effects);
+
+        &[data-starting-style],
+        &[data-ending-style] {
+          scale: 1;
+        }
       }
     }
   }

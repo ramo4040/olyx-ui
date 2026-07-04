@@ -16,7 +16,9 @@
         transparent
       );
       z-index: 50;
-      transition: all var(--transition-standard-slow-effects);
+      transition:
+        background-color var(--transition-standard-slow-effects),
+        opacity var(--transition-standard-slow-effects);
       opacity: 0;
 
       &[data-open] {
@@ -37,7 +39,9 @@
       padding: var(--padding-block) var(--spacing-24);
       background-color: var(--color-surface-container-lowest);
       color: var(--color-on-surface);
-      transition: all var(--transition-standard-slow-spatial);
+      transition:
+        translate var(--transition-standard-default-spatial),
+        opacity var(--transition-standard-slow-effects);
       max-height: 100vh;
       overflow: auto;
 
@@ -133,6 +137,16 @@
 
         &[data-ending-style] {
           translate: 0 100%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        transition: opacity var(--transition-standard-fast-effects);
+
+        &:where([data-starting-style]),
+        &:where([data-ending-style]) {
+          translate: 0 0;
+          opacity: 0;
         }
       }
 

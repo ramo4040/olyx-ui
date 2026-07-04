@@ -15,12 +15,16 @@
     color: var(--color-on-surface);
     font: var(--font-body-md);
     outline: 0;
-    transition: all var(--transition-expressive-fast-effects);
+    transition:
+      background-color var(--transition-expressive-fast-effects),
+      border-color var(--transition-expressive-fast-effects),
+      box-shadow var(--transition-expressive-fast-effects),
+      color var(--transition-expressive-fast-effects);
 
     /* Placeholder */
     &::placeholder {
       color: color-mix(in oklab, currentcolor 50%, transparent);
-      transition: all var(--transition-expressive-fast-effects);
+      transition: color var(--transition-expressive-fast-effects);
     }
 
     /* Focuse */
@@ -31,11 +35,13 @@
     }
 
     /* hover */
-    &:hover:not(:focus-within, :disabled) {
-      background-color: var(--surface-low);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover:not(:focus-within, :disabled) {
+        background-color: var(--surface-low);
 
-      &::placeholder {
-        color: var(--color-on-surface-variant);
+        &::placeholder {
+          color: var(--color-on-surface-variant);
+        }
       }
     }
 
